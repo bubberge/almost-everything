@@ -1,0 +1,212 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
+
+/* ====== Heading Area ====== */
+
+
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    padding: 0;
+    font-family: "open sans", helvetica, tahoma, sans-serif;
+    text-rendering: optimizelegibility;
+}
+
+header h1 {
+    font-family: lato, helvetica, tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 3.6rem;
+}
+
+header h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 1.4rem;
+}
+
+header ul {
+    text-align: right;
+    font-weight: 300;
+}
+
+header a,
+header h1,
+header h2,
+header p,
+header span {
+    color: #fff;
+}
+
+.header-wrapper {
+    height: 85vh;
+    background-color: #2199e8;
+    color: #fff;
+}
+
+.header-wrapper .columns:nth-child(-n+2) {
+    margin-top: 4rem;
+}
+
+.down-arrow {
+    text-align: center;
+    position: relative;
+    font-size: 3rem;
+}
+
+body {
+   color: #63666f;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+/* ====== Body Area ====== */
+
+.row {
+    max-width: 65rem;
+}
+.content-container {
+    padding: .5rem;
+}
+
+.header-wrapper,
+.footer-wrapper {
+    background-color: #2199e8;
+    color: #fff;
+}
+
+.callout.large {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+@media screen and (min-width: 40em) {
+    header h1 {
+        font-weight: 700;
+        font-size: 5rem;
+        line-height: 4.2rem;
+    }
+
+    .callout.large {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .down-arrow {
+        display: none;
+    }
+}
+
+/* ====== Job Blue Dots ====== */
+
+.job {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.job::after,
+.job::before {
+    content: '';
+    background: #2199e8;
+    position: absolute;
+    display: block;
+}
+
+.job::after { /* the line */
+    height: 100%;
+    width: 4px;
+    left: -24px;
+    top: 7px;
+}
+
+.job::before { /* the dot */
+    width: 1rem;
+    height: 1rem;
+    left: -30px;
+    top: 6px;
+    border-radius: 50%;
+}
+
+.job.end {
+    padding-bottom: 0;
+}
+
+.job.end::after {
+    background: #fff;
+    z-index: -1;
+}
+
+@media screen and (min-width: 40em) {
+    .job::before {
+        left: -55px;
+        top: 11px;
+    }
+
+    .job::after {
+        left: -49px;
+        top: 10%;
+    }
+}
+
+/* ====== Job Area ====== */
+.job {
+    line-height: 2rem;
+}
+
+.job span {
+    display: none;
+}
+
+.job-date,
+.job-title {
+    font-weight: 600;
+}
+
+.job-company,
+.school {
+    font-weight: 400;
+    font-size: .9rem;
+    padding: .6rem 0;
+    letter-spacing: -.3px;
+}
+
+.content-container {
+    font-weight: 300;
+}
+
+@media screen and (min-width: 40em) {
+    .job-date,
+    .job-title,
+    .job span {
+        font-size: 1.5rem;
+        display: inline;
+    }
+}
+
+
+/* ====== Education Area ====== ( see link 151 )  */
+
+/* ====== Skills Area ====== */
+
+.skill i {
+    font-size: 1.2rem;
+    padding: 0 .3rem;
+}
+
+.collapse {
+    padding-left: 0;
+}
+
+.too-long {
+    letter-spacing: -.65px;
+}
+
+/* ====== Footer Area ====== */
+
+.footer-wrapper {
+    margin-top: 1rem;
+}
+
+footer p {
+    color: #2199e8;
+}

@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
+
+body {
+    font-family: "open sans", helvetica, tahoma, sans-serif;
+    text-rendering: optimizelegibility;
+}
+
+h1.name {
+    display:inline-block;
+    line-height: 0;
+    opacity: 0;
+    font-family: lato, helvetica, tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: -.15rem;
+    margin-left: -2px;
+}
+
+header p {
+    opacity: 0;
+}
+
+.name {
+    span {
+        position: relative;
+    }
+    span:nth-child(1) {
+        color: #BF3F3F;
+    }
+    span:nth-child(2) {
+        color: #2C852C;
+    }
+    span:nth-child(3) {
+        color: #6b8;
+    }
+}
+
+
+.subheading span:first-child {
+    display: block;
+}

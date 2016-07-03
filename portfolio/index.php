@@ -1,14 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Duffy | Web Designer</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<?php
+$pageTitle = '';
+
+include 'incl/_header.php';
+?>
   <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
       <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
@@ -55,44 +49,12 @@
                     <span class="title-bar-title"><a href="#splash">David Duffy</a></span>
                   </div>
                 </nav>
-                <div id="about" class="about">
-                  <h1>About</h1>
-                  <p>David is an experienced, self-motivated problem solver and leader. He is laser-focused and analytical, able to navigate through challenges and ambiguity with poise. He communicates with clarity and empathy, and has a track record of building trusting, positive, and lasting relationships with team members, supervisors, and clientele. He is intelligent and determined, able to analyze obstacles, quickly learn and apply new skills, and rise to the occasion.</p>   
-                </div>
-                <div id="experience" class="experience">
-                  <h1>Job Experience</h1>
-                  <div class="job small-11 small-offset-1">
-                    <h2 class="job-date">2014-Current</h2><span> | </span>
-                    <h3 class="job-title">Design Manager</h3>
-                    <p class="job-company">CrystalCommerce | Mountlake Terrace, WA</p>
-                    <p class="job-responsibilities">Coordinator and supervisor of all web and graphic design projects. Developed productivity metrics and KPIs, doubling department utilization. Analyzed and reformed established web development processes, improving inter-departmental communication, project delivery speed, and site usability and performance.</p>
-                  </div>
-                  <div class="job small-11 small-offset-1">
-                    <h2 class="job-date">2013-2014</h2><span> | </span>
-                    <h3 class="job-title">Client Experience Representative</h3>
-                    <p class="job-company">CrystalCommerce | Mountlake Terrace, WA</p>
-                    <p class="job-responsibilities">Provided exemplary, personal support tailored to each specific client's needs. Introduced and supported clients through onboarding onto the inventory management and e-commerce platform.</p>
-                  </div>
-                  <div class="job small-11 small-offset-1 end">
-                    <h2 class="job-date">2009-2013</h2><span> | </span>
-                    <h3 class="job-title">Design and Service Coordinator</h3>
-                    <p class="job-company">JH Surgery.com et al | Jackson, WY</p>
-                    <p class="job-responsibilities">Designer, Inventory Manager, Customer Service Savant. Managed all sales, inventory control, and order processing on the e-commerce platform. Designed all web and print marketing assets. Built extensive knowledge of Adobe Creative Suite.</p>
-                  </div>
-                  <h1>Education</h1>
-                  <p>
-                    <span class="school">2009 University of Washington</span><br>
-                    <span>European Studies, French Language Studies</span><br>
-                  </p>
-                  <p>
-                    <span class="school">2004 Lake Washington High School</span><br>
-                    <span>Marketing, Web Design</span><br>
-                  </p>  
-                </div>
-                <div id="portfolio" class="portfolio">
-                </div>
-                <div id="contact" class="contact">
-                </div>
+                <?php 
+                  include 'incl/_about.php';
+                  include 'incl/_experience.php';
+                  include 'incl/_portfolio.php';
+                  include 'incl/_contact.php';
+                ?>
               </div>
 
 
@@ -108,10 +70,4 @@
 
 
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/plugins/foundation.magellan.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-</html>
+<?php include 'incl/_footer.php' ?>

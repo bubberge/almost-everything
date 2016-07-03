@@ -1,7 +1,13 @@
 header {
     height: 100vh;
+    @include flexbox();
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.nav-mobile li > a {
-    padding: 0.7rem 1rem 0.7rem 0;
+.nav-mobile {
+    padding-bottom: 2rem;
+    li > a {
+        padding: 0.7rem 1rem 0.7rem 0;
+    }
 }

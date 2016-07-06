@@ -1,17 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
-div {
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25); }
-
 .sticky-container ul.menu {
   padding-top: 45vh; }
   .sticky-container ul.menu a {
     justify-content: flex-end; }
 
 .heading {
-  padding-top: 29vh; }
+  padding-top: 33vh; }
+  .heading .subheading {
+    padding-top: 2rem; }
 
+.index .about,
+.index .contact,
+.index .experience,
+.index .portfolio {
+  display: none; }
+
+@media screen and (min-width: 768px) {
+  .index .about,
+  .index .contact,
+  .index .experience,
+  .index .portfolio {
+    display: initial; } }
 header {
   height: 100vh;
   display: -webkit-box;
@@ -91,16 +100,16 @@ header p {
   animation-name: lo-fi;
   -webkit-animation-duration: .6s;
   animation-duration: .6s;
-  -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s; }
+  -webkit-animation-delay: .85s;
+  animation-delay: .85s; }
 
 .effect.lo-fi-2 {
   -webkit-animation-name: lo-fi-2;
   animation-name: lo-fi-2;
   -webkit-animation-duration: .6s;
   animation-duration: .6s;
-  -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s; }
+  -webkit-animation-delay: .85s;
+  animation-delay: .85s; }
 
 @-webkit-keyframes lo-fi {
   0% {

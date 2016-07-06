@@ -1,3 +1,26 @@
 .heading {
-    padding-top: 29vh;
+    padding-top: 33vh;
+    .subheading {
+        padding-top: 2rem;
+    }
+}
+
+.index {
+    .about,
+    .contact,
+    .experience,
+    .portfolio {
+        display: none;
+    }
+}
+
+@media screen and ( min-width: 768px ) {
+    .index {
+        .about,
+        .contact,
+        .experience,
+        .portfolio {
+            display: initial;
+        }
+    }
 }

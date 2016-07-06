@@ -1,7 +1,8 @@
 <?php 
 $pageTitle = 'About';
 
-include 'incl/_header.php' ?>
+include 'incl/_header.php'; ?>
+<body class="about">
   <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
       <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
@@ -12,14 +13,16 @@ include 'incl/_header.php' ?>
         </button>
 
         <!-- Menu -->
-        <?php include 'incl/menu.php' ?>
+        <?php include 'incl/_menu.php'; ?>
       </div>
-
-      <div class="off-canvas-content" data-off-canvas-content>
-        <a type="button" class="button" data-toggle="offCanvas">Open</a>
-        <?php include 'incl/_about.php' ?>
+        <!-- Nav and Content -->
+      <?php include 'incl/_mobile-nav.php'; ?>
+      <div class="row">
+        <div class="small-10 small-offset-1">
+      <?php include 'incl/_about.php'; ?>
+        </div>
       </div>
     </div>
   </div>
 
-  <?php include 'incl/_footer.php' ?>
+  <?php include 'incl/_footer.php'; ?>

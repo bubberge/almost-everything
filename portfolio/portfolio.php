@@ -2,6 +2,7 @@
 $pageTitle = 'Portfolio';
 
 include 'incl/_header.php' ?>
+<body>
   <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
       <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
@@ -12,13 +13,11 @@ include 'incl/_header.php' ?>
         </button>
 
         <!-- Menu -->
-        <?php include 'incl/menu.php' ?>
+        <?php include 'incl/_menu.php' ?>
       </div>
-
-      <div class="off-canvas-content" data-off-canvas-content>
-        <a type="button" class="button" data-toggle="offCanvas">Open</a>
-        <?php include 'incl/_portfolio.php' ?>
-      </div>
+        <!-- Nav and Content -->
+      <?php include 'incl/_mobile-nav.php';
+            include 'incl/_portfolio.php'; ?>
     </div>
   </div>
 

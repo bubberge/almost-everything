@@ -19,7 +19,7 @@ include 'incl/_header.php'; ?>
       <?php include 'incl/_mobile-nav.php'; ?>
       <div class="row">
         <div class="small-10 small-offset-1">
-      <?php include 'incl/_about.php'; ?>
+          <?php include 'incl/_about.php'; ?>
         </div>
       </div>
     </div>

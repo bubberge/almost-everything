@@ -1,4 +1,4 @@
-<div id="experience" class="experience">
+<div id="experience" class="experience-content fade-in fade-in-down">
   <h1>Job Experience</h1>
   <div class="job small-11 small-offset-1">
     <h2 class="job-date">2014-Current</h2><span> | </span>

@@ -334,11 +334,11 @@ p.jumbotron-pre-title {
     padding: 6rem 0 0;
 }
 
-.section-heading.intro h2 {
+.section-heading.intro h1 {
     font-size: 2rem;
 }
 
-.section-heading h2 {
+.section-heading h1 {
     position: relative;
     font-size: 2.6rem;
     padding: 0 2rem 1rem;
@@ -346,7 +346,7 @@ p.jumbotron-pre-title {
     margin: 0 auto;
 }
 
-.section-heading h2::after {
+.section-heading h1::after {
     content: '';
     background: rgba(231, 76, 60, 1);
     position: absolute;
@@ -607,4 +607,105 @@ footer a:active {
 
 .alert-dismissable .close {
     z-index: 1;
+}
+
+
+
+/* ==   Effects
+========================================= */
+
+.fade-in {
+    opacity: 0!important;
+}
+
+.fade-in-down {
+    -webkit-animation-name: fade-in-down;
+    animation-name: fade-in-down;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-down-delay {
+    -webkit-animation-name: fade-in-down;
+    animation-name: fade-in-down;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: .44s;
+    animation-delay: .44s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+    65% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    65% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out-up {
+    opacity: 1;
+    -webkit-animation-name: fade-out-up;
+    animation-name: fade-out-up;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes fade-out-up {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+    65% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@keyframes fade-out-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    65% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }

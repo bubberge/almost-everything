@@ -67,219 +67,214 @@
             <div class="jumbotron-darken-vignette"></div>
         </div>
         <div class="jumbotron-content">
-            <p class="jumbotron-pre-title">
+            <p class="jumbotron-pre-title fade-in fade-in-down-delay">
               <span>STRATEGY</span>
               <span>TALENT</span>
               <span>FUNDING</span>
               <span>PRODUCTION</span>
             </p>
-            <h1 class="jumbotron-title">Don't worry. We got this.</h1>
-            <p class="jumbotron-subtitle">A full service production company that gets results</p>
-            <a class="btn btn-default btn-user btn-cta text-btn" href="#" role="button" type="button" data-toggle="modal" data-target="#myModal">Contact Us</a>
+            <h1 class="jumbotron-title fade-in fade-in-down-delay">Don't worry. We got this.</h1>
+            <p class="jumbotron-subtitle fade-in fade-in-down-delay">A full service production company that gets results</p>
+            <a class="btn btn-default btn-user btn-cta text-btn fade-in fade-in-down-delay" href="#" role="button" type="button" data-toggle="modal" data-target="#myModal">Contact Us</a>
            <!-- <a class="btn btn-default btn-user btn-info text-btn" href="#" role="button">Learn More</a> -->
         </div>
     </div>
-    <!-- /Jumbotron -->
 
     <!-- Intro -->
-    <div id="intro" class="section-heading intro">
-      <h2 class="text-center text-nav">A Los Angeles based production company</h2>
+    <aside id="intro" class="section-heading intro">
+      <h1 class="text-center text-nav">A Los Angeles based production company</h1>
       <p class="text-center divider lead">T&amp;C Entertainment is currently focused on Music Videos, Commercials, Feature Films, and Web Content. We also offer consulting and preproduction packaging for any project you are trying to get off the ground. We offer services and expertise in every stage of production; our mission is to assist you with every step, taking your script to the big screen!</p>
-    </div>
-    <!-- /Intro -->
+    </aside>
 
     <!-- Services -->
-    <div id="services" class="section-heading services">
-      <h2 class="text-center text-nav">Services</h2>
-      <p class="text-center divider lead">This is how we turn your ideas into reality</p>
-    </div>
-    <div class="container services-content">
-      <div class="row">
-        <div class="col-xs-offset-1 col-sm-5 col-md-4 col-md-offset-2 service">
-          <span class="fa-icon">&#xf19c;</span>
-          <h2>Funding &amp; Tax Credit Financing</h2>
-          <p>We play match maker with your script, pairing you with private or corporate investors that will be the most passionate about it.</p>
+      <section id="services" class="section-heading services fade-in">
+        <h1 class="text-center text-nav">Services</h1>
+        <p class="text-center divider lead">This is how we turn your ideas into reality</p>
+
+        <div class="container services-content">
+          <div class="row">
+            <div class="col-xs-offset-1 col-sm-5 col-md-4 col-md-offset-2 service">
+              <span class="fa-icon">&#xf19c;</span>
+              <h2>Funding &amp; Tax Credit Financing</h2>
+              <p>We play match maker with your script, pairing you with private or corporate investors that will be the most passionate about it.</p>
+            </div>
+            <div class="col-xs-offset-1 col-sm-5 col-md-4 col-sm-offset-0 service">
+            <span class="fa-icon">&#xf24e;</span>
+              <h2>Investor Prospectus</h2>
+              <p>We turn your idea into a professional business plan/lookbook that celebrates your artistic vision.</p>
+           </div>
+           <div class="clearfix"></div>
+            <div class="col-xs-offset-1 col-sm-5 col-md-4 col-md-offset-2 service">
+            <span class="fa-icon">&#xf135;</span>
+              <h2>Sales &amp; Distribution</h2>
+              <p>Your project needs strong components. We package your project to guarantee presales and bankable productions.</p>
+            </div>
+            <div class="col-xs-offset-1 col-sm-5 col-md-4 col-sm-offset-0 service">
+            <span class="fa-icon">&#xf200;</span>
+              <h2>Budget, Schedule, DooD</h2>
+              <p>A strong budget, schedule, and day out of days is essential. We crunch the hard numbers so you don't have to.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-offset-1 col-sm-5 col-md-4 col-sm-offset-0 service">
-        <span class="fa-icon">&#xf24e;</span>
-          <h2>Investor Prospectus</h2>
-          <p>We turn your idea into a professional business plan/lookbook that celebrates your artistic vision.</p>
-       </div>
-       <div class="clearfix"></div>
-        <div class="col-xs-offset-1 col-sm-5 col-md-4 col-md-offset-2 service">
-        <span class="fa-icon">&#xf135;</span>
-          <h2>Sales &amp; Distribution</h2>
-          <p>Your project needs strong components. We package your project to guarantee presales and bankable productions.</p>
-        </div>
-        <div class="col-xs-offset-1 col-sm-5 col-md-4 col-sm-offset-0 service">
-        <span class="fa-icon">&#xf200;</span>
-          <h2>Budget, Schedule, DooD</h2>
-          <p>A strong budget, schedule, and day out of days is essential. We crunch the hard numbers so you don't have to.</p>
-        </div>
-      </div>
-      <p></p>
-    </div>
-    <!-- /services -->
+      </section>
 
     <!-- People -->
-    <div id="people" class="section-heading people">
-      <h2 class="text-center text-nav">People</h2>
-      <p class="text-center divider lead">Meet your new crew</p>
-    </div>
-    <div class="container people-content">
-      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-        <p>
-          With over two decades of combined production experience, T&amp;C Entertainment was founded by two individuals who refused to quit. Both coming from "below-the-line" departments, Helena T. Falangus and Darryll C. Scott not only have knowledge of every cogg on a film set, but have gained positive relationships with major Los Angeles production companies. It is for this reason, that their progression into producing has proven to be so successful.<br><br>
+      <section id="people" class="section-heading people fade-in">
+        <h1 class="text-center text-nav">People</h1>
+        <p class="text-center divider lead">Meet your new crew</p>
+        <div class="container people-content">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+            <p>
+              With over two decades of combined production experience, T&amp;C Entertainment was founded by two individuals who refused to quit. Both coming from "below-the-line" departments, Helena T. Falangus and Darryll C. Scott not only have knowledge of every cogg on a film set, but have gained positive relationships with major Los Angeles production companies. It is for this reason, that their progression into producing has proven to be so successful.<br><br>
 
-          Now having forged relationships in both the American and European film markets they have expanded to the Chinese film industry and are look forward to their co-productions this year.<br><br>
+              Now having forged relationships in both the American and European film markets they have expanded to the Chinese film industry and are look forward to their co-productions this year.<br><br>
 
-          Clients seek them out not only to produce commercials, music videos, and feature films, but also for their business expertise in pitching, packaging, and building creative business plans.
-        </p>
-      </div>
-    </div>
-    <!-- /People -->
+              Clients seek them out not only to produce commercials, music videos, and feature films, but also for their business expertise in pitching, packaging, and building creative business plans.
+            </p>
+          </div>
+        </div>
+      </section>
 
     <!-- Work -->
-    <div id="work" class="section-heading work">
-      <h2 class="text-center text-nav">Some of our Contributions</h2>
+    <section id="work" class="section-heading work fade-in">
+      <h1 class="text-center text-nav">Some of our Contributions</h1>
       <p class="text-center divider lead visible-xs-block visible-sm-block">Click to watch</p>
-    </div>
-    <div class="container work-content">
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <div class="row">
-            <div class="col-xs-6 col-sm-3 work-card-film">
-              <a href="https://www.youtube.com/watch?v=i-JxwEIP_u8" target="_blank">
-                <img src="img/work_night_owls.jpg" class="img-responsive">
-                <div class="work-card-meta"> 
-                  <p class="lead">Night Owls</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-xs-6 col-sm-3 work-card-film">
-              <a href="https://www.youtube.com/watch?v=ZEEd6rnU1u0" target="_blank">
-                <img src="img/work_a_christmas_reunion.jpg" class="img-responsive">
-                <div class="work-card-meta"> 
-                  <p class="lead">A Christmas Reunion</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-xs-6 col-sm-3 work-card-film">
-              <a href="https://vimeo.com/88496894" target="_blank">
-                <img src="img/work_gone_in_the_dark.jpg" class="img-responsive">
-                <div class="work-card-meta"> 
-                  <p class="lead">Gone in the Dark</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-xs-6 col-sm-3 visible-md-down work-card-film">
-              <a href="https://vimeo.com/78491251" target="_blank">
-                <img src="img/work_the_heeler.png" class="img-responsive">
-                <div class="work-card-meta"> 
-                  <p class="lead">The Heeler</p>
-                  <p>Staring Oscar Award Winning JK Simmons</p>
-                </div>
+      <div class="container work-content">
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 work-card-film">
+                <a href="https://www.youtube.com/watch?v=i-JxwEIP_u8" target="_blank">
+                  <img src="img/work_night_owls.jpg" class="img-responsive">
+                  <div class="work-card-meta"> 
+                    <p class="lead">Night Owls</p>
+                  </div>
                 </a>
+              </div>
+              <div class="col-xs-6 col-sm-3 work-card-film">
+                <a href="https://www.youtube.com/watch?v=ZEEd6rnU1u0" target="_blank">
+                  <img src="img/work_a_christmas_reunion.jpg" class="img-responsive">
+                  <div class="work-card-meta"> 
+                    <p class="lead">A Christmas Reunion</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-3 work-card-film">
+                <a href="https://vimeo.com/88496894" target="_blank">
+                  <img src="img/work_gone_in_the_dark.jpg" class="img-responsive">
+                  <div class="work-card-meta"> 
+                    <p class="lead">Gone in the Dark</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-xs-6 col-sm-3 visible-md-down work-card-film">
+                <a href="https://vimeo.com/78491251" target="_blank">
+                  <img src="img/work_the_heeler.png" class="img-responsive">
+                  <div class="work-card-meta"> 
+                    <p class="lead">The Heeler</p>
+                    <p>Staring Oscar Award Winning JK Simmons</p>
+                  </div>
+                  </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <div class="row">
-            <div class="col-sm-4 work-card-short">
-              <a href="https://www.youtube.com/embed/2yhpN8qFBqE" target="_blank">
-                <div class='image-container'><img src="img/work_empty_spaces.jpg" alt="artwork for T&amp;C productions short Empty Spaces"></div>
-                <div class="work-card-meta">
-                  <p class="lead">Empty Spaces</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4 work-card-short">
-              <a href="https://www.youtube.com/embed/TO8gAvl59Kw" target="_blank">
-                <div class='image-container'><img src="img/work_its_my_belly_button.jpg" alt="artwork for T&amp;C productions short It's My Belly Button"></div>
-                <div class="work-card-meta"> 
-                  <p class="lead">It's My Belly Button</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4 work-card-short">
-              <a href='https://www.youtube.com/embed/OOhH_F9omtQ' target="_blank">
-                <div class='image-container'><img src="img/work_how_shana.jpg" alt="artwork for T&amp;C productions short How Shananay Stole Christmas"></div>
-                <div class="work-card-meta"> 
-                  <p class="lead">How Shananay Stole Christmas</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4 work-card-short">
-              <a href='https://www.youtube.com/embed/U_cbCH1k3Kc' target="_blank">
-                <div class='image-container'><img src="img/work_back_to_church.jpg" alt="artwork for T&amp;C productions short Alyson Stoner - Back to Church"></div>
-                <div class="work-card-meta"> 
-                  <p class="lead">Alyson Stoner - Back to Church</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4 work-card-short">
-              <a href='https://www.youtube.com/embed/Ut3GXG1lFfk' target="_blank">
-                <div class='image-container'><img src="img/work_ni_una.jpg" alt="artwork for T&amp;C productions short Joey Montana - Ni Una Lagrima"></div>
-                <div class="work-card-meta"> 
-                  <p class="lead">Joey Montana - Ni Una Lagrima</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-4 work-card-short">
-              <a href='https://www.youtube.com/embed/4A1kH45TJG4' target="_blank">
-                <div class='image-container'><img src="img/work_doubt_your_doubts.jpg" alt="artwork for T&amp;C productions short Brent Riviera - Doubt Your Doubts"></div>
-                <div class="work-card-meta"> 
-                  <p class="lead">Brent Riviera - Doubt Your Doubts</p>
-                  <?php include 'img/youtube.svg'; ?>
-                </div>
-              </a>
+        <hr>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+              <div class="col-sm-4 work-card-short">
+                <a href="https://www.youtube.com/embed/2yhpN8qFBqE" target="_blank">
+                  <div class='image-container'><img src="img/work_empty_spaces.jpg" alt="artwork for T&amp;C productions short Empty Spaces"></div>
+                  <div class="work-card-meta">
+                    <p class="lead">Empty Spaces</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-4 work-card-short">
+                <a href="https://www.youtube.com/embed/TO8gAvl59Kw" target="_blank">
+                  <div class='image-container'><img src="img/work_its_my_belly_button.jpg" alt="artwork for T&amp;C productions short It's My Belly Button"></div>
+                  <div class="work-card-meta"> 
+                    <p class="lead">It's My Belly Button</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-4 work-card-short">
+                <a href='https://www.youtube.com/embed/OOhH_F9omtQ' target="_blank">
+                  <div class='image-container'><img src="img/work_how_shana.jpg" alt="artwork for T&amp;C productions short How Shananay Stole Christmas"></div>
+                  <div class="work-card-meta"> 
+                    <p class="lead">How Shananay Stole Christmas</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-4 work-card-short">
+                <a href='https://www.youtube.com/embed/U_cbCH1k3Kc' target="_blank">
+                  <div class='image-container'><img src="img/work_back_to_church.jpg" alt="artwork for T&amp;C productions short Alyson Stoner - Back to Church"></div>
+                  <div class="work-card-meta"> 
+                    <p class="lead">Alyson Stoner - Back to Church</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-4 work-card-short">
+                <a href='https://www.youtube.com/embed/Ut3GXG1lFfk' target="_blank">
+                  <div class='image-container'><img src="img/work_ni_una.jpg" alt="artwork for T&amp;C productions short Joey Montana - Ni Una Lagrima"></div>
+                  <div class="work-card-meta"> 
+                    <p class="lead">Joey Montana - Ni Una Lagrima</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-4 work-card-short">
+                <a href='https://www.youtube.com/embed/4A1kH45TJG4' target="_blank">
+                  <div class='image-container'><img src="img/work_doubt_your_doubts.jpg" alt="artwork for T&amp;C productions short Brent Riviera - Doubt Your Doubts"></div>
+                  <div class="work-card-meta"> 
+                    <p class="lead">Brent Riviera - Doubt Your Doubts</p>
+                    <?php include 'img/youtube.svg'; ?>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="https://vimeo.com/87545850" target="_blank">
+              <img src="img/work_axe.png" class="img-responsive" alt="logo for T&amp;C productions work with axe body spray">
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="https://www.youtube.com/watch?v=p_23b69iyKk" target="_blank">
+              <img src="img/work_att.png" class="img-responsive" alt="logo for T&amp;C productions work with AT&amp;T">
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="https://vimeo.com/95935266" target="_blank">
+              <img src="img/work_reebok_lesmills.png" class="img-responsive" alt="logo for T&amp;C productions work with Reebok Les Mills">
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="https://www.instagram.com/p/BB30ZPIgsJQ/" target="_blank">
+              <img src="img/work_tmobile.png" class="img-responsive" alt="logo for T&amp;C productions work with T-Mobile">
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="https://www.youtube.com/watch?v=Ej4zPl61coo" target="_blank">
+              <img src="img/work_pillsbury_toaster_strudel.png" class="img-responsive" alt="logo for T&amp;C productions work with Pillsbury toaster strudel">
+            </a>
+          </div>
+          <div class="col-xs-6 col-sm-2 work-card-comm">
+            <a href="http://lrn.com/news-archive/lrn-wins-highest-honor-at-37th-annual-telly-awards/" target="_blank">
+              <img src="img/work_lrn.png" class="img-responsive" alt="logo for T&amp;C productions work with LRN Inspiring Principled Performance">
+            </a>
+          </div>
+        </div>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="https://vimeo.com/87545850" target="_blank">
-            <img src="img/work_axe.png" class="img-responsive" alt="logo for T&amp;C productions work with axe body spray">
-          </a>
-        </div>
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="https://www.youtube.com/watch?v=p_23b69iyKk" target="_blank">
-            <img src="img/work_att.png" class="img-responsive" alt="logo for T&amp;C productions work with AT&amp;T">
-          </a>
-        </div>
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="https://vimeo.com/95935266" target="_blank">
-            <img src="img/work_reebok_lesmills.png" class="img-responsive" alt="logo for T&amp;C productions work with Reebok Les Mills">
-          </a>
-        </div>
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="https://www.instagram.com/p/BB30ZPIgsJQ/" target="_blank">
-            <img src="img/work_tmobile.png" class="img-responsive" alt="logo for T&amp;C productions work with T-Mobile">
-          </a>
-        </div>
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="https://www.youtube.com/watch?v=Ej4zPl61coo" target="_blank">
-            <img src="img/work_pillsbury_toaster_strudel.png" class="img-responsive" alt="logo for T&amp;C productions work with Pillsbury toaster strudel">
-          </a>
-        </div>
-        <div class="col-xs-6 col-sm-2 work-card-comm">
-          <a href="http://lrn.com/news-archive/lrn-wins-highest-honor-at-37th-annual-telly-awards/" target="_blank">
-            <img src="img/work_lrn.png" class="img-responsive" alt="logo for T&amp;C productions work with LRN Inspiring Principled Performance">
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- /Work -->
+    </section>
 
     <!-- Press -->
 

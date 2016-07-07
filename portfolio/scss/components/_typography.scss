@@ -35,3 +35,37 @@ h1.name {
 .subheading span:first-child {
     display: block;
 }
+
+.job {
+    line-height: 2rem;
+}
+
+.job span {
+    display: none;
+}
+
+.job-date,
+.job-title {
+    font-weight: 600;
+}
+
+.job-company,
+.school {
+    font-weight: 400;
+    font-size: .9rem;
+    padding: .6rem 0;
+    letter-spacing: -.3px;
+}
+
+.experience-content {
+    font-weight: 300;
+}
+
+@media screen and (min-width: 40em) {
+    .job-date,
+    .job-title,
+    .job span {
+        font-size: 1.5rem;
+        display: inline;
+    }
+}

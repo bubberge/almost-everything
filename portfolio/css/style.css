@@ -4,9 +4,9 @@
   .sticky-container ul.menu a {
     justify-content: flex-end; }
 
-.heading {
-  padding-top: 33vh; }
-  .heading .subheading {
+.splash {
+  padding-top: 48vh; }
+  .splash .subheading {
     padding-top: 2rem; }
 
 .index .about-content,
@@ -14,6 +14,14 @@
 .index .experience-content,
 .index .portfolio-content {
   display: none; }
+  @media screen and (min-width: 768px) {
+    .index .about-content,
+    .index .contact-content,
+    .index .experience-content,
+    .index .portfolio-content {
+      display: block;
+      min-height: 100vh;
+      padding-top: 40vh; } }
 
 .about-content,
 .contact-content,
@@ -33,6 +41,47 @@
   .index .experience,
   .index .portfolio {
     display: initial; } }
+.job {
+  position: relative;
+  padding-bottom: 1rem; }
+
+.job::after,
+.job::before {
+  content: '';
+  background: #2199e8;
+  position: absolute;
+  display: block; }
+
+.job::after {
+  /* the line */
+  height: 100%;
+  width: 4px;
+  left: -24px;
+  top: 7px; }
+
+.job::before {
+  /* the dot */
+  width: 1rem;
+  height: 1rem;
+  left: -30px;
+  top: 6px;
+  border-radius: 50%; }
+
+.job.end {
+  padding-bottom: 0; }
+
+.job.end::after {
+  background: #fff;
+  z-index: -1; }
+
+@media screen and (min-width: 40em) {
+  .job::before {
+    left: -55px;
+    top: 11px; }
+
+  .job::after {
+    left: -49px;
+    top: 10%; } }
 header {
   height: 100vh;
   display: -webkit-box;
@@ -74,6 +123,32 @@ h1.name {
 .subheading span:first-child {
   display: block; }
 
+.job {
+  line-height: 2rem; }
+
+.job span {
+  display: none; }
+
+.job-date,
+.job-title {
+  font-weight: 600; }
+
+.job-company,
+.school {
+  font-weight: 400;
+  font-size: .9rem;
+  padding: .6rem 0;
+  letter-spacing: -.3px; }
+
+.experience-content {
+  font-weight: 300; }
+
+@media screen and (min-width: 40em) {
+  .job-date,
+  .job-title,
+  .job span {
+    font-size: 1.5rem;
+    display: inline; } }
 .fade-in {
   opacity: 0; }
 
@@ -236,129 +311,5 @@ h1.name {
   100% {
     left: 0px;
     top: 0px; } }
-.animsition,
-.animsition-overlay {
-  position: relative;
-  opacity: 0;
-  animation-fill-mode: both; }
-
-/**
- * overlay option
- */
-.animsition-overlay-slide {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: #ddd; }
-
-/* loading option */
-.animsition-loading,
-.animsition-loading:after {
-  width: 32px;
-  height: 32px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -16px;
-  margin-left: -16px;
-  border-radius: 50%;
-  z-index: 100; }
-
-.animsition-loading {
-  background-color: transparent;
-  border-top: 5px solid rgba(0, 0, 0, 0.2);
-  border-right: 5px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #eee;
-  transform: translateZ(0);
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: .8s;
-  animation-name: animsition-loading; }
-
-@keyframes animsition-loading {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-@keyframes overlay-slide-in-top {
-  0% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-.overlay-slide-in-top {
-  top: 0;
-  height: 0;
-  animation-name: overlay-slide-in-top; }
-
-@keyframes overlay-slide-out-top {
-  0% {
-    height: 0; }
-  100% {
-    height: 100%; } }
-.overlay-slide-out-top {
-  top: 0;
-  height: 100%;
-  animation-name: overlay-slide-out-top; }
-
-@keyframes overlay-slide-in-bottom {
-  0% {
-    height: 100%; }
-  100% {
-    height: 0; } }
-.overlay-slide-in-bottom {
-  bottom: 0;
-  height: 0;
-  animation-name: overlay-slide-in-bottom; }
-
-@keyframes overlay-slide-out-bottom {
-  0% {
-    height: 0; }
-  100% {
-    height: 100%; } }
-.overlay-slide-out-bottom {
-  bottom: 0;
-  height: 100%;
-  animation-name: overlay-slide-out-bottom; }
-
-@keyframes overlay-slide-in-left {
-  0% {
-    width: 100%; }
-  100% {
-    width: 0; } }
-.overlay-slide-in-left {
-  width: 0;
-  animation-name: overlay-slide-in-left; }
-
-@keyframes overlay-slide-out-left {
-  0% {
-    width: 0; }
-  100% {
-    width: 100%; } }
-.overlay-slide-out-left {
-  left: 0;
-  width: 100%;
-  animation-name: overlay-slide-out-left; }
-
-@keyframes overlay-slide-in-right {
-  0% {
-    width: 100%; }
-  100% {
-    width: 0; } }
-.overlay-slide-in-right {
-  right: 0;
-  width: 0;
-  animation-name: overlay-slide-in-right; }
-
-@keyframes overlay-slide-out-right {
-  0% {
-    width: 0; }
-  100% {
-    width: 100%; } }
-.overlay-slide-out-right {
-  right: 0;
-  width: 100%;
-  animation-name: overlay-slide-out-right; }
 
 /*# sourceMappingURL=style.css.map */

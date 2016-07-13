@@ -41,6 +41,7 @@
   .index .experience,
   .index .portfolio {
     display: initial; } }
+
 .job {
   position: relative;
   padding-bottom: 1rem; }
@@ -78,10 +79,10 @@
   .job::before {
     left: -55px;
     top: 11px; }
-
   .job::after {
     left: -49px;
     top: 10%; } }
+
 header {
   height: 100vh;
   display: -webkit-box;
@@ -113,10 +114,13 @@ h1.name {
 
 .name span {
   position: relative; }
+
 .name span:nth-child(1) {
   color: #BF3F3F; }
+
 .name span:nth-child(2) {
   color: #2C852C; }
+
 .name span:nth-child(3) {
   color: #6b8; }
 
@@ -149,6 +153,7 @@ h1.name {
   .job span {
     font-size: 1.5rem;
     display: inline; } }
+
 .fade-in {
   opacity: 0; }
 
@@ -181,6 +186,7 @@ h1.name {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0); } }
+
 @keyframes fade-in-down {
   0% {
     opacity: 0;
@@ -190,6 +196,7 @@ h1.name {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
 .fade-out-up {
   opacity: 1;
   -webkit-animation-name: fade-out-up;
@@ -210,6 +217,7 @@ h1.name {
   100% {
     opacity: 0;
     -webkit-transform: translateY(-20px); } }
+
 @keyframes fade-out-up {
   0% {
     opacity: 1;
@@ -219,6 +227,7 @@ h1.name {
   100% {
     opacity: 0;
     transform: translateY(-20px); } }
+
 .lo-fi {
   position: relative;
   -webkit-animation-name: lo-fi;
@@ -273,6 +282,7 @@ h1.name {
   100% {
     right: 0px;
     top: 0px; } }
+
 @-webkit-keyframes lo-fi-2 {
   0% {
     left: 0px;
@@ -311,5 +321,3 @@ h1.name {
   100% {
     left: 0px;
     top: 0px; } }
-
-/*# sourceMappingURL=style.css.map */

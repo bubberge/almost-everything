@@ -19472,3 +19472,4 @@ $('.nav-mobile a').click(function( e ){ // animate mobile navigation clicks
     $('#splash').toggleClass('fade-out-up');
     setTimeout(function() {window.location = href;}, 700);
 });
+//# sourceMappingURL=output.js.map

@@ -1,51 +1,73 @@
 'use strict';
 
 var gulp = require('gulp'),
+    http = require('http-server'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     cleanCSS = require('gulp-clean-css'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    maps = require('gulp-sourcemaps'),
+    del = require('del');
 
-gulp.task('concat-scripts', function(){
-    gulp.src([
-            'js/vendor/jquery.js',
-            'js/vendor/what-input.js',
-            'js/vendor/foundation.js',
-            'js/vendor/foundation.magellan.js',
-            'js/app.js'])
-        .pipe(concat('output.js'))
-        .pipe(gulp.dest('js'));
+gulp.task('compile-scss',function(){
+    return gulp.src('./scss/style.scss')
+        .pipe(maps.init())          // create maps from scss partials
+        .pipe(sass())
+        .pipe(maps.write('./'))     // this path is relative to the output directory
+        .pipe(gulp.dest('./css'));  // this is the output directory
 });
 
-gulp.task('concat-css', function(){
-    gulp.src([                      // specify sources for gulp 
+gulp.task('concat-css',['compile-scss'], function(){
+    return gulp.src([                      // specify sources for gulp 
             'css/foundation.min.css',
             'css/style.css'])
         .pipe(concat('output.css')) // concat into file name
         .pipe(gulp.dest('css'));    // send that file to the css directory
 });
 
-gulp.task('minify-scripts', function(){
-    gulp.src('js/output.js')
-        .pipe(uglify())
-        .pipe(rename('output.min.js'))
-        .pipe(gulp.dest('js'));
-});
-
-gulp.task('minify-css', function(){
-    gulp.src('css/output.css')
+gulp.task('minify-css',['concat-css'], function(){
+    return gulp.src('css/output.css')
+        .pipe(maps.init({loadMaps:true}))   // create maps from scss *sourcemaps* not the css
         .pipe(cleanCSS())
         .pipe(rename('output.min.css'))
+        .pipe(maps.write('./'))
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('sass-compile',function(){
-    gulp.src('./scss/style.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('./css'));
+gulp.task('concat-scripts', function(){
+    return gulp.src([
+            'js/vendor/jquery.js',
+            'js/vendor/what-input.js',
+            'js/vendor/foundation.js',
+            'js/vendor/foundation.magellan.js',
+            'js/app.js'])
+        .pipe(maps.init())
+        .pipe(concat('output.js'))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('js'));
 });
 
-gulp.task('default', ['sass-compile','concat-scripts', 'concat-css', 'minify-scripts', 'minify-css'],function(){ // array defined dependencies, which are all run before the default task
-    console.log('done');
+gulp.task('minify-scripts',['concat-scripts'], function(){
+    return gulp.src('js/output.js')
+        .pipe(maps.init({loadmaps:true}))
+        .pipe(uglify())
+        .pipe(rename('output.min.js'))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('js'));
 });
+
+gulp.task('clean', function(){
+    del(['dist','css/output*.css*','css/style.css*','js/output*.js*']);
+});
+
+gulp.task('watch', function(){
+    gulp.watch('./scss/**/*.scss',['minify-css'])
+});
+
+gulp.task('build', ['minify-scripts', 'minify-css'], function(){ // array defined dependencies, which are all run before the default task
+    return gulp.src(['css/output.min.css','js/output.min.js','incl/**','*.php',], {base:'./'})
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['build']);

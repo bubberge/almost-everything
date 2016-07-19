@@ -1,0 +1,36 @@
+.body-content {
+    min-height: calc(100vh - 40px);
+    @include breakpoint(medium){
+        min-height: calc(100vh - 54px);
+    }
+}
+
+.off-canvas-content, .off-canvas-content {
+    box-shadow: initial;
+}
+
+.home {
+    .heading {
+        margin-top: 20vh;
+    }
+    .subheading {
+        padding: .6rem 2.6rem;
+    }
+    h1 {
+        font-family: $font-family-sans-serif;
+        background-color: $color-primary;
+        padding: 0 .5rem 0 2.5rem;
+        display: inline-block;
+        color: $white;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -.9px;
+        text-transform: uppercase;
+    }
+    h2,
+    p:nth-child(2) {
+        font-weight: bold
+    }
+
+
+}

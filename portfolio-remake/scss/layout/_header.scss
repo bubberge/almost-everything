@@ -1,0 +1,27 @@
+.top-bar {
+    padding-top: 0;
+}
+.top-bar-left {
+    background-color: $color-primary;
+    span {
+        display: block;
+    }
+    a {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+.top-bar-right {
+    font-size: 1.8rem;
+    li:nth-child(n+2) {
+        padding-left: 6rem;
+    }
+    a {
+        color: $black;
+    }
+}
+.top-bar-left,
+.top-bar-right {
+    padding-top: 30px;
+}

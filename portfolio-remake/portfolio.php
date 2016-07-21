@@ -46,17 +46,22 @@
         </div>
 
         <!-- page content goes in this container -->
-        <div class="off-canvas-content body-content home" data-off-canvas-content>
+        <div class="off-canvas-content body-content portfolio" data-off-canvas-content>
           <div class="row">
-            <div class="large-8 large-push-2 heading">
-              <h1 class="small-title show-for-small-only">David Duffy</h1>
-              <div class="subheading">
-                <h2>Howdy!</h2>
-                <p>I'm <span class="show-for-medium">David Duffy,</span> a web designer and developer.</p>
-                <p>I love creative problem solving and challenging myself. I like to be a difference-maker.</p>
-              </div>
-              <div class="circle-gen show-for-large">
-                <?php include './incl/_circlediv.php';?>
+            <div class="large-12">
+              <div class="portfolio-card">
+                <div class="card image">
+                    <img src="//i.imgur.com/vEZypaN.png">
+                </div>
+                <div class="card underline">
+                    <span>&nbsp;</span>
+                </div>
+                <div class="card card-button">
+                    <span>Button Link</span>
+                </div>
+                <div class="card description">
+                    <span>Caramels cake gingerbread jujubes sweet donut jelly beans bonbon chocolate bar.<br><br><a href="#">See it ></a></span>
+                </div>
               </div>
             </div>
           </div>

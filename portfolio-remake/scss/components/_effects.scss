@@ -1,5 +1,50 @@
+
+// circleDivider
 // ===============================
-// Effects: Animations and things
+.circleGen-header {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    p:last-child {
+        color: $medium-gray;
+    }
+    :nth-child(n){
+        margin-bottom: 1rem;
+    }
+}
+.circleGen-container {
+  width:800px;
+  height:400px;
+  clear:both;
+  .outer-box {
+    height: 100%;
+  }
+  div {
+    width: 50%;
+    height: 50%;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+.parent {
+  border-radius: 0px;
+  background: none!important; /* may need !important */
+  overflow: visible;
+}
+.leaf {
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.50);
+}
+.right {
+  float: right;
+}
+.inter > .leaf:nth-child(4)
+ {
+  background-color: $color-primary;
+}
+
+// Fade in down/Fade out up
 // ===============================
 
 .fade-in {
@@ -65,6 +110,18 @@
     animation-duration: .6s;
     -webkit-animation-delay: .1s;
     animation-delay: .1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.fade-out-up-delay {
+    opacity: 1;
+    -webkit-animation-name: fade-out-up;
+    animation-name: fade-out-up;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -146,4 +203,29 @@
     88%   {left:.86px; top:.65px;}
     94%   {left:1.56px; top:-1.67px;transform:scale(1.1);}
     100%  {left:0px; top:0px;}
+}
+
+// Underline For Links
+// ===============================
+.nav-underline {
+    position: relative;
+}
+.nav-underline:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -3px;
+    background: $color-primary;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.nav-underline:hover:before {
+    right: 0;
 }

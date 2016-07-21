@@ -1,7 +1,8 @@
 .body-content {
     min-height: calc(100vh - 40px);
     @include breakpoint(medium){
-        min-height: calc(100vh - 54px);
+        min-height: initial;
+        overflow: hidden;
     }
 }
 
@@ -11,12 +12,15 @@
 
 .home {
     .heading {
-        margin-top: 20vh;
+        margin-top: 10vh;
     }
     .subheading {
         padding: .6rem 2.6rem;
+        @include breakpoint(medium){
+            padding: 0;
+        }
     }
-    h1 {
+    .small-title {
         font-family: $font-family-sans-serif;
         background-color: $color-primary;
         padding: 0 .5rem 0 2.5rem;
@@ -26,11 +30,90 @@
         font-weight: 700;
         letter-spacing: -.9px;
         text-transform: uppercase;
+        @include breakpoint(medium){
+            font-weight:300;
+        }
     }
     h2,
     p:nth-child(2) {
         font-weight: bold
     }
+}
 
+// Portfolio Tiles
+// ===============
 
+.portfolio-card {
+    font-family: sans-serif;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background-color: rgba(250, 141, 40, .55);
+    font-size: 1.4rem;
+    transition: .15s ease-in-out;
+}
+.card {
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    mix-blend-mode: screen;
+}
+
+.card span {
+    color: white;
+    align-self: center;
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    border: 1px solid rgba(255,255,255,1);
+    padding: .4rem 2rem;
+    transition: .35s ease-in-out;
+}
+
+.card.description span {
+    border: initial;
+    font-size: .8rem;
+    margin-top: 10rem;
+    opacity: 0;
+    width: 80%;
+    display: block;
+}
+
+.card.underline span {
+    border: initial;
+    border-bottom: 1px solid white;
+}
+
+.card a {
+    color: white;
+}
+.portfolio-card:hover {
+    background-color: rgba(0,0,0,.9);
+}
+.portfolio-card:hover .card.card-button span {
+    border-color: rgba(255,255,255,0);
+}
+
+.portfolio-card:hover .card.underline span {
+    width: 10%;
+}
+.portfolio-card:hover .card.description > *{
+    opacity: 1;
+}
+
+.portfolio-card:hover .card.underline > *,
+.portfolio-card:hover .card.card-button > *,
+.portfolio-card:hover .card.description > *{
+    transform: translate(0, -20px);
 }

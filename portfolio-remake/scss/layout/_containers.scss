@@ -12,28 +12,29 @@
 
 // All Pages
 // =========
-
-.heading {
-    margin-top: 10vh;
-}
-.subheading {
-    padding: .6rem 2.6rem;
-    @include breakpoint(medium){
-        padding: 0;
+.home {
+    .heading {
+        margin-top: 10vh;
     }
-}
-.small-title {
-    font-family: $font-family-sans-serif;
-    background-color: $color-primary;
-    padding: 0 .5rem 0 2.5rem;
-    display: inline-block;
-    color: $white;
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: -.9px;
-    text-transform: uppercase;
-    @include breakpoint(medium){
-        font-weight:300;
+    .subheading {
+        padding: .6rem 2.6rem;
+        @include breakpoint(medium){
+            padding: 0;
+        }
+    }
+    .small-title {
+        font-family: $font-family-sans-serif;
+        background-color: $color-primary;
+        padding: 0 .5rem 0 2.5rem;
+        display: inline-block;
+        color: $white;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -.9px;
+        text-transform: uppercase;
+        @include breakpoint(medium){
+            font-weight:300;
+        }
     }
 }
 
@@ -48,7 +49,7 @@
 }
 
 .portfolio {
-    .heading {
+    .content {
         margin-bottom: 5vh;
     }
 }
@@ -91,7 +92,7 @@
         height: 25%;
         border: 1px solid;
         padding: .42rem 2rem;
-        transition: .35s ease-in-out;
+        transition: all .35s ease-in-out;
         @include breakpoint(medium){
             width: 50%;
         }
@@ -124,6 +125,7 @@
         opacity: 0;
         width: 90%;
         display: block;
+        a:hover {text-decoration: underline}
         @include breakpoint(medium){
             width: 70%;
         }
@@ -154,6 +156,7 @@
     }
     .card.underline span {
         width: 22%;
+        height: 17%;
     }
     .card.description > *{
         opacity: 1;
@@ -161,7 +164,7 @@
     & .card.underline > *,
     & .card.card-button > *,
     & .card.description > *{
-        transform: translate(0, -40px);
+        transform: translate(0, -60px);
     }   
 }
 
@@ -179,6 +182,9 @@
     }
 }
 .card-3 {
+    &:hover span {
+        color: $white;
+    }
     span {
         color: $black;
     }

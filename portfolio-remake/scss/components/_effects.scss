@@ -229,3 +229,16 @@
 .nav-underline:hover:before {
     right: 0;
 }
+
+// Comment Slash
+// =============
+
+.comment {
+    position: relative;
+    margin-left: 3.6rem;
+}
+.comment::before {
+    content: "//";
+    position: absolute;
+    left: -3.6rem;
+}

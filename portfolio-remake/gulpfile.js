@@ -1,5 +1,7 @@
-var gulp = require('gulp');
-var $    = require('gulp-load-plugins')();
+var gulp = require('gulp')
+  , $    = require('gulp-load-plugins')()
+  , maps = require('gulp-sourcemaps');
+
 
 var sassPaths = [
   'bower_components/foundation-sites/scss',
@@ -8,6 +10,7 @@ var sassPaths = [
 
 gulp.task('sass', function() {
   return gulp.src('scss/app.scss')
+    .pipe(maps.init({loadmaps:true}))
     .pipe($.sass({
       includePaths: sassPaths,
       outputStyle: 'compressed' // if css compressed **file size**
@@ -16,6 +19,7 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
+    .pipe(maps.write('./')) 
     .pipe(gulp.dest('css'));
 });
 

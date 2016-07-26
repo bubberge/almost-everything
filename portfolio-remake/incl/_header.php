@@ -37,9 +37,9 @@
             </div>
             <div class="top-bar-right">
               <ul class="dropdown menu" data-dropdown-menu>
-                <li><a class="nav-underline" href="about.php">About</a></li>
-                <li><a class="nav-underline" href="portfolio.php">Portfolio</a></li>
-                <li><a class="nav-underline" href="contact.php">Contact</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'About') echo 'active'; ?>" href="about.php">About</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'Portfolio') echo 'active'; ?>" href="portfolio.php">Portfolio</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'Contact') echo 'active'; ?>" href="contact.php">Contact</a></li>
               </ul>
             </div>
           </div>

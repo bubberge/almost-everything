@@ -245,3 +245,50 @@
     position: absolute;
     left: -3.6rem;
 }
+
+// Scroll Fill (About)
+// ===================
+
+.about.content {
+    background-color: $black;
+    transition: background-color .4s ease-in-out;
+    &.gray {
+        background-color: $medium-gray;
+    }
+    &.orange {
+        background-color: $color-primary;
+    }
+    .scrollFill {
+        height: 400px;
+        position: relative;
+        background: white;
+        mix-blend-mode: screen;
+        clear: left;
+    }
+    img {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+    }
+    .scrollFill:after {
+        content: '';
+        position: absolute;
+        z-index: 3;
+        display: block;
+        width: 5px;
+        height: 250px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: black;
+        background-blend-mode: screen;
+    }
+    .scrollFill.omega:after {
+        height: 0px;
+    }
+    .scrollContent {
+        background-color: white;
+        height: 400px;
+    }
+}

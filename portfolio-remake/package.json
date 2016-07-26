@@ -4,11 +4,15 @@
   "description": "Basic template for a new Foundation for Sites project.",
   "main": "gulpfile.js",
   "devDependencies": {
+    "del": "^2.2.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4"
   },
   "scripts": {
     "start": "gulp",

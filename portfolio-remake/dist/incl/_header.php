@@ -12,9 +12,9 @@
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
         <!-- off-canvas title bar for 'small' screen -->
-        <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
+        <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <div class="title-bar-right">
-            <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+            <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
           </div>
         </div>
 
@@ -28,7 +28,7 @@
         </div>
 
         <!-- "wider" top-bar menu for 'medium' and up -->
-        <div id="widemenu" class="top-bar">
+        <div id="widemenu" class="top-bar show-for-medium">
           <div class="row">
             <div class="top-bar-left">
               <ul class="menu">

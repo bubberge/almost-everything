@@ -28,7 +28,7 @@
         </div>
 
         <!-- "wider" top-bar menu for 'medium' and up -->
-        <div id="widemenu" class="top-bar">
+        <div id="widemenu" class="top-bar show-for-medium">
           <div class="row">
             <div class="top-bar-left">
               <ul class="menu">

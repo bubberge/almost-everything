@@ -13,6 +13,11 @@
 
         <!-- off-canvas title bar for 'small' screen -->
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
+          <?php if ($pageTitle) : ?>
+          <div class="title-bar-left">
+            <h1 class="comment"><?php echo $pageTitle ?></h1>
+          </div>
+          <?php endif; ?>
           <div class="title-bar-right">
             <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
           </div>
@@ -48,6 +53,6 @@
         <?php if ($pageTitle): ?>
         <div class="off-canvas-content body-content portfolio" data-off-canvas-content>
           <div class="row heading">
-            <h1 class="comment"><?php echo $pageTitle ?></h1>
+            <h1 class="comment show-for-large"><?php echo $pageTitle ?></h1>
           </div>
           <?php endif ?>

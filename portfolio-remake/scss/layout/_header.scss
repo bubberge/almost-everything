@@ -1,3 +1,13 @@
+// header on small
+.title-bar {
+    padding: .25rem;
+    color: $black;
+    &-right {
+        margin: .2rem;
+    }
+}
+
+// header on medium up
 .top-bar {
     padding-top: 0;
 }

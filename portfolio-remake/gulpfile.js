@@ -61,6 +61,6 @@ gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined depe
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass','minify-scripts'], function() {
+gulp.task('default', ['sass'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
 });

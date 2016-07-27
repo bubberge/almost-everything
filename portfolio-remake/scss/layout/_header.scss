@@ -10,6 +10,9 @@
 // header on medium up
 .top-bar {
     padding-top: 0;
+    position: relative;
+    z-index: 1;
+    background-color: $white;
 }
 .top-bar-left {
     background-color: $color-primary;

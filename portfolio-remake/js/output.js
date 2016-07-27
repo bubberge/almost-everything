@@ -19255,7 +19255,7 @@ function scrollTracker(e) {
         $content.removeClass('orange');
     }
 }
-console.log('script.js');
+console.log('new script.js');
 
 $(document).ready(function(){
     wind.scroll( function(){ 

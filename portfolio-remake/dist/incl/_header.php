@@ -53,6 +53,6 @@
         <?php if ($pageTitle): ?>
         <div class="off-canvas-content body-content portfolio" data-off-canvas-content>
           <div class="row heading">
-            <h1 class="comment"><?php echo $pageTitle ?></h1>
+            <h1 class="comment show-for-large"><?php echo $pageTitle ?></h1>
           </div>
           <?php endif ?>

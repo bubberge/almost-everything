@@ -262,7 +262,6 @@
 }
 .about.content {
     background-color: $black;
-    transition: background-color .4s ease-in-out;
     position: relative;
     z-index: 0;
     &:before {
@@ -274,14 +273,15 @@
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        height: 65vh;
+        height: 60vh;
         z-index: -1;
         background-color: purple;
+        transition: background-color .4s ease-in-out;
     }
-    &.gray {
+    &.gray:before {
         background-color: $medium-gray;
     }
-    &.orange {
+    &.orange:before {
         background-color: $color-primary;
     }
     .scrollFill {

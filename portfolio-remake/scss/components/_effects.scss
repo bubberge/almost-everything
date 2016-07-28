@@ -261,7 +261,7 @@
     padding-bottom: 6rem;
 }
 .about.content {
-    background-color: $black;
+    background-color: $light-gray;
     position: relative;
     z-index: 0;
     &:before {
@@ -275,14 +275,16 @@
         transform: translateX(-50%);
         height: 60vh;
         z-index: -1;
-        background-color: purple;
         transition: background-color .4s ease-in-out;
     }
-    &.gray:before {
-        background-color: $medium-gray;
+    &._1_lw:before {
+        background-color: purple;
     }
-    &.orange:before {
-        background-color: $color-primary;
+    &._2_uw:before {
+        background-color: #4B2E84;
+    }
+    &._3_jh:before {
+        background-color: #B22222;
     }
     .scrollFill {
         height: 400px;
@@ -293,8 +295,8 @@
     }
     img {
         display: block;
-        width: 150px;
-        margin: 0 auto;
+        width: 12rem;
+        margin: -3px auto 0;
     }
     .scrollFill:after {
         content: '';
@@ -302,7 +304,7 @@
         z-index: 3;
         display: block;
         width: 5px;
-        height: 250px;
+        height: 216px;
         left: 0;
         right: 0;
         bottom: 0;

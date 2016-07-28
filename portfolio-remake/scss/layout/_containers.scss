@@ -38,7 +38,7 @@
     }
 }
 
-// Specific Pages
+// Home
 // ==============
 
 .home {
@@ -48,14 +48,15 @@
     }
 }
 
+
+
+// Portfolio
+// ===============
 .portfolio {
     .content {
         margin-bottom: 5vh;
     }
 }
-
-// Portfolio Tiles
-// ===============
 
 .portfolio-card {
     font-family: sans-serif;
@@ -196,8 +197,28 @@
     }
 }
 
-// Contact Page
-// ============
+// About
+// =====
+
+.about {
+    
+    .scrollContent {
+        h2 {
+            margin-top: 1.6rem;
+            font-size: 2rem;
+        }
+        p,
+        span {
+            font-family: "Open Sans", sans-serif;
+        }
+        &>span {
+            display: block;
+        }
+    }
+}
+
+// Contact
+// =======
 
 .contact {
     label > span {

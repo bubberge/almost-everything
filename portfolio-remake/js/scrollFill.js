@@ -2,6 +2,7 @@
 
 var wind = $(window)
     , $content = $('.about.content')
+    , $headHeight = $(document).height() - $content.height()
     , height = wind.height()
     , heightBumper = (height/2)
     , $scrollContent = $('.scrollContent')

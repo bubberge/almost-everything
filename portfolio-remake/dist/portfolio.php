@@ -15,7 +15,7 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>Give'r, an uncompromising brand that focuses on a few small group of flagship products. An e-Commerce funnel that delivers conversions.<br><br><a href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>Give'r, an uncompromising brand that focuses on a small group of flagship products. An e-Commerce funnel that delivers conversions.<br><br><a href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
               </div>
               <div class="card meta">
                 <span class="tech">Liquid<br>SCSS</span>

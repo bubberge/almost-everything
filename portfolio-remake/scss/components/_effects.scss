@@ -337,13 +337,19 @@
     }
     img {
         display: block;
-        width: 12rem;
+        width: 3.6rem;
         margin: 0 auto;
+        @include breakpoint(medium){
+            width: 12rem;
+        }
     }
     .scrollFill,
     .scrollContent {
-        height: 520px;
+        height: 460px;
         background-color: white;
+        @include breakpoint (medium){
+            height: 520px;
+        }
     }
     .scrollFill {
         position: relative;
@@ -355,8 +361,8 @@
         position: absolute;
         z-index: 3;
         display: block;
-        width: 3px;
-        height: 86%;
+        width: 2px;
+        height: 87.5%;
         left: 0;
         right: 0;
         bottom: 0;

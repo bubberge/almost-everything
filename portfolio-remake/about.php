@@ -3,7 +3,11 @@ $pageTitle = 'About';
 include 'incl/_header.php'; ?>
           <div class="row content about _1_lw">
             <div class="small-3 column scrollFill">
+              <div>
                 <img src="img/LW.png">
+              </div>
+              <div class="img-fill">
+              </div>
             </div>
             <div class="small-9 column scrollContent LW">
               <span class="show-for-medium">2002-2004</span>
@@ -52,7 +56,7 @@ include 'incl/_header.php'; ?>
             <div class="small-9 column scrollContent ME">
               <h2>On my own time</h2>
               <p>My mom taught me to always keep learning -- you never just "arrive." Webdev basically requires that mindset, so it's perfect.</p>
-              <span>See Portfolio</span>
+              <span><a href="index.php">See Portfolio</a></span>
             </div>
 
           </div>

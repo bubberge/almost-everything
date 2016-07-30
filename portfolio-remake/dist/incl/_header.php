@@ -26,6 +26,7 @@
         <!-- off-canvas right menu -->
         <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
           <ul class="vertical dropdown menu" data-dropdown-menu>
+            <?php if ( $pageTitle ) : ?><li class="show-for-small-only"><a href="index.php">Home</a></li><?php endif; ?>
             <li><a href="about.php">About</a></li>
             <li><a href="portfolio.php">Portfolio</a></li>
             <li><a href="contact.php">Contact</a></li>
@@ -51,7 +52,7 @@
         </div>
         <!-- page content goes in this container -->
         <?php if ($pageTitle): ?>
-        <div class="off-canvas-content body-content <?php echo $pageTitle?>" data-off-canvas-content>
+        <div class="off-canvas-content body-content <?php echo $pageTitle?> clearfix" data-off-canvas-content>
           <div class="row heading">
             <h1 class="comment show-for-large"><?php echo $pageTitle ?></h1>
           </div>

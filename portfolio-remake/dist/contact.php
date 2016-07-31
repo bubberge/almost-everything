@@ -56,7 +56,7 @@ include 'incl/_header.php'
         </div>
         <div>
             <label for="message">Message
-                <textarea id="message" name="message" placeholder="Testing to see if this actually works" aria-describedby="message for use in the contact form"></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="My hedgehog needs a website." aria-describedby="message for use in the contact form"></textarea>
                 <span class="form-error">
                       Well, if there's no message, what's the point?
                 </span>

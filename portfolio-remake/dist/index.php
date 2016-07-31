@@ -11,6 +11,11 @@ include 'incl/_header.php'; ?>
                 <p>I'm <span class="show-for-medium">David Duffy,</span> a web designer and developer.</p>
                 <p>I love creative problem solving and challenging myself. I like to be a difference-maker.</p>
               </div>
+              <ul class="subheading show-for-small-only vertical menu">
+                <li><a href="about.php">About</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
+                <li><a href="contact.php">Contact</a></li>
+              </ul>
               <div class="circle-gen show-for-large">
                 <?php include './incl/_circlediv.php';?>
               </div>

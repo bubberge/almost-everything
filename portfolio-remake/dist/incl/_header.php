@@ -20,12 +20,14 @@
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <?php if ($pageTitle) : ?>
           <div class="title-bar-left">
+            <span><a href="./index.php">DD</a></span>
             <h1 class="comment"><?php echo $pageTitle ?></h1>
           </div>
-          <?php endif; ?>
+          
           <div class="title-bar-right">
             <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
           </div>
+          <?php endif; ?>
         </div>
 
         <!-- off-canvas right menu -->

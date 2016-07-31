@@ -20,6 +20,7 @@
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <?php if ($pageTitle) : ?>
           <div class="title-bar-left">
+            <span><a href="./index.php">DD</a></span>
             <h1 class="comment"><?php echo $pageTitle ?></h1>
           </div>
           

@@ -1,6 +1,6 @@
 <?php
 
-    if (isset($_POST["submit"]) && $_POST['name']) {
+    if (isset($_POST["submit"])) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $website = $_POST['website'];
@@ -37,7 +37,7 @@ include 'incl/_header.php'
             <label for="name">Name
                 <input type="text" id="name" name="name" placeholder="Herb Derson" aria-describedby="name for use in contact form" required>
                 <span class="form-error">
-                    Yo, you had better fill this out, it's required.
+                    Yo, you gotta fill this out, it's required.
                 </span>
             </label>
         </div>
@@ -58,7 +58,7 @@ include 'incl/_header.php'
             <label for="message">Message
                 <textarea id="message" name="message" placeholder="Testing to see if this actually works" aria-describedby="message for use in the contact form"></textarea>
                 <span class="form-error">
-                      You gotta sent me a message, doo.
+                      Well, if there's no message, what's the point?
                 </span>
             </label>
         </div>

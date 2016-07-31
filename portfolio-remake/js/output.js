@@ -19826,8 +19826,6 @@ $(document).ready(function(){
 });
 
 
-$(document).foundation();
-
 var hoverSplits = true
   , $leaves = $('.leaf')
   , $results = $('.results')

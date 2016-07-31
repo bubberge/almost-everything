@@ -12,6 +12,11 @@
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
         <!-- off-canvas title bar for 'small' screen -->
+        <style>
+          @media only screen and (max-width:39.98em){
+            .title-bar {display:none;}
+          }
+        </style>
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <?php if ($pageTitle) : ?>
           <div class="title-bar-left">

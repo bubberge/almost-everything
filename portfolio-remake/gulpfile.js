@@ -17,7 +17,9 @@ var sassPaths = [
     'bower_components/what-input/what-input.js',
     'bower_components/foundation-sites/dist/foundation.js',
     'js/app.js',
-    'js/scrollFill.js'
+    'js/foundation.abide.js',
+    'js/scrollFill.js',
+    'js/circles.js'
   ];
 
 gulp.task('concat-scripts', function(){

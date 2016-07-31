@@ -56,7 +56,7 @@ include 'incl/_header.php'; ?>
             <div class="small-9 column scrollContent ME">
               <h2>On my own time</h2>
               <p>My mom taught me to always keep learning -- you never just "arrive." Webdev basically requires that mindset, so it's perfect.</p>
-              <span><a href="index.php">See Portfolio</a></span>
+              <span><a href="porfolio.php">See Portfolio</a></span>
             </div>
 
           </div>

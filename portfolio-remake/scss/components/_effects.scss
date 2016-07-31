@@ -221,11 +221,8 @@
     margin: auto;
     background: $color-primary;
     height: 1px;
-    -webkit-transition-property: width;
     transition-property: width;
-    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
 .nav-underline:hover:before,
@@ -260,12 +257,6 @@
     position: relative;
     z-index: 1;
 }
-.About .heading {
-    padding-bottom: 10rem;
-    @include breakpoint(medium){
-        padding-bottom: 12rem;
-    }
-}
 .about.content {
     background: $light-gray;
     position: relative;
@@ -286,14 +277,14 @@
         z-index: -1;
     }
     &:before {
-        height: 72vh;
+        min-height: calc(50vh + 192px);
         transition: background-color .4s ease-in-out;
         top: 0;
     }
     &:after{
-        height: 43.3vh;
+        height: 32vh;
         bottom: 0;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 66%);
+        background: $light-gray;
     }
     &._1_lw {
         &:before {

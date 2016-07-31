@@ -199,7 +199,12 @@
 
 // About
 // =====
-
+.About .heading {
+    padding-bottom: 10rem;
+    @include breakpoint(medium){
+        padding-bottom: 10vh;
+    }
+}
 .about {
     
     .scrollContent {

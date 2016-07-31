@@ -22,10 +22,11 @@
           <div class="title-bar-left">
             <h1 class="comment"><?php echo $pageTitle ?></h1>
           </div>
-          <?php endif; ?>
+          
           <div class="title-bar-right">
             <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
           </div>
+          <?php endif; ?>
         </div>
 
         <!-- off-canvas right menu -->

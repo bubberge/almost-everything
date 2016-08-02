@@ -16,19 +16,19 @@ function scrollTracker(e) {
         clearClasses($content);
         $content.addClass('_1_lw');
     }
-    if ( wind.scrollTop() > ($body*.18)-$header && wind.scrollTop() < ($body*.34)-$header ) {
+    if ( wind.scrollTop() > ($body*.18)-$header && wind.scrollTop() < ($body*.36)-$header ) {
         clearClasses($content);
         $content.addClass('_2_uw');
     }
-    if ( wind.scrollTop() > ($body*.35)-$header && wind.scrollTop() < ($body*.51)-$header ) {
+    if ( wind.scrollTop() > ($body*.37)-$header && wind.scrollTop() < ($body*.53)-$header ) {
         clearClasses($content);
         $content.addClass('_3_jh');
     }
-    if ( wind.scrollTop() > ($body*.52)-$header && wind.scrollTop() < $body*.66) {
+    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.71) {
         clearClasses($content);
         $content.addClass('_4_cc');
     }
-    if ( wind.scrollTop() > $body*.67) {
+    if ( wind.scrollTop() > $body*.72) {
         clearClasses($content);
         $content.addClass('_5_me');
     }

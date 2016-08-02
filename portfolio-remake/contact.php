@@ -21,6 +21,7 @@
     }
 
 $pageTitle = 'Contact';
+$pageBlurb = "Want to see what happens when an idea comes to life? Let's chat!";
 include 'incl/_header.php'
 ?>
 <div class="row">

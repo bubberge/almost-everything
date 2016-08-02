@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'About';
+$pageBlurb = 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit ...," which translates as';
 include 'incl/_header.php'; ?>
           <div class="row content about _1_lw">
             <div class="small-3 column scrollFill">
@@ -18,7 +19,11 @@ include 'incl/_header.php'; ?>
             </div>
 
             <div class="small-3 column scrollFill">
+                <div>
                 <img src="img/UW.png">
+              </div>
+              <div class="img-fill">
+              </div>
             </div>
             <div class="small-9 column scrollContent UW">
               <span class="show-for-medium">2006-2009</span>
@@ -29,7 +34,11 @@ include 'incl/_header.php'; ?>
             </div>
 
             <div class="small-3 column scrollFill">
-                <img src="img/JH.png">
+                <div>
+                  <img src="img/JH.png">
+                </div>
+                <div class="img-fill">
+                </div>
             </div>
             <div class="small-9 column scrollContent JH">
               <span class="show-for-medium">2009-2013</span>
@@ -40,7 +49,11 @@ include 'incl/_header.php'; ?>
             </div>
 
             <div class="small-3 column scrollFill">
+                <div>
                 <img src="img/CC.png">
+              </div>
+              <div class="img-fill">
+              </div>
             </div>
             <div class="small-9 column scrollContent CC">
               <span class="show-for-medium">2013-2016</span>
@@ -51,12 +64,13 @@ include 'incl/_header.php'; ?>
             </div>
 
             <div class="small-3 column scrollFill omega">
-                <img src="img/microphone.png">
+                <img src="img/ME.png">
             </div>
             <div class="small-9 column scrollContent ME">
               <h2>On my own time</h2>
+              <p>I think armor costumes are cool, so I made one. I once moved to Wyoming just to snowboard. I like doing things that other people think are hard.</p>
               <p>My mom taught me to always keep learning -- you never just "arrive." Webdev basically requires that mindset, so it's perfect.</p>
-              <span><a href="porfolio.php">See Portfolio</a></span>
+              <span><a href="portfolio.php">See Portfolio</a></span>
             </div>
 
           </div>

@@ -30,7 +30,7 @@ include 'incl/_header.php'; ?>
               <span class="year show-for-medium">2006-2009</span>
               <p>Spent my time at UW in the Jackson School of International Studies, focusing on the European Union and the French language</p>
               <span><span>European Studies:</span> learned about organizational super-structures, inheriting properties (laws)</span>
-              <span><span>French:</span> developed language-learning techniques.</span>
+              <span><span>French:</span> developed language-learning techniques</span>
             </div>
 
             <div class="small-3 column scrollFill">
@@ -44,8 +44,8 @@ include 'incl/_header.php'; ?>
               <h2>GoSkateShop, Super-Fit, JHSurgery.com</h2>
               <span class="year show-for-medium">2009-2013</span>
               <p>Worked for a guy that had a thing for starting e-Commerce stores. I ran everything for all of them, from answering customer service phone calls to helping with two site re-designs.</p>
-              <span><span>GoSkateShop:</span> Hands-on work with Flash, Adobe Creative Suite, e-Commerce management, and lots of customer service.</span>
-              <span><span>Super-Fit:</span> Did my first work with HTML and CSS, and minor development work WordPress.</span>
+              <span><span>GoSkateShop:</span> hands-on work with Flash, Adobe Creative Suite, e-Commerce management, and lots of customer service</span>
+              <span><span>Super-Fit:</span> first work with HTML and CSS, and minor development work WordPress</span>
             </div>
 
             <div class="small-3 column scrollFill">
@@ -59,8 +59,8 @@ include 'incl/_header.php'; ?>
               <h2>CrystalCommerce</h2>
               <span class="year show-for-medium">2013-2016</span>
               <p>Started as a customer service rep with big aspirations. Worked hard and moved into web design and development department, which I manage now.</p>
-              <span><span>Customer Service:</span> Refined that ever-important ability to explain technical subject matter to non-technical persons.</span>
-              <span><span>Management:</span> Learned to create clarity from ambiguity. Also, see above.</span>
+              <span><span>Customer Service:</span> refined that ever-important ability to explain technical subject matter to non-technical persons</span>
+              <span><span>Management:</span> learned to create clarity from ambiguity, best practices for communicating clear expectations</span>
             </div>
 
             <div class="small-3 column scrollFill omega">
@@ -68,9 +68,10 @@ include 'incl/_header.php'; ?>
             </div>
             <div class="small-9 column scrollContent ME">
               <h2>Outside Work</h2>
-              <span><span>Keep Learning:</span> Web development has so many disciplines, and it can be self-taught. I can't think of a better match.</span>
+              <p>I find that I am most proud of the things I accomplish while following these principles:</p>
+              <span><span>Keep Learning:</span> Web development has so many disciplines, and it can be self-taught. I can't think of a better combination for me.</span>
               <span><span>Spontaneity Can Be Good:</span> In 2009 I moved to Wyoming just to snowboard. Jobs I had there laid the groundwork for pursuing web develoment.</span>
-              <span><span>Be Yourself:</span> I think armor costumes are cool, so I made one.</span>
+              <span><span>Be Yourself:</span> I think armor costumes are cool, <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">so I made one.</a></span>
               <span><span>Shameless Self-Promotion:</span><a href="portfolio.php"> See Portfolio</a></span>
             </div>
 

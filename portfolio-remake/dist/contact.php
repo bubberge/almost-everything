@@ -8,7 +8,7 @@
         $message = wordwrap($message, 70, "\r\n");
         $from = 'Demo Contact Form'; 
         $to = 'daviduffy1@gmail.com'; 
-        $subject = 'Message from Contact Demo ';
+        $subject = 'Portfolio Site Contact Form Submission';
         $body ="From: $name\n E-Mail: $email\n Website: $website\n Message:\n $message";
         
 
@@ -21,6 +21,7 @@
     }
 
 $pageTitle = 'Contact';
+$pageBlurb = "Want to see what happens when an idea comes to life? <br class='show-for-large'>Let's chat!";
 include 'incl/_header.php'
 ?>
 <div class="row">

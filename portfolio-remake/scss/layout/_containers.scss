@@ -13,18 +13,15 @@
 // All Pages
 // =========
 .heading {
-    .blurb {
-        height: 3rem;
-        line-height: 1rem;
-        margin-top: 1rem;
-        @include breakpoint(medium){
-            margin-top: 0;
-            display: flex;
-            align-items: flex-end;
-        }
+    h1 {
+        margin-bottom: 0;
     }
-    span {
-        font-size: .8rem;
+    .blurb {
+        line-height: 1rem;
+        padding-left: 0;
+        span {
+            font-size: .8rem;
+        }
     }
 }
 
@@ -61,6 +58,12 @@
     }
 }
 
+@media (max-width: 767px) and (orientation: landscape) {
+    .subheading li {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}
 
 
 // Portfolio
@@ -220,9 +223,6 @@
     }
 }
 .about {
-    .blurb {
-        background-color: white;
-    }
     .scrollContent {
             @include breakpoint(medium){
                 margin-top: -1rem;
@@ -259,8 +259,8 @@
             top: -2rem;
         }
         a {
-            color: $dark-gray;
-            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.2);
+            color: $light-gray;
+            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.8);
         }
     }
     .img-fill {

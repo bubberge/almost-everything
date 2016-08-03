@@ -5,7 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Duffy | Web | Designer | Developer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
+    <meta name="description" content="A portfolio site created by David Duffy, a web designer and developer from Seattle, Washington."/>
     <link rel="stylesheet" href="css/app.css">
+    <link rel='shortcut icon' href='img/fav.ico' type='image/x-icon'/ >
   </head>
   <body>
     <div class="off-canvas-wrapper">
@@ -20,7 +22,10 @@
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <?php if ($pageTitle) : ?>
           <div class="title-bar-left">
-            <span><a href="./index.php">DD</a></span>
+            <span><a href="./index.php">
+              <span class="lettermark">D</span>
+              <span class="lettermark">D</span>
+            </a></span>
             <h1 class="comment"><?php echo $pageTitle ?></h1>
           </div>
           
@@ -62,7 +67,7 @@
         <div class="off-canvas-content body-content <?php echo $pageTitle?> clearfix" data-off-canvas-content>
           <div class="row heading">
             <h1 class="medium-2 columns comment show-for-medium"><?php echo $pageTitle ?></h1>
-            <p class="small-12 medium-9 blurb columns">
+            <p class="small-12 blurb columns">
               <span><?php echo $pageBlurb ?></span>
             </p>
           </div>

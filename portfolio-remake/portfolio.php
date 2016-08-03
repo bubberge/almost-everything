@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Portfolio';
-$pageBlurb = 'Right now I like simple, clean design. These sites from the past year exemplify that approach on a variety of platforms.';
+$pageBlurb = 'Right now I like simple, clean design. <br class="show-for-large">These sites from the past year exemplify that approach on a variety of platforms.';
 include 'incl/_header.php'; ?>
           <div class="row content portfolio">
             <div class="large-6 columns portfolio-card card-1">

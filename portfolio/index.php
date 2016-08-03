@@ -1,27 +1,27 @@
 <?php
 $pageTitle = '';
-
 include 'incl/_header.php'; ?>
-
-
-
-        <div class="row">
-          <div class="small-11 small-push-1 medium-9 medium-order-2 columns">
-            <header>
-
-            </header>
-          </div>
-
-          <div class="medium-3 show-for-medium medium-order-1 columns sticky-container" data-sticky-container>
-            <nav class="columns sticky" data-sticky data-options="marginTop:0;" data-sticky-on="large">
-              <?php include 'incl/_menu.php' ?>
-            </nav>
+        <!-- page content goes in this container -->
+        <div class="off-canvas-content body-content home" data-off-canvas-content>
+          <div class="row">
+            <div class="large-8 large-push-2 heading">
+              <h1 class="small-title show-for-small-only">David Duffy</h1>
+              <div class="subheading">
+                <h2>Howdy!</h2>
+                <p>I'm <span class="show-for-medium">David Duffy,</span> a web designer and developer.</p>
+                <p>I love creative problem solving and challenging myself. I like to be a difference-maker.</p>
+              </div>
+              <ul class="subheading show-for-small-only menu">
+                <li><a href="about.php">About</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
+                <li><a href="contact.php">Contact</a></li>
+              </ul>
+              <div class="circle-gen show-for-large">
+                <?php include './incl/_circlediv.php';?>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-
-
-<?php include 'incl/_footer.php' ?>
+      <!-- /page content  -->
+<?php include 'incl/_footer.php';  ?>

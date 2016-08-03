@@ -1,6 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
 
 body {
-    font-family: "open sans", helvetica, tahoma, sans-serif;
-    text-rendering: optimizelegibility;
+    letter-spacing: -.4px;
+}
+
+.off-canvas a {
+    color: $black;
+}
+
+a {
+    outline-color: $light-gray;
 }

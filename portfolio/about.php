@@ -70,8 +70,8 @@ include 'incl/_header.php'; ?>
               <h2>Outside Work</h2>
               <p>I get pretty bored if I'm not challenging myself with something new and difficult to focus on. The things I am proudest of all follow that mold.</p>
               <span><span>Snowboarding:</span>In 2009 I moved to Jackson, WY just to snowboard. Inadvertently, the jobs that I had there laid the groundwork for pursuing web develoment.</span>
-              <span><span>Halo Suit:</span>I think armor costumes are cool. Like a true DIY enthusiast, I watched about 2 minutes of a YouTube video and figured I could make one too. Surprisingly, <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">I did.</a></span>
-              <span><span>Web Develoment:</span>The world of webdev is basically endless, and it can be self-taught. It may seems strange, but it's actually a perfect match for me.</span>
+              <span><span>Halo Suit:</span>I think armor costumes are cool. Like a true DIY enthusiast, I watched about 2 minutes of a YouTube video and figured <br class="show-for-medium">I could make one too. Surprisingly, <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">I did.</a></span>
+              <span><span>Web Develoment:</span>The world of webdev is basically endless, and it can be self-taught. It may seem strange because web development is work for so many people, but it's actually a perfect match for me.</span>
               <span><span>If you read all of that,</span>It's probably time to look at<a href="portfolio.php"> my portfolio.</a></span>
             </div>
 

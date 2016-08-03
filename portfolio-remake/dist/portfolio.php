@@ -12,11 +12,11 @@ include 'incl/_header.php'; ?>
               <div class="card card-button">
                 <span>
                   <span>Give'r</span>
-                  <a href="http://www.give-r.com/"></a>
+                  <a class="show-for-small-only" href="http://www.give-r.com/"></a>
                 </span>
               </div>
               <div class="card description">
-                  <span>Give'r, an uncompromising brand that focuses on a small group of flagship products. An e-Commerce funnel that delivers conversions.<br><br><a href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>Give'r, an uncompromising brand that focuses on a small group of flagship products.<br><br><a href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
               </div>
               <div class="card meta">
                 <span class="tech">Liquid<br>SCSS</span>
@@ -36,7 +36,7 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
               <div class="card description">
-                  <span>A photographer that captures simple, natural photography. A fitting blog that doesn't get in the way.<br><br><a href="http://blog.amygalbraith.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>A photographer that captures simple, natural photography.<br><br><a href="http://blog.amygalbraith.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
               </div>
               <div class="card meta">
                 <span class="tech">PHP<br>jQuery</span>
@@ -56,10 +56,11 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>An up-and-coming visual production house with a unique selection of services. A site that oozes confidence.<br><br><a href="http://tandcentertainment.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>An up-and-coming visual production house with a unique selection of services.<br><br><a href="http://tandcentertainment.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
               </div>
               <div class="card meta">
                 <span class="tech">Bootstrap<br>Gulp</span>
+                <span class="platform">PHP</span>
               </div>
             </div>
             <div class="large-6 large-pull-6 columns portfolio-card card-3">

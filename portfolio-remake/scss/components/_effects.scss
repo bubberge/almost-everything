@@ -250,6 +250,7 @@
     .scrollContent {
         color: $medium-gray;
         transition: color .4s ease-in-out;
+        padding-right: 1rem;
     }
     &:before,
     &:after {

@@ -63,7 +63,7 @@ include 'incl/_header.php'
                 </span>
             </label>
         </div>
-        <input type="submit" id="submit" name="submit" class="button secondary small" value="Send Message"></a>
+        <input type="submit" id="submit" name="submit" class="button secondary" value="Send Message"></a>
     </form>
 </div>
 

@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
+div {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25); }
+
 .sticky-container ul.menu {
   padding-top: 45vh; }
   .sticky-container ul.menu a {
@@ -101,58 +106,6 @@ header {
 body {
   font-family: "open sans", helvetica, tahoma, sans-serif;
   text-rendering: optimizelegibility; }
-
-h1.name {
-  display: inline-block;
-  line-height: 0;
-  font-family: lato, helvetica, tahoma, sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 3rem;
-  letter-spacing: -.15rem;
-  margin-left: -2px; }
-
-.name span {
-  position: relative; }
-
-.name span:nth-child(1) {
-  color: #BF3F3F; }
-
-.name span:nth-child(2) {
-  color: #2C852C; }
-
-.name span:nth-child(3) {
-  color: #6b8; }
-
-.subheading span:first-child {
-  display: block; }
-
-.job {
-  line-height: 2rem; }
-
-.job span {
-  display: none; }
-
-.job-date,
-.job-title {
-  font-weight: 600; }
-
-.job-company,
-.school {
-  font-weight: 400;
-  font-size: .9rem;
-  padding: .6rem 0;
-  letter-spacing: -.3px; }
-
-.experience-content {
-  font-weight: 300; }
-
-@media screen and (min-width: 40em) {
-  .job-date,
-  .job-title,
-  .job span {
-    font-size: 1.5rem;
-    display: inline; } }
 
 .fade-in {
   opacity: 0; }

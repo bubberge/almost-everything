@@ -20,7 +20,7 @@ gulp.task('compile-scss',function(){
 
 gulp.task('concat-css',['compile-scss'], function(){
     return gulp.src([                      // specify sources for gulp 
-            'css/foundation.min.css',
+            'css/foundation.css',
             'css/style.css'])
         .pipe(concat('output.css')) // concat into file name
         .pipe(gulp.dest('css'));    // send that file to the css directory
@@ -62,7 +62,8 @@ gulp.task('clean', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch('./scss/**/*.scss',['minify-css'])
+    gulp.watch('./scss/**/*.scss',['minify-css']);
+    gulp.watch('./js/app.js',['minify-scripts']);
 });
 
 gulp.task('build', ['minify-scripts', 'minify-css'], function(){ // array defined dependencies, which are all run before the default task

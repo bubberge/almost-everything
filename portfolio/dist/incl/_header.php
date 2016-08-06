@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Duffy | Web | Designer | Developer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
-    <meta name="description" content="A portfolio site created by David Duffy, a web designer and developer from Seattle, Washington."/>
+    <title>David Duffy | daviduffy | Web Designer &amp; Developer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
+    <meta name="description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington."/>
     <link rel="stylesheet" href="css/app.css">
     <link rel='shortcut icon' href='img/fav.ico' type='image/x-icon'/ >
   </head>

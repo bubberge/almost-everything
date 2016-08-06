@@ -1,0 +1,26 @@
+.heading {
+    h1 {
+        margin-bottom: 0;
+    }
+    .blurb {
+        line-height: 1rem;
+        @include breakpoint(medium){
+            padding-left: 0;
+        }
+        span {
+            font-size: .8rem;
+        }
+    }
+}
+
+.body-content {
+    min-height: calc(100vh - 40px);
+    @include breakpoint(medium){
+        min-height: initial;
+        overflow: hidden;
+    }
+}
+
+.off-canvas-content, .off-canvas-content {
+    box-shadow: initial;
+}

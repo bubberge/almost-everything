@@ -1,0 +1,167 @@
+.portfolio {
+    .content {
+        margin-bottom: 5vh;
+    }
+}
+
+.portfolio-card {
+    font-family: sans-serif;
+    height: 360px;
+    position: relative;
+    font-size: 1.4rem;
+    transition: .15s ease-in-out;
+    padding: 0;
+    z-index: 1;
+}
+@include breakpoint (medium down){
+    .portfolio-card {
+        background-color: rgba(90,90,90,.9);
+        .card.card-button span {
+            border-color: rgba(255,255,255,0);
+        }
+        .card.underline span {
+            width: 22%;
+            height: 17%;
+        }
+        .card.description > *{
+            opacity: 1;
+        }
+        & .card.underline > *,
+        & .card.card-button > *,
+        & .card.description > *{
+            transform: translate(0, -60px);
+        }
+    }   
+}
+.card {
+    color: $white;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card.image{
+    mix-blend-mode: screen;
+    background-size: cover!important;
+    opacity: .35;
+}
+.card {
+    a {
+        color: inherit;
+    }
+    &>span {
+        color: inherit;
+        display: inline-block;
+        text-align: center;
+        width: 70%;
+        height: 25%;
+        border: 1px solid;
+        padding: .42rem 1.8rem;
+        transition: all .35s ease-in-out;
+        @include breakpoint(medium){
+            width: 50%;
+        }
+    }
+    &.card-button {
+        &>span {
+            z-index: 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            bottom:0;
+            right:0;
+            left:0;
+        }
+    }
+    &.underline span {
+        border: initial;
+        border-bottom: 1px solid;
+    }
+    &.description span {
+        z-index: 3;
+        border: initial;
+        font-size: 1rem;
+        margin-top: 11.4rem;
+        opacity: 0;
+        width: 90%;
+        display: block;
+        a:hover {text-decoration: underline}
+        @include breakpoint(medium){
+            width: 70%;
+        }
+    }
+    //.meta
+    .tech,
+    .platform {
+        font-size: 1rem;
+        opacity: 1 ;
+        border: none;
+        position: absolute;
+        top: 0;
+        width: initial;
+        padding: .2rem .8rem;
+    }
+    .tech {
+        left: 0;
+        text-align: left;
+    }
+    .platform {
+        right: 0;
+    }
+}
+
+@include breakpoint(medium){
+    .portfolio-card:hover {
+        background-color: rgba(90,90,90,.9);
+        .card.card-button span {
+            border-color: rgba(255,255,255,0);
+        }
+        .card.underline span {
+            width: 22%;
+            height: 17%;
+        }
+        .card.description > *{
+            opacity: 1;
+        }
+        & .card.underline > *,
+        & .card.card-button > *,
+        & .card.description > *{
+            transform: translate(0, -60px);
+        }   
+    }
+}
+
+
+.card-1 {
+    background-color: rgba(120,120,120,.75);
+    .card.image {
+        background: url("../img/give-r-ecommerce-1.jpg") no-repeat center;
+    }
+}
+.card-2 {
+    background-color: rgba(250, 141, 40, .55);
+    .card.image {
+        background: url("../img/amy-galbraith-blog-1.jpg") no-repeat center;
+    }
+}
+.card-3 {
+    &:hover span {
+        color: $white;
+    }
+    span {
+        color: $black;
+    }
+}
+.card-4 {
+    background-color: rgba(190,190,190,.75);
+    .card.image {
+        background: url("../img/t-and-c-entertainment-1.jpg") no-repeat center;
+    }
+}

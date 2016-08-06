@@ -1,0 +1,14 @@
+.contact {
+    label > span {
+        color: $color-primary;
+    }
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        padding: .33rem;
+    }
+    form > * {
+        margin: 1rem 0;
+    }
+}

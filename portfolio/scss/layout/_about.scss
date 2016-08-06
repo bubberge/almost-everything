@@ -1,0 +1,53 @@
+.About .heading {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+    @include breakpoint(medium){
+        padding-top: initial;
+    }
+}
+.about {
+    .scrollContent {
+            @include breakpoint(medium){
+                margin-top: -1rem;
+            }
+        h2 {
+            font-size: 1.6rem;
+            @include breakpoint(medium){
+                margin-top: .5rem;
+                font-size: 2rem;
+                border-bottom: 1px solid $light-gray;
+            }
+        }
+        p,
+        span {
+            font-family: "Open Sans", sans-serif;
+        }
+        &>span {
+            display: block;
+            font-size: .8rem;
+            &>span {
+                font-weight: bold;
+                display: block;
+            }
+        }
+        p {
+            font-size: .9rem;
+            @include breakpoint(medium){
+                font-size: 1rem;
+            }
+        }
+        .year {
+            float: right;
+            position: relative;
+            top: -2rem;
+        }
+        a {
+            color: $light-gray;
+            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.8);
+        }
+    }
+    .img-fill {
+        background: url('../img/SIS.png') center/contain repeat-y;
+        height: 100%;
+    }
+}

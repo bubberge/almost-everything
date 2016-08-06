@@ -1,0 +1,39 @@
+.home {
+    h2,
+    p:nth-child(2) {
+        font-weight: bold
+    }
+    .heading {
+        margin-top: 10vh;
+    }
+    .subheading {
+        padding: .6rem 2.6rem;
+        @include breakpoint(medium){
+            padding: 0;
+        }
+    }
+    .small-title {
+        font-family: $font-family-sans-serif;
+        background-color: $color-primary;
+        padding: 0 .5rem 0 2.5rem;
+        display: inline-block;
+        color: $white;
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -.9px;
+        text-transform: uppercase;
+        @include breakpoint(medium){
+            font-weight:300;
+        }
+    }
+    li {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    .subheading li {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}

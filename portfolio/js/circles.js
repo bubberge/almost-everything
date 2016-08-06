@@ -28,7 +28,7 @@ var splitter = function(){
     , $parent = $this.parent() 
     ; 
   
-  if (totalCircles == 302) {
+  if (totalCircles > 302) {
     $toggleButton.addClass('fade-in-down');
   }
   

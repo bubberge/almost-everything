@@ -12,9 +12,9 @@ include 'incl/_header.php'; ?>
                 <p>I love creative problem solving and challenging myself. I like to be a difference-maker.</p>
               </div>
               <ul class="subheading show-for-small-only menu">
-                <li><a href="about.php">About</a></li>
-                <li><a href="portfolio.php">Portfolio</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li><a href="contact">Contact</a></li>
               </ul>
               <div class="circle-gen show-for-large">
                 <?php include './incl/_circlediv.php';?>

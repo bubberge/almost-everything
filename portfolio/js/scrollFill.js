@@ -35,10 +35,9 @@ function scrollTracker(e) {
 }
 
 // do things
-console.log('new script.js');
 $(document).ready(function(){
     wind.scroll( function(){ 
-        console.log('scroll');
+        //console.log('scroll');
         scrollTracker();
     });
 });

@@ -76,7 +76,7 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>Work with me to create a site that captures your audience and positions you for success.<br><br><a href="contact.php">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>Work with me to create a site that captures your audience and positions you for success.<br><br><a href="contact">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
               </div>
             </div>
           </div>

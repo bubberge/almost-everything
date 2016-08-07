@@ -22,7 +22,7 @@
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
           <?php if ($pageTitle) : ?>
           <div class="title-bar-left">
-            <span><a href="./index.php">
+            <span><a href="index">
               <span class="lettermark">D</span>
               <span class="lettermark">D</span>
             </a></span>
@@ -38,10 +38,10 @@
         <!-- off-canvas right menu -->
         <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
           <ul class="vertical dropdown menu" data-dropdown-menu>
-            <?php if ( $pageTitle ) : ?><li class="show-for-small-only"><a href="index.php">Home</a></li><?php endif; ?>
-            <li><a href="about.php">About</a></li>
-            <li><a href="portfolio.php">Portfolio</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <?php if ( $pageTitle ) : ?><li class="show-for-small-only"><a href="index">Home</a></li><?php endif; ?>
+            <li><a href="about">About</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li><a href="contact">Contact</a></li>
           </ul>
         </div>
 
@@ -50,14 +50,14 @@
           <div class="row">
             <div class="top-bar-left">
               <ul class="menu">
-                <li><a href="index.php"><span>David </span>Duffy</a></li>
+                <li><a href="index"><span>David </span>Duffy</a></li>
               </ul>
             </div>
             <div class="top-bar-right">
               <ul class="dropdown menu" data-dropdown-menu>
-                <li><a class="nav-underline <?php if ($pageTitle == 'About') echo 'active'; ?>" href="about.php">About</a></li>
-                <li><a class="nav-underline <?php if ($pageTitle == 'Portfolio') echo 'active'; ?>" href="portfolio.php">Portfolio</a></li>
-                <li><a class="nav-underline <?php if ($pageTitle == 'Contact') echo 'active'; ?>" href="contact.php">Contact</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'About') echo 'active'; ?>" href="about">About</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'Portfolio') echo 'active'; ?>" href="portfolio">Portfolio</a></li>
+                <li><a class="nav-underline <?php if ($pageTitle == 'Contact') echo 'active'; ?>" href="contact">Contact</a></li>
               </ul>
             </div>
           </div>

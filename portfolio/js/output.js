@@ -19180,6 +19180,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 }(jQuery);
 
 $(document).foundation();
+$(document).ready(function(){
+    console.log('¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>');
+});
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19806,11 +19809,11 @@ function scrollTracker(e) {
         clearClasses($content);
         $content.addClass('_3_jh');
     }
-    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.71) {
+    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.67) {
         clearClasses($content);
         $content.addClass('_4_cc');
     }
-    if ( wind.scrollTop() > $body*.72) {
+    if ( wind.scrollTop() > $body*.68) {
         clearClasses($content);
         $content.addClass('_5_me');
     }

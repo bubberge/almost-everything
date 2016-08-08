@@ -264,13 +264,17 @@
         z-index: -1;
     }
     &:before {
-        height: calc(50vh + 192px);
+        height: 68vh;
         transition: background-color .4s ease-in-out;
         top: 0;
+        @include breakpoint(xlarge){
+            height: 70vh;
+        }
     }
     &:after{
         height: 32vh;
         bottom: 0;
+        z-index: -2;
         background: $light-gray;
     }
     &._1_lw {

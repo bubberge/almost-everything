@@ -66,9 +66,11 @@
         <?php if ($pageTitle): ?>
         <div class="off-canvas-content body-content <?php echo $pageTitle?> clearfix" data-off-canvas-content>
           <div class="row heading">
-            <h1 class="medium-2 columns comment show-for-medium"><?php echo $pageTitle ?></h1>
-            <p class="small-12 blurb columns">
-              <span><?php echo $pageBlurb ?></span>
-            </p>
+            <div class="column">
+              <h1 class="medium-2 columns comment show-for-medium"><?php echo $pageTitle ?></h1>
+              <p class="small-12 blurb columns">
+                <span><?php echo $pageBlurb ?></span>
+              </p>
+            </div>
           </div>
           <?php endif ?>

@@ -1,10 +1,13 @@
 /* jshint laxcomma:true */
 var hoverSplits = true
   , $leaves = $('.leaf')
-  , $results = $('.results')
+  , $created = $('.created>span')
+  , $destroyedScore = $('.score')
+  , $destroyedGoal = $('.goal')
   , $toggleButton = $('#toggle')
   , $resetButton = $('#reset')
   , $reverseText = $('#inReverse')
+  , destroyedScore = 0
   , totalCircles = $leaves.length
   , leavesTemplate = '<div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div>'
   , reverseTemplate = '<button id="reverse">Reverse</button>'
@@ -12,12 +15,16 @@ var hoverSplits = true
   , $container = $('.circleGen-container')
   ;
 
- var reverse = function(){
+var fadeIn = function(elem) {
+  elem.addClass('fade-in-down');
+};
+
+var reverse = function(){
   hoverSplits = !hoverSplits;
-  $reverseText.removeClass('hide');
-  $toggleButton.text('Reversed! Better hurry...');
-  $toggleButton.toggleClass('fade-in-down fade-out-up-delay');
-  console.log('var hoverSplits = ' + hoverSplits + '.');
+  $destroyedGoal.text('0.0%');
+  initTimer(Math.sqrt(totalCircles)*1600);
+  fadeIn($('.timer'));
+  fadeIn($('.destroyed'));
 };
 
 var reset = function(){
@@ -25,44 +32,50 @@ var reset = function(){
   $container.html( $startingTemplate );
   $leaves = $('.leaf');
   totalCircles = $leaves.length;
-  $results.text(totalCircles);
+  $created.text(totalCircles);
   $leaves.on('mouseover', splitter);
+  $destroyedScore.text('0');
+  $destroyedGoal.text('0.0%');
+  hoverSplits = true;
 };
 
 var splitter = function(){
   var $this = $(this)
-    , $parent = $this.parent() 
+    , $parent = $this.parent()
+    , destroyedPct = 0
     ; 
   
   if (totalCircles > 302) {
-    $toggleButton.addClass('fade-in-down');
+    fadeIn($toggleButton);
   }
   
   if ( hoverSplits ){
-    totalCircles += 4;
+    totalCircles += 3;
     $parent.removeClass('inter');  
     $this.addClass('parent inter').removeClass( 'leaf').append(leavesTemplate);  
-    $this.unbind('mouseover').find('.leaf').on('mouseover', splitter);  
+    $this.unbind('mouseover').find('.leaf').on('mouseover', splitter);
+    $created.text(totalCircles);
   } else if ($parent.hasClass('inter')){
-    totalCircles -= 4;
+    destroyedScore += 3;
     $parent.removeClass('inter parent').addClass('leaf');
     $parent.html('');
     $parent.parent().addClass('inter');
     $this.unbind('mouseover').find('.inter').on('mouseover', splitter);
+    destroyedPct = +((destroyedScore/totalCircles)*100).toFixed(1);
+    $destroyedGoal.text( destroyedPct + '%');
+    $destroyedScore.text(destroyedScore);
   }
-
-  $results.text(totalCircles);
 
 };
 
 function initTimer( circles ){
-    var timeLeft = circles*(100)
+    var timeLeft = circles
       , $minutes = $('.minutes')
       , $seconds = $('.seconds')
       , timeinterval = setInterval( function(){
         var t = getTimeRemaining( timeLeft );
         $minutes.html('0' + t.minutes).slice(-2);
-        $seconds.html('0' + t.seconds).slice(-2);
+        $seconds.html(('0' + t.seconds).slice(-2));
         timeLeft -= 1000;
         if(timeLeft<0){
             clearInterval(timeinterval); // stops timer

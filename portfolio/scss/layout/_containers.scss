@@ -18,7 +18,7 @@
     }
     .blurb {
         line-height: 1rem;
-        @include breakpoint(medium){
+        @include breakpoint(large){
             padding-left: 0;
         }
         span {
@@ -32,8 +32,8 @@
 
 .home {
     h2,
-    p:nth-child(2) {
-        font-weight: bold
+    .subheading {
+        font-weight: bold;
     }
     .heading {
         margin-top: 10vh;
@@ -42,6 +42,9 @@
         padding: .6rem 2.6rem;
         @include breakpoint(medium){
             padding: 0;
+        }
+        p:last-child {
+            font-weight: 300;
         }
     }
     .small-title {

@@ -4,7 +4,7 @@ include 'incl/_header.php'; ?>
         <!-- page content goes in this container -->
         <div class="off-canvas-content body-content home" data-off-canvas-content>
           <div class="row">
-            <div class="large-8 large-push-2 heading">
+            <div class="large-8 large-push-2 column heading">
               <h1 class="small-title show-for-small-only">David Duffy</h1>
               <div class="subheading">
                 <h2>Howdy!</h2>

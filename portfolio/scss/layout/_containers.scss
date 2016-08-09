@@ -37,6 +37,10 @@
     }
     .heading {
         margin-top: 10vh;
+        padding-left: 0;
+        @include breakpoint(medium){
+            padding-left: inherit;
+        }
     }
     .subheading {
         padding: .6rem 2.6rem;

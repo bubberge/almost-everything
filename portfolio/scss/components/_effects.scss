@@ -1,6 +1,11 @@
 
 // circleDivider
 // ===============================
+
+.circleGen {
+    margin-top: 2rem;
+}
+
 .circleGen-controls {
     font-weight: 300;
     display: flex;
@@ -373,5 +378,9 @@
     .scrollFill {
         mix-blend-mode: screen;
         clear: left;
+    }
+    .scrollFill.omega,
+    .scrollContent:last-child {
+        height: 520px;
     }
 }

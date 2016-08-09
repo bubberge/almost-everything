@@ -19867,6 +19867,7 @@ var reset = function(){
   $destroyedScore.text('0');
   $destroyedGoal.text('0.0%');
   hoverSplits = true;
+  destroyedScore = 0;
 };
 
 var splitter = function(){
@@ -19907,7 +19908,8 @@ function initTimer( circles ){
         $minutes.html('0' + t.minutes).slice(-2);
         $seconds.html(('0' + t.seconds).slice(-2));
         timeLeft -= 1000;
-        if(timeLeft<0){
+        if(timeLeft<=0){
+            $leaves.unbind('mouseover');
             clearInterval(timeinterval); // stops timer
         }
     },1000);

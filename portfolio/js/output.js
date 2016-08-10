@@ -19832,11 +19832,12 @@ $(document).ready(function(){
 var hoverSplits = true
   , $leaves = $('.leaf')
   , $created = $('.created>span')
-  , $destroyedScore = $('.score')
-  , $destroyedGoal = $('.goal')
+  , $destroyed = $('.score')
+  , $countdownGoal = $('.goal')
   , $toggleButton = $('#toggle')
-  , $resetButton = $('#reset')
+  , $resetButton = $('.reset')
   , $reverseText = $('#inReverse')
+  , $overlay = $('.circleGen-overlay')
   , destroyedScore = 0
   , totalCircles = $leaves.length
   , leavesTemplate = '<div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div>'
@@ -19851,7 +19852,7 @@ var fadeIn = function(elem) {
 
 var reverse = function(){
   hoverSplits = !hoverSplits;
-  $destroyedGoal.text('0.0%');
+  $countdownGoal.text('0.0%');
   initTimer(Math.sqrt(totalCircles)*1600);
   fadeIn($('.timer'));
   fadeIn($('.destroyed'));
@@ -19859,16 +19860,19 @@ var reverse = function(){
 
 var reset = function(){
   $leaves.unbind('mouseover');
+  var overlay = $overlay.detach();
   $container.html( $startingTemplate );
+  $container.prepend(overlay);
   $leaves = $('.leaf');
-  totalCircles = $leaves.length; //0
+  totalCircles = $leaves.length;
   $created.text(totalCircles);
   $leaves.on('mouseover', splitter);
   destroyedScore = 0;
-  $destroyedScore.text(destroyedScore);
   destroyedPct = 0;
-  $destroyedGoal.text('0.0%');
   hoverSplits = true;
+  $destroyed.text(destroyedScore);
+  $countdownGoal.text('0.0%');
+  $('.circleGen-overlay').removeClass('active');
 };
 
 var splitter = function(){
@@ -19894,38 +19898,39 @@ var splitter = function(){
     $parent.parent().addClass('inter');
     $this.unbind('mouseover').find('.inter').on('mouseover', splitter);
     destroyedPct = +((destroyedScore/totalCircles)*100).toFixed(1);
-    $destroyedGoal.text( destroyedPct + '%');
-    $destroyedScore.text(destroyedScore);
+    $countdownGoal.text( destroyedPct + '%');
+    $destroyed.text(destroyedScore);
   }
 
 };
 
-function initTimer( circles ){
-    var timeLeft = circles
-      , $minutes = $('.minutes')
-      , $seconds = $('.seconds')
-      , timeinterval = setInterval( function(){
-        var t = getTimeRemaining( timeLeft );
-        $minutes.html('0' + t.minutes).slice(-2);
-        $seconds.html(('0' + t.seconds).slice(-2));
-        timeLeft -= 1000;
-        if(timeLeft<=0){
-            $('.leaf').unbind('mouseover');
-            console.log('unbind leaves');
-            clearInterval(timeinterval); // stops timer
-        }
-    },1000);
+function initTimer(circles){
+  var timeLeft = circles
+    , $minutes = $('.minutes')
+    , $seconds = $('.seconds')
+    , timeinterval = setInterval( function(){
+      var t = getTimeRemaining( timeLeft );
+      $minutes.html('0' + t.minutes).slice(-2);
+      $seconds.html(('0' + t.seconds).slice(-2));
+      timeLeft -= 1000;
+      if(timeLeft<=0){
+          $('.leaf').unbind('mouseover');
+          $('.circleGen-overlay').addClass('active');
+          console.log('unbind leaves');
+          clearInterval(timeinterval); // stops timer
+      }
+  },1000);
 }
 
 var getTimeRemaining = function(input){
-    var t = input
-      , seconds = Math.floor( (t/1000) % 60 )
-      , minutes = Math.floor( (t/1000/60) % 60 )
-    ;
-    return {
-        'minutes': minutes,
-        'seconds': seconds
-    };
+  var t = input
+    , seconds = Math.floor( (t/1000) % 60 )
+    , minutes = Math.floor( (t/1000/60) % 60 )
+  ;
+  return {
+      'minutes': minutes,
+      'seconds': seconds
+  };
 };
 
 $leaves.on( 'mouseover', splitter );

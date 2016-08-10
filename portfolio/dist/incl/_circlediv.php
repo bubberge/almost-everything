@@ -15,11 +15,15 @@
                 <span class="minutes">00</span>:<span class="seconds">00</span>
             </span>
         </p>
-        <a id='toggle' class='toggleButton control-button fade-in'>Reverse</a>
-        <a id='reset' href='JavaScript:void(0)' class='control-button' title='resets the circleDiv doodle to its original state'>Reset</a>
+        <a id='toggle' href='JavaScript:void(0)' class='toggleButton control-button fade-in'>Reverse</a>
+        <a href='JavaScript:void(0)' class='reset control-button' title='resets the circleDiv doodle to its original state'>Reset</a>
     </div>
     <div class='medium-8 medium-pull-2 column'>
         <div class='circleGen-container'>
+        <span class="circleGen-overlay">
+            <span>Game Over</span>
+            <a href='JavaScript:void(0)' class='reset control-button' title='resets the circleDiv doodle to its original state'>Reset</a>
+        </span>
             <div class='outer-box leaf'>
             </div>
             <div class='outer-box right parent inter'>

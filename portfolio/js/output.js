@@ -19861,13 +19861,14 @@ var reset = function(){
   $leaves.unbind('mouseover');
   $container.html( $startingTemplate );
   $leaves = $('.leaf');
-  totalCircles = $leaves.length;
+  totalCircles = $leaves.length; //0
   $created.text(totalCircles);
   $leaves.on('mouseover', splitter);
-  $destroyedScore.text('0');
+  destroyedScore = 0;
+  $destroyedScore.text(destroyedScore);
+  destroyedPct = 0;
   $destroyedGoal.text('0.0%');
   hoverSplits = true;
-  destroyedScore = 0;
 };
 
 var splitter = function(){
@@ -19909,7 +19910,8 @@ function initTimer( circles ){
         $seconds.html(('0' + t.seconds).slice(-2));
         timeLeft -= 1000;
         if(timeLeft<=0){
-            $leaves.unbind('mouseover');
+            $('.leaf').unbind('mouseover');
+            console.log('unbind leaves');
             clearInterval(timeinterval); // stops timer
         }
     },1000);

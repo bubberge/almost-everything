@@ -10,23 +10,6 @@
     box-shadow: initial;
 }
 
-// All Pages
-// =========
-.heading {
-    h1 {
-        margin-bottom: 0;
-    }
-    .blurb {
-        line-height: 1rem;
-        @include breakpoint(large){
-            padding-left: 0;
-        }
-        span {
-            font-size: .8rem;
-        }
-    }
-}
-
 // Home
 // ==============
 
@@ -274,6 +257,7 @@
         height: 68vh;
         transition: background-color .4s ease-in-out;
         top: 0;
+        will-change: background-color;
         @include breakpoint(xlarge){
             height: 70vh;
         }

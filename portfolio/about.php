@@ -60,6 +60,7 @@ include 'incl/_header.php'; ?>
               <span class="year show-for-medium">2014-2016</span>
               <p>Started at the bottom a customer service rep. Worked hard, moved into web design and development department, where I am the manager now.</p>
               <span><span>Customer Service:</span> refined that ever-important ability to explain technical subject matter to non-technical persons</span>
+              <span><span>Design/Development:</span> went from 4th-grade reading level to fluent in HTML/SCSS and can do work with JS as well</span>
               <span><span>Management:</span> learned to do all I can to create clarity from ambiguity</span>
             </div>
 

@@ -10,6 +10,13 @@
     box-shadow: initial;
 }
 
+.heading .column {
+    @include breakpoint(medium){
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 // Home
 // ==============
 
@@ -161,7 +168,6 @@
 }
 .card.image{
     mix-blend-mode: screen;
-    background-size: cover!important;
     opacity: .35;
 }
 
@@ -190,27 +196,27 @@
 .card-1 {
     background-color: rgba(120,120,120,.75);
     .card.image {
-        background: url("../img/give-r-ecommerce-1.jpg") no-repeat center;
+        background: url("../img/give-r-ecommerce-1.jpg") no-repeat center/cover;
     }
 }
 .card-2 {
     background-color: rgba(250, 141, 40, .55);
     .card.image {
-        background: url("../img/amy-galbraith-blog-1.jpg") no-repeat center;
+        background: url("../img/amy-galbraith-blog-1.jpg") no-repeat center/cover;
     }
 }
 .card-3 {
-    &:hover span {
-        color: $white;
+    .card {
+        color: $black;
     }
-    span {
-        color: $black !important;
+    &:hover span{
+        color: $white;
     }
 }
 .card-4 {
     background-color: rgba(190,190,190,.75);
     .card.image {
-        background: url("../img/t-and-c-entertainment-1.jpg") no-repeat center;
+        background: url("../img/t-and-c-entertainment-1.jpg") no-repeat center/cover;
     }
 }
 

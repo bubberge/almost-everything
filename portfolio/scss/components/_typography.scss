@@ -12,13 +12,16 @@ a {
 }
 
 .heading {
-    h1 {
-        margin-bottom: 0;
+    font-size: .82rem;
+    & > .column {
+        padding: 0;
     }
     .blurb {
         line-height: 1rem;
+        margin-top: .8rem;
         @include breakpoint(large){
             padding-left: 0;
+            text-align: right;
         }
         span {
             font-size: .8rem;
@@ -92,7 +95,17 @@ a {
 
 // Portfolio
 // =========
-
+.portfolio-heading {
+    h2 {
+        font-size: 1.2rem;
+        @include breakpoint(medium){
+            font-size: 2rem;;
+        }
+    }
+    .comment {
+        line-height: 1;
+    }
+}
 .card {
     font-family: sans-serif;
     a {

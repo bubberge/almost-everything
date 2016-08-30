@@ -2,11 +2,11 @@ $duration       : .7s;
 $easing         : cubic-bezier(.56,.26,.37,.98);
 $color-map      : ( color-1: #FF6F00, color-2: #D37731, color-3: #A67F61, color-4: #7A8692, color-5: #4D8EC2, color-6: #2196F3 );
 
-@mixin animate-petal( $petal-class, $rev ){
-    animation: $petal-class $duration $easing $rev;
+@mixin animate-petal( $-petal-class, $-rev ){
+    animation: $-petal-class $duration $easing $-rev;
 }
-@mixin petal-open-rotation( $petal-num , $offset){
-    transform: rotateZ(($petal-num - 1) * 60deg + $offset);
+@mixin petal-open-rotation( $-petal-num , $-offset){
+    transform: rotateZ(($-petal-num - 1) * 60deg + $-offset);
 }
 
 [class^="flower"] {

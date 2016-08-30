@@ -1,10 +1,9 @@
 /* jshint laxcomma: true */
-/* use strict            */
 
 $(document).ready(function(){
     var $container = $('.flower')
-      , $leaves = $('.flower > *')
-      , $leaf = $('.flower > *:first-child')
+      , $leaves = $container.find('*')
+      , $leaf = $container.find('*:first-child')
       , $trigger = $('#trigger')
       ;
     

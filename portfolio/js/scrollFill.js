@@ -24,21 +24,20 @@ function scrollTracker(e) {
         clearClasses($content);
         $content.addClass('_3_jh');
     }
-    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.71) {
+    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.67) {
         clearClasses($content);
         $content.addClass('_4_cc');
     }
-    if ( wind.scrollTop() > $body*.72) {
+    if ( wind.scrollTop() > $body*.68) {
         clearClasses($content);
         $content.addClass('_5_me');
     }
 }
 
 // do things
-console.log('new script.js');
 $(document).ready(function(){
     wind.scroll( function(){ 
-        console.log('scroll');
+        //console.log('scroll');
         scrollTracker();
     });
 });

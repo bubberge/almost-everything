@@ -10,20 +10,10 @@
     box-shadow: initial;
 }
 
-// All Pages
-// =========
-.heading {
-    h1 {
-        margin-bottom: 0;
-    }
-    .blurb {
-        line-height: 1rem;
-        @include breakpoint(medium){
-            padding-left: 0;
-        }
-        span {
-            font-size: .8rem;
-        }
+.heading .column {
+    @include breakpoint(medium){
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -31,31 +21,17 @@
 // ==============
 
 .home {
-    h2,
-    p:nth-child(2) {
-        font-weight: bold
-    }
     .heading {
         margin-top: 10vh;
+        padding-left: 0;
+        @include breakpoint(medium){
+            padding-left: inherit;
+        }
     }
     .subheading {
         padding: .6rem 2.6rem;
         @include breakpoint(medium){
             padding: 0;
-        }
-    }
-    .small-title {
-        font-family: $font-family-sans-serif;
-        background-color: $color-primary;
-        padding: 0 .5rem 0 2.5rem;
-        display: inline-block;
-        color: $white;
-        font-size: 2.4rem;
-        font-weight: 700;
-        letter-spacing: -.9px;
-        text-transform: uppercase;
-        @include breakpoint(medium){
-            font-weight:300;
         }
     }
     li {
@@ -70,6 +46,65 @@
     }
 }
 
+// circleDivider
+// =============
+
+.circleGen {
+    margin-top: 2rem;
+}
+
+.circleGen-controls {
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.circleGen-container {
+    width:800px;
+    height:400px;
+    clear:both;
+        .outer-box {
+              height: 100%;
+        }
+    div {
+        width: 50%;
+        height: 50%;
+        float: left;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+
+.circleGen-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: rgba(255,255,255,.8);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &.active {
+        z-index: 10;
+    }
+}
+.parent {
+    border-radius: 0px;
+}
+.leaf {
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.50);
+}
+.right {
+    float: right;
+}
+.inter > .leaf:nth-child(4) {
+    background-color: $color-primary;
+}
+
 
 // Portfolio
 // ===============
@@ -80,10 +115,8 @@
 }
 
 .portfolio-card {
-    font-family: sans-serif;
     height: 360px;
     position: relative;
-    font-size: 1.4rem;
     transition: .15s ease-in-out;
     padding: 0;
     z-index: 1;
@@ -116,29 +149,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.card.image{
-    mix-blend-mode: screen;
-    background-size: cover!important;
-    opacity: .35;
-}
-.card {
-    a {
-        color: inherit;
-    }
-    &>span {
-        color: inherit;
-        display: inline-block;
-        text-align: center;
-        width: 70%;
-        height: 25%;
-        border: 1px solid;
-        padding: .42rem 1.8rem;
-        transition: all .35s ease-in-out;
-        @include breakpoint(medium){
-            width: 50%;
-        }
-    }
     &.card-button {
         &>span {
             z-index: 2;
@@ -155,41 +165,10 @@
             left:0;
         }
     }
-    &.underline span {
-        border: initial;
-        border-bottom: 1px solid;
-    }
-    &.description span {
-        z-index: 3;
-        border: initial;
-        font-size: 1rem;
-        margin-top: 11.4rem;
-        opacity: 0;
-        width: 90%;
-        display: block;
-        a:hover {text-decoration: underline}
-        @include breakpoint(medium){
-            width: 70%;
-        }
-    }
-    //.meta
-    .tech,
-    .platform {
-        font-size: 1rem;
-        opacity: 1 ;
-        border: none;
-        position: absolute;
-        top: 0;
-        width: initial;
-        padding: .2rem .8rem;
-    }
-    .tech {
-        left: 0;
-        text-align: left;
-    }
-    .platform {
-        right: 0;
-    }
+}
+.card.image{
+    mix-blend-mode: screen;
+    opacity: .35;
 }
 
 @include breakpoint(medium){
@@ -217,33 +196,39 @@
 .card-1 {
     background-color: rgba(120,120,120,.75);
     .card.image {
-        background: url("../img/give-r-ecommerce-1.jpg") no-repeat center;
+        background: url("../img/give-r-ecommerce-1.jpg") no-repeat center/cover;
     }
 }
 .card-2 {
     background-color: rgba(250, 141, 40, .55);
     .card.image {
-        background: url("../img/amy-galbraith-blog-1.jpg") no-repeat center;
+        background: url("../img/amy-galbraith-blog-1.jpg") no-repeat center/cover;
     }
 }
 .card-3 {
-    &:hover span {
-        color: $white;
-    }
-    span {
+    .card {
         color: $black;
+    }
+    &:hover span{
+        color: $white;
     }
 }
 .card-4 {
     background-color: rgba(190,190,190,.75);
     .card.image {
-        background: url("../img/t-and-c-entertainment-1.jpg") no-repeat center;
+        background: url("../img/t-and-c-entertainment-1.jpg") no-repeat center/cover;
     }
 }
 
-// About
-// =====
+// Scroll Fill (About)
+// ===================
+
+
+.title-bar,
 .About .heading {
+    background-color: $white;
+    position: relative;
+    z-index: 1;
     padding-top: 3rem;
     padding-bottom: 7rem;
     @include breakpoint(medium){
@@ -251,49 +236,111 @@
     }
 }
 .about {
+    background: $light-gray;
+    position: relative;
+    z-index: 0;
     .scrollContent {
-            @include breakpoint(medium){
-                margin-top: -1rem;
-            }
-        h2 {
-            font-size: 1.6rem;
-            @include breakpoint(medium){
-                margin-top: .5rem;
-                font-size: 2rem;
-                border-bottom: 1px solid $light-gray;
-            }
-        }
-        p,
-        span {
-            font-family: "Open Sans", sans-serif;
-        }
-        &>span {
-            display: block;
-            font-size: .8rem;
-            &>span {
-                font-weight: bold;
-                display: block;
-            }
-        }
-        p {
-            font-size: .9rem;
-            @include breakpoint(medium){
-                font-size: 1rem;
-            }
-        }
-        .year {
-            float: right;
-            position: relative;
-            top: -2rem;
-        }
-        a {
-            color: $light-gray;
-            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.8);
-        }
+        color: $medium-gray;
+        transition: color .4s ease-in-out;
+        padding-right: 1rem;
     }
     .img-fill {
         background: url('../img/SIS.png') center/contain repeat-y;
         height: 100%;
+    }
+    &:before,
+    &:after {
+        content: '';
+        position: fixed;
+        width: 100%;
+        max-width: 1170px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    &:before {
+        height: 68vh;
+        transition: background-color .4s ease-in-out;
+        top: 0;
+        will-change: background-color;
+        @include breakpoint(xlarge){
+            height: 70vh;
+        }
+    }
+    &:after{
+        height: 32vh;
+        bottom: 0;
+        z-index: -2;
+        background: $light-gray;
+    }
+    &._1_lw {
+        &:before {
+        background-color: purple;
+        }
+        .LW {
+            color: $black;
+        }
+    }
+    &._2_uw {
+        &:before {
+        background-color: #4B2E84;
+        }
+        .UW {
+            color: $black;
+        }
+    }
+    &._3_jh {
+        &:before {
+        background-color: #B22222;
+        }
+        .JH {
+            color: $black;
+        }
+    }
+    &._4_cc {
+        &:before {
+        background-color: #29abe1;
+        }
+        .CC {
+            color: $black;
+        }
+    }
+    &._5_me {
+        &:before {
+        background-color: $color-primary;
+        }
+        .ME {
+            color: $black;
+        }
+        .scrollContent a {
+            color: $dark-gray;
+            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.2);
+        }
+    }
+    img {
+        display: block;
+        width: 3.6rem;
+        margin: 0 auto;
+        @include breakpoint(medium){
+            width: 12rem;
+        }
+    }
+    .scrollFill,
+    .scrollContent {
+        height: 460px;
+        background-color: white;
+        @include breakpoint (medium){
+            height: 520px;
+        }
+    }
+    .scrollFill {
+        mix-blend-mode: screen;
+        clear: left;
+    }
+    .scrollFill.omega,
+    .scrollContent:last-child {
+        height: 520px;
     }
 }
 

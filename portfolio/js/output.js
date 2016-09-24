@@ -19180,6 +19180,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 }(jQuery);
 
 $(document).foundation();
+$(document).ready(function(){
+    console.log('¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>');
+});
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19806,76 +19809,156 @@ function scrollTracker(e) {
         clearClasses($content);
         $content.addClass('_3_jh');
     }
-    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.71) {
+    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.67) {
         clearClasses($content);
         $content.addClass('_4_cc');
     }
-    if ( wind.scrollTop() > $body*.72) {
+    if ( wind.scrollTop() > $body*.68) {
         clearClasses($content);
         $content.addClass('_5_me');
     }
 }
 
 // do things
-console.log('new script.js');
 $(document).ready(function(){
     wind.scroll( function(){ 
-        console.log('scroll');
+        //console.log('scroll');
         scrollTracker();
     });
 });
 
 
+/* jshint laxcomma:true */
 var hoverSplits = true
   , $leaves = $('.leaf')
-  , $results = $('.results')
+  , $created = $('.created>span')
+  , $destroyed = $('.score')
+  , $countdownGoal = $('.goal')
   , $toggleButton = $('#toggle')
-  , $resetButton = $('#reset')
+  , $resetButton = $('.reset')
   , $reverseText = $('#inReverse')
+  , $overlay = $('.circleGen-overlay')
+  , destroyedScore = 0
   , totalCircles = $leaves.length
   , leavesTemplate = '<div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div>'
   , reverseTemplate = '<button id="reverse">Reverse</button>'
-  , $startingTemplate = $('.circleGen-container > div')
+  , $startingTemplate = '<div class="outer-box leaf"></div><div class="outer-box right parent inter"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div></div>'
   , $container = $('.circleGen-container')
   ;
 
- var reverse = function(){
+var fadeIn = function(elem) {
+  elem.addClass('fade-in-down');
+};
+
+var reverse = function(){
   hoverSplits = !hoverSplits;
-  $reverseText.removeClass('hide');
-  $toggleButton.text('Reversed! Hover on...');
-  $toggleButton.toggleClass('fade-in-down fade-out-up-delay');
-  console.log('var hoverSplits = ' + hoverSplits + '.');
+  $countdownGoal.text('0.0%');
+  initTimer(Math.sqrt(totalCircles)*1600);
+  fadeIn($('.timer'));
+  fadeIn($('.destroyed'));
 };
 
 var reset = function(){
+  $leaves.unbind('mouseover');
+  var overlay = $overlay.detach();
   $container.html( $startingTemplate );
+  $container.prepend(overlay);
+  $leaves = $('.leaf');
+  totalCircles = $leaves.length;
+  $created.text(totalCircles);
+  $leaves.on('mouseover', splitter);
+  destroyedScore = 0;
+  destroyedPct = 0;
+  hoverSplits = true;
+  $destroyed.text(destroyedScore);
+  $countdownGoal.text('0.0%');
+  $('.circleGen-overlay').removeClass('active');
 };
 
 var splitter = function(){
   var $this = $(this)
-    , $parent = $this.parent() 
+    , $parent = $this.parent()
+    , destroyedPct = 0
     ; 
   
-  if (totalCircles == 302) {
-    $toggleButton.addClass('fade-in-down');
+  if (totalCircles > 302) {
+    fadeIn($toggleButton);
   }
   
   if ( hoverSplits ){
-    totalCircles += 4;
+    totalCircles += 3;
     $parent.removeClass('inter');  
     $this.addClass('parent inter').removeClass( 'leaf').append(leavesTemplate);  
-    $this.unbind('mouseover').find('.leaf').on('mouseover', splitter);  
+    $this.unbind('mouseover').find('.leaf').on('mouseover', splitter);
+    $created.text(totalCircles);
   } else if ($parent.hasClass('inter')){
-    totalCircles -= 4;
+    destroyedScore += 3;
     $parent.removeClass('inter parent').addClass('leaf');
     $parent.html('');
     $parent.parent().addClass('inter');
     $this.unbind('mouseover').find('.inter').on('mouseover', splitter);
+    destroyedPct = +((destroyedScore/totalCircles)*100).toFixed(1);
+    $countdownGoal.text( destroyedPct + '%');
+    $destroyed.text(destroyedScore);
   }
-  $results.text(totalCircles);
+
+};
+
+function initTimer(circles){
+  var timeLeft = circles
+    , $minutes = $('.minutes')
+    , $seconds = $('.seconds')
+    , timeinterval = setInterval( function(){
+      var t = getTimeRemaining( timeLeft );
+      $minutes.html('0' + t.minutes).slice(-2);
+      $seconds.html(('0' + t.seconds).slice(-2));
+      timeLeft -= 1000;
+      if(timeLeft<=0){
+          $('.leaf').unbind('mouseover');
+          $('.circleGen-overlay').addClass('active');
+          console.log('unbind leaves');
+          clearInterval(timeinterval); // stops timer
+      }
+  },1000);
+}
+
+var getTimeRemaining = function(input){
+  var t = input
+    , seconds = Math.floor( (t/1000) % 60 )
+    , minutes = Math.floor( (t/1000/60) % 60 )
+  ;
+  return {
+      'minutes': minutes,
+      'seconds': seconds
+  };
 };
 
 $leaves.on( 'mouseover', splitter );
 $resetButton.on( 'click', reset );
 $toggleButton.on('click', reverse );
+/* jshint laxcomma: true */
+
+$(document).ready(function(){
+    var $container = $('.flower')
+      , $leaves = $('.flower > *')
+      , $leaf = $('.flower > *:first-child')
+      , $trigger = $('#trigger')
+      ;
+    
+    function animateFlower(){
+        $leaves.toggleClass('animate');
+    }
+
+    $container.hover(animateFlower);
+    $trigger.click(animateFlower);
+        
+    $leaf.on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(e) {
+        $leaves.removeClass('animate');
+        if ($leaves.hasClass('end')) {
+            $leaves.removeClass('end');
+        } else {
+            $leaves.addClass('end');
+        }
+    });
+});
 //# sourceMappingURL=output.js.map

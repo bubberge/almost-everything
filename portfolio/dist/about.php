@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'About';
-$pageBlurb = "Yep, I'm another one of those self-taught web developers. <br class='show-for-medium'>And like most self-taught designers or developers, my path took me all over the place.";
+$pageBlurb = "Yep, I'm another one of those self-taught web developers.<br class='show-for-large'><span class='show-for-small'>&nbsp;</span>And like most self-taught designers or developers, my path took me all over the place.";
 include 'incl/_header.php'; ?>
           <div class="row content about _1_lw">
             <div class="small-3 column scrollFill">
@@ -60,6 +60,7 @@ include 'incl/_header.php'; ?>
               <span class="year show-for-medium">2014-2016</span>
               <p>Started at the bottom a customer service rep. Worked hard, moved into web design and development department, where I am the manager now.</p>
               <span><span>Customer Service:</span> refined that ever-important ability to explain technical subject matter to non-technical persons</span>
+              <span><span>Design/Development:</span> went from 4th-grade reading level to fluent in HTML/SCSS and can do work with JS as well</span>
               <span><span>Management:</span> learned to do all I can to create clarity from ambiguity</span>
             </div>
 
@@ -70,9 +71,9 @@ include 'incl/_header.php'; ?>
               <h2>Outside Work</h2>
               <p>I get pretty bored if I'm not challenging myself with something new and difficult to focus on. The things I am proudest of all follow that mold.</p>
               <span><span>Snowboarding:</span>In 2009 I moved to Jackson, WY just to snowboard. Inadvertently, the jobs that I had there laid the groundwork for pursuing web develoment.</span>
-              <span><span>Halo Suit:</span>I think armor costumes are cool. Like a true DIY enthusiast, I watched about 2 minutes of a YouTube video and figured I could make one too. Surprisingly, <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">I did.</a></span>
-              <span><span>Web Develoment:</span>The world of webdev is basically endless, and it can be self-taught. It may seems strange, but it's actually a perfect match for me.</span>
-              <span><span>If you read all of that,</span>It's probably time to look at<a href="portfolio.php"> my portfolio.</a></span>
+              <span><span>Halo Suit:</span>I think armor costumes are cool. Like a true DIY enthusiast, I watched about 2 minutes of a YouTube video and figured <br class="show-for-medium">I could make one too. <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">It went better than expected.</a></span>
+              <span><span>Web Develoment:</span>The world of webdev is basically endless, and it can be self-taught. It may seem strange because web development is just work for so many people, but for me it's a fun world to explore.</span>
+              <span><span>If you read all of that,</span>It's probably time to <a href="portfolio">look at my portfolio.</a></span>
             </div>
 
           </div>

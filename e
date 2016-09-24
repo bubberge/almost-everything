@@ -1,0 +1,323 @@
+[33mcommit 2d0d15cb2d366b37a05f7b4310cdf78b0bb32f93[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Sat Aug 6 08:30:04 2016 -0700
+
+    updated all links to use new non-.php strings and updated starting template for circlegen to not look like two balls or boobs
+
+[33mcommit 3b7507ae5c7066ee653c41444270077ca6b657e4[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Wed Aug 3 09:50:51 2016 -0700
+
+    updated text in the 'outside work' area of the about page
+
+[33mcommit add9f286d6509a7b1fd3798ad81f115e173002ef[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Aug 2 22:21:25 2016 -0700
+
+    updated directory names
+
+[33mcommit d6cddab45e887890864b9dcadfbdab22d824d5f1[m
+Merge: 6bd68bf ad24bca
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Tue Aug 2 22:05:34 2016 -0700
+
+    Merge pull request #7 from bubberge/portfolio-remake
+    
+    Portfolio remake
+
+[33mcommit ad24bca616eb67d74effbc759e1b29136599c6df[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Aug 2 21:46:30 2016 -0700
+
+    updated messaging on the site to be a little more conversational
+
+[33mcommit f17a5a1f446f97e3ba3e151c203e30cb55be606a[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Aug 2 17:58:15 2016 -0700
+
+    updated text on about page, created sitemap and robots.txt, updated head with meta description and favicon. added favicon
+
+[33mcommit d84790dda61081d794a3ce630762897e542e1e92[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Mon Aug 1 22:44:32 2016 -0700
+
+    added logo for last section of about page. changed how the line connects logos so that it will work on all screen sizes. changed the way the date is displayed. Added a page blurb for all pages. updated messaging in the about modules.
+
+[33mcommit 326d7ab1f17feb6c932b11a79ee143056bfa79da[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Sun Jul 31 13:36:14 2016 -0700
+
+    added home navigation into header on mobile, updated height property of the about background to work on Firefox.
+
+[33mcommit c8af4a6db8b335f5d5a9da0ec95e3b06e7a72859[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Sun Jul 31 12:32:53 2016 -0700
+
+    removed hamburger menu from homepage in favor of just placing the menu items there instead. updated styles for homepage menu
+
+[33mcommit 717e37f0e8686a76068a60dab8a5d9b8f5b696e5[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Sun Jul 31 12:18:32 2016 -0700
+
+    fixed an issue where document.foundation was being called twice, throwing a bunch of console errors
+
+[33mcommit bb8210fe4b40f45c6331ac4b281e31f24b8f5fe9[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Sun Jul 31 09:15:26 2016 -0700
+
+    parted out JS into separate files. added PHP to power contact form. Added JS for abide to power form validation. Updated all of the markup for the form.
+
+[33mcommit 2ee4fd7c9890b613c4e01dadf2bd0e617824418f[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 29 22:32:25 2016 -0700
+
+    updated styles for about page to try to make it more consistent for mobile. made other small changes to offcanvas menu and about text
+
+[33mcommit 663b9d56adfc5c4ca96cea4c1935d01efe9c8466[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 29 14:46:22 2016 -0700
+
+    updated styles on the About page for mobile. Will need to change the approach for the lines between the icons in the future, this method of using an :after is not working as well as I thought it might.
+
+[33mcommit c695a294410da2ef42f575b68fcc0160b5f303bd[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 29 11:45:50 2016 -0700
+
+    changed gradient on bottom of about page scroll
+
+[33mcommit 0bcc5867bf9d9e30e64a60f32b443e47fd004966[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Thu Jul 28 21:34:53 2016 -0700
+
+    added percentages to govern color changes on the about page. added classes to change text colors when a specific module was focused. still need to update small
+
+[33mcommit 20f994083c4219f14f1363df4feba0fa6a99e910[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Thu Jul 28 10:36:23 2016 -0700
+
+    working on a new idea for changing the colors that has to do with the height of the content area divided by 5. Added variables to determine the height of the header in order to enable this.
+
+[33mcommit 187058bf23f28efd1e24252dfd62e113488b0e20[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Thu Jul 28 10:17:09 2016 -0700
+
+    added text to the about page
+
+[33mcommit f63c31b929246edfd57d2e42ae314823010d09d2[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Wed Jul 27 12:54:59 2016 -0700
+
+    updated styles to cause the :before color to change rather than the content background
+
+[33mcommit 33fd30cc1ac4b3023b30c24365b38aea9801827d[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 26 21:40:15 2016 -0700
+
+    some changes that help the about page scroll experience
+
+[33mcommit 73ffc27eb1925350b863b3dd5d75610c2c621607[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 26 13:33:25 2016 -0700
+
+    added an array of supported browsers to the autoprefixer so that it would be forced to support flexbox in older iPhone browsers
+
+[33mcommit 38a4e6a8085a011e656e076d5ae352b583e2faa9[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 26 10:55:56 2016 -0700
+
+    updated one string in the off canvas title bar for small. off canvas toggle not working on iOS for some reason
+
+[33mcommit 3967840aba456e18ff38b4ec1642f4988092a35f[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 26 10:19:03 2016 -0700
+
+    added gulp tasks for clean, build, and added js concat and min tasks
+
+[33mcommit c80ed364345d303c7968558b4c1d7772f9cf9df8[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Mon Jul 25 20:45:56 2016 -0700
+
+    added contact form markup and styles, header active class and styles
+
+[33mcommit fdefe6e0564adc4046f74925e8da01c6a55b3d3e[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 22 21:07:25 2016 -0700
+
+    updated site files to include partials for header and footer, adjusted portfolio page styles
+
+[33mcommit 6da3c4a80b767d4cbd17eb7aaa88d473391ba8ef[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 22 08:49:21 2016 -0700
+
+    updated styles on the portfolio page, making sure I take a mobile-first approach
+
+[33mcommit 6c78a678f51eb4a5505dc845ab80baff20916181[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Fri Jul 22 08:12:44 2016 -0700
+
+    closing in in finished styles on the portfolio page
+
+[33mcommit ef1b52e42525215d50d8e9bfce26ff96b57de693[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Wed Jul 20 23:23:52 2016 -0700
+
+    added styles for the desktop homepage. wireframed portfolio page and began working on the cards which I will use to showcase work
+
+[33mcommit c8b3bdb90416832d41659b6587d44bebe6716d01[m
+Author: bubberge <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 19 18:23:36 2016 -0700
+
+    somehow the node modules dir was deleted so I re-installed various modules for the watch command
+
+[33mcommit ace9f46ac7af3b6647ff6de95bad59b71be2ae88[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Mon Jul 18 22:41:59 2016 -0700
+
+    created a new portfolio site with foundation's cli tools. completely changed the approach to this site because I wasn't liking the previous iteration. homepage mobile and large wireframes done and in img directory. mobile homepage markup and styles complete.
+
+[33mcommit 6bd68bf2901990fb68ebcdd145eb1a5faa1880d6[m
+Merge: 771841a 1559bf4
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Thu Jul 14 18:34:26 2016 -0700
+
+    Merge pull request #6 from bubberge/portfolio-gulp
+    
+    added clean task, added sourcemaps for js and css/scss, added watch t…
+
+[33mcommit 1559bf46b1ae0e8544bfc027ac6f0de5b7d9837a[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Thu Jul 14 18:32:47 2016 -0700
+
+    added clean task, added sourcemaps for js and css/scss, added watch task, updated build to include clean task. Dist folder now includes everything for production after build.
+
+[33mcommit 771841ad5c7dc27b1357023ea53b3e18ab5751a5[m
+Merge: bc7c5b2 8f5f824
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 12 22:05:54 2016 -0700
+
+    Merge pull request #4 from bubberge/tandcentertainment
+    
+    added gulp and various modules to concat and minify site js and css f…
+
+[33mcommit bc7c5b295d5d1064eb2c046cc870a8376fb207a5[m
+Merge: 9e216ed 72dce2c
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 12 22:05:14 2016 -0700
+
+    Merge pull request #3 from bubberge/portfolio-gulp
+    
+    Portfolio gulp
+
+[33mcommit 8f5f824e1606805d1513a404b843698257edd120[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 12 21:53:39 2016 -0700
+
+    added gulp and various modules to concat and minify site js and css files
+
+[33mcommit 9e216ed168ec6a5b0f80a8841663f652e9b2240b[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 12 21:02:39 2016 -0700
+
+    adding gitignore to master to prevent node modules from being tracked
+
+[33mcommit 72dce2ca320f15d86c3f212c75811b1c82865bf5[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 12 20:37:47 2016 -0700
+
+    added gulp and various modules, created a gulpfile to compile scss to css, concat and minify js and css. updated site to include one request for minified js and css
+
+[33mcommit 33ccf69e9f47eb6740087acecd1e2834688e6421[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 12 18:16:24 2016 -0700
+
+    added npm package file and gulp gulpfile, ignored node_modules folder
+
+[33mcommit b408dff387c323fa4b496c847e3ccd2888009561[m
+Merge: cc57cfe 39c0380
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Tue Jul 12 17:58:56 2016 -0700
+
+    Merge pull request #2 from bubberge/portfolio/mobile-pages-animsition
+    
+    Portfolio/mobile pages
+
+[33mcommit cc57cfe4c258acf73ccbd94fa38aabd04c93e7dd[m
+Merge: b13cbc1 ffd93fe
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Wed Jul 6 19:20:46 2016 -0700
+
+    Merge pull request #1 from bubberge/tcentertainment
+    
+    Tcentertainment
+
+[33mcommit ffd93fe3428114c1e36089dd75abd27dfe64c564[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Wed Jul 6 19:18:50 2016 -0700
+
+    added fade-in effects to jumbotron and all modules other than the first one. added some shitty JS which controls adding classes when an element is in the screen.  I would like to replace with a better solution in the future
+
+[33mcommit 39c038003a71c6a82d6616aba1e23cd054f1b626[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Wed Jul 6 17:32:50 2016 -0700
+
+    added styles to content blocks to separate them, added styles to Experience section typography
+
+[33mcommit f48d26dafc10920d75cb9c06bd334e9cdd0bd69a[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 5 22:17:22 2016 -0700
+
+    removed animsition because it isn't really what I'm looking for. added my own custom css animations for loading between pages on mobile
+
+[33mcommit 738e77cc3f927a8b73ae261d77e518d349d99410[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Tue Jul 5 20:06:45 2016 -0700
+
+    converted site to php in order to enable partials. added animsition for mobile transitions
+
+[33mcommit 323e8a71286372a13129b1e580115d58f2a8bb96[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Sun Jul 3 10:42:04 2016 -0700
+
+    split up site markup into pages in root and partials in incl
+
+[33mcommit 9d15044358d1c2263ab158e7f3879c58c00bc6d7[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Sat Jul 2 12:47:13 2016 -0700
+
+    converted index file to php, going to use several pages for mobile and single-page for medium/large
+
+[33mcommit b13cbc1bc5944b604c6fe89da778cd1ccc965637[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Fri Jul 1 15:43:33 2016 -0700
+
+    changed layout to flex grid and started basic styles on portfolio site
+
+[33mcommit 279d67618bfc6d10a3a86011868a03697f1f1a10[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Thu Jun 30 18:34:23 2016 -0700
+
+    added vanilla sass for this project
+
+[33mcommit 4fd1c7c063ad637f51d2e6ae570d402d8ec4092d[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Thu Jun 30 17:23:15 2016 -0700
+
+    had to do git rm <file> to get the repo to acknowlege that they were deleted
+
+[33mcommit 85c0555b634edf19c49d5c1a0cf8b6459e051cfd[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Thu Jun 30 17:20:41 2016 -0700
+
+    removed non-working foundation files and npm log from failed CLI use
+
+[33mcommit 9bc469f9d5525f9c63fcd7493c367e2bb348be54[m
+Author: David Duffy <daviduffy1@gmail.com>
+Date:   Wed Jun 29 20:30:25 2016 -0700
+
+    moving amy's site, helena's t&C entertainment, and my resume site to new repo
+
+[33mcommit d607a09f75a98b3b028052ada8ee5a03dbbed401[m
+Author: David Duffy <david.duffy@crystalcommerce.com>
+Date:   Wed Jun 29 20:16:47 2016 -0700
+
+    Initial commit

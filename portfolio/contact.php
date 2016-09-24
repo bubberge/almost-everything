@@ -21,7 +21,7 @@
     }
 
 $pageTitle = 'Contact';
-$pageBlurb = "Want to see what happens when an idea comes to life? <br class='show-for-large'>Let's chat!";
+$pageBlurb = "Want to see what happens when an idea comes to life?<br class='show-for-large'><span class='show-for-small'>&nbsp;</span>Let's chat!";
 include 'incl/_header.php'
 ?>
 <div class="row">

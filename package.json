@@ -1,0 +1,26 @@
+{
+  "name": "agphoto",
+  "version": "0.0.1",
+  "description": "a photo website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubberge/almost-everything.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bubberge/almost-everything/issues"
+  },
+  "homepage": "https://github.com/bubberge/almost-everything#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.7.3",
+    "gulp-uglify": "^2.0.0"
+  }
+}

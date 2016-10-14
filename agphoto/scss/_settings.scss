@@ -534,7 +534,7 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $white;
+$titlebar-background: transparent;
 $titlebar-color: $black;
 $titlebar-padding: 0.25rem;
 $titlebar-text-font-weight: bold;
@@ -558,12 +558,12 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 1rem;
-$topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+// $topbar-padding: 0.5rem;
+// $topbar-background: $light-gray;
+// $topbar-submenu-background: $topbar-background;
+// $topbar-title-spacing: 1rem;
+// $topbar-input-width: 200px;
+// $topbar-unstack-breakpoint: medium;
 
 
 // 37. Utilites

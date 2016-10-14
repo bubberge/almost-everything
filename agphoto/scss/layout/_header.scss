@@ -4,6 +4,10 @@
 
 .title-bar {
     @extend .flex-centered;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
 }
 
 .menu>li>a {

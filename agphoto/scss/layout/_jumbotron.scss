@@ -2,9 +2,9 @@
 // Jumbotron styles
 // ===============================
 .j-height {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 4rem);
     min-height: 500px;
-    max-height: 720px;
+    max-height: 790px;
 }
 
 .jumbotron {
@@ -15,8 +15,14 @@
 
 .j-slide {
     height: 100%;
+
     .j-background {
         @extend .j-height;
+        background: no-repeat center/cover;
+    }
+
+    &.slide-1 .j-background {
+        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
     }
 }
 .j-overlay {

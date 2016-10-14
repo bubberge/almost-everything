@@ -2,6 +2,9 @@
 // Container styles
 // ===============================
 
+$transition-time            :   .2s;
+$transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
+
 .g-card {
     position: relative;
     padding: .25rem;
@@ -11,15 +14,61 @@
         @extend .flex-centered;
         span {
             color: $white;
-            padding: 1rem 2.6rem;
+            padding: 1rem;
+            width: 50%;
+            text-align: center;
             border: 1px solid;
+            border-color: $white;
+            transition-duration: .4s;
+        }
+    }
+
+    .g-underline {
+        @extend .abs-centered;
+        @extend .flex-centered;
+        span {
+            width: 50%;
+            height: 15%;
+            border-bottom: 1px solid $white;
+            transition: width $transition-time $transition-bezier;
         }
     }
 
     .g-background {
         margin: .25rem;
         height: 23rem;
-        background: $dark-gray;
+        background: $dark-gray no-repeat center/cover;
+    }
+
+    &.weddings .g-background {
+        background-image: url('../img/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
+    }
+
+    &.engagements .g-background {
+        background-image: url('../img/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
+    }
+
+    &.seniors .g-background {
+        background-image: url('../img/amy-galbraith-photography-highschool-senior-gallery.jpg');
+    }
+
+    a {
+        @extend .abs-centered;
+        background: transparentize( $white,.7 );
+        transition: background $transition-time $transition-bezier;
+    }
+
+    &:hover {
+        a {
+            background: transparent;
+        }
+        .g-title span {
+            border-color: transparent;
+            transition: $transition-time $transition-bezier;
+        }
+        .g-underline span {
+            width: 12%;
+        }
     }
 }
 

@@ -1,0 +1,28 @@
+// ===============================
+// Container styles
+// ===============================
+
+.g-card {
+    position: relative;
+    padding: .25rem;
+
+    .g-title {
+        @extend .abs-centered;
+        @extend .flex-centered;
+        span {
+            color: $white;
+            padding: 1rem 2.6rem;
+            border: 1px solid;
+        }
+    }
+
+    .g-background {
+        margin: .25rem;
+        height: 23rem;
+        background: $dark-gray;
+    }
+}
+
+.galleries .row {
+    margin-bottom: 4rem;
+}

@@ -2,7 +2,10 @@
 // Typography Styles
 // ===============================
 
+$color-menu-text    : lighten($black,.75);
+
 .module-heading {
     width: 100%;
     text-align: center;
+    margin: 2rem 0 1.7rem;
 }

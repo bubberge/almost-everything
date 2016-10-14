@@ -534,11 +534,11 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-background: $white;
+$titlebar-color: $black;
+$titlebar-padding: 0.25rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: $black;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
@@ -564,3 +564,34 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+
+// 37. Utilites
+// ------------
+
+.eat-left {
+  padding-left: 0 !important;
+}
+
+.eat-right {
+  padding-right: 0 !important;
+}
+
+.eat-both {
+  @extend .eat-left;
+  @extend .eat-right;
+}
+
+.abs-centered {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

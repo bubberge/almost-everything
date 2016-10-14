@@ -1,0 +1,49 @@
+// ===============================
+// Blog styles
+// ===============================
+
+$color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-4: #838383, color-5: #838383, color-6: #c2c2c2, color-7: #737373 , color-8: #b2b2b2 );
+
+.blog .module-heading {
+
+}
+
+.blog-feed {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+.b-post {
+    position: relative;
+    background-color: $dark-gray;
+    min-width: 24.9%;
+    height: 20rem;
+    flex-grow: 1;
+    &:hover .b-overlay {
+        background-color: transparentize($black,.8),
+    }
+}
+.b-title {
+    @extend .abs-centered;
+    @extend .flex-centered;
+    z-index: 2;
+    span {
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+.b-background {
+    background: no-repeat center/cover;
+    height:100%;
+}
+.b-overlay {
+    @extend .abs-centered;
+    z-index: 1;
+    background-color: transparent;
+}
+@for $i from 1 through 8 {
+    .b-post:nth-child(#{$i}) {
+        background-color: map-get($color-map, color-#{$i});
+    }
+}

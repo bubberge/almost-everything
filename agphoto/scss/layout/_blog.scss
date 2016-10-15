@@ -3,19 +3,7 @@
 // ===============================
 
 $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-4: #838383, color-5: #838383, color-6: #c2c2c2, color-7: #737373 , color-8: #b2b2b2 );
-$image-map      : ( image-1: '../img/hidden_meadows_wedding-photos-bailey-001.jpg',
-                    image-2: '../img/seattle_senior_photographer-claire-17.jpg',
-                    image-3: '../img/Promo-PhotoforBlog.jpg',
-                    image-4: '../img/jackson_hole_wedding_photographer-035.jpg',
-                    image-5: '../img/wing-lake-backpacking-10.jpg',
-                    image-6: '../img/seattle_senior_photographer-betty-4.jpg',
-                    image-7: '../img/jackson_hole_hotel_terra_wedding_photos-todd-036.jpg',
-                    image-8: '../img/skansonia_wedding_photos-davis-42.jpg',
-                    );
 
-.blog .module-heading {
-
-}
 
 .blog-feed {
     display: flex;
@@ -26,18 +14,29 @@ $image-map      : ( image-1: '../img/hidden_meadows_wedding-photos-bailey-001.jp
 .b-post {
     position: relative;
     background-color: $dark-gray;
-    min-width: 24.9%;
+    width: 100%;
     height: 20rem;
     flex-grow: 1;
     &:hover .b-overlay {
-        background-color: transparentize($black,.8),
+        background-color: transparentize($black,.8);
+    }
+    @include breakpoint(medium){
+        width: 49.99%;
+    }
+    @include breakpoint(large){
+        min-width: 33.32%;
+    }
+    @include breakpoint(xlarge){
+        min-width: 24.99%;
     }
 }
 .b-title {
     @extend .abs-centered;
     @extend .flex-centered;
+    flex-direction: column;
     z-index: 2;
     span {
+        font-family: $font-main;
         color: $white;
         text-transform: uppercase;
     }
@@ -52,9 +51,13 @@ $image-map      : ( image-1: '../img/hidden_meadows_wedding-photos-bailey-001.jp
     background-color: transparent;
 }
 
+.b-link {
+    @extend .abs-centered;
+    z-index: 3;
+}
+
 @for $i from 1 through 8 {
     .b-post:nth-child(#{$i}) .b-background {
         background: map-get($color-map, color-#{$i}) no-repeat center/cover;
-        background-image: url(map-get($image-map, image-#{$i}));
     }
 }

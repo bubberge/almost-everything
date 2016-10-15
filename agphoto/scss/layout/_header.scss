@@ -2,16 +2,48 @@
 // Header styles
 // ===============================
 
-.title-bar {
-    @extend .flex-centered;
+.off-canvas {
+    ul.vertical.menu a {
+        color: $color-menu-text;
+        font-family: $font-main;
+    }
+    &-content {
+        position: relative;
+        @include breakpoint(medium){
+            position: initial;
+        }
+    }
+    .close-button {
+        top: .2rem;
+    }
 }
 
-.menu>li>a {
-    color: $color-menu-text;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: .8rem;
-    padding: 0.9rem 0;
-    width: 8.8rem;
-    text-align: center;
+
+
+.title-bar {
+    @extend .flex-centered;
+    position: absolute;
+    top: 0;
+    @include breakpoint(medium){
+        position: initial;
+    }
+    .menu {
+        display: none;
+        @include breakpoint(medium){
+            display: initial;
+        }
+        &>li>a {
+            color: $color-menu-text;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: .8rem;
+            padding: 0.9rem 0;
+            width: 7rem;
+            text-align: center;
+            @include breakpoint(large){
+                width: 8.8rem;
+            }
+        }
+    }
 }
+

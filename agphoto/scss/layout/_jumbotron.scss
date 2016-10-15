@@ -27,8 +27,14 @@
     @extend .abs-centered;
     @extend .flex-centered;
     background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
-    background-size: 18vw;
+    background-size: 160px;
     @extend .j-height;
+    @include breakpoint(medium){
+        background-size: 200px;
+    }
+    @include breakpoint(large){
+        background-size: 240px;
+    }
 }
 
 .j-overlay {

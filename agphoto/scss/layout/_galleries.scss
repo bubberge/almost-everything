@@ -2,7 +2,7 @@
 // Galleries Container Styles
 // ===============================
 
-$transition-time            :   .2s;
+$transition-time            :   .4s;
 $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
 
 .g-card {
@@ -14,8 +14,9 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
         @extend .flex-centered;
         span {
             color: $white;
-            padding: 1rem;
+            padding: 1rem 0;
             width: 50%;
+            max-width: 244px;
             text-align: center;
             border: 1px solid;
             border-color: $white;
@@ -28,17 +29,25 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
         @extend .flex-centered;
         span {
             width: 50%;
-            height: 15%;
+            max-width: 244px;
+            height: 21%;
             border-bottom: 1px solid $white;
-            transition: width $transition-time $transition-bezier;
+            @include breakpoint(medium){
+                height: 3.6rem;
+                transition: all $transition-time $transition-bezier;
+            }
         }
     }
 
     .g-background {
         margin: .25rem;
-        height: 23rem;
+        height: 16rem;
         background: $dark-gray no-repeat center/cover;
+        @include breakpoint(medium){
+            height: 320px;
+        }
     }
+
 
     &.weddings .g-background {
         background-image: url('../img/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
@@ -46,10 +55,16 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
 
     &.engagements .g-background {
         background-image: url('../img/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
+        @include breakpoint(medium only){
+            height: 280px;
+        }
     }
 
     &.seniors .g-background {
         background-image: url('../img/amy-galbraith-photography-highschool-senior-gallery.jpg');
+        @include breakpoint(medium only){
+            height: 280px;
+        }
     }
 
     a {
@@ -57,19 +72,21 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
         background: transparentize( $white,.7 );
         transition: background $transition-time $transition-bezier;
     }
-
-    &:hover {
-        a {
-            background: transparent;
+    @include breakpoint(medium){
+            &:hover {
+                a {
+                    background: transparent;
+                }
+                .g-title span {
+                    border-color: transparent;
+                    transition: $transition-time $transition-bezier;
+                }
+                .g-underline span {
+                    width: 12%;
+                    // border-color: #C93;
+                }
+            }
         }
-        .g-title span {
-            border-color: transparent;
-            transition: $transition-time $transition-bezier;
-        }
-        .g-underline span {
-            width: 12%;
-        }
-    }
 }
 
 .galleries .row {

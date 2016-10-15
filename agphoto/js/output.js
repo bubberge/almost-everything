@@ -7,3 +7,4 @@ $('.j-slick').slick({
     centerMode: true,
     variableWidth: true
 });
+//# sourceMappingURL=output.js.map

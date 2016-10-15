@@ -35,14 +35,16 @@ gulp.task('minify-scripts',['concat-scripts'], function(){
 
 gulp.task('sass', function() {
   return gulp.src('scss/app.scss')
+    .pipe(maps.init({loadmaps:true}))
     .pipe($.sass({
       includePaths: sassPaths,
       outputStyle: 'compressed' // if css compressed **file size**
     })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9']
+        browsers: ['last 2 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
     }))
+    .pipe(maps.write('./')) 
     .pipe(gulp.dest('css'));
 });
 
@@ -50,12 +52,12 @@ gulp.task('clean', function(){
   del(['dist','css/app*.css*','js/output*.js*']);
 });
 
-/*
+
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/app.css','js/output.min.js','incl/**','*.php','img/**'], {base:'./'})
+    return gulp.src(['css/app.css','js/output.min.js','incl/**','*.html','img/**'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
-*/
+
 
 gulp.task('default', ['sass'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);

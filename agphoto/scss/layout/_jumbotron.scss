@@ -2,9 +2,9 @@
 // Jumbotron styles
 // ===============================
 .j-height {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3rem);
     min-height: 500px;
-    max-height: 790px;
+    max-height: 820px;
 }
 
 .jumbotron {
@@ -16,28 +16,38 @@
 .j-slide {
     height: 100%;
 
-    .j-background {
+    &.slide-1 .j-background {
         @extend .j-height;
         background: no-repeat center/cover;
-    }
-
-    &.slide-1 .j-background {
         background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
     }
 }
+
+.j-overlay-background {
+    @extend .abs-centered;
+    @extend .flex-centered;
+    background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
+    background-size: 18vw;
+    @extend .j-height;
+}
+
 .j-overlay {
     @extend .abs-centered;
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
-    background: url('../img/amy-galbraith-photography-logo.png') no-repeat center/contain;
-    background-size: 300px;
-    i {
-        font-size: 2.4rem;
-        color: $color-menu-text;
-    }
+    flex-direction: column-reverse;
 }
 
 .j-arrow {
     @extend .flex-centered;
+    flex-direction: column;
+    color: $white;
+    span {
+        display: block;
+        font-family: 'Shadows Into Light Two',"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+    }
+    i {
+        font-size: 2.4rem;
+        margin-bottom: .5rem;
+    }
 }

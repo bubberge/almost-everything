@@ -2,12 +2,27 @@
 // Typography Styles
 // ===============================
 
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand|Shadows+Into+Light+Two');
 
 $color-menu-text    : lighten($black,.75);
+$font-main          : 'Quicksand', veranda, sans-serif;
 
-.module-heading {
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-main;
+}
+
+h2.module-heading {
     width: 100%;
     text-align: center;
     margin: 2rem 0 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    font-size: 2.25rem;
+}
+
+// Galleries
+
+.g-title span {
+    text-transform: uppercase;
+    letter-spacing: .6px;
 }

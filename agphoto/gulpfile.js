@@ -10,10 +10,14 @@ var gulp = require('gulp')
   ;
 
 var sassPaths = [
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+    'bower_components/foundation-sites/scss',
+    'bower_components/motion-ui/src'
 ], jsPaths = [
-  'js/app.js'
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/what-input/what-input.js',
+    'bower_components/foundation-sites/dist/foundation.js',
+    'js/app.js',
+    'node_modules/slick-carousel/slick/slick.min.js'
 ];
 
 gulp.task('concat-scripts', function(){
@@ -34,31 +38,32 @@ gulp.task('minify-scripts',['concat-scripts'], function(){
 });
 
 gulp.task('sass', function() {
-  return gulp.src('scss/app.scss')
-    .pipe(maps.init({loadmaps:true}))
-    .pipe($.sass({
-      includePaths: sassPaths,
-      outputStyle: 'compressed' // if css compressed **file size**
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-        browsers: ['last 2 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
-    }))
-    .pipe(maps.write('./')) 
-    .pipe(gulp.dest('css'));
+    return gulp.src('scss/app.scss')
+        .pipe(maps.init({loadmaps:true}))
+        .pipe($.sass({
+          includePaths: sassPaths,
+          outputStyle: 'compressed' // if css compressed **file size**
+        })
+          .on('error', $.sass.logError))
+        .pipe($.autoprefixer({
+            browsers: ['last 2 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
+        }))
+        .pipe(rename('output.min.css'))
+        .pipe(maps.write('./')) 
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('clean', function(){
-  del(['dist','css/app*.css*','js/output*.js*']);
+    del(['dist','css/app*.css*','js/output*.js*']);
 });
 
 
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/app.css','js/output.min.js','incl/**','*.html','img/**'], {base:'./'})
+    return gulp.src(['css/output.min.css*','js/output.min.js*','*.html','img/**'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 
 
 gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+    gulp.watch(['scss/**/*.scss'], ['sass']);
 });

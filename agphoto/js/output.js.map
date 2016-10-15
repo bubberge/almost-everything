@@ -1,1 +1,0 @@
-{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"output.js","sourcesContent":["$(document).foundation();\r\n$('.j-slick').slick({\r\n    dots: true,\r\n    infinite: true,\r\n    speed: 300,\r\n    slidesToShow: 1,\r\n    centerMode: true,\r\n    variableWidth: true\r\n});"]}

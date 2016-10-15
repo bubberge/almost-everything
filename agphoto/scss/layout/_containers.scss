@@ -4,5 +4,14 @@
 
 .row.galleries,
 .row.blog {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    @include breakpoint(medium){
+        margin-top: 5rem;
+    }
+}
+
+.row.blog {
+    @include breakpoint (small only){
+        margin-top: -1rem;
+    }
 }

@@ -19200,7 +19200,7 @@ $(document).foundation();
         url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
         dataType: 'json',
         success: function(data) {
-            console.log(data.responseData.feed);
+            //console.log(data.responseData.feed);
             $.each(data.responseData.feed.entries, function(key, value){
                 if ( key < 8) {
                     var thehtml = '<div class="b-post"><div class="b-title">';
@@ -19226,6 +19226,47 @@ $(document).foundation();
         }
     });
 })('http://blog.amygalbraith.com/feed','.blog-feed');
+
+
+var wind = $(window);
+var height = wind.height();
+var $nav = $('.title-bar');
+var $jumbo = $('.j-overlay-background');
+var scrollToggle = true;
+var scrollTimer = null;
+
+function stickyScroll(e){
+    if ( wind.scrollTop() > $jumbo.height() ) {  //114%
+        $nav.addClass('stuck');
+    }
+
+    if ( wind.scrollTop() < $jumbo.height() ) {
+        $nav.removeClass('stuck');
+    }
+}
+
+wind.scroll(function () {
+    if (scrollTimer) {
+        clearTimeout(scrollTimer);   // clear any previous pending timer
+    }
+    scrollTimer = setTimeout(stickyScroll(), 20);   // set new timer
+});
+
+
+$('#page-scroll').click( function( event ) {
+    event.preventDefault();
+    console.log('click');
+    var $anchor = $(this);
+    if ( $jumbo.width() < 640 ) {
+        $('html, body').animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 40 )
+        }, 350 );
+    } else {
+        $('html, body').animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 120 )
+        }, 350 );
+    }
+});
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___

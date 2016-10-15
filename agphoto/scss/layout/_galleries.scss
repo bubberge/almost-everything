@@ -21,6 +21,9 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
             border: 1px solid;
             border-color: $white;
             transition-duration: .4s;
+            font-family: $font-main;
+            text-transform: uppercase;
+            font-weight: 800;
         }
     }
 
@@ -90,5 +93,5 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
 }
 
 .galleries .row {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }

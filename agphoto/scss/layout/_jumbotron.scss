@@ -2,9 +2,9 @@
 // Jumbotron styles
 // ===============================
 .j-height {
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 44px);
     min-height: 500px;
-    max-height: 820px;
+    // max-height: 820px;
 }
 
 .jumbotron {
@@ -51,6 +51,12 @@
     span {
         display: block;
         font-family: 'Shadows Into Light Two',"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+    }
+    a {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: $white;
     }
     i {
         font-size: 2.4rem;

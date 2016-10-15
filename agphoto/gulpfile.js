@@ -16,8 +16,8 @@ var sassPaths = [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/what-input/what-input.js',
     'bower_components/foundation-sites/dist/foundation.js',
-    'js/app.js',
-    'node_modules/slick-carousel/slick/slick.min.js'
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'js/app.js'
 ];
 
 gulp.task('concat-scripts', function(){

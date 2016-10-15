@@ -30,18 +30,29 @@
     .menu {
         display: none;
         @include breakpoint(medium){
-            display: initial;
+            display: block;
         }
         &>li>a {
             color: $color-menu-text;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: .8rem;
+            letter-spacing: 1.8px;
+            font-size: .75rem;
             padding: 0.9rem 0;
             width: 7rem;
             text-align: center;
             @include breakpoint(large){
                 width: 8.8rem;
+            }
+        }
+    }
+    &.stuck {
+        @include breakpoint(medium){
+            position: fixed;
+            width: 100%;
+            background: $white;
+            z-index: 10;
+            & + .row.galleries {
+                margin-top: calc( 5rem + 42px );
             }
         }
     }

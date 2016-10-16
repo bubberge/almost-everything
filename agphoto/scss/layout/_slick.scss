@@ -1,0 +1,38 @@
+// ===============================
+// Slick styles
+// ===============================
+.weddings .page-wrapper {
+    height: calc(100vh - 56px);
+    padding-top: 50px;
+}
+
+.s-height {
+    height: calc(80vh - 104px); // 50px space for header + 54px space for bottom nav
+    min-height: 500px;
+    // max-height: 820px;
+}
+
+.s-wrapper,
+.s-container,
+.s-slide,
+.s-slide > img {
+    @extend .s-height;
+}
+
+// .slide-1 {
+//     background-image
+// }
+
+.s-wrapper {
+    border-bottom: 2px solid $dark-gray;
+}
+
+.s-container {
+    background: $light-gray;
+}
+
+.s-slide {
+    max-height: 700px;
+    background: #fff no-repeat center/contain;
+    margin-right: 1px;
+}

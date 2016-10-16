@@ -1,13 +1,13 @@
 $(document).foundation();
 
-// $('.j-slick').slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 1,
-//     centerMode: true,
-//     variableWidth: true
-// });
+$('.s-container').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+});
 
 /**
  * parses any RSS/XML feed through Google and returns JSON data

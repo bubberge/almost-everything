@@ -27,6 +27,9 @@
     @include breakpoint(medium){
         position: initial;
     }
+    &-left {
+        padding: .25rem;
+    }
     .menu {
         display: none;
         @include breakpoint(medium){

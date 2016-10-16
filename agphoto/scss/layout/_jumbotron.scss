@@ -2,7 +2,7 @@
 // Jumbotron styles
 // ===============================
 .j-height {
-    height: calc(100vh - 44px);
+    height: calc(100vh - 54px);
     min-height: 500px;
     // max-height: 820px;
 }
@@ -13,15 +13,12 @@
     border-bottom: 2px solid $dark-gray;
 }
 
-.j-slide {
-    height: 100%;
-
-    &.slide-1 .j-background {
-        @extend .j-height;
-        background: no-repeat center/cover;
-        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
-    }
+.j-background {
+    @extend .j-height;
+    background: no-repeat center/cover;
+    background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
 }
+
 
 .j-overlay-background {
     @extend .abs-centered;

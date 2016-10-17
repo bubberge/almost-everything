@@ -2,6 +2,10 @@
 // Jumbotron styles
 // ===============================
 
+.off-canvas-wrapper {
+    overflow-y: hidden;
+}
+
 .row.galleries,
 .row.blog {
     margin-top: 2rem;

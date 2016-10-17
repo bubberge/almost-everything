@@ -1,13 +1,17 @@
 $(document).foundation();
 
-$('.s-container').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
-});
+(function slickInit(){
+    $('.s-container').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        initialSlide: 0,
+        centerMode: true,
+        variableWidth: true,
+        lazyLoad: 'ondemand'
+    });
+})();
 
 /**
  * parses any RSS/XML feed through Google and returns JSON data
@@ -86,3 +90,35 @@ $('#page-scroll').click( function( event ) {
         }, 350 );
     }
 });
+
+
+
+/*
+ * Uses AJAX to load JSON and then builds markup for slideshow
+
+
+ function createGallery( container, fileExt ) {   
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+    xobj.open('GET', fileExt, true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            var $container = $(container);
+            var jsonFile = JSON.parse(xobj.responseText);
+            for ( var i = 0; i < jsonFile.slides.length; i++ ){
+                theHTML = '<div class="s-slide"><div class="s-overlay"></div><img src="';
+                theHTML += jsonFile.slides[i].url;
+                theHTML += '" alt="';
+                theHTML += jsonFile.slides[i].alt;
+                theHTML += '" /></div>';
+                $container.append(theHTML);
+            }
+            slickInit();
+            console.log('gallery loaded');
+          }
+    };
+    xobj.send(null);  
+ }
+
+createGallery('.weddings .s-container', 'img/weddings/weddings.json');
+ */

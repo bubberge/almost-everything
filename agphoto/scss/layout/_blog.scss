@@ -34,8 +34,8 @@ $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-
     }
 }
 .b-title {
-    @extend .abs-centered;
-    @extend .flex-centered;
+    @include abs-centered;
+    @include flex-centered;
     flex-direction: column;
     z-index: 2;
     span {
@@ -54,13 +54,13 @@ $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-
     background-blend-mode: multiply;
 }
 .b-overlay {
-    @extend .abs-centered;
+    @include abs-centered;
     z-index: 1;
     background-color: transparent;
 }
 
 .b-link {
-    @extend .abs-centered;
+    @include abs-centered;
     z-index: 3;
 }
 

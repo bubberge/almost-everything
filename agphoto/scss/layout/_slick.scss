@@ -1,38 +1,87 @@
 // ===============================
 // Slick styles
 // ===============================
-.weddings .page-wrapper {
-    height: calc(100vh - 56px);
-    padding-top: 50px;
-}
-
-.s-height {
-    height: calc(80vh - 104px); // 50px space for header + 54px space for bottom nav
-    min-height: 500px;
-    // max-height: 820px;
-}
-
-.s-wrapper,
-.s-container,
-.s-slide,
-.s-slide > img {
-    @extend .s-height;
-}
-
-// .slide-1 {
-//     background-image
-// }
-
-.s-wrapper {
-    border-bottom: 2px solid $dark-gray;
-}
-
-.s-container {
-    background: $light-gray;
-}
-
 .s-slide {
-    max-height: 700px;
-    background: #fff no-repeat center/contain;
     margin-right: 1px;
+    position: relative;
+    min-width: 20px;
+}
+
+.gallery {
+    box-shadow: 0 -4px 0 #fff,0 0 0 #fff,0 4px 0 #fff,-4px 3px 6px 0px rgba(10,10,10,0.25);
+    min-height: 100vh;
+    .page-wrapper {
+        // height: calc(100vh - 56px);
+        padding-top: 40px;
+    }
+    .s-slide {
+        max-height: 700px;
+        &>img {
+            height: 70vh;
+        }
+    }
+    @include breakpoint (medium) {
+        .page-wrapper {
+            padding-top: 0;
+        }
+        .s-slide {
+            max-height: 885px;
+            &>img {
+                height: 87.5vh;
+            }
+        }
+    }
+    @include breakpoint (large) {
+        .s-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: transparentize($white,.7);
+            transition: background-color .2s $transition-bezier;
+        }
+        .slick-active .s-overlay {
+            background-color: transparent;
+        }
+        .slick-arrow {
+            color: $white;
+            z-index: 1;
+            background: transparentize($white,.8);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            &:focus {
+                background: transparentize($white,.8);
+            }
+            &.slick-prev {
+                left: 4%;
+            }
+            &.slick-next {
+                right: 4%;
+            }
+        }
+    }
+    .footer {
+        .social a {
+            color: $color-gallery-icons;
+        }
+    }
+    @media screen and (orientation: landscape) and (max-width: 1024px)  { /* @include breakpoint (large) */
+        .title-bar {
+            display: none;
+        }
+        .page-wrapper {
+            height: calc(100vh - 4px);
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .s-slide>img {
+            height: calc(100vh - 4px);
+        }
+        .slick-dots,
+        .footer {
+            display: none !important;
+        }
+    }
 }

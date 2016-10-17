@@ -35,7 +35,7 @@ include 'incl/_header.php'; ?>
                     </div>
                     <div class="g-underline"><span>&nbsp;</span></div>
                     <div class="g-background"></div>
-                    <a href="../agphoto/weddings"></a>
+                    <a href="/weddings"></a>
                 </div>
                 <div class="g-card engagements column small-12 medium-6 large-4 eat-left">
                     <div class="g-title">

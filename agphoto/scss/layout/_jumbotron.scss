@@ -21,8 +21,8 @@
 
 
 .j-overlay-background {
-    @extend .abs-centered;
-    @extend .flex-centered;
+    @include abs-centered;
+    @include flex-centered;
     background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
     background-size: 160px;
     @extend .j-height;
@@ -35,19 +35,19 @@
 }
 
 .j-overlay {
-    @extend .abs-centered;
+    @include abs-centered;
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
 }
 
 .j-arrow {
-    @extend .flex-centered;
+    @include flex-centered;
     flex-direction: column;
     color: $white;
     span {
         display: block;
-        font-family: 'Shadows Into Light Two',"Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+        font-family: $font-handwriting;
     }
     a {
         position: relative;

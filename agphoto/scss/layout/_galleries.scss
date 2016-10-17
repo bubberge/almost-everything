@@ -2,16 +2,13 @@
 // Galleries Container Styles
 // ===============================
 
-$transition-time            :   .4s;
-$transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
-
 .g-card {
     position: relative;
     padding: .25rem;
 
     .g-title {
-        @extend .abs-centered;
-        @extend .flex-centered;
+        @include abs-centered;
+        @include flex-centered;
         span {
             color: $white;
             padding: 1rem 0;
@@ -28,8 +25,8 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
     }
 
     .g-underline {
-        @extend .abs-centered;
-        @extend .flex-centered;
+        @include abs-centered;
+        @include flex-centered;
         span {
             width: 50%;
             max-width: 244px;
@@ -71,7 +68,7 @@ $transition-bezier          :   cubic-bezier(.56,.26,.37,.98);
     }
 
     a {
-        @extend .abs-centered;
+        @include abs-centered;
         background: transparentize( $white,.7 );
         transition: background $transition-time $transition-bezier;
     }

@@ -3,7 +3,7 @@
 // ===============================
 
 .footer {
-    @extend .flex-centered;
+    @include flex-centered;
     flex-direction: column;
     margin-bottom: .5rem;
     color: $black;

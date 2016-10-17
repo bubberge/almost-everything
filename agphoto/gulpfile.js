@@ -7,6 +7,7 @@ var gulp = require('gulp')
   , uglify = require('gulp-uglify')
   , rename = require('gulp-rename')
   , del = require('del')
+  , imagemin = require('gulp-imagemin')
   ;
 
 var sassPaths = [
@@ -16,7 +17,7 @@ var sassPaths = [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/what-input/what-input.js',
     'bower_components/foundation-sites/dist/foundation.js',
-    'node_modules/slick-carousel/slick/slick.min.js',
+    'bower_components/slick-carousel/slick/slick.js',
     'js/app.js'
 ];
 
@@ -24,7 +25,6 @@ gulp.task('concat-scripts', function(){
     return gulp.src( jsPaths )
         .pipe(maps.init())
         .pipe(concat('output.js'))
-        .pipe(maps.write('./'))
         .pipe(gulp.dest('js'));
 });
 
@@ -46,7 +46,7 @@ gulp.task('sass', function() {
         })
           .on('error', $.sass.logError))
         .pipe($.autoprefixer({
-            browsers: ['last 2 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
+            browsers: ['last 3 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
         }))
         .pipe(rename('output.min.css'))
         .pipe(maps.write('./')) 
@@ -57,9 +57,15 @@ gulp.task('clean', function(){
     del(['dist','css/app*.css*','js/output*.js*']);
 });
 
+gulp.task('img-min',function(){
+    gulp.src('img/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'));
+});
+
 
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/output.min.css*','js/output.min.js*','*.html','img/**'], {base:'./'})
+    return gulp.src(['css/**','js/output.min.js*','incl/**','*.php','.htaccess'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 

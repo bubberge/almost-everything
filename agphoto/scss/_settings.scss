@@ -404,7 +404,7 @@ $offcanvas-transition-timing: ease;
 $offcanvas-fixed-reveal: true;
 $offcanvas-exit-background: rgba($white, 0.25);
 $maincontent-class: 'off-canvas-content';
-$maincontent-shadow: -4px 3px 6px 0px rgba($black, 0.25);
+$maincontent-shadow: none;
 
 // 25. Orbit
 // ---------
@@ -566,7 +566,14 @@ $tooltip-radius: $global-radius;
 // $topbar-unstack-breakpoint: medium;
 
 
-// 37. Utilites
+// 37. Vars
+// ------------
+
+$transition-time            : .4s;
+$transition-bezier          : cubic-bezier(.56,.26,.37,.98);
+$color-gallery-icons        : lighten($black,50%);
+
+// 38. Utilities
 // ------------
 
 .eat-left {
@@ -582,7 +589,7 @@ $tooltip-radius: $global-radius;
   @extend .eat-right;
 }
 
-.abs-centered {
+@mixin abs-centered {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -590,7 +597,7 @@ $tooltip-radius: $global-radius;
   right: 0;
 }
 
-.flex-centered {
+@mixin flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;

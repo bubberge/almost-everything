@@ -27,7 +27,7 @@ include 'incl/_header.php'; ?>
     </div>
     <div class="row galleries">
         <div class="column small-12">
-            <h2 class="module-heading" id="scrollDestination">Galleries</h2>
+            <h2 class="module-heading" id="portLoc">Portfolio</h2>
             <div class="row">
                 <div class="g-card weddings column small-12 large-4 eat-left">
                     <div class="g-title">
@@ -58,7 +58,7 @@ include 'incl/_header.php'; ?>
     </div>
     <div class="row blog">
         <div class="column small-12">
-            <h2 class="module-heading">Blog</h2>
+            <h2 class="module-heading" id="blogLoc">Blog</h2>
         </div>
     </div>
     <div class="blog-feed">

@@ -75,22 +75,26 @@ wind.scroll(function () {
     scrollTimer = setTimeout(stickyScroll(), 20);   // set new timer
 });
 
+function portfolioScroll (selector) {
+    $(selector).click( function( event ) {
+        event.preventDefault();
+        console.log('click');
+        var $anchor = $(this);
+        if ( $jumbo.width() < 640 ) {
+            $('html, body').animate({
+                scrollTop: ($($anchor.attr('href')).offset().top - 40 )
+            }, 350 );
+        } else {
+            $('html, body').animate({
+                scrollTop: ($($anchor.attr('href')).offset().top - 120 )
+            }, 350 );
+        }
+    });
+}
 
-$('#page-scroll').click( function( event ) {
-    event.preventDefault();
-    console.log('click');
-    var $anchor = $(this);
-    if ( $jumbo.width() < 640 ) {
-        $('html, body').animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 40 )
-        }, 350 );
-    } else {
-        $('html, body').animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 120 )
-        }, 350 );
-    }
-});
-
+portfolioScroll('.home #page-scroll');
+portfolioScroll('.home #port-link');
+portfolioScroll('.home #blog-link');
 
 
 /*

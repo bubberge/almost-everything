@@ -37,7 +37,7 @@ gulp.task('minify-scripts',['concat-scripts'], function(){
         .pipe(gulp.dest('js'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function(){
     return gulp.src('scss/app.scss')
         .pipe(maps.init({loadmaps:true}))
         .pipe($.sass({

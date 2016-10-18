@@ -8,6 +8,7 @@ var gulp = require('gulp')
   , rename = require('gulp-rename')
   , del = require('del')
   , imagemin = require('gulp-imagemin')
+  , runSequence = require('run-sequence')
   ;
 
 var sassPaths = [
@@ -69,6 +70,7 @@ gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined depe
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('rebuild', function(done) { runSequence('clean', 'build'); });
 
 gulp.task('default', ['sass'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);

@@ -17,11 +17,10 @@
         <meta name="twitter:image" content="https://photos.smugmug.com/2015-Homepage/i-zjzDszs/0/L/jackson_hole_wedding_photographer_goodman-70-L.jpg"/>
         <meta name="twitter:site" content="@amygphoto"/>
         <meta name="twitter:creator" content="@amygphoto"/>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         <link rel="stylesheet" href="css/output.min.css">
         <link rel='shortcut icon' href='img/fav.ico' type='image/x-icon'/ >
     </head>
-    <body>
+    <body class="<?php echo $pageClasses; ?>">
     <div class="off-canvas-wrapper">
         <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
             <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
@@ -38,5 +37,5 @@
 
             </div>
 
-            <div class="off-canvas-content <?php echo $pageClasses; ?>" data-off-canvas-content>
+            <div class="off-canvas-content <?php echo $pageClasses; ?>-content" data-off-canvas-content>
                 <!-- begin page content -->

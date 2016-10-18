@@ -96,6 +96,10 @@ portfolioScroll('.home #page-scroll');
 portfolioScroll('.home #port-link');
 portfolioScroll('.home #blog-link');
 
+// automatically closes the off-canvas menu when an option is selected
+$(".off-canvas a").mouseup( function(){
+  $(".close-button").click();
+});
 
 /*
  * Uses AJAX to load JSON and then builds markup for slideshow

@@ -10,7 +10,7 @@ include 'incl/_header.php'; ?>
         <div class="j-overlay">
             <div class="j-overlay-background"></div>
             <div class="j-arrow">
-                <a id="page-scroll" href="#scrollDestination" title="Take me to the pictures!">
+                <a id="page-scroll" href="#portLoc" title="Take me to the pictures!">
                     <span>I am a photographer. Learn more down here!</span>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>

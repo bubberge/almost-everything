@@ -19,3 +19,56 @@
         margin-top: -1rem;
     }
 }
+
+
+// About
+.row.shifted {
+    margin-bottom: -4.75rem;
+    @include breakpoint (medium) {
+        margin-bottom: -12rem;
+    }
+}
+
+.about {
+
+    &-text {
+        font-family: $font-content;
+        background-color: transparentize($white,.2);
+        @include breakpoint (small only) {
+            padding-right: 1.75rem;
+            padding-left: 4%;
+            transform: translateY(-4.75rem);
+        }
+        @include breakpoint (medium) {
+            transform: translateY(-12rem);
+            padding: .25rem 1.8rem;
+        }
+        p:first-child {
+            margin-top: 1rem;
+            &:first-line {
+                font-size: 1.2rem;
+                font-family: $font-main;
+                font-weight: 800;
+            }
+        }
+    }
+    &-faq {
+        font-family: $font-content;
+        column-count: 2;
+        @include breakpoint (medium) {
+            column-count: 3;
+        }
+        @include breakpoint (xlarge) {
+            column-count: 4;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        span {
+            display: block;
+            font-weight: bold;
+        }
+        margin-bottom: 4rem;
+    }
+}
+

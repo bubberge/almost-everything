@@ -1,0 +1,125 @@
+// ===============================
+// Jumbotron styles
+// ===============================
+.j-height {
+    height: calc(100vh - 54px);
+    min-height: 500px;
+    // max-height: 820px;
+}
+
+.jumbotron {
+    @extend .j-height;
+    position: relative;
+    border-bottom: 2px solid $dark-gray;
+}
+
+.j-background {
+    @extend .j-height;
+    background: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg') no-repeat center/cover;
+}
+
+
+.j-overlay-background {
+    @include abs-centered;
+    @include flex-centered;
+    background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
+    background-size: 160px;
+    @extend .j-height;
+    @include breakpoint(medium){
+        background-size: 200px;
+    }
+    @include breakpoint(large){
+        background-size: 240px;
+    }
+}
+
+.j-overlay {
+    @include abs-centered;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.j-arrow {
+    @include flex-centered;
+    flex-direction: column;
+    color: $white;
+    span {
+        display: block;
+        font-family: $font-handwriting;
+    }
+    a {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: $white;
+    }
+    i {
+        font-size: 2.4rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.about {
+    .jumbotron {
+        border-bottom: none;
+        margin-top: 48px;
+    }
+    .j-overlay {
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .j-overlay-content {
+        @include abs-centered;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            width: 120px;
+            @include breakpoint (medium){
+                width: 60%;
+                max-width: 250px;
+            }
+        }
+    }
+    .j-background {
+        background-image: url('../img/about.jpg');
+    }
+    .j-overlay-background {
+        background-image: url('../img/amy-galbraith-photography-logo.png');
+    }
+    .j-logo {
+        background-image: url(../img/amy-galbraith-photography-logo.png);
+        height: 200px;
+        width: 200px;
+    }
+    .j-arrow a {
+        color: $black;
+        font-weight: bold;
+    }
+    .j-overlay-text {
+        padding: 1rem;
+        padding-left: .8rem;
+        background: transparentize($white, .2);
+        border-left: 2px solid $white;
+        align-self: flex-end;
+        margin-bottom: calc(25vw - 160px);
+    }
+    .j-overlay-gradient {
+        height: 20vh;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.99) 98%, rgba(255,255,255,1) 98%);
+    }
+    .a-slide {
+        height: 24vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        &>img {
+            max-height: 26vh;
+            border-right: 2px solid $light-gray;
+        }
+    }
+}

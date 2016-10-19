@@ -18,6 +18,7 @@ $(document).foundation();
  * source: http://stackoverflow.com/a/6271906/477958
  */
 (function parseRSS(url, container) {
+    // console.log(parseRSS);
     var $outputContainer = $(container);
     $.ajax({
         url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),

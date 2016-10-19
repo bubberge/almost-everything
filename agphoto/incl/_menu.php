@@ -5,4 +5,4 @@
 <li><a id="port-link" href="<?php if ($pageExt) : ?>/<?php endif; ?>#portLoc">Portfolio</a></li>
 <li><a id="blog-link" href="<?php if ($pageExt) : ?>/<?php endif; ?>#blogLoc">Blog</a></li>
 <li><a href="#">Investment</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="/contact">Contact</a></li>

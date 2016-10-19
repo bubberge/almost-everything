@@ -18,22 +18,14 @@
     }
 }
 
-
-
 .title-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99;
-    @include breakpoint(medium){
-        position: initial;
+    &>* {
+        padding: .25rem;
+    }
+    @include breakpoint (medium) {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    &>* {
-        padding: .25rem;
     }
     .menu {
         display: none;
@@ -53,29 +45,59 @@
             }
         }
     }
-    &.stuck {
-        .title-bar-left {
-            background-color: transparentize($white,.5);
-            border-radius: 2px;
-            button {
-                margin-bottom: .15rem;
-            }
+}
+
+.home .title-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    @include breakpoint(medium){
+        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.about .title-bar,
+.gallery .title-bar,
+.contact .title-bar,
+.investment .title-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    @include breakpoint (medium) {
+        background: $white;
+    }    
+}
+
+.title-bar.stuck {
+    .title-bar-left {
+        background-color: transparentize($white,.5);
+        border-radius: 2px;
+        button {
+            margin-bottom: .15rem;
         }
-        .menu-icon::after{
-            background: transparentize($black,.25);
-            box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
-        }
-        @include breakpoint(medium){
-            position: fixed;
-            width: 100%;
-            background: $white;
-            z-index: 10;
-            & + .row.galleries {
-                margin-top: calc( 5rem + 42px );
-            }
+    }
+    .menu-icon::after{
+        background: transparentize($black,.25);
+        box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
+    }
+    @include breakpoint(medium){
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: $white;
+        z-index: 10;
+        & + .row.galleries {
+            margin-top: calc( 5rem + 42px );
         }
     }
 }
+
 
 .gallery {
     .menu-icon::after {
@@ -98,4 +120,12 @@
         font-weight: bold;
     }
 }
+
+.about {
+    .menu-icon::after{
+        background: transparentize($black,.25);
+        box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
+    }
+}
+
 

@@ -1,43 +1,24 @@
 // ===============================
 // Jumbotron styles
 // ===============================
-.j-height {
+@mixin j-height {
     height: calc(100vh - 54px);
     min-height: 500px;
-    // max-height: 820px;
 }
 
 .jumbotron {
-    @extend .j-height;
+    @include j-height;
     position: relative;
     border-bottom: 2px solid $dark-gray;
 }
-
 .j-background {
-    @extend .j-height;
-    background: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg') no-repeat center/cover;
+    @include j-height;
+    background: no-repeat center/cover;
 }
-
-
-.j-overlay-background {
-    @include abs-centered;
-    @include flex-centered;
-    background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
-    background-size: 160px;
-    @extend .j-height;
-    @include breakpoint(medium){
-        background-size: 200px;
-    }
-    @include breakpoint(large){
-        background-size: 240px;
-    }
-}
-
 .j-overlay {
     @include abs-centered;
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
 }
 
 .j-arrow {
@@ -49,8 +30,6 @@
         font-family: $font-handwriting;
     }
     a {
-        position: relative;
-        z-index: 1;
         text-align: center;
         color: $white;
     }
@@ -59,41 +38,60 @@
         margin-bottom: .5rem;
     }
 }
+.j-overlay-content {
+    @include abs-centered;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 120px;
+        @include breakpoint (medium){
+            width: 60%;
+            max-width: 220px;
+        }
+        @include breakpoint (large) {
+            min-width: 220px;
+        }
+    }
+}
+
+.home {
+    .j-background {
+        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
+    }
+    .j-overlay-background {
+        @include abs-centered;
+        background: url('../img/amy-galbraith-photography-logo-white.png') no-repeat top;
+        background-size: 160px;
+        @include breakpoint ( medium ) {
+            background-size: 200px;
+        }
+        @include breakpoint ( large ) {
+            background-size: 240px;
+        }
+    }
+    .j-arrow a {
+        position: relative;
+        z-index: 1;
+    }
+    .j-overlay {
+        flex-direction: column-reverse;
+    }
+}
 
 .about {
     .jumbotron {
         border-bottom: none;
         margin-top: 48px;
     }
-    .j-overlay {
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 100%;
-    }
     .j-overlay-content {
-        @include abs-centered;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-between;
-        img {
-            width: 120px;
-            @include breakpoint (medium){
-                width: 60%;
-                max-width: 250px;
-            }
-        }
     }
     .j-background {
         background-image: url('../img/about.jpg');
     }
     .j-overlay-background {
         background-image: url('../img/amy-galbraith-photography-logo.png');
-    }
-    .j-logo {
-        background-image: url(../img/amy-galbraith-photography-logo.png);
-        height: 200px;
-        width: 200px;
     }
     .j-arrow a {
         color: $black;
@@ -107,11 +105,6 @@
         align-self: flex-end;
         margin-bottom: calc(25vw - 160px);
     }
-    .j-overlay-gradient {
-        height: 20vh;
-        width: 100%;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.99) 98%, rgba(255,255,255,1) 98%);
-    }
     .a-slide {
         height: 24vh;
         display: flex;
@@ -120,6 +113,43 @@
         &>img {
             max-height: 26vh;
             border-right: 2px solid $light-gray;
+        }
+        @include breakpoint (medium) {
+            transform: translateY(calc(-5vw + 30px));
+        }
+    }
+}
+
+.investment {
+    .j-background {
+        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
+    }
+    .j-overlay.row {
+        margin-top: 48px;
+        justify-content: center;
+    }
+    .j-overlay-content {
+        justify-content: center;
+    }
+    .j-overlay-text {
+        display: flex;
+        flex-direction: column;
+        a {
+            font-family: $font-main;
+            color: darken($color-action,12%);
+            border: 1px solid $color-action;
+            border-radius: 1px;
+            padding: .3rem .6rem;
+            align-self: center;
+            &:hover {
+                background-color: lighten($color-action, 36%);
+            }
+        }
+    }
+    .j-arrow {
+        align-self: flex-end;
+        a {
+            color: $black;
         }
     }
 }

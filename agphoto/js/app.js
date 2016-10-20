@@ -42,8 +42,6 @@ $(document).foundation();
                     var temp = document.createElement('div');
                     temp.innerHTML = s;
                     thehtml += temp.firstChild.getAttribute("src") + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                    // var thumbnail = temp.firstChild;
-                    // thehtml += thumbnail;
                     $outputContainer.append(thehtml);
                 }
             });
@@ -76,7 +74,7 @@ wind.scroll(function () {
     scrollTimer = setTimeout(stickyScroll(), 20);   // set new timer
 });
 
-function portfolioScroll (selector) {
+function smoothScroll (selector) {
     $(selector).click( function( event ) {
         event.preventDefault();
         console.log('click');
@@ -93,14 +91,16 @@ function portfolioScroll (selector) {
     });
 }
 
-portfolioScroll('.home #page-scroll');
-portfolioScroll('.home #port-link');
-portfolioScroll('.home #blog-link');
+smoothScroll('.home #page-scroll');
+smoothScroll('.home #port-link');
+smoothScroll('.home #blog-link');
+smoothScroll('.about #page-scroll');
 
 // automatically closes the off-canvas menu when an option is selected
 $(".off-canvas a").mouseup( function(){
   $(".close-button").click();
 });
+
 
 /*
  * Uses AJAX to load JSON and then builds markup for slideshow

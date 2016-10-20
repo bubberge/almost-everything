@@ -33,12 +33,14 @@ include 'incl/_header.php'; ?>
     </div>
 
     <div class="a-slide">
+        <img src="//placehold.it/300x200" />
         <img src="//placehold.it/200x300" />
         <img src="//placehold.it/300x300" />
         <img src="//placehold.it/200x300" />
         <img src="//placehold.it/300x200" />
         <img src="//placehold.it/400x200" />
         <img src="//placehold.it/200x300" />
+        <img src="//placehold.it/300x200" />
     </div>
     <div class="row small-about-text hide-for-medium">
         <h2 class="module-heading text-center" id="storyLoc">Hi! My name is Amy.</h2>

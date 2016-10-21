@@ -2,14 +2,14 @@
 // Jumbotron styles
 // ===============================
 @mixin j-height {
-    height: calc(100vh - 54px);
+    height: calc(100vh - 74px);
     min-height: 500px;
+    margin-bottom: 20px;
 }
 
 .jumbotron {
     @include j-height;
     position: relative;
-    border-bottom: 2px solid $dark-gray;
 }
 .j-background {
     @include j-height;
@@ -56,8 +56,23 @@
 }
 
 .home {
+    .j-track {
+        @include j-height;
+    }
     .j-background {
-        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: calc(100vh - 74px)!important;
+        min-height: 500px!important;
+        &.j-1{background-image:url('../img/homepage/001-leavenworth_wedding_photographer-betz-001.jpg');}
+        &.j-2{background-image:url('../img/homepage/002-jackson_hole_wedding_photographer-todd-002.jpg');}
+        &.j-3{background-image:url('../img/homepage/002-wisconsin-wedding-photographer-001.jpg');}
+        &.j-4{background-image:url('../img/homepage/003-leavenworth_wedding_photographer-jasinski-004.jpg');}
+        &.j-5{background-image:url('../img/homepage/004-within-sodo-wedding-aebischer.jpg');}
+        &.j-6{background-image:url('../img/homepage/006-mt-baker-engagement-session-001.jpg');}
+        &.j-7{background-image:url('../img/homepage/007-bainbridge-island-engagement-001.jpg');}
+        &.j-8{background-image:url('../img/homepage/008-stevens-pass-engagement-session-001.jpg');}
     }
     .j-overlay-background {
         @include abs-centered;

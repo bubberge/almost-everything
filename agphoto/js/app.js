@@ -13,6 +13,19 @@ $(document).foundation();
     });
 })();
 
+(function slickInit(){
+    console.log('home slick');
+    $('.j-track').slick({
+        dots: true,
+        infinite: true,
+        speed: 700,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        lazyLoad: 'ondemand'
+    });
+})();
+
 /**
  * parses any RSS/XML feed through Google and returns JSON data
  * source: http://stackoverflow.com/a/6271906/477958

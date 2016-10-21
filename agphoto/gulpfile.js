@@ -47,7 +47,7 @@ gulp.task('sass', function(){
         })
           .on('error', $.sass.logError))
         .pipe($.autoprefixer({
-            browsers: ['last 3 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
+            browsers: ['last 3 versions', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
         }))
         .pipe(rename('output.min.css'))
         .pipe(maps.write('./')) 

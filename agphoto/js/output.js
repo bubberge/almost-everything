@@ -22087,6 +22087,19 @@ $(document).foundation();
     });
 })();
 
+(function slickInit(){
+    console.log('home slick');
+    $('.j-track').slick({
+        dots: true,
+        infinite: true,
+        speed: 700,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        lazyLoad: 'ondemand'
+    });
+})();
+
 /**
  * parses any RSS/XML feed through Google and returns JSON data
  * source: http://stackoverflow.com/a/6271906/477958
@@ -22116,8 +22129,6 @@ $(document).foundation();
                     var temp = document.createElement('div');
                     temp.innerHTML = s;
                     thehtml += temp.firstChild.getAttribute("src") + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                    // var thumbnail = temp.firstChild;
-                    // thehtml += thumbnail;
                     $outputContainer.append(thehtml);
                 }
             });

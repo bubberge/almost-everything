@@ -23,7 +23,7 @@ include 'incl/_header.php'; ?>
                 </div>
             </div>
             <div class="j-arrow">
-                <a id="page-scroll" href="#storyLoc" title="Read my story!">
+                <a id="page-scroll" href="#inv" title="Read my story!">
                     <span>Check out pricing</span>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
@@ -31,8 +31,8 @@ include 'incl/_header.php'; ?>
         </div>
     </div>
     <div class="row">
-        <h2 class="module-heading text-center" id="faq"><?php echo $pageTitle; ?></h2>
-        <div class="investment-text column small-10 small-offset-1">
+        <h2 class="module-heading text-center" id="inv"><?php echo $pageTitle; ?></h2>
+        <div class="investment-text column small-10 small-offset-1 medium-8 medium-offset-2">
             <?php include 'incl/_investmentTxt.php'; ?>
         </div>
     </div>

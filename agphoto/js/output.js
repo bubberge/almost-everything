@@ -22074,31 +22074,80 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 $(document).foundation();
 
-(function slickInit(){
-    $('.s-container').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        initialSlide: 0,
-        centerMode: true,
-        variableWidth: true,
-        lazyLoad: 'ondemand'
-    });
-})();
+var $slickHome = $('.home')
+  , $slickGallery = $('.s-container')
+  , $slickAbout = $('.a-slide')
+  ;
 
-(function slickInit(){
+if ( $slickHome[0] ) { 
+        slickHome();
+    } else if ( $slickGallery[0] ) {
+        slickGallery();
+    } else if ( $slickAbout[0] ) {
+        slickAbout();
+    }
+
+function slickHome(){ // removes images that aren't good for small and then inits slick on home
     console.log('home slick');
+    var $jumbo = $('.j-background');
+    if ( $slickHome[0] && $jumbo.width() < 640 ) {
+        $('.rm-rf').remove();
+    }
     $('.j-track').slick({
         dots: true,
         infinite: true,
         speed: 700,
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 5000
+    });
+}
+
+function slickGallery(){
+    console.log('gallery slick');
+    $('.s-container').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
         lazyLoad: 'ondemand'
     });
-})();
+}
+
+function slickAbout(){
+    console.log('about slick');
+    $('.a-slide').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        centerMode: false,
+        variableWidth: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
+    });
+}
 
 /**
  * parses any RSS/XML feed through Google and returns JSON data
@@ -22140,7 +22189,7 @@ $(document).foundation();
 var wind = $(window);
 var height = wind.height();
 var $nav = $('.title-bar');
-var $jumbo = $('.j-overlay-background');
+var $jumbo = $('.j-background');
 var scrollToggle = true;
 var scrollTimer = null;
 
@@ -22178,10 +22227,9 @@ function smoothScroll (selector) {
     });
 }
 
-smoothScroll('.home #page-scroll');
+smoothScroll('#page-scroll');
 smoothScroll('.home #port-link');
 smoothScroll('.home #blog-link');
-smoothScroll('.about #page-scroll');
 
 // automatically closes the off-canvas menu when an option is selected
 $(".off-canvas a").mouseup( function(){

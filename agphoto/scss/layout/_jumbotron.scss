@@ -32,6 +32,8 @@
     a {
         text-align: center;
         color: $white;
+        position: relative;
+        z-index: 1; 
     }
     i {
         font-size: 2.4rem;
@@ -65,7 +67,7 @@
         align-items: flex-end;
         height: calc(100vh - 74px)!important;
         min-height: 500px!important;
-        &.j-1{background-image:url('../img/homepage/001-leavenworth_wedding_photographer-betz-001.jpg');}
+        &.j-1{background-image:url('../img/homepage/001-leavenworth_wedding_photographer-betz-001.jpg');background-position:bottom;}
         &.j-2{background-image:url('../img/homepage/002-jackson_hole_wedding_photographer-todd-002.jpg');}
         &.j-3{background-image:url('../img/homepage/002-wisconsin-wedding-photographer-001.jpg');}
         &.j-4{background-image:url('../img/homepage/003-leavenworth_wedding_photographer-jasinski-004.jpg');}
@@ -85,10 +87,6 @@
             background-size: 240px;
         }
     }
-    .j-arrow a {
-        position: relative;
-        z-index: 1;
-    }
     .j-overlay {
         flex-direction: column-reverse;
     }
@@ -97,13 +95,15 @@
 .about {
     .jumbotron {
         border-bottom: none;
+    }
+    .j-overlay.row {
         margin-top: 48px;
     }
-    .j-overlay-content {
+    .j-overlay-content {    
         justify-content: space-between;
     }
     .j-background {
-        background-image: url('../img/about.jpg');
+        background-image: url('../img/amy-galbraith-wedding-engagement-senior-photography-about-page-portrait.jpg');
     }
     .j-overlay-background {
         background-image: url('../img/amy-galbraith-photography-logo.png');
@@ -116,17 +116,17 @@
         padding: 1rem;
         padding-left: .8rem;
         background: transparentize($white, .2);
-        border-left: 2px solid $white;
+        border-right: 2px solid $white;
         align-self: flex-end;
         margin-bottom: calc(25vw - 160px);
     }
     .a-slide {
-        height: 24vh;
+        // height: 24vh;
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
-        &>img {
-            max-height: 26vh;
+        & img {
+            height: 24vh;
             border-right: 2px solid $light-gray;
         }
         @include breakpoint (medium) {
@@ -137,11 +137,16 @@
 
 .investment {
     .j-background {
-        background-image: url('../img/amy-galbraith-photography-rolling-hills-mountains-wedding.jpg');
+        background-image: url('../img/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
+        @include breakpoint ( small only ) {
+            background-position: right;
+        }
     }
     .j-overlay.row {
-        margin-top: 48px;
         justify-content: center;
+        @include breakpoint (medium) {
+            margin-top: 48px;
+        }
     }
     .j-overlay-content {
         justify-content: center;
@@ -149,22 +154,17 @@
     .j-overlay-text {
         display: flex;
         flex-direction: column;
-        a {
-            font-family: $font-main;
-            color: darken($color-action,12%);
-            border: 1px solid $color-action;
-            border-radius: 1px;
-            padding: .3rem .6rem;
-            align-self: center;
-            &:hover {
-                background-color: lighten($color-action, 36%);
-            }
+        p, a {
+            margin-bottom: 2rem;
         }
     }
     .j-arrow {
         align-self: flex-end;
         a {
-            color: $black;
+            color: $white;
+            @include breakpoint (medium) {
+                color: $black;
+            }
         }
     }
 }

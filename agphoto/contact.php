@@ -14,7 +14,10 @@ include 'incl/_header.php'; ?>
         </div>
     </div>
     <div class="row">
-        <div class="column small-12">
+        <div class="column small-12 medium-5 medium-offset-1">
+            <img src="img/amy-galbraith-wedding-engagement-senior-photography-portland-piwowarski.jpg" alt="A bride and groom sharing a private moment in an enchantent hidden alley, as captured by Amy Galbraith" />
+        </div>
+        <div class="column small-12 medium-5">
             <div id="wufoo-z1qlr1zr1rr5n5w">
             Fill out my <a href="https://amygalbraith.wufoo.com/forms/z1qlr1zr1rr5n5w">online form</a>.
             </div>

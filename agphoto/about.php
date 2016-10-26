@@ -16,7 +16,7 @@ include 'incl/_header.php'; ?>
     <div class="jumbotron">
         <div class="j-background"></div>
         <div class="j-overlay row">            
-            <div class="j-overlay-content small-12 medium-6 medium-offset-6 columns">
+            <div class="j-overlay-content small-12 medium-6 columns">
                 <img src="img/amy-galbraith-photography-logo.png" alt="amy galbraith photography logo, a circle with four small hand-drawn trees" />
                 <div class="j-overlay-text show-for-medium">
                     <h1>Hi! My name is Amy.</h1>

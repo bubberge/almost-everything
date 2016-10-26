@@ -1,17 +1,38 @@
 // ===============================
 // Slick styles
 // ===============================
+
+.slick-arrow {
+    z-index: 1;
+    &.slick-prev {
+        left: 4%;
+    }
+    &.slick-next {
+        right: 4%;
+    }
+}
+
 .s-slide {
     margin-right: 1px;
     position: relative;
     min-width: 20px;
 }
 
+.a-slide {
+    & img:nth-child(1){background-image:url("//placehold.it/300x200")};
+    & img:nth-child(2){background-image:url("//placehold.it/200x200")};
+    & img:nth-child(3){background-image:url("//placehold.it/300x400")};
+    & img:nth-child(4){background-image:url("//placehold.it/400x400")};
+    & img:nth-child(5){background-image:url("//placehold.it/400x200")};
+    & img:nth-child(6){background-image:url("//placehold.it/250x200")};
+    & img:nth-child(7){background-image:url("//placehold.it/300x300")};
+    & img:nth-child(8){background-image:url("//placehold.it/300x400")};
+}
+
 .gallery {
     box-shadow: 0 -4px 0 #fff,0 0 0 #fff,0 4px 0 #fff,-4px 3px 6px 0px rgba(10,10,10,0.25);
     min-height: 100vh;
     .page-wrapper {
-        // height: calc(100vh - 56px);
         padding-top: 40px;
     }
     .s-slide {
@@ -44,22 +65,8 @@
         .slick-active .s-overlay {
             background-color: transparent;
         }
-        .slick-arrow {
-            color: $white;
-            z-index: 1;
-            background: transparentize($white,.8);
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            &:focus {
-                background: transparentize($white,.8);
-            }
-            &.slick-prev {
-                left: 4%;
-            }
-            &.slick-next {
-                right: 4%;
-            }
+        .slick-arrow:focus {
+            background: transparent;
         }
     }
     .footer {

@@ -135,15 +135,6 @@ include 'incl/_header.php'; ?>
                     <img src="img/engagements/038-seattle_engagement_photos-aebischer-002.jpg" alt="" />
                 </div>                
             </div>
-            <!-- <div class="j-overlay">
-                <div class="j-overlay-background"></div>
-                <div class="j-arrow">
-                    <a id="page-scroll" href="#scrollDestination" title="Take me to the pictures!">
-                        <span>I am a photographer. Learn more down here!</span>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div> -->
         </div>
     </div>
     <?php include 'incl/_footer.php';  ?>

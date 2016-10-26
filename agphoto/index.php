@@ -7,14 +7,14 @@ $pageClasses = 'home';
 include 'incl/_header.php'; ?>
     <div class="jumbotron">
         <div class="j-track">
-            <div class="j-background j-1"></div>
+            <div class="j-background j-1 rm-rf"></div>
             <div class="j-background j-2"></div>
             <div class="j-background j-3"></div>
-            <div class="j-background j-4"></div>
+            <div class="j-background j-4 rm-rf"></div>
             <div class="j-background j-5"></div>
             <div class="j-background j-6"></div>
-            <div class="j-background j-7"></div>
-            <div class="j-background j-8"></div>
+            <div class="j-background j-7 rm-rf"></div>
+            <div class="j-background j-8 rm-rf"></div>
         </div>
         <div class="j-overlay">
             <div class="j-overlay-background"></div>

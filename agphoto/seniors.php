@@ -30,18 +30,102 @@ include 'incl/_header.php'; ?>
                     <img src="img/seniors/seattle-senior-photographer-003.jpg" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>
-                    <img src="img/seniors/seattle-senior-photographer-035.jpg" alt="" />
-                </div>                
-            </div>
-            <!-- <div class="j-overlay">
-                <div class="j-overlay-background"></div>
-                <div class="j-arrow">
-                    <a id="page-scroll" href="#scrollDestination" title="Take me to the pictures!">
-                        <span>I am a photographer. Learn more down here!</span>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </a>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-004.jpg" alt="" />
                 </div>
-            </div> -->
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-005.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-006.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-007.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-008.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-009.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-010.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-011.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-012.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-013.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-014.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-015.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-016.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-017.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-018.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-019.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-020.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-021.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-022.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-023.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-024.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-025.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-026.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-027.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-028.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-029.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-030.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-031.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-032.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-033.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img data-lazy="img/seniors/seattle-senior-photographer-034.jpg" alt="" />
+                </div>
+                <div class="s-slide"><div class="s-overlay"></div>
+                    <img src="img/seniors/seattle-senior-photographer-035.jpg" alt="" />
+                </div>
+            </div>
         </div>
     </div>
     <?php include 'incl/_footer.php';  ?>

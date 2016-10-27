@@ -19,6 +19,7 @@
 }
 
 .title-bar {
+    transition: background-color $transition-time $transition-bezier;
     &>* {
         padding: .25rem;
     }
@@ -69,9 +70,11 @@
     top: 0;
     width: 100%;
     z-index: 99;
-    @include breakpoint (medium) {
-        background: $white;
-    }    
+    &.stuck {
+        @include breakpoint (medium) {
+            background: $white;
+        }    
+    }
 }
 
 .title-bar.stuck {
@@ -123,11 +126,13 @@
     }
 }
 
-.about {
+.about,
+.contact {
     .menu-icon::after{
         background: transparentize($black,.25);
         box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
     }
 }
+
 
 

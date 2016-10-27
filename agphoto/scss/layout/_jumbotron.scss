@@ -103,34 +103,41 @@
         justify-content: space-between;
     }
     .j-background {
+        background-position: left;
         background-image: url('../img/amy-galbraith-wedding-engagement-senior-photography-about-page-portrait.jpg');
+        @include breakpoint (medium) {
+            background-position: right;
+        }
+        @include breakpoint (large) {
+            background-position: center;
+        }
     }
     .j-overlay-background {
         background-image: url('../img/amy-galbraith-photography-logo.png');
     }
     .j-arrow a {
-        color: $black;
         font-weight: bold;
+        color: $white;
+        @include breakpoint (medium) {
+            color: $black;
+        }
     }
     .j-overlay-text {
         padding: 1rem;
         padding-left: .8rem;
-        background: transparentize($white, .2);
-        border-right: 2px solid $white;
         align-self: flex-end;
         margin-bottom: calc(25vw - 160px);
-    }
-    .a-slide {
-        // height: 24vh;
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        & img {
-            height: 24vh;
-            border-right: 2px solid $light-gray;
+        color: $white;
+        text-align: center;
+        h1 {
+            color: inherit;
+            font-size: 3.5rem;
         }
         @include breakpoint (medium) {
-            transform: translateY(calc(-5vw + 30px));
+            text-align: left;
+            background: transparentize($white, .2);
+            border-right: 2px solid $white;
+            color: $black;
         }
     }
 }

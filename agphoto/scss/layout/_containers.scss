@@ -54,8 +54,11 @@
     }
     &-faq {
         font-family: $font-content;
-        column-count: 2;
+        column-count: 1;
         @include breakpoint (medium) {
+            column-count: 2;
+        }
+        @include breakpoint (large) {
             column-count: 3;
         }
         @include breakpoint (xlarge) {
@@ -69,6 +72,24 @@
             font-weight: bold;
         }
         margin-bottom: 4rem;
+    }
+    .a-slide {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        border-top: 1px solid $light-gray;
+        border-bottom: 1px solid $light-gray;
+        & .a-img {
+            height: 24vh;
+            border-right: 2px solid $light-gray;
+            min-width: 90px;
+            img {
+                max-height: 100%;
+            }
+        }
+        @include breakpoint (medium) {
+            transform: translateY(calc(-5vw + 30px));
+        }
     }
 }
 

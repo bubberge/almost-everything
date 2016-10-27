@@ -115,17 +115,28 @@ function slickAbout(){
 var wind = $(window);
 var height = wind.height();
 var $nav = $('.title-bar');
-var $jumbo = $('.j-background');
+var $jumboHome = $('.home .j-background');
+var $notHome = $('body').not('.home');
 var scrollToggle = true;
 var scrollTimer = null;
 
 function stickyScroll(e){
-    if ( wind.scrollTop() > $jumbo.height() ) {  //114%
-        $nav.addClass('stuck');
-    }
+    if ( $jumboHome.height() ) {
+        if ( wind.scrollTop() > $jumboHome.height() ) {  //114%
+            $nav.addClass('stuck');
+        }
 
-    if ( wind.scrollTop() < $jumbo.height() ) {
-        $nav.removeClass('stuck');
+        if ( wind.scrollTop() <= $jumboHome.height() ) {
+            $nav.removeClass('stuck');
+        }
+    }
+    if ( $notHome.height() ) {
+        if ( wind.scrollTop() > 0 ) {
+            $nav.addClass('stuck');
+        }
+        if ( wind.scrollTop() <= 0 ) {
+            $nav.removeClass('stuck');
+        }
     }
 }
 
@@ -141,7 +152,7 @@ function smoothScroll (selector) {
         event.preventDefault();
         console.log('click');
         var $anchor = $(this);
-        if ( $jumbo.width() < 640 ) {
+        if ( $nav.width() < 640 ) {
             $('html, body').animate({
                 scrollTop: ($($anchor.attr('href')).offset().top - 40 )
             }, 350 );

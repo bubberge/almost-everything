@@ -1,0 +1,171 @@
+// ===============================
+// Jumbotron styles
+// ===============================
+
+.off-canvas-wrapper {
+    overflow-y: hidden;
+}
+
+.row.galleries,
+.row.blog {
+    margin-top: 2rem;
+    @include breakpoint(medium){
+        margin-top: 5rem;
+    }
+}
+
+.row.blog {
+    @include breakpoint (small only){
+        margin-top: -1rem;
+    }
+}
+
+
+// About
+.row.shifted {
+    margin-bottom: -4.75rem;
+    @include breakpoint (medium) {
+        margin-bottom: -12rem;
+    }
+}
+
+.about {
+
+    &-text {
+        font-family: $font-content;
+        background-color: transparentize($white,.2);
+        @include breakpoint (small only) {
+            padding-right: 1.75rem;
+            padding-left: 4%;
+            transform: translateY(-4.75rem);
+        }
+        @include breakpoint (medium) {
+            transform: translateY(-12rem);
+            padding: .25rem 1.8rem;
+        }
+        p:first-child {
+            margin-top: 1rem;
+            &:first-line {
+                font-size: 1.2rem;
+                font-family: $font-main;
+                font-weight: 800;
+            }
+        }
+    }
+    &-faq {
+        font-family: $font-content;
+        column-count: 1;
+        @include breakpoint (medium) {
+            column-count: 2;
+        }
+        @include breakpoint (large) {
+            column-count: 3;
+        }
+        @include breakpoint (xlarge) {
+            column-count: 4;
+        }
+        p {
+            margin-bottom: 1.5rem;
+        }
+        span {
+            display: block;
+            font-weight: bold;
+        }
+        margin-bottom: 4rem;
+    }
+    .a-slide {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        border-top: 1px solid $light-gray;
+        border-bottom: 1px solid $light-gray;
+        & .a-img {
+            height: 24vh;
+            border-right: 2px solid $light-gray;
+            min-width: 90px;
+            img {
+                max-height: 100%;
+            }
+        }
+        @include breakpoint (medium) {
+            transform: translateY(calc(-5vw + 30px));
+        }
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: "fontawesome";
+        font-size: 2rem;
+        line-height: .4;
+        @include breakpoint (medium) {
+            font-size: 4rem;
+        }
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+}
+
+
+// Contact
+.contact {
+    .contact-content {
+        margin-top: 5rem;
+    }
+}
+
+// Investment
+.investment {
+    .investment-img {
+        display: flex;
+        margin-bottom: 4rem;
+    }
+    .i-title {
+        @include abs-centered;
+        @include flex-centered;
+        flex-direction: column;
+        z-index: 3;
+        &>div {
+            width: 75%;
+            background-color: transparentize($white,.25);
+            border: 1px solid transparentize($white,.55);
+            text-align: center;
+            padding: 1.6rem;
+        }
+        span {
+            color: $white;
+            font-family: $font-main;
+            display: block;
+            mix-blend-mode: difference;
+            &:first-child {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
+            &:last-child {
+                padding-top: .25rem;
+            }
+        }
+    }
+    .g-underline span {
+        transform: translateY(-2.35rem);
+        border-color: transparent;
+        width: 100%;
+        mix-blend-mode: difference;
+    }
+    .g-card:hover {
+        .g-underline span {
+            border-color: transparentize($white,.15);
+        }
+    }
+    .g-background {
+        height: 16rem;
+        filter: saturate(0);
+    }
+    .weddings .g-background {
+        @include breakpoint(medium only){
+            height: 280px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+// ===============================
+// Footer styles
+// ===============================
+
+.footer {
+    @include flex-centered;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    color: $black;
+
+    i {
+        padding: 1rem;
+    }
+
+    .credits,
+    .contact {
+        padding: 0 1rem;
+        font-family: $font-main;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        a {
+            box-shadow: 0px 3px 0px 0px $light-gray;
+            &:hover {
+                color: $medium-gray;
+            }
+        }
+    }
+    .social {
+        a:nth-child(1):hover {
+            color: #3b5998;
+        }
+        a:nth-child(2):hover {
+            color: #00aced;
+        }
+        a:nth-child(3):hover {
+            color: #e4405f;
+        }
+        a:nth-child(4):hover {
+            color: #cb2027;
+        }
+        a:nth-child(5):hover {
+            color: #FFFC00;
+        }
+    }
+
+
+    a {
+        color: inherit;
+        transition: .15s;
+    }
+    @include breakpoint(large){
+        position: relative;
+        flex-direction: row;
+        .credits,
+        .contact {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .credits {
+            left: 0;
+        }
+        .contact {
+            right: 0;
+        }
+    }
+}

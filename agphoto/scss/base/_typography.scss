@@ -1,0 +1,51 @@
+// ===============================
+// Typography Styles
+// ===============================
+
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand|Shadows+Into+Light+Two');
+@import '../vendor/font-awesome.scss';
+
+$color-menu-text    : lighten($black,.75);
+$font-main          : 'Quicksand', veranda, sans-serif;
+$font-content       : 'EB Garamond', Georgia,Times,Times New Roman,serif; 
+$font-handwriting   : 'Shadows Into Light Two',"Arial Rounded MT Bold","Helvetica Rounded", Arial, sans-serif;;
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-main;
+}
+
+h2.module-heading {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    font-size: 2.25rem;
+}
+
+// Galleries
+
+.g-title span {
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+.j-overlay-text {
+    font-family: $font-content;
+    &:first-line {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-family: $font-main;
+        font-weight: 800;
+    }
+}
+
+// About
+.small-about-text p {
+    font-family: $font-content;
+}
+
+// Investment
+.investment-text {
+    font-family: $font-content;
+}

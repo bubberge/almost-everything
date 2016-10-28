@@ -1,0 +1,29 @@
+// ===============================
+// Effect styles
+// ===============================
+
+.fade-in {
+    animation-name: fade-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-duration: .33s;
+    animation-timing-function: $transition-bezier;
+}
+
+.fade-out {
+    animation-name: fade-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-duration: .33s;
+    animation-timing-function: $transition-bezier;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}

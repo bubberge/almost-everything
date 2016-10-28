@@ -1,0 +1,2 @@
+<p>Every idea, every couple, every wedding is different. If you like what you see, lets talk! I also love to travel, snowboard, hike, camp, [insert outdoor activity of choice here] so please don't hesitate to contact me for a destination event or an idea that strays from the social norm.</p>
+<a class="cta" href="/contact" alt="contact Amy Galbraith">Contact</a>

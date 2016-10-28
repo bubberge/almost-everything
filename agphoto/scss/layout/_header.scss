@@ -1,0 +1,144 @@
+// ===============================
+// Header styles
+// ===============================
+
+.off-canvas {
+    ul.vertical.menu a {
+        color: $color-menu-text;
+        font-family: $font-main;
+    }
+    &-content {
+        position: relative;
+        @include breakpoint(medium){
+            position: initial;
+        }
+    }
+    .close-button {
+        top: .2rem;
+    }
+}
+
+.title-bar {
+    transition: background-color $transition-time $transition-bezier;
+    &>* {
+        padding: .25rem;
+    }
+    @include breakpoint (medium) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu {
+        display: none;
+        @include breakpoint(medium){
+            display: block;
+        }
+        &>li>a {
+            color: $color-menu-text;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            font-size: .75rem;
+            padding: 0.9rem 0;
+            width: 13vw;
+            text-align: center;
+            @include breakpoint(large){
+                width: 8.8rem;
+            }
+        }
+    }
+}
+
+.home .title-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    .menu>li>a {
+        width: 7rem;
+        @include breakpoint (large) {
+            width: 8.8rem;
+        }
+    }
+    @include breakpoint(medium){
+        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.about .title-bar,
+.gallery .title-bar,
+.contact .title-bar,
+.investment .title-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    &.stuck {
+        @include breakpoint (medium) {
+            background: $white;
+        }    
+    }
+}
+
+.title-bar.stuck {
+    .title-bar-left {
+        @include breakpoint (small only){
+            background-color: transparentize($white,.5);
+            border-radius: 2px;
+        }
+        button {
+            margin-bottom: .15rem;
+        }
+    }
+    .menu-icon::after{
+        background: transparentize($black,.25);
+        box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
+    }
+    @include breakpoint(medium){
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: $white;
+        z-index: 10;
+        & + .row.galleries {
+            margin-top: calc( 5rem + 42px );
+        }
+    }
+}
+
+
+.gallery {
+    .menu-icon::after {
+        background: $color-gallery-icons;
+        box-shadow: 0 7px 0 $color-gallery-icons,0 14px 0 $color-gallery-icons;
+    }
+    .title-bar-right {
+        display: flex;
+        align-items: center;
+        height: 38px;
+        color: transparentize($black,.75);
+        img {
+            height: 20px;
+            margin: 0 .25rem 0 .5rem;
+            opacity: .25;
+        }
+    }
+    .l-hint {
+        font-family: $font-handwriting;
+        font-weight: bold;
+    }
+}
+
+.about,
+.contact {
+    .menu-icon::after{
+        background: transparentize($black,.25);
+        box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);
+    }
+}
+
+
+

@@ -1,0 +1,71 @@
+// ===============================
+// Blog styles
+// ===============================
+
+$color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-4: #838383, color-5: #838383, color-6: #c2c2c2, color-7: #737373 , color-8: #b2b2b2 );
+
+
+.blog-feed {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+.b-post {
+    position: relative;
+    background-color: $dark-gray;
+    width: 100%;
+    height: 70vw;
+    flex-grow: 1;
+    &:hover .b-overlay {
+        background-color: transparentize($black,.8);
+    }
+    @include breakpoint(medium only){
+        width: 49.99%;
+        height: 40vw;
+    }
+    @include breakpoint(large only){
+        width: 33.32%;
+        height: 28vw;
+    }
+    @include breakpoint(xlarge){
+        width: 24.99%;
+        height: 20vw;
+    }
+}
+.b-title {
+    @include abs-centered;
+    @include flex-centered;
+    flex-direction: column;
+    z-index: 2;
+    span {
+        font-family: $font-main;
+        color: $white;
+        &:first-child {
+            text-transform: uppercase;
+        }
+        &:last-child {
+            text-transform: capitalize;
+        }
+    }
+}
+.b-background {
+    height:100%;
+    background-blend-mode: multiply;
+}
+.b-overlay {
+    @include abs-centered;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.b-link {
+    @include abs-centered;
+    z-index: 3;
+}
+
+@for $i from 1 through 8 {
+    .b-post:nth-child(#{$i}) .b-background {
+        background: map-get($color-map, color-#{$i}) no-repeat center/cover;
+    }
+}

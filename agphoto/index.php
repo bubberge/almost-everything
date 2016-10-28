@@ -20,7 +20,7 @@ include 'incl/_header.php'; ?>
             <div class="j-overlay-background"></div>
             <div class="j-arrow">
                 <a id="page-scroll" href="#portLoc" title="Take me to the pictures!">
-                    <span>I am a photographer. Learn more down here!</span>
+                    <span>I am a photographer. See more down here!</span>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
             </div>

@@ -19,7 +19,7 @@ include 'incl/_header.php'; ?>
             <div class="j-overlay-content small-6 small-offset-3 medium-6 medium-offset-0 columns">
                 <img src="img/amy-galbraith-photography-logo.png" alt="amy galbraith photography logo, a circle with four small hand-drawn trees" />
                 <div class="j-overlay-text">
-                    <h1>Hi! My name is Amy.</h1>
+                    <h1>Hi! My name is <br class="hide-for-medium" />Amy.</h1>
                     <div class="show-for-medium">
                         <?php include 'incl/_aboutTxt.php'; ?>
                     </div>

@@ -32,8 +32,46 @@ include 'incl/_header.php'; ?>
     </div>
     <div class="row">
         <h2 class="module-heading text-center" id="inv"><?php echo $pageTitle; ?></h2>
-        <div class="investment-text column small-10 small-offset-1 medium-8 medium-offset-2">
-            <?php include 'incl/_investmentTxt.php'; ?>
+        <div class="investment-text column small-10 small-offset-1 hide-for-large">
+        <?php include 'incl/_investmentTxt.php'; ?>
+        </div>
+        <div class="investment-img show-for-large column large-10 large-offset-1">
+            <div class="g-card weddings column eat-left">
+                <div class="i-title">
+                    <div>
+                        <span>Weddings</span>
+                        <span>collections begin at</span>
+                        <span>$3300</span>
+                    </div>
+                </div>
+                <!-- <div class="g-underline"><span>&nbsp;</span></div> -->
+                <div class="g-background"></div>
+                <!-- <a href="/weddings"></a> -->
+            </div>
+            <div class="g-card engagements column">
+                <div class="i-title">
+                    <div>
+                        <span>Engagements</span>
+                        <span>sessions begin at</span>
+                        <span>$650</span>
+                    </div>
+                </div>
+                <!-- <div class="g-underline"><span>&nbsp;</span></div> -->
+                <div class="g-background"></div>
+                <!-- <a href="/engagements"></a> -->
+            </div>
+            <div class="g-card seniors column eat-right">
+                <div class="i-title">
+                    <div>
+                        <span>Seniors</span>
+                        <span>sessions begin at</span>
+                        <span>$350</span>
+                    </div>
+                </div>
+                <!-- <div class="g-underline"><span>&nbsp;</span></div> -->
+                <div class="g-background"></div>
+                <!-- <a href="/seniors"></a> -->
+            </div>
         </div>
     </div>
 <?php include 'incl/_footer.php'; ?>

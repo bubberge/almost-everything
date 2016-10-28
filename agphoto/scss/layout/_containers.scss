@@ -91,6 +91,21 @@
             transform: translateY(calc(-5vw + 30px));
         }
     }
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: "fontawesome";
+        font-size: 2rem;
+        line-height: .4;
+        @include breakpoint (medium) {
+            font-size: 4rem;
+        }
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
 }
 
 
@@ -98,5 +113,59 @@
 .contact {
     .contact-content {
         margin-top: 5rem;
+    }
+}
+
+// Investment
+.investment {
+    .investment-img {
+        display: flex;
+        margin-bottom: 4rem;
+    }
+    .i-title {
+        @include abs-centered;
+        @include flex-centered;
+        flex-direction: column;
+        z-index: 3;
+        &>div {
+            width: 75%;
+            background-color: transparentize($white,.25);
+            border: 1px solid transparentize($white,.55);
+            text-align: center;
+            padding: 1.6rem;
+        }
+        span {
+            color: $white;
+            font-family: $font-main;
+            display: block;
+            mix-blend-mode: difference;
+            &:first-child {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
+            &:last-child {
+                padding-top: .25rem;
+            }
+        }
+    }
+    .g-underline span {
+        transform: translateY(-2.35rem);
+        border-color: transparent;
+        width: 100%;
+        mix-blend-mode: difference;
+    }
+    .g-card:hover {
+        .g-underline span {
+            border-color: transparentize($white,.15);
+        }
+    }
+    .g-background {
+        height: 16rem;
+        filter: saturate(0);
+    }
+    .weddings .g-background {
+        @include breakpoint(medium only){
+            height: 280px;
+        }
     }
 }

@@ -48,25 +48,6 @@
         }
     }
 
-
-    &.weddings .g-background {
-        background-image: url('../img/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
-    }
-
-    &.engagements .g-background {
-        background-image: url('../img/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
-        @include breakpoint(medium only){
-            height: 280px;
-        }
-    }
-
-    &.seniors .g-background {
-        background-image: url('../img/amy-galbraith-photography-highschool-senior-gallery.jpg');
-        @include breakpoint(medium only){
-            height: 280px;
-        }
-    }
-
     a {
         @include abs-centered;
         background: transparentize( $white,.7 );
@@ -87,6 +68,40 @@
                 }
             }
         }
+}
+
+.home .g-card {
+    &.weddings .g-background {
+        background-image: url('../img/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
+    }
+
+    &.engagements .g-background {
+        background-image: url('../img/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
+        @include breakpoint(medium only){
+            height: 280px;
+        }
+    }
+
+    &.seniors .g-background {
+        background-image: url('../img/amy-galbraith-photography-highschool-senior-gallery.jpg');
+        @include breakpoint(medium only){
+            height: 280px;
+        }
+    }
+}
+
+.investment .g-card {
+    &.weddings .g-background {
+        background-image: url(../img/weddings/013-portland-wedding-photographer-piwowarski-001.jpg);
+    }
+
+    &.engagements .g-background {
+        background-image: url('../img/engagements/029-seattle_engagement_photos-nagel-003.jpg');
+    }
+
+    &.seniors .g-background {
+        background-image: url('../img/seniors/seattle-senior-photographer-025.jpg');
+    }
 }
 
 .galleries .row {

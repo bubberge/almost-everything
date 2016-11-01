@@ -101,6 +101,12 @@
     }
     .j-overlay-content {    
         justify-content: space-between;
+        @media screen and (min-width: 40em) and (max-width: 63.96em) and (orientation: landscape) {
+            max-width: 60%!important;
+            img {
+                width: 130px!important;
+            }
+        }
     }
     .j-background {
         background-position: left;
@@ -143,7 +149,7 @@
 
 .investment {
     .j-background {
-        background-image: url('../img/investment/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
+        background-image: url('../img/other/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
         @include breakpoint ( small only ) {
             background-position: right;
         }
@@ -173,4 +179,12 @@
             }
         }
     }
+}
+
+.vendors {
+    .jumbotron,
+    .j-background {
+        max-height: 300px;
+        min-height: initial;
+    }   
 }

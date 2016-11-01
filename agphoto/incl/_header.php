@@ -9,15 +9,23 @@
         <meta name="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="name" content="Amy Galbraith"/>
-        <meta itemprop="url" content="http://www.amygalbraith.com<?php if ($pageExt) echo '/' . $pageExt; ?>"/>
+        <meta itemprop="url" content="http://amygalbraith.com<?php if ($pageExt) echo '/' . $pageExt; ?>"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:url" content="http://www.amygalbraith.com"/>
+        <meta name="twitter:url" content="http://amygalbraith.com"/>
         <meta name="twitter:title" content="Amy Galbraith"/>
         <meta name="twitter:description" content="<?php echo $pageDescription; ?>"/>
         <meta name="twitter:image" content="https://amygalbraith.com/img/twitter-photo.jpg"/>
         <meta name="twitter:site" content="@amygphoto"/>
         <meta name="twitter:creator" content="@amygphoto"/>
+        <meta property="og:title" content="Amy Galbraith" />
+        <meta property="og:site_name" content="Amy Galbraith Photography" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://amygalbraith.com<?php if ($pageExt) echo '/' . $pageExt; ?>" />
+        <meta property="og:image" content="http://amygalbraith.com/img/twitter-photo.jpg" />
+        <meta property="og:description" content="<?php echo $pageDescription; ?>" />
+        <link rel="canonical" href="http://amygalbraith.com<?php if ($pageExt) echo '/' . $pageExt; ?>">
         <link rel="stylesheet" href="css/output.min.css">
+        <meta name="google-site-verification" content="5NH_Jss4iPicBqHJJsMZPOgAiCQxrFowW7qv5J1kprk" />
         <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">

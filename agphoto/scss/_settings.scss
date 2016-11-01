@@ -603,3 +603,8 @@ $color-action               : #FFBF40;
   justify-content: center;
   align-items: center;
 }
+
+@mixin link-style {
+    color: transparentize($black, 0.25);
+    box-shadow: 0px 2px 0px 0px transparentize($color-action ,0.5);
+}

@@ -71,7 +71,8 @@
 .about .title-bar,
 .gallery .title-bar,
 .contact .title-bar,
-.investment .title-bar {
+.investment .title-bar,
+.vendors .title-bar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -133,7 +134,8 @@
 }
 
 .about,
-.contact {
+.contact,
+.vendor {
     .menu-icon::after{
         background: transparentize($black,.25);
         box-shadow: 0 7px 0 transparentize($black,.25),0 14px 0 transparentize($black,.25);

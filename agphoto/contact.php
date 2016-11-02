@@ -15,7 +15,7 @@ include 'incl/_header.php'; ?>
     </div>
     <div class="row">
         <div class="column small-12 medium-5 medium-offset-1 show-for-medium">
-            <img src="img/amy-galbraith-wedding-engagement-senior-photography-portland-piwowarski.jpg" alt="A bride and groom sharing a private moment in an enchantent hidden alley, as captured by Amy Galbraith" />
+            <img src="img/other/amy-galbraith-wedding-engagement-senior-photography-portland-piwowarski.jpg" alt="A bride and groom sharing a private moment in an enchantent hidden alley, as captured by Amy Galbraith" />
         </div>
         <div class="column small-12 medium-5 medium-order">
             <div id="wufoo-z1qlr1zr1rr5n5w">

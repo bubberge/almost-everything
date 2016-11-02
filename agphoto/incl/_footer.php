@@ -10,7 +10,7 @@
                         <span>&copy;</span><span>&nbsp;Amy Galbraith Photography</span>
                     </div>
                     <div class="contact">
-                        <a href="/">Contact</a>
+                        <a href="/contact">Contact</a>
                     </div>
                 </div>
             </div>

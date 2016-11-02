@@ -17,13 +17,13 @@
 }
 .j-overlay {
     @include abs-centered;
-    display: flex;
-    align-items: center;
+    @include display-flex;
+    @include align-items(center);
 }
 
 .j-arrow {
     @include flex-centered;
-    flex-direction: column;
+    @include flex-direction(column);
     color: $white;
     span {
         display: block;
@@ -42,9 +42,9 @@
 }
 .j-overlay-content {
     @include abs-centered;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
     img {
         width: 120px;
         @include breakpoint (medium){
@@ -101,10 +101,16 @@
     }
     .j-overlay-content {    
         justify-content: space-between;
+        @media screen and (min-width: 40em) and (max-width: 63.96em) and (orientation: landscape) {
+            max-width: 60%!important;
+            img {
+                width: 130px!important;
+            }
+        }
     }
     .j-background {
         background-position: left;
-        background-image: url('../img/amy-galbraith-wedding-engagement-senior-photography-about-page-portrait.jpg');
+        background-image: url('../img/about/amy-galbraith-wedding-engagement-senior-photography-about-page-portrait.jpg');
         @include breakpoint (medium) {
             background-position: right;
         }
@@ -143,7 +149,7 @@
 
 .investment {
     .j-background {
-        background-image: url('../img/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
+        background-image: url('../img/other/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
         @include breakpoint ( small only ) {
             background-position: right;
         }
@@ -173,4 +179,12 @@
             }
         }
     }
+}
+
+.vendors {
+    .jumbotron,
+    .j-background {
+        max-height: 300px;
+        min-height: initial;
+    }   
 }

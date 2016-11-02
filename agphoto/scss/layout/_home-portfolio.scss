@@ -72,18 +72,18 @@
 
 .home .g-card {
     &.weddings .g-background {
-        background-image: url('../img/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
+        background-image: url('../img/homepage/amy-galbraith-photography-wedding-gallery-seattle-wedding-photographer.jpg');
     }
 
     &.engagements .g-background {
-        background-image: url('../img/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
+        background-image: url('../img/homepage/amy-galbraith-engagement-gallery-seattle-wedding-photographer.jpg');
         @include breakpoint(medium only){
             height: 280px;
         }
     }
 
     &.seniors .g-background {
-        background-image: url('../img/amy-galbraith-photography-highschool-senior-gallery.jpg');
+        background-image: url('../img/homepage/amy-galbraith-photography-highschool-senior-gallery.jpg');
         @include breakpoint(medium only){
             height: 280px;
         }

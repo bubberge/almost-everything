@@ -54,15 +54,15 @@
     }
     &-faq {
         font-family: $font-content;
-        column-count: 1;
+        @include column-count(1);
         @include breakpoint (medium) {
-            column-count: 2;
+            @include column-count(2);
         }
         @include breakpoint (large) {
-            column-count: 3;
+            @include column-count(3);
         }
         @include breakpoint (xlarge) {
-            column-count: 4;
+            @include column-count(4);
         }
         p {
             margin-bottom: 1.5rem;
@@ -72,11 +72,14 @@
             font-weight: bold;
         }
         margin-bottom: 4rem;
+        a {
+            @include link-style;
+        }
     }
     .a-slide {
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
+        @include display-flex;
+        @include justify-content-center;
+        @include flex-wrap(nowrap);
         border-top: 1px solid $light-gray;
         border-bottom: 1px solid $light-gray;
         & .a-img {
@@ -116,20 +119,27 @@
     }
 }
 
+// Vendors
+.vendors {
+    .washington-vendors {
+        margin-top: 50px;
+    }
+}
+
 // Investment
 .investment {
     .investment-img {
-        display: flex;
+        @include display-flex;
         margin-bottom: 4rem;
     }
     .i-title {
         @include abs-centered;
         @include flex-centered;
-        flex-direction: column;
+        @include flex-direction(column);
         z-index: 3;
         &>div {
             width: 75%;
-            background-color: transparentize($white,.25);
+            background-color: transparentize($white,.22);
             border: 1px solid transparentize($white,.55);
             text-align: center;
             padding: 1.6rem;
@@ -167,5 +177,44 @@
         @include breakpoint(medium only){
             height: 280px;
         }
+    }
+}
+
+.vendors {
+    .washington-vendors,
+    .jackson-vendors {
+        .row > div {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .vendor-header {
+           background: #eee no-repeat center/cover; 
+       }
+        .vendor {
+            margin: .75rem 0;
+        }
+        h2 {
+            padding: 1rem;
+            margin: 0;
+            background-color: transparentize($white,.25);
+            border-right: 2px solid transparentize($white,.25);
+        }
+        h3 {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        a {
+            @include link-style;
+        }
+    }
+    .washington-vendors .vendor-header {
+        background-image: url('../img/weddings/034-snohomish_wedding_photographer-bailey-001.jpg');
+        background-position-y: bottom;
+    }
+    .jackson-vendors .vendor-header {
+        background-image: url('../img/other/amy-galbraith-wedding-engagement-senior-photography-jackson-wyoming-vendor-recommendations.jpg');
+        background-position-y: -180px;
     }
 }

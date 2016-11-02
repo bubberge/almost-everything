@@ -17,13 +17,13 @@
 }
 .j-overlay {
     @include abs-centered;
-    display: flex;
-    align-items: center;
+    @include display-flex;
+    @include align-items(center);
 }
 
 .j-arrow {
     @include flex-centered;
-    flex-direction: column;
+    @include flex-direction(column);
     color: $white;
     span {
         display: block;
@@ -42,9 +42,9 @@
 }
 .j-overlay-content {
     @include abs-centered;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
     img {
         width: 120px;
         @include breakpoint (medium){

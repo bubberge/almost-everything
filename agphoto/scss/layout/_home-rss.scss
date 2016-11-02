@@ -6,9 +6,9 @@ $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-
 
 
 .blog-feed {
-    display: flex;
+    @include display-flex;
     width: 100%;
-    flex-wrap: wrap;
+    @include flex-wrap(wrap);
     padding: .5rem 0;
 }
 .b-post {
@@ -36,7 +36,7 @@ $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-
 .b-title {
     @include abs-centered;
     @include flex-centered;
-    flex-direction: column;
+    @include flex-direction(column);
     z-index: 2;
     span {
         font-family: $font-main;

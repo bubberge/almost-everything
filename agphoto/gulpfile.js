@@ -47,7 +47,7 @@ gulp.task('sass', function(){
         })
           .on('error', $.sass.logError))
         .pipe($.autoprefixer({
-            browsers: ['last 3 versions', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
+            browsers: ['last 2 versions', 'android >= 4.1', 'safari >= 7', 'iOS >= 7']
         }))
         .pipe(rename('output.min.css'))
         .pipe(maps.write('./')) 
@@ -66,7 +66,7 @@ gulp.task('img-min',function(){
 
 
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/**','js/output.min.js*','incl/**','fonts/**','img/**','*.php','.htaccess'], {base:'./'})
+    return gulp.src(['css/**','js/output.min.js*','incl/**','fonts/**','img/**','*.php','.htaccess','sitemap.xml'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 

@@ -70,7 +70,7 @@ $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
-$global-flexbox: false;
+$global-flexbox: true;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
@@ -598,13 +598,47 @@ $color-action               : #FFBF40;
   right: 0;
 }
 
-@mixin flex-centered {
+@mixin display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+}
+
+@mixin justify-content-center {
+  -webkit-justify-content: center;
   justify-content: center;
-  align-items: center;
+}
+
+@mixin align-items($arg) {
+  -webkit-align-items: $arg;
+  align-items: $arg;
+}
+
+@mixin flex-centered {
+  @include display-flex;
+  @include justify-content-center;
+  @include align-items(center);
 }
 
 @mixin link-style {
     color: transparentize($black, 0.25);
     box-shadow: 0px 2px 0px 0px transparentize($color-action ,0.5);
+}
+
+@mixin flex-direction($arg) {
+    -webkit-flex-direction: $arg;
+    flex-direction: $arg;
+}
+
+@mixin flex-wrap($arg) {
+  -webkit-flex-wrap: $arg;
+  flex-wrap: $arg;
+}
+
+@mixin column-count($arg){
+    -webkit-column-count: $arg; /* Chrome, Safari, Opera */
+    -moz-column-count: $arg; /* Firefox */
+    column-count: $arg;
 }

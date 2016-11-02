@@ -86,12 +86,13 @@ function slickAbout(){
         url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
         dataType: 'json',
         success: function(data) {
-            //console.log(data.responseData.feed);
+            // console.log(data.responseData.feed);
             $.each(data.responseData.feed.entries, function(key, value){
                 if ( key < 8) {
                     var thehtml = '<div class="b-post"><div class="b-title">';
                     var str = value.title;
-                    if (str.includes(' | ')) {
+                    // console.log(typeof str);
+                    if (str.indexOf(' | ') !== -1) {
                         var splitStrings = str.split(' | ');
                         $.each(splitStrings,function(index, value){
                             thehtml += '<span>'+value+'</span>';

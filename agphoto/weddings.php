@@ -22,10 +22,10 @@ include 'incl/_header.php'; ?>
             <div class="s-container">
                 
                 <div class="s-slide"><div class="s-overlay"></div>
-                    <img src="img/weddings/001-seattle_wedding_photographer-portfolio_001.jpg" alt="" />
+                    <img src="<?php include 'incl/_weddings-1.php' ; ?>" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>
-                    <img src="img/weddings/004-seattle_wedding_photographer-rayachoti-001.jpg" alt="" />
+                    <img src="<?php include 'incl/_weddings-2.php' ; ?>" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>
                     <img data-lazy="img/weddings/005-seattle_wedding_photographer-tate-1.jpg" alt="" />
@@ -270,7 +270,7 @@ include 'incl/_header.php'; ?>
                 </div>
                 <!-- -->
                 <div class="s-slide"><div class="s-overlay"></div>
-                    <img src="img/weddings/094-within-sodo-wedding-aebischer.jpg" alt="" />
+                    <img src="<?php include 'incl/_weddings-3.php' ; ?>" alt="" />
                 </div>
             </div>
         </div>

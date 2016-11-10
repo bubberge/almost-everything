@@ -6,6 +6,9 @@ $pageExt = '';
 $pageClasses = 'home';
 include 'incl/_header.php'; ?>
     <div class="jumbotron">
+        <div class="j-loader">
+            <div class='uil-ring-css' style='transform:scale(0.45);'><div></div></div>
+        </div>
         <div class="j-track">
             <div class="j-background j-1 rm-rf"></div>
             <div class="j-background j-2"></div>

@@ -66,7 +66,7 @@ gulp.task('img-min',function(){
 
 
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/**','js/output.min.js*','incl/**','fonts/**','img/**','*.php','.htaccess','sitemap.xml'], {base:'./'})
+    return gulp.src(['css/**','js/output.min.js*','incl/**','fonts/**','*.php','.htaccess','sitemap.xml'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 

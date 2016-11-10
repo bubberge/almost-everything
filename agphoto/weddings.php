@@ -19,9 +19,17 @@ include 'incl/_header.php'; ?>
             </div>
         </div>
         <div class="s-wrapper">
+            <style>
+                .s-overlay {
+                    box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
+                    background-color: #e9e9e9;
+                    background-color: rgba(233,233,233,1);
+                    opacity: 1;
+                }
+
+            </style>
             <div class="s-container">
-                
-                <div class="s-slide"><div class="s-overlay"></div>
+                <div class="s-slide"><div class="s-overlay" style="background-"></div>
                     <img src="<?php include 'incl/_weddings-1.php' ; ?>" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>

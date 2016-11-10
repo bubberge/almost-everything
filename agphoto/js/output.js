@@ -22163,7 +22163,7 @@ if ( $('.blog-feed')[0] ) {
             url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
             dataType: 'json',
             success: function(data) {
-                // console.log(data.responseData.feed);
+                console.log(data.responseData.feed);
                 $.each(data.responseData.feed.entries, function(key, value){
                     if ( key < 8) {
                         var thehtml = '<div class="b-post"><div class="b-title">';

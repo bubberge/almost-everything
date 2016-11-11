@@ -75,4 +75,27 @@ function wpt_theme_widgets() {
 }
 add_action( 'widgets_init', 'wpt_theme_widgets' );
 
+// add the namespace to the RSS opening element
+function add_media_namespace() {
+  echo "xmlns:media="http://search.yahoo.com/mrss/"n";
+}
+
+// add the requisite tag where a thumbnail exists
+function add_media_thumbnail() {
+  global $post;
+  if( has_post_thumbnail( $post->ID )) {
+    $thumb_ID = get_post_thumbnail_id( $post->ID );
+    $details = wp_get_attachment_image_src($thumb_ID, 'thumbnail');
+    if( is_array($details) ) {
+      echo '<media:thumbnail url="' . $details[0]
+        . '" width="' . $details[1] 
+        . '" height="' . $details[2] . '"></media:content>';
+    }
+  }
+}
+
+// add the two functions above into the relevant WP hooks
+add_action( 'rss2_ns', 'add_media_namespace' );
+add_action( 'rss2_item', 'add_media_thumbnail' );
+
 ?>

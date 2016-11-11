@@ -14,7 +14,7 @@ if ( $slickHome[0] ) {
     }
 
 function slickHome(){ // removes images that aren't good for small and then inits slick on home
-    console.log('home slick');
+    console.log('¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>');
     var $jumbo = $('.j-background');
     if ( $slickHome[0] && $jumbo.width() < 640 ) {
         $('.rm-rf').remove();
@@ -30,7 +30,7 @@ function slickHome(){ // removes images that aren't good for small and then init
 }
 
 function slickGallery(){
-    console.log('gallery slick');
+    //console.log('gallery slick');
     $('.s-container').slick({
         dots: false,
         infinite: true,
@@ -43,7 +43,7 @@ function slickGallery(){
 }
 
 function slickAbout(){
-    console.log('about slick');
+    //console.log('about slick');
     $('.a-slide').slick({
         dots: false,
         infinite: false,
@@ -81,7 +81,7 @@ function slickAbout(){
  */
 if ( $('.blog-feed')[0] ) {
     // if the blog feed dom node exists, run this function
-    console.log('start parseRSS');
+    // console.log('start parseRSS');
     (function parseRSS(url, container) {
         // console.log(parseRSS);
         var $outputContainer = $(container);
@@ -89,7 +89,7 @@ if ( $('.blog-feed')[0] ) {
             url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
             dataType: 'json',
             success: function(data) {
-                console.log(data.responseData.feed);
+                // console.log(data.responseData.feed);
                 $.each(data.responseData.feed.entries, function(key, value){
                     if ( key < 8) {
                         var thehtml = '<div class="b-post"><div class="b-title">';
@@ -104,17 +104,18 @@ if ( $('.blog-feed')[0] ) {
                             thehtml += '<span>'+str+'</span>';
                         }
                         thehtml += '</div><div class="b-background" style="background-image: url(';
-                        var s = value.content;
-                        console.log(s);
-                        var temp = document.createElement('div');
-                        temp.innerHTML = s;
-                        thehtml += temp.firstChild.getAttribute("src") + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
+                        // Description string contains featured image as first element. Cut string at the src attribute value
+                        var first = value.content.slice(value.content.indexOf('src="') + 5 );
+                        // cut and save the string after .jpg
+                        var imgURL = first.slice(0,first.indexOf('.jpg') + 4);
+                        // console.log(imgURL);
+                        thehtml += imgURL + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
                         $outputContainer.append(thehtml);
                     }
                 });
             }
         });
-    })('http://blog.amygalbraith.com/feed','.blog-feed');
+    })('http://blog.amygalbraith.com/feed/','.blog-feed');
 }
 
 var wind = $(window);

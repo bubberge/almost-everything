@@ -67,6 +67,9 @@
 .home {
     .j-track {
         @include j-height;
+        button {
+            z-index: 5;
+        }
     }
     .j-background {
         display: flex;

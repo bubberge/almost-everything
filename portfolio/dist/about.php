@@ -1,6 +1,8 @@
 <?php
 $pageTitle = 'About';
 $pageBlurb = "Yep, I'm another one of those self-taught web developers.<br class='show-for-large'><span class='show-for-small'>&nbsp;</span>And like most self-taught designers or developers, my path took me all over the place.";
+$pageDescription = "The about page on David Duffy (aka daviduffy)'s porfolio site. David is a web designer and developer from Seattle, Washington.";
+$pageExt = 'about';
 include 'incl/_header.php'; ?>
           <div class="row content about _1_lw">
             <div class="small-3 column scrollFill">

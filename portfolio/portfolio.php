@@ -1,6 +1,8 @@
 <?php
 $pageTitle = 'Portfolio';
 $pageBlurb = "Right now I like simple, clean design.<br class='show-for-large'><span class='show-for-small'>&nbsp;</span>These sites from the past year exemplify that approach on a variety of platforms.";
+$pageDescription = "The actual portfolio page on David Duffy (aka daviduffy)'s web design porfolio website. David is a web designer and developer from Seattle, Washington.";
+$pageExt = 'portfolio';
 include 'incl/_header.php'; ?>
           <div class="row content portfolio">
           <div class="portfolio-heading">

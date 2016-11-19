@@ -1,13 +1,30 @@
-<!doctype html>
+<!doctype html> 
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Duffy | daviduffy | Web Designer &amp; Developer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
-    <meta name="description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington."/>
+    <meta name="description" content="<?php echo $pageDescription; ?>" />
+    <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
     <link rel="stylesheet" href="css/app.css">
     <link rel='shortcut icon' href='img/fav.ico' type='image/x-icon'/ >
+    <meta itemprop="name" content="David Duffy"/>
+    <meta itemprop="url" content="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://daviduffy.me"/>
+    <meta name="twitter:title" content="David Duffy"/>
+    <meta name="twitter:description" content="<?php echo $pageDescription; ?>"/>
+    <meta name="twitter:image" content="https://daviduffy.me/img/twitter.jpg"/>
+    <meta name="twitter:site" content="@fairedusnow"/>
+    <meta name="twitter:creator" content="@fairedusnow"/>
+    <meta property="og:title" content="David Duffy" />
+    <meta property="og:site_name" content="David Duffy Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>" />
+    <meta property="og:image" content="http://daviduffy.me/img/twitter.jpg" />
+    <meta property="og:description" content="<?php echo $pageDescription; ?>" />
+    <link rel="canonical" href="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>">
   </head>
   <body>
     <div class="off-canvas-wrapper">

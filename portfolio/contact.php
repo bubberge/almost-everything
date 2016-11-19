@@ -22,6 +22,8 @@
 
 $pageTitle = 'Contact';
 $pageBlurb = "Want to see what happens when an idea comes to life?<br class='show-for-large'><span class='show-for-small'>&nbsp;</span>Let's chat!";
+$pageDescription = "Contact page for David Duffy's portfolio. David (aka daviduffy) is a web designer and developer from Seattle, Washington.";
+$pageExt = 'contact';
 include 'incl/_header.php'
 ?>
 <div class="row">

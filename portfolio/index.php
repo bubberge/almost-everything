@@ -1,5 +1,7 @@
 <?php
 $pageTitle = '';
+$pageDescription = 'A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington.';
+$pageExt = '';
 include 'incl/_header.php'; ?>
         <!-- page content goes in this container -->
         <div class="off-canvas-content body-content home" data-off-canvas-content>

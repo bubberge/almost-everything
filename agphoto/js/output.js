@@ -22253,7 +22253,6 @@ $(".off-canvas a").mouseup( function(){
   $(".close-button").click();
 });
 
-
 /*
  * Uses AJAX to load JSON and then builds markup for slideshow
 

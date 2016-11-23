@@ -9,9 +9,7 @@ include 'incl/_header.php'; ?>
         <div class="title-bar">
             <div class="title-bar-left">
                 <button class="menu-icon hide-for-medium" type="button" data-open="offCanvas"></button>
-                <ul class="horizontal menu">
-                  <?php include 'incl/_menu.php'; ?>
-                </ul>
+                <?php include 'incl/_horizontal-menu.php'; ?>
             </div>
             <div class="title-bar-right show-for-small-only">
                 <span class="l-hint">try landscape!</span>
@@ -21,15 +19,18 @@ include 'incl/_header.php'; ?>
         <div class="s-wrapper">
             <style>
                 .s-overlay {
+                    -webkit-box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
+                    -moz-box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
                     box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
                     background-color: #e9e9e9;
                     background-color: rgba(233,233,233,1);
+                    zoom: 1;
+                    filter: alpha(opacity=50);
                     opacity: 1;
                 }
-
             </style>
             <div class="s-container">
-                <div class="s-slide"><div class="s-overlay" style="background-"></div>
+                <div class="s-slide"><div class="s-overlay"></div>
                     <img src="img/weddings/001-seattle_wedding_photographer-portfolio_001.jpg" alt="a bride turns and gazes pensively toward the ground in her dressing room, revealing her vintage earrings" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>

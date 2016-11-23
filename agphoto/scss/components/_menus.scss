@@ -1,3 +1,17 @@
 // ===============================
 // Menu Styles
 // ===============================
+
+.submenu {
+    border-top: none;
+}
+.is-dropdown-submenu-parent .submenu {
+    display: none;
+}
+.is-dropdown-submenu-parent.is-active .submenu {
+    @include display-flex;
+}
+.dropdown.menu>li.opens-right>.is-dropdown-submenu {
+    left: -15px;
+    min-width: 170px;
+}

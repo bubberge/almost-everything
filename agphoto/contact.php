@@ -8,9 +8,7 @@ include 'incl/_header.php'; ?>
     <div class="title-bar">
         <div class="title-bar-left">
             <button class="menu-icon hide-for-medium" type="button" data-open="offCanvas"></button>
-            <ul class="horizontal menu">
-              <?php include 'incl/_menu.php'; ?>
-            </ul>
+            <?php include 'incl/_horizontal-menu.php'; ?>
         </div>
     </div>
     <div class="row">

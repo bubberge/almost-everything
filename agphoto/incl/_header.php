@@ -55,9 +55,7 @@
                 </button>
 
                 <!-- Menu -->
-                <ul class="vertical menu">
-                    <?php include '_menu.php' ?>
-                </ul>
+                <?php include '_vertical-menu.php' ?>
 
             </div>
 

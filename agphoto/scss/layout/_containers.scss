@@ -110,20 +110,20 @@
         content: "\f105";
     }
     .badges {
-        @include display-flex;
-        flex-wrap: wrap;
         margin-bottom: 2rem;
-        &>div {
+        text-align: center;
+        &>span {
+            display: inline-block;
             background: #fff no-repeat center/contain;
             min-height: 120px;
             position: relative;
-            min-width: 25%;
+            min-width: 32.5%;
             margin-bottom: 1rem;
             @include breakpoint (medium) {
-                min-width: 20%;
+                min-width: 19.5%;
             }
-            @include breakpoint (large) {
-                min-width: 11.11%;
+            @include breakpoint (xlarge) {
+                min-width: 10.8%;
             }
         }
         a {

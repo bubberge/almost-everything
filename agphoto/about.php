@@ -91,31 +91,31 @@ include 'incl/_header.php'; ?>
     </div>
     <h2 class="module-heading text-center" id="faq">Publications</h2>
     <div class="badges small-12 columns">
-        <div class="shadow" style="background-image:url('img/badges/seattle-bride.png');">
+        <div style="background-image:url('img/badges/seattle-bride.png');">
             <a href="http://seattlebridemag.com/search/node/amy%20galbraith%20Photography" title="Link to Amy Galbraith Photography publication in Seattle Bride"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/rocky-mountain-bride.png');">
+        <div style="background-image:url('img/badges/rocky-mountain-bride.png');">
             <a href="https://rockymountainbride.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Rocky Mountain Bride"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/style-me-pretty.png');">
+        <div style="background-image:url('img/badges/style-me-pretty.png');">
             <a href="http://www.stylemepretty.com/2012/12/26/jackson-hole-winter-engagement-from-amy-galbraith-photography/" title="Link to Amy Galbraith Photography publication in Style Me Pretty"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/100-layer-cake.jpg');">
+        <div style="background-image:url('img/badges/100-layer-cake.jpg');">
             <a href="http://www.100layercake.com/wedding-vendors/view/1940/amy-galbraith-photography" title="Link to Amy Galbraith Photography publication in 100 Layer Cake"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/mountainside-bride.png');">
+        <div style="background-image:url('img/badges/mountainside-bride.png');">
             <a href="http://mountainsidebride.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Mountainside Bride"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/borrowed-and-blue.png');">
+        <div style="background-image:url('img/badges/borrowed-and-blue.png');">
             <a href="https://www.borrowedandblue.com/jackson-hole/wedding-photographers/amy-galbraith-photography" title="Link to Amy Galbraith Photography publication in Borrowed and Blue"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/luxe-mountain-weddings.jpg');">
+        <div style="background-image:url('img/badges/luxe-mountain-weddings.jpg');">
             <a href="http://luxemountainweddings.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Luxe Mountain Weddings"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/beyond-the-wanderlust.jpg');">
+        <div style="background-image:url('img/badges/beyond-the-wanderlust.jpg');">
             <a href="http://beyondthewanderlust.com/washington-mountain-pass-engagement/" title="Link to Amy Galbraith Photography publication in Beyond the Wanderlust"></a>
         </div>
-        <div class="shadow" style="background-image:url('img/badges/artfully-wed.jpg');">
+        <div style="background-image:url('img/badges/artfully-wed.jpg');">
             <a href="http://www.artfullywed.com/tag/amy-galbraith-photography/" title="Link to Amy Galbraith Photography publication in Artfully Wed"></a>
         </div>
     </div>

@@ -41,11 +41,19 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
               <div class="card description">
-                  <span>A photographer that captures simple, natural photography.<br><br><a href="http://blog.amygalbraith.com/" target="_blank">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>A photographer that captures natural, emotion-driven photography</span>
+              </div>
+              <div class="card sub-description">
+                  <div class="sub-container">
+                        <span>A beautifully simple portfolio.<br><br><a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                    </div>
+                    <div class="sub-container">
+                        <span>And a blog to match.<br><br><a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                    </div>
               </div>
               <div class="card meta">
-                <span class="tech">PHP<br>jQuery</span>
-                <span class="platform">WordPress</span>
+                <span class="tech">PHP<br>jQuery<br>Gulp</span>
+                <span class="platform">WordPress<br>Foundation</span>
               </div>
             </div>
             <div class="large-6 columns large-push-6 portfolio-card card-4">

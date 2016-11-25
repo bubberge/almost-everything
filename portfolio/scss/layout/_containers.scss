@@ -109,7 +109,7 @@
 // Portfolio
 // ===============
 .portfolio {
-    .content {
+    &.content {
         margin-bottom: 5vh;
     }
 }
@@ -243,6 +243,12 @@
         color: $medium-gray;
         transition: color .4s ease-in-out;
         padding-right: 1rem;
+        @include breakpoint (medium) {
+            padding-right: 6rem;
+        }
+        @include breakpoint (large) {
+            padding-right: 12rem;
+        }
     }
     .img-fill {
         background: url('../img/SIS.png') center/contain repeat-y;

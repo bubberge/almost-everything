@@ -21,7 +21,9 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.<br><br><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.
+                      <div class="sub-description"><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+                  </span>
               </div>
               <div class="card meta">
                 <span class="tech">Liquid<br>SCSS</span>
@@ -41,15 +43,12 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
               <div class="card description">
-                  <span>A photographer that captures natural, emotion-driven photography</span>
-              </div>
-              <div class="card sub-description">
-                  <div class="sub-container">
-                        <span>A beautifully simple portfolio.<br><br><a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
-                    </div>
-                    <div class="sub-container">
-                        <span>And a blog to match.<br><br><a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
-                    </div>
+                  <span>A photographer that captures simple, natural images. A beautiful portfolio and blog.
+                      <div class="sub-description">
+                          <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                          <a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                      </div>
+                  </span>
               </div>
               <div class="card meta">
                 <span class="tech">PHP<br>jQuery<br>Gulp</span>
@@ -69,7 +68,9 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>An up-and-coming visual production house with a unique selection of services.<br><br><a href="http://tandcentertainment.com/" target="_blank">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>An up-and-coming visual production house with a unique selection of services.
+                      <div class="sub-description"><a href="http://tandcentertainment.com/" target="_blank">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+                  </span>
               </div>
               <div class="card meta">
                 <span class="tech">Bootstrap<br>Gulp</span>
@@ -89,7 +90,9 @@ include 'incl/_header.php'; ?>
                 </span>
               </div>
               <div class="card description">
-                  <span>Work with me to create a site that captures your audience and positions you for success.<br><br><a href="contact">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                  <span>Work with me to create a site that captures your audience and positions you for success.
+                      <div class="sub-description"><a href="contact">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+                  </span>
               </div>
             </div>
           </div>

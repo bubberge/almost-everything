@@ -45,8 +45,8 @@ include 'incl/_header.php'; ?>
               <div class="card description">
                   <span>A photographer that captures simple, natural images. A beautiful portfolio and blog.
                       <div class="sub-description">
-                          <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                           <a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                          <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                       </div>
                   </span>
               </div>

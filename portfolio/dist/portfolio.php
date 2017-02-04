@@ -4,31 +4,31 @@ $pageBlurb = "Right now I like simple, clean design.<br class='show-for-large'><
 $pageDescription = "The actual portfolio page on David Duffy (aka daviduffy)'s web design porfolio website. David is a web designer and developer from Seattle, Washington.";
 $pageExt = 'portfolio';
 include 'incl/_header.php'; ?>
-          <div class="row content portfolio">
-          <div class="portfolio-heading">
-            <h2 class="comment">Websites</h2>
-          </div>
+        <div class="row content portfolio">
+            <div class="portfolio-heading">
+                <h2 class="comment">Websites</h2>
+            </div>
             <div class="large-6 columns portfolio-card card-1">
-              <div class="card image" title="The main image from the Give-r e-Commerce site, developed by David Duffy">
-              </div>
-              <div class="card underline">
+                <div class="card image" title="The main image from the Give-r e-Commerce site, developed by David Duffy">
+                </div>
+                <div class="card underline">
                   <span>&nbsp;</span>
-              </div>
-              <div class="card card-button">
-                <span>
-                  <span>Give'r</span>
-                  <a class="show-for-small-only" target="_blank" href="http://www.give-r.com/"></a>
-                </span>
-              </div>
-              <div class="card description">
-                  <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.
-                      <div class="sub-description"><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
-                  </span>
-              </div>
-              <div class="card meta">
-                <span class="tech">Liquid<br>SCSS</span>
-                <span class="platform">Shopify</span>
-              </div>
+                </div>
+                <div class="card card-button">
+                    <span>
+                        <span>Give'r</span>
+                        <a class="show-for-small-only" target="_blank" href="http://www.give-r.com/"></a>
+                    </span>
+                </div>
+                <div class="card description">
+                    <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.
+                        <div class="sub-description"><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+                    </span>
+                </div>
+                <div class="card meta">
+                    <span class="tech">Liquid<br>SCSS</span>
+                    <span class="platform">Shopify</span>
+                </div>
             </div>
             <div class="large-6 columns portfolio-card card-2">
               <div class="card image" title="A main image from the photographer Amy Galbraith's blog website, designed and developed by David Duffy">
@@ -43,10 +43,10 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
               <div class="card description">
-                  <span>A photographer that captures simple, natural photography. A beautiful portfolio and blog.
+                  <span>A photographer that captures simple, natural images. A beautiful portfolio and blog.
                       <div class="sub-description">
-                          <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                           <a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                          <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                       </div>
                   </span>
               </div>
@@ -95,8 +95,19 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
             </div>
-          </div>
         </div>
+        <div class="row content portfolio">
+            <div class="portfolio-heading">
+                <h2 class="comment">Doodles</h2>
+            </div>
+            <div class="large-6 columns doodle-card doodle-1">
+                <?php include 'incl/_flower.php' ;?>
+            </div>
+            <div class="large-6 columns doodle-card doodle-2">
+                
+            </div>
+        </div>
+    </div>
 
       <!-- /page content  -->
 <?php include 'incl/_footer.php';  ?>

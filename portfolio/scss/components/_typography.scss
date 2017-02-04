@@ -162,6 +162,17 @@ a {
     }
 }
 
+.doodle-heading {
+    font-family: $font-family-sans-serif;
+    h3 {
+        font-family: inherit;
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: .94rem;
+    }
+}
+
 // About
 // =====
 

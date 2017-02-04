@@ -1,6 +1,7 @@
 $duration       : .7s;
 $easing         : cubic-bezier(.56,.26,.37,.98);
 $color-map      : ( color-1: #FF6F00, color-2: #D37731, color-3: #A67F61, color-4: #7A8692, color-5: #4D8EC2, color-6: #2196F3 );
+$global-width   : calc(300px + 10vw);
 
 @mixin animate-petal( $petal-class, $rev ){
     animation: $petal-class $duration $easing $rev;
@@ -16,7 +17,8 @@ $color-map      : ( color-1: #FF6F00, color-2: #D37731, color-3: #A67F61, color-
 }
 .flower-container {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column; 
+
     a {
         display: block;
         margin: 1rem auto;
@@ -30,54 +32,132 @@ $color-map      : ( color-1: #FF6F00, color-2: #D37731, color-3: #A67F61, color-
             display:none;
         }
     }
-}
-.flower {
-    width: calc(300px + 10vw);
-    height: calc(300px + 10vw);
-    border: 1px solid lightgray;
-    list-style-type: none;
-    padding: 0;
-    & > * {
-        position: relative;
-        mix-blend-mode: multiply;
-        will-change: transform;
+    .flower {
+        width: $global-width;
+        height: $global-width;
+        list-style-type: none;
+        padding: 0;
+        & > * {
+            position: relative;
+            mix-blend-mode: multiply;
+            will-change: transform;
+        }
+        & > *:after {
+            position: absolute;
+            content: '';
+            display: block;
+            height: calc(90px + 4vw);
+            width: calc(90px + 4vw);
+            background-color: inherit;
+            border-top-right-radius: 210% 140%;
+            border-bottom-right-radius: 18%;
+            border-bottom-left-radius: 140% 210%;
+            border-top-left-radius: 7%;
+        }
     }
-    & > *:after {
-        position: absolute;
-        content: '';
-        display: block;
-        height: calc(90px + 4vw);
-        width: calc(90px + 4vw);
-        background-color: inherit;
-        border-top-right-radius: 210% 140%;
-        border-bottom-right-radius: 18%;
-        border-bottom-left-radius: 140% 210%;
-        border-top-left-radius: 7%;
+
+    @for $i from 1 through 6 {
+        .petal-#{$i} {
+            background-color: map-get($color-map, color-#{$i});
+            &.animate {
+                @include animate-petal(petal-#{$i}-open, forwards);
+            }
+            &.animate.end {
+                @include animate-petal(petal-#{$i}-close, forwards);
+            }
+            &.end {
+                @include petal-open-rotation( $i , 45deg);
+            }
+        }
+        @keyframes petal-#{$i}-open {
+            0%      { transform: rotateZ(0deg) }
+            100%    { 
+                @include petal-open-rotation( $i , 45deg) }
+        }
+        @keyframes petal-#{$i}-close {
+            0%      { @include petal-open-rotation( $i , 45deg) }
+            100%    { transform: rotateZ(
+                315deg - (( $i - 1 ) * 60deg) + (($i - 1) * 60deg + 45deg)
+             ) }   /* 315 deg - (i-1)60deg +  petal-open-rotation   this is uggo 👎👎👎 */
+        }
     }
 }
 
-@for $i from 1 through 6 {
-    .petal-#{$i} {
-        background-color: map-get($color-map, color-#{$i});
-        &.animate {
-            @include animate-petal(petal-#{$i}-open, forwards);
+.rgb-container {
+    font-family: sans-serif;
+    font-size: .8rem;
+    width: $global-width;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .copy-note {
+        height: 34px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 45px;
+        text-align: center;
+        opacity: 0;
+    }
+    .controls {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem 0;
+        .color-input {
+            margin: 0 .5rem;
         }
-        &.animate.end {
-            @include animate-petal(petal-#{$i}-close, forwards);
+        label {
+            color: #999;
+            display: inline-block;
+            margin: 0 .3rem;
         }
-        &.end {
-            @include petal-open-rotation( $i , 45deg);
+        input {
+            display: block;
+            width: 3rem;
+            padding: .25rem;
+            margin: 0;
+            font-size: .86rem;
+            text-align: center;
+        }
+        p {
+            width: 100%;
+            text-align: center;
+            margin: 0;
         }
     }
-    @keyframes petal-#{$i}-open {
-        0%      { transform: rotateZ(0deg) }
-        100%    { 
-            @include petal-open-rotation( $i , 45deg) }
+
+    #submit {
+        color: black;
+        text-decoration: none;
+        text-transform: lowercase;
+        padding: .2rem .5rem;
+        border: 1px solid #888;
+        border-radius: 2px;
+        cursor: pointer;
     }
-    @keyframes petal-#{$i}-close {
-        0%      { @include petal-open-rotation( $i , 45deg) }
-        100%    { transform: rotateZ(
-            315deg - (( $i - 1 ) * 60deg) + (($i - 1) * 60deg + 45deg)
-         ) }   /* 315 deg - (i-1)60deg +  petal-open-rotation   this is uggo 👎👎👎 */
+
+    #col-array {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: .12rem 0;
+        &>* {
+            border: 1px solid #555;
+            height: 30px;
+            flex-grow: 1;
+            margin: 0 .12rem;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }

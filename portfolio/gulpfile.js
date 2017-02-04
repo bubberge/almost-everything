@@ -20,7 +20,8 @@ var sassPaths = [
     'js/foundation.abide.js',
     'js/scrollFill.js',
     'js/circles.js',
-    'js/flower.js'
+    'js/flower.js',
+    'js/colorBlend.js'
   ];
 
 gulp.task('concat-scripts', function(){

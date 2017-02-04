@@ -1,46 +1,37 @@
-<div class="flower-container">
-    <ul class="flower">
-        <li class="petal-1"></li>
-        <li class="petal-2"></li>
-        <li class="petal-3"></li>
-        <li class="petal-4"></li>
-        <li class="petal-5"></li>
-        <li class="petal-6"></li>
-    </ul>
-    <a href="JavaScript:void(0)" id="trigger">Toggle</a>
-</div>
 <div class="rgb-container">
-    <div class="copy-note">
+<!--     <div class="copy-note">
         <span>Value copied to clipboard</span>
-    </div>
+    </div> -->
     <div id="col-array"></div>
     <div class="controls">
         <div class="color-input color-1">
-            <span>rgb(</span>
-            <label>R
+            <label>
                 <input type="number" id="red-1" value="33"></input>
+                &nbsp; &nbsp; &nbsp;R
             </label>
-            <label>G
+            <label>
                 <input type="number" id="green-1" value="150"></input>
+                &nbsp; &nbsp; &nbsp;G
             </label>
-            <label>B
+            <label>
                 <input type="number" id="blue-1" value="233"></input>
+                &nbsp; &nbsp; &nbsp;B
             </label>
-            <span>)</span>
             <p>Color 1</p>
         </div>
         <div class="color-input color-2">
-            <span>rgb(</span>
-            <label>R
+            <label>
                 <input type="number" id="red-2" value="255"></input>
+                &nbsp; &nbsp; &nbsp;R
             </label>
-            <label>G
+            <label>
                 <input type="number" id="green-2" value="111"></input>
+                &nbsp; &nbsp; &nbsp;G
             </label>
-            <label>B
+            <label>
                 <input type="number" id="blue-2" value="0"></input>
+                &nbsp; &nbsp; &nbsp;B
             </label>
-            <span>)</span>
             <p>Color 2</p>
         </div>
     </div>

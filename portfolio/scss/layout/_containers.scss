@@ -231,6 +231,50 @@
     }
 }
 
+.doodles {
+    background-color: #f6f6f6;
+    padding-top: 3rem;
+}
+
+.doodle-card {
+    padding: .2rem;
+    min-height: 200px;
+    .doodle-inner {
+        border: 1px solid $light-gray;
+        transform: scale(.98);
+        transition: all .16s ease-in-out;
+        box-shadow: 0px 10px 45px -30px rgba(0,0,0,0.2);
+        &:hover {
+            box-shadow: 0px 10px 45px -6px rgba(0,0,0,0.2);
+            transform: scale(1);
+        }
+    }
+    .doodle-image {
+        min-height: 300px;
+        border-bottom: 1px solid $light-gray;
+    }
+    .doodle-heading {
+        padding: 2rem;
+        background-color: rgba(255,255,255,.8);
+        min-height: 165px;
+    }
+}
+
+.doodle-1 {
+    .doodle-image {
+        background: left / 500px 500px no-repeat;
+    }
+}
+
+.doodle-2 {
+    .doodle-image {
+        background: center / cover no-repeat;
+    }
+}
+
+
+
+
 // Scroll Fill (About)
 // ===================
 

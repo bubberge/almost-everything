@@ -45,6 +45,7 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body class="<?php echo $pageClasses; ?>">
+    <?php include_once('_analyticstracking.php') ?>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
             <div class="off-canvas position-left" id="offCanvas" data-off-canvas>

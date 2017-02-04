@@ -45,9 +45,9 @@ include 'incl/_header.php'; ?>
             <div class="small-9 column scrollContent JH">
               <h2>GoSkateShop, Super-Fit, JHSurgery</h2>
               <span class="year show-for-medium">2009-2013</span>
-              <p>Worked for a guy that had a thing for starting e-Commerce stores. I ran everything for all of them, from answering customer service phone calls to helping with two site re-designs.</p>
+              <p>Worked for a guy that had a thing for starting eCommerce stores. I ran everything for all of them, from answering customer service phone calls to helping with two site re-designs.</p>
               <span><span>GoSkateShop:</span> hands-on work with Flash, Adobe Creative Suite, e-Commerce management, and lots of customer service</span>
-              <span><span>Super-Fit:</span> first work with HTML and CSS, and minor development work WordPress</span>
+              <span><span>Super-Fit:</span> first work with HTML and CSS, and minor development work with Wordpress</span>
             </div>
 
             <div class="small-3 column scrollFill">
@@ -60,7 +60,7 @@ include 'incl/_header.php'; ?>
             <div class="small-9 column scrollContent CC">
               <h2>CrystalCommerce</h2>
               <span class="year show-for-medium">2014-2016</span>
-              <p>Started at the bottom a customer service rep. Worked hard, moved into web design and development department, where I am the manager now.</p>
+              <p>Started at the bottom as a customer service rep. Worked hard, moved into web design and development department, where I am the manager now.</p>
               <span><span>Customer Service:</span> refined that ever-important ability to explain technical subject matter to non-technical persons</span>
               <span><span>Design/Development:</span> went from 4th-grade reading level to fluent in HTML/SCSS and can do work with JS as well</span>
               <span><span>Management:</span> learned to do all I can to create clarity from ambiguity</span>

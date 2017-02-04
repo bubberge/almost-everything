@@ -89,4 +89,34 @@ include 'incl/_header.php'; ?>
             <p><span>How would you describe you style?</span>We think the photos that resonate most with anyone are always the ones that tell two stories. We want each image to play it's part in describing the story of your day, just as it happened. And we want each image to capture real, candid emotion -- the kind that sticks so strongly in your mind that it has the power to transport you back to that exact moment on that day. We avoid coaching, catching real emotion in natural moments.</p>
         </div>
     </div>
+    <h2 class="module-heading text-center" id="faq">Publications</h2>
+    <div class="badges small-12 columns">
+        <span target="_blank" style="background-image:url('img/badges/seattle-bride.png');">
+            <a href="http://seattlebridemag.com/search/node/amy%20galbraith%20Photography" title="Link to Amy Galbraith Photography publication in Seattle Bride"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/rocky-mountain-bride.png');">
+            <a href="https://rockymountainbride.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Rocky Mountain Bride"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/style-me-pretty.png');">
+            <a href="http://www.stylemepretty.com/2012/12/26/jackson-hole-winter-engagement-from-amy-galbraith-photography/" title="Link to Amy Galbraith Photography publication in Style Me Pretty"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/100-layer-cake.jpg');">
+            <a href="http://www.100layercake.com/wedding-vendors/view/1940/amy-galbraith-photography" title="Link to Amy Galbraith Photography publication in 100 Layer Cake"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/mountainside-bride.png');">
+            <a href="http://mountainsidebride.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Mountainside Bride"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/borrowed-and-blue.png');">
+            <a href="https://www.borrowedandblue.com/jackson-hole/wedding-photographers/amy-galbraith-photography" title="Link to Amy Galbraith Photography publication in Borrowed and Blue"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/luxe-mountain-weddings.jpg');">
+            <a href="http://luxemountainweddings.com/?s=amy+galbraith+photography" title="Link to Amy Galbraith Photography publication in Luxe Mountain Weddings"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/beyond-the-wanderlust.jpg');">
+            <a href="http://beyondthewanderlust.com/washington-mountain-pass-engagement/" title="Link to Amy Galbraith Photography publication in Beyond the Wanderlust"></a>
+        </span>
+        <span target="_blank" style="background-image:url('img/badges/artfully-wed.jpg');">
+            <a href="http://www.artfullywed.com/tag/amy-galbraith-photography/" title="Link to Amy Galbraith Photography publication in Artfully Wed"></a>
+        </span>
+    </div>
 <?php include 'incl/_footer.php';  ?>

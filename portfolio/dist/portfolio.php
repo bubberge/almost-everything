@@ -96,15 +96,45 @@ include 'incl/_header.php'; ?>
               </div>
             </div>
         </div>
-        <div class="row content portfolio">
-            <div class="portfolio-heading">
-                <h2 class="comment">Doodles</h2>
-            </div>
-            <div class="large-6 columns doodle-card doodle-1">
-                <?php include 'incl/_flower.php' ;?>
-            </div>
-            <div class="large-6 columns doodle-card doodle-2">
-                
+        <div class="doodles">
+            <div class="row content portfolio">
+                <div class="portfolio-heading">
+                    <h2 class="comment">Doodles</h2>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-1">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" style="background-image:url('img/flower.png')">
+                            <span>
+                                <a href="/">button</a>
+                            </span>
+                        </div>
+                        <?php include 'incl/_flower.ph' ;?>
+                        <div class="doodle-heading">
+                            <h3>Hover Flower</h3>
+                            <p>Achieving 60 FPS with CSS3 animations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-2">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" style="background-image:url('img/gradient.jpg')"></div>
+                        <?php include 'incl/_rgbGen.ph' ;?>
+                        <div class="doodle-heading">
+                            <h3>RGB Gradient Value Gen</h3>
+                            <p>Harnessing user input to manipulate the DOM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-2">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" style="background-image:url('img/lo-fi.png')"></div>
+                        <?php include 'incl/_rgbGen.ph' ;?>
+                        <div class="doodle-heading">
+                            <h3>Lo-Fi Film Shake</h3>
+                            <p>Experimenting with CSS blend modes and animation</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

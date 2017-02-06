@@ -103,7 +103,11 @@ include 'incl/_header.php'; ?>
                 </div>
                 <div class="medium-6 large-4 columns doodle-card doodle-1">
                     <div class="doodle-inner">  
-                        <div class="doodle-image" style="background-image:url('img/flower.png')"></div>
+                        <div class="doodle-image" title="teaser image of a CSS flower animation demo" style="background-image:url('img/flower.png')">
+                            <span>
+                                <a href="/">see demo</a>
+                            </span>
+                        </div>
                         <?php include 'incl/_flower.ph' ;?>
                         <div class="doodle-heading">
                             <h3>Hover Flower</h3>

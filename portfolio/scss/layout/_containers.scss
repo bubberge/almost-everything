@@ -231,6 +231,9 @@
     }
 }
 
+// Portfolio Doodles
+// =================
+
 .doodles {
     background-color: #f6f6f6;
     padding-top: 3rem;
@@ -239,6 +242,7 @@
 .doodle-card {
     padding: .2rem;
     min-height: 200px;
+    position: relative;
     .doodle-inner {
         border: 1px solid $light-gray;
         transform: scale(.98);
@@ -249,31 +253,31 @@
         min-height: 300px;
         border-bottom: 1px solid $light-gray;
         position: relative;
-        span {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
     }
     .doodle-heading {
         padding: 2rem;
         background-color: rgba(255,255,255,.8);
         min-height: 165px;
     }
+    a {
+        background-color: rgba(255,255,255,.4);
+        @include abs-centered;
+        @include flex-centered;
+        transition: background-color .16s ease-in-out;
+    }
+    svg {
+        max-width: 100px;
+        opacity: 0;
+        mix-blend-mode: darken;
+        transition: opacity .16s ease-in-out;
+    }
 
     &:hover {
-        .doodle-inner {
-            // box-shadow: 0px 10px 45px -6px rgba(0,0,0,0.2);
-            // transform: scale(1);
+        a {
+            background-color: rgba(255,255,255,.6);
         }
-        .doodle-image span {
-
-
+        svg {
+            opacity: .4;
         }
     }
 }
@@ -287,6 +291,15 @@
 .doodle-2 {
     .doodle-image {
         background: center / cover no-repeat;
+    }
+}
+
+.doodle-3 {
+    .doodle-image {
+        background: center / cover no-repeat;
+    }
+    &:hover svg {
+        opacity: .6;
     }
 }
 

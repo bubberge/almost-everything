@@ -103,12 +103,11 @@ include 'incl/_header.php'; ?>
                 </div>
                 <div class="medium-6 large-4 columns doodle-card doodle-1">
                     <div class="doodle-inner">  
-                        <div class="doodle-image" style="background-image:url('img/flower.png')">
-                            <span>
-                                <a href="/">button</a>
-                            </span>
+                        <div class="doodle-image" title="teaser image of a CSS flower animation demo" style="background-image:url('img/flower.png')">
+                            <a href="http://jsbin.com/yeyewic/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the hover flower doodle by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
                         </div>
-                        <?php include 'incl/_flower.ph' ;?>
                         <div class="doodle-heading">
                             <h3>Hover Flower</h3>
                             <p>Achieving 60 FPS with CSS3 animations.</p>
@@ -117,18 +116,24 @@ include 'incl/_header.php'; ?>
                 </div>
                 <div class="medium-6 large-4 columns doodle-card doodle-2">
                     <div class="doodle-inner">  
-                        <div class="doodle-image" style="background-image:url('img/gradient.jpg')"></div>
-                        <?php include 'incl/_rgbGen.ph' ;?>
+                        <div class="doodle-image" style="background-image:url('img/gradient.jpg')">
+                            <a href="http://jsbin.com/venuda/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the RGB gradient generator by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
+                       </div>
                         <div class="doodle-heading">
                             <h3>RGB Gradient Value Gen</h3>
                             <p>Harnessing user input to manipulate the DOM</p>
                         </div>
                     </div>
                 </div>
-                <div class="medium-6 large-4 columns doodle-card doodle-2">
+                <div class="medium-6 large-4 columns doodle-card doodle-3">
                     <div class="doodle-inner">  
-                        <div class="doodle-image" style="background-image:url('img/lo-fi.png')"></div>
-                        <?php include 'incl/_rgbGen.ph' ;?>
+                        <div class="doodle-image" style="background-image:url('img/lo-fi.png')">
+                            <a href="http://jsbin.com/duyivar/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the lo-fi film shake by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
+                        </div>
                         <div class="doodle-heading">
                             <h3>Lo-Fi Film Shake</h3>
                             <p>Experimenting with CSS blend modes and animation</p>

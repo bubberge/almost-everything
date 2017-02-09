@@ -45,10 +45,7 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/engagements/008-jackson_hole_wedding_photographer-sheehy-001.jpg" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>
-                    <img data-lazy="img/engagements/009-jackson_hole_engagement_004.jpg" alt="" />
-                </div>
-                <div class="s-slide"><div class="s-overlay"></div>
-                    <img data-lazy="img/engagements/010-jackson_hole_engagement_005.jpg" alt="" />
+                    <img data-lazy="img/engagements/010-stevens-pass-engagement_005.jpg" alt="" />
                 </div>
                 <div class="s-slide"><div class="s-overlay"></div>
                     <img data-lazy="img/engagements/011-seattle_wedding_photographer-board-4.jpg" alt="" />

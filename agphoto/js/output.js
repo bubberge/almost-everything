@@ -22157,7 +22157,7 @@ function slickAbout(){
     // console.log(parseRSS);
     var $outputContainer = $(container);
     $.ajax({
-        url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+        url: document.location.protocol + "//feedrapp.info?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
         dataType: 'json',
         success: function(data) {
             // console.log(data.responseData.feed);

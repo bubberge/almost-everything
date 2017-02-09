@@ -2,9 +2,9 @@
 <li><a href="/">Home</a></li>
 <?php endif; ?>
 <li><a href="/about">About</a></li>
-<li>
+<li class="nested-menu">
     <a id="port-link" href="<?php if ($pageExt) : ?>/<?php endif; ?>#portLoc">Portfolio</a>
-    <ul class="menu<?php if ( $vertical ) echo ' vertical nested is-active'?>">
+    <ul class="menu vertical nested">
         <li><a href="/weddings">Weddings</a></li>
         <li><a href="/engagements">Engagements</a></li>
         <li><a href="/seniors">Seniors</a></li>

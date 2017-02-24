@@ -63,7 +63,7 @@ include 'incl/_header.php'; ?>
                     <div>
                         <span>Seniors</span>
                         <span>sessions begin at</span>
-                        <span>$350</span>
+                        <span>$600</span>
                     </div>
                 </div>
                 <!-- <div class="g-underline"><span>&nbsp;</span></div> -->

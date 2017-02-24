@@ -7,14 +7,30 @@ $pageClasses = 'home';
 include 'incl/_header.php'; ?>
     <div class="jumbotron">
         <div class="j-track">
-            <div class="j-background j-1 rm-rf"></div>
-            <div class="j-background j-2"></div>
-            <div class="j-background j-3"></div>
-            <div class="j-background j-4 rm-rf"></div>
-            <div class="j-background j-5"></div>
-            <div class="j-background j-6"></div>
-            <div class="j-background j-7 rm-rf"></div>
-            <div class="j-background j-8 rm-rf"></div>
+            <div class="j-background j-1 rm-rf">
+                <img src="img/homepage/001-leavenworth_wedding_photographer-betz-001-small.jpg" srcset="img/homepage/001-leavenworth_wedding_photographer-betz-001.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-2">
+                <img src="img/homepage/002-jackson_hole_wedding_photographer-todd-002-small.jpg" srcset="img/homepage/002-jackson_hole_wedding_photographer-todd-002.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-3">
+                <img src="img/homepage/002-wisconsin-wedding-photographer-001-small.jpg" srcset="img/homepage/002-wisconsin-wedding-photographer-001.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-4 rm-rf">
+                <img src="img/homepage/003-leavenworth_wedding_photographer-jasinski-004-small.jpg" srcset="img/homepage/003-leavenworth_wedding_photographer-jasinski-004.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-5">
+                <img src="img/homepage/004-within-sodo-wedding-aebischer-small.jpg" srcset="img/homepage/004-within-sodo-wedding-aebischer.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-6">
+                <img src="img/homepage/006-mt-baker-engagement-session-001-small.jpg" srcset="img/homepage/006-mt-baker-engagement-session-001.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-7 rm-rf">
+                <img src="img/homepage/007-bainbridge-island-engagement-001-small.jpg" srcset="img/homepage/007-bainbridge-island-engagement-001.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
+            <div class="j-background j-8 rm-rf">
+                <img src="img/homepage/008-stevens-pass-engagement-session-001-small.jpg" srcset="img/homepage/008-stevens-pass-engagement-session-001.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
+            </div>
         </div>
         <div class="j-overlay">
             <div class="j-overlay-background"></div>
@@ -70,7 +86,7 @@ include 'incl/_header.php'; ?>
             <h2 class="module-heading" id="blogLoc">Blog</h2>
         </div>
     </div>
-    <div class="blog-feed">
-        <!-- RSS content loads here -->
-    </div>
+<!--     <div class="blog-feed">
+        RSS content loads here
+    </div> -->
                 <?php include 'incl/_footer.php';  ?>

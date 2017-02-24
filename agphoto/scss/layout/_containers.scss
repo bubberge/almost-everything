@@ -110,6 +110,27 @@
     .slick-next:before {
         content: "\f105";
     }
+    .badges {
+        margin-bottom: 2rem;
+        text-align: center;
+        &>span {
+            display: inline-block;
+            background: #fff no-repeat center/contain;
+            min-height: 120px;
+            position: relative;
+            min-width: 30.5%;
+            margin-bottom: 1rem;
+            @include breakpoint (medium) {
+                min-width: 19.5%;
+            }
+            @include breakpoint (xlarge) {
+                min-width: 10.8%;
+            }
+        }
+        a {
+            @include abs-centered;
+        }
+    }
 }
 
 

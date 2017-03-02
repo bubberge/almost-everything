@@ -28,7 +28,6 @@
     @include flex-centered;
     @include flex-direction(column);
     color: $white;
-    margin-bottom: .5rem;
     span {
         display: block;
         font-family: $font-handwriting;

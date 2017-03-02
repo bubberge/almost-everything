@@ -13,4 +13,4 @@
 <li><a id="blog-link" href="<?php if ($pageExt) { echo 'http://blog.amygalbraith.com" target="_blank"'; } else { echo '#blogLoc'; } ?>">Blog</a></li>
 <li><a href="/investment">Investment</a></li>
 <li><a href="/contact">Contact</a></li>
-<li><a href="http://amygalbraith.smugmug.com/Event-Photos" target="_blank">Proofs</a></li>
+<li><a href="https://amygalbraithphotography.shootproof.com" target="_blank">Proofs</a></li>

@@ -174,6 +174,19 @@
         }
     }
     .j-overlay-content {
+        @media screen and #{breakpoint(medium down)} and #{breakpoint(landscape)} {
+            justify-content: flex-start;
+            margin-left: 33.33333%;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 33.33333%;
+            -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            .j-overlay-text {
+                opacity: 0;
+            }
+        }
+
         justify-content: center;
     }
     .j-overlay-text {

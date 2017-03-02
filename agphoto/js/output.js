@@ -22090,9 +22090,6 @@ if ( $slickHome[0] ) {
 function slickHome(){ // removes images that aren't good for small and then inits slick on home
     console.log('home slick');
     var $jumbo = $('.j-background');
-    if ( $slickHome[0] && $jumbo.width() < 640 ) {
-        $('.rm-rf').remove();
-    }
     $('.j-track').slick({
         dots: true,
         infinite: true,

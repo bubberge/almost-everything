@@ -13,28 +13,29 @@ include 'incl/_header.php'; ?>
             <div class="j-background j-1">
 
                 <picture>
+                    <?php
+                    // for testing
+                    // <source srcset="img/homepage/h1334.png" media="(orientation: portrait) and (min-width: 500px)" >
+                    // <source srcset="img/homepage/h667.png" media="(orientation: portrait)"  >
 
-                    <source srcset="img/homepage/h1334.png" media="(orientation: portrait) and (min-width: 500px)" >
-                    <source srcset="img/homepage/h667.png" media="(orientation: portrait)"  >
 
+                    // <source srcset="img/homepage/2000.png" media="(min-width: 1440px)" />
+                    // <source srcset="img/homepage/1440.png" media="(min-width: 1024px)" />
+                    // <source srcset="img/homepage/1024.png" media="(min-width: 768px)" />
+                    // <source srcset="img/homepage/768.png"/>
+                    // <img src="img/homepage/1024.png" alt="testing"/>
+                    ?>
 
-                    <source srcset="img/homepage/2000.png" media="(min-width: 1440px)" />
-                    <source srcset="img/homepage/1440.png" media="(min-width: 1024px)" />
-                    <source srcset="img/homepage/1024.png" media="(min-width: 768px)" />
-                    <source srcset="img/homepage/768.png"/>
-                    <img src="img/homepage/1024.png" alt="testing"/>
-
-<!--
-                    <source media="(orientation: portrait)" srcset="img/homepage/h667/001-leavenworth_wedding_photographer-betz-001-667h.jpg 1x, img/homepage/h1334/001-leavenworth_wedding_photographer-betz-001-1334h.jpg 2x" >
+                    <!-- portrait images -->
                     <source media="(orientation: portrait) and (min-width: 500px)" src="img/homepage/h1334/001-leavenworth_wedding_photographer-betz-001-1334h.jpg" >
+                    <source media="(orientation: portrait)" srcset="img/homepage/h667/001-leavenworth_wedding_photographer-betz-001-667h.jpg" >
 
-
+                    <!-- landscape images -->
                     <source srcset="img/homepage/w2000/001-leavenworth_wedding_photographer-betz-001-2000.jpg" media="(min-width: 1440px)" />
                     <source srcset="img/homepage/w1440/001-leavenworth_wedding_photographer-betz-001-1440.jpg" media="(min-width: 1024px)" />
                     <source srcset="img/homepage/w1024/001-leavenworth_wedding_photographer-betz-001-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/001-leavenworth_wedding_photographer-betz-001-768.jpg"/>
-                    <img src="img/homepage/w1024/001-leavenworth_wedding_photographer-betz-001-1024.jpg" alt="Bride and groom kiss in front of a moody mountain sky on the shore of scenic Lake Wenatchee"/> -->
-
+                    <img src="img/homepage/w1024/001-leavenworth_wedding_photographer-betz-001-1024.jpg" alt="Bride and groom kiss in front of a moody mountain sky on the shore of scenic Lake Wenatchee"/>
 
                 </picture>
 
@@ -53,7 +54,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/002-jackson_hole_wedding_photographer-todd-002-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/002-jackson_hole_wedding_photographer-todd-002-768.jpg"/>
                     <img src="img/homepage/w1024/002-jackson_hole_wedding_photographer-todd-002-1024.jpg" alt="mountain bride and groom sit on a chair lift in jackson hole, wyoming"/>
-                    <p><!-- mountain bride and groom sit on a chair lift in jackson hole, wyoming --></p>
 
                 </picture>
 
@@ -78,7 +78,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/002-wisconsin-wedding-photographer-001-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/002-wisconsin-wedding-photographer-001-768.jpg"/>
                     <img src="img/homepage/w1024/002-wisconsin-wedding-photographer-001-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -97,7 +96,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/003-leavenworth_wedding_photographer-jasinski-004-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/003-leavenworth_wedding_photographer-jasinski-004-768.jpg"/>
                     <img src="img/homepage/w1024/003-leavenworth_wedding_photographer-jasinski-004-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -116,7 +114,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/004-within-sodo-wedding-aebischer-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/004-within-sodo-wedding-aebischer-768.jpg"/>
                     <img src="img/homepage/w1024/004-within-sodo-wedding-aebischer-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -135,7 +132,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/006-mt-baker-engagement-session-001-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/006-mt-baker-engagement-session-001-768.jpg"/>
                     <img src="img/homepage/w1024/006-mt-baker-engagement-session-001-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -154,7 +150,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/007-bainbridge-island-engagement-001-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/007-bainbridge-island-engagement-001-768.jpg"/>
                     <img src="img/homepage/w1024/007-bainbridge-island-engagement-001-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -173,7 +168,6 @@ include 'incl/_header.php'; ?>
                     <source srcset="img/homepage/w1024/008-stevens-pass-engagement-session-001-1024.jpg" media="(min-width: 768px)" />
                     <source srcset="img/homepage/w768/008-stevens-pass-engagement-session-001-768.jpg"/>
                     <img src="img/homepage/w1024/008-stevens-pass-engagement-session-001-1024.jpg" alt=""/>
-                    <p><!--  --></p>
 
                 </picture>
 
@@ -232,6 +226,6 @@ include 'incl/_header.php'; ?>
         </div>
     </div>
     <div class="blog-feed">
-        RSS content loads here
+        <!-- RSS content loads here -->
     </div>
                 <?php include 'incl/_footer.php';  ?>

@@ -124,6 +124,7 @@
     .title-bar-right {
         @include display-flex;
         @include align-items(center);
+        @include justify-content(flex-end);
         height: 38px;
         color: transparentize($black,.75);
         img {

@@ -611,6 +611,11 @@ $color-action               : #FFBF40;
   justify-content: center;
 }
 
+@mixin justify-content ($arg) {
+  -webkit-justify-content: $arg;
+  justify-content: $arg;
+}
+
 @mixin align-items($arg) {
   -webkit-align-items: $arg;
   align-items: $arg;

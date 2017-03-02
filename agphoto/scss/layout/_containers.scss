@@ -31,6 +31,12 @@
 
 .about {
 
+    @media screen and #{breakpoint(medium down)} and #{breakpoint(landscape)} {
+        .j-overlay-text h1 {
+            display: none;
+        }
+    }
+
     &-text {
         font-family: $font-content;
         background-color: transparentize($white,.2);
@@ -178,6 +184,17 @@
             &:last-child {
                 padding-top: .25rem;
             }
+        }
+    }
+    .investment-text {
+        a {
+            @include link-style;
+        }
+    }
+    .optional-investment-text {
+        margin-bottom: 1rem;
+        @media screen and #{breakpoint(medium down)} and #{breakpoint(portrait)} {
+            display: none;
         }
     }
     .g-underline span {

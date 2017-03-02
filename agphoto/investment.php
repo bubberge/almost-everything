@@ -31,7 +31,10 @@ include 'incl/_header.php'; ?>
     <div class="row">
         <h2 class="module-heading text-center" id="inv"><?php echo $pageTitle; ?></h2>
         <div class="investment-text column small-10 small-offset-1 hide-for-large">
-        <?php include 'incl/_investmentTxt.php'; ?>
+            <div class="optional-investment-text">
+                <?php include 'incl/_investmentBlurb.php' ;?>
+            </div>
+            <?php include 'incl/_investmentTxt.php'; ?>
         </div>
         <div class="investment-img show-for-large column large-10 large-offset-1">
             <div class="g-card weddings column eat-left">

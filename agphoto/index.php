@@ -231,7 +231,7 @@ include 'incl/_header.php'; ?>
             <h2 class="module-heading" id="blogLoc">Blog</h2>
         </div>
     </div>
-<!--     <div class="blog-feed">
+    <div class="blog-feed">
         RSS content loads here
-    </div> -->
+    </div>
                 <?php include 'incl/_footer.php';  ?>

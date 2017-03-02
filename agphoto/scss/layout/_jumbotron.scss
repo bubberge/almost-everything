@@ -2,9 +2,12 @@
 // Jumbotron styles
 // ===============================
 @mixin j-height {
-    height: calc(100vh - 74px);
-    min-height: 500px;
+    height: 100vh;
     margin-bottom: 20px;
+    @include breakpoint (large) {
+        height: calc(100vh - 74px);
+        min-height: 500px;
+    }
 }
 
 .jumbotron {
@@ -28,6 +31,7 @@
     @include flex-centered;
     @include flex-direction(column);
     color: $white;
+    margin-bottom: .5rem;
     span {
         display: block;
         font-family: $font-handwriting;
@@ -75,15 +79,16 @@
         display: flex!important;
         justify-content: center;
         align-items: flex-end;
-        height: calc(100vh - 74px)!important;
-        min-height: 500px!important;
+        @include j-height;
         overflow: hidden;
-        img {
-            width: 145vh;
-            max-width: none;
-            display: block;
-            @media screen and ( orientation: landscape) {
+        picture {
+            & > * {
                 width: 100vw;
+                display: block;
+                max-width: none;
+                @media screen and ( orientation: portrait ) {
+                    width: 88vh;
+                }
             }
         }
     }
@@ -149,6 +154,13 @@
         h1 {
             color: inherit;
             font-size: 3.5rem;
+        }
+        @media screen and (orientation: landscape) and (max-width: 639px) {
+            padding: 0;
+            align-self: center;
+            h1 {
+                font-size: 1.3rem;
+            }
         }
         @include breakpoint (medium) {
             text-align: left;

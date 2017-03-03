@@ -22175,9 +22175,10 @@ function slickAbout(){
                     }
                     thehtml += '</div><div class="b-background" style="background-image: url(';
                     var s = value.content;
-                    var temp = document.createElement('div');
-                    temp.innerHTML = s;
-                    thehtml += temp.firstChild.getAttribute("src") + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
+                    s = s.slice(0,s.indexOf(".jpg") + 4 );
+                    s = s.slice(s.indexOf("src=") + 5);
+                    console.log(s); 
+                    thehtml += s + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
                     finalHTML += thehtml;
                 }
             });

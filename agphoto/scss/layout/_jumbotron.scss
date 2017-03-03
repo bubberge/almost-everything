@@ -80,6 +80,9 @@
         align-items: flex-end;
         @include j-height;
         overflow: hidden;
+        @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
+            position: relative;
+        }
         picture {
             & > * {
                 width: 100vw;
@@ -87,6 +90,11 @@
                 max-width: none;
                 @media screen and ( orientation: portrait ) {
                     width: 88vh;
+                }
+                @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
+                    height: 66.66vw;
+                    @include abs-centered;
+                    margin: auto;
                 }
             }
         }
@@ -105,6 +113,14 @@
     .j-overlay {
         flex-direction: column-reverse;
         z-index: 2;
+    }
+    @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
+        .j-1 picture > * {
+            bottom: 14%;
+        }
+        .j-6 picture > * {
+            top: 8%;
+        }
     }
 }
 

@@ -58,11 +58,6 @@ include 'incl/_header.php'; ?>
                 </picture>
 
             </div>
-            <!--
-            <div class="j-background j-2">
-                <img src="img/homepage/002-jackson_hole_wedding_photographer-todd-002-small.jpg" srcset="img/homepage/002-jackson_hole_wedding_photographer-todd-002.jpg 2000w" sizes="(orientation: landscape) 100vw, 145vh" alt="" />
-            </div>
-            -->
             <div class="j-background j-3">
 
                 <picture>
@@ -222,10 +217,60 @@ include 'incl/_header.php'; ?>
     </div>
     <div class="row blog">
         <div class="column small-12">
-            <h2 class="module-heading" id="blogLoc">Blog</h2>
+            <a href="http://blog.amygalbraith.com" title="Amy Galbraith Photography blog website" >
+                <h2 class="module-heading link-style" id="blogLoc">Blog</h2>
+            </a>
         </div>
     </div>
     <div class="blog-feed">
         <!-- RSS content loads here -->
+        <div class="b-post">
+            <div class="b-title">
+                <span>We</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>are</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>waiting</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>for</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>the</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>feed</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>to</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="b-post">
+            <div class="b-title">
+                <span>load</span>
+                <span></span>
+            </div>
+        </div>
     </div>
                 <?php include 'incl/_footer.php';  ?>

@@ -1,3 +1,4 @@
+/* jshint laxcomma: true */
 $(document).foundation();
 
 var $slickHome = $('.home')

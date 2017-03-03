@@ -27,7 +27,7 @@ include 'incl/_header.php'; ?>
                     ?>
 
                     <!-- portrait images -->
-                    <source media="(orientation: portrait) and (min-width: 500px)" src="img/homepage/h1334/001-leavenworth_wedding_photographer-betz-001-1334h.jpg" >
+                    <source media="(orientation: portrait) and (min-width: 500px)" srcset="img/homepage/h1334/001-leavenworth_wedding_photographer-betz-001-1334h.jpg" >
                     <source media="(orientation: portrait)" srcset="img/homepage/h667/001-leavenworth_wedding_photographer-betz-001-667h.jpg" >
 
                     <!-- landscape images -->
@@ -82,8 +82,8 @@ include 'incl/_header.php'; ?>
                 <picture>
 
                     <!-- portrait images -->
-                    <source class="portrait" media="(orientation: portrait) and (min-width:500px)" srcset="img/homepage/h1334/003-leavenworth_wedding_photographer-jasinski-004-1334h.jpg" >
-                    <source class="portrait" media="(orientation: portrait)" srcset="img/homepage/h667/003-leavenworth_wedding_photographer-jasinski-004-667h.jpg" >
+                    <source media="(orientation: portrait) and (min-width:500px)" srcset="img/homepage/h1334/003-leavenworth_wedding_photographer-jasinski-004-1334h.jpg" >
+                    <source media="(orientation: portrait)" srcset="img/homepage/h667/003-leavenworth_wedding_photographer-jasinski-004-667h.jpg" >
 
                     <!-- landscape images -->
                     <source srcset="img/homepage/w2000/003-leavenworth_wedding_photographer-jasinski-004-2000.jpg" media="(min-width: 1440px)" />

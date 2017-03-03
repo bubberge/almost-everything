@@ -102,19 +102,21 @@ if ( $('.blog-feed')[0] ) {
                             thehtml += '<span>'+str+'</span>';
                         }
                         thehtml += '</div><div class="b-background" style="background-image: url(';
-                        // Description string contains featured image as first element. Cut string at the src attribute value
-                        var first = value.content.slice(value.content.indexOf('src="') + 5 );
-                        // cut and save the string after .jpg
-                        var imgURL = first.slice(0,first.indexOf('.jpg') + 4);
-                        // console.log(imgURL);
-                        thehtml += imgURL + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                        $outputContainer.append(thehtml);
+                        var s = value.content;
+                        s = s.slice(0,s.indexOf(".jpg") + 4 );
+                        s = s.slice(s.indexOf("src=") + 5);
+                        console.log(s);
+                        thehtml += s + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
+                        finalHTML += thehtml;
                     }
                 });
-            }
-        });
-    })('http://blog.amygalbraith.com/feed/','.blog-feed');
-}
+            $('#blogLoc').removeClass('link-style');
+            $outputContainer.html('');
+            $outputContainer.append(finalHTML);
+        }
+    });
+})('http://blog.amygalbraith.com/feed','.blog-feed');
+
 
 var wind = $(window);
 var height = wind.height();

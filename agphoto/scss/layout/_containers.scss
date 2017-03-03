@@ -1,5 +1,5 @@
 // ===============================
-// Jumbotron styles
+// Container styles
 // ===============================
 
 .off-canvas-wrapper {
@@ -18,6 +18,33 @@
     @include breakpoint (small only){
         margin-top: -1rem;
     }
+}
+
+// Home
+
+.home {
+    .blog {
+        a {
+            cursor: default;
+        }
+        h2.module-heading {
+            position: relative;
+            margin: 2rem auto;
+            max-width: 100px!important;
+            color: $black;
+            &.link-style::before {
+                content: "Feed didn't load, check the";
+                font-family: $font-handwriting;
+                position: absolute;
+                font-size: 1rem;
+                transform: rotateZ(-20deg) translateX(-7.7rem) translateY(-2.6rem);
+                width: 160px;
+                cursor: default;
+
+            }
+        }
+    }
+
 }
 
 

@@ -22072,6 +22072,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 }));
 
+/* jshint laxcomma: true */
 $(document).foundation();
 
 var $slickHome = $('.home')
@@ -22153,6 +22154,7 @@ function slickAbout(){
 (function parseRSS(url, container) {
     // console.log(parseRSS);
     var $outputContainer = $(container);
+    var finalHTML = '';
     $.ajax({
         url: document.location.protocol + "//feedrapp.info?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
         dataType: 'json',
@@ -22176,9 +22178,12 @@ function slickAbout(){
                     var temp = document.createElement('div');
                     temp.innerHTML = s;
                     thehtml += temp.firstChild.getAttribute("src") + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                    $outputContainer.append(thehtml);
+                    finalHTML += thehtml;
                 }
             });
+            $('#blogLoc').removeClass('link-style');
+            $outputContainer.html('');
+            $outputContainer.append(finalHTML);
         }
     });
 })('http://blog.amygalbraith.com/feed','.blog-feed');

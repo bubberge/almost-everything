@@ -647,3 +647,7 @@ $color-action               : #FFBF40;
     -moz-column-count: $arg; /* Firefox */
     column-count: $arg;
 }
+
+.link-style {
+  @include link-style;
+}

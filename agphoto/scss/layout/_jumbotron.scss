@@ -70,17 +70,21 @@
         align-items: flex-end;
         @include j-height;
         overflow: hidden;
-        position: relative;
+        @include breakpoint ( landscape ) {
+            position: relative;
+        }
         picture {
             & > * {
                 width: 100vw;
                 display: block;
                 max-width: none;
-                height: 66.66vw;
-                @include abs-centered;
-                margin: auto;
-                @media screen and ( orientation: portrait ) {
+                @include breakpoint ( portrait ) {
                     width: 88vh;
+                }
+                @include breakpoint ( landscape ) {
+                    height: 66.66vw;
+                    @include abs-centered;
+                    margin: auto;
                 }
             }
         }
@@ -99,7 +103,7 @@
     .j-overlay {
         flex-direction: column-reverse;
     }
-    @include breakpoint ( landscape ) {
+    @include breakpoint (landscape) {
         .j-1 picture > * {
             bottom: 14%;
         }

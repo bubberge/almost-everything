@@ -80,21 +80,17 @@
         align-items: flex-end;
         @include j-height;
         overflow: hidden;
-        @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
-            position: relative;
-        }
+        position: relative;
         picture {
             & > * {
                 width: 100vw;
                 display: block;
                 max-width: none;
+                height: 66.66vw;
+                @include abs-centered;
+                margin: auto;
                 @media screen and ( orientation: portrait ) {
                     width: 88vh;
-                }
-                @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
-                    height: 66.66vw;
-                    @include abs-centered;
-                    margin: auto;
                 }
             }
         }
@@ -114,7 +110,7 @@
         flex-direction: column-reverse;
         z-index: 2;
     }
-    @media screen and #{breakpoint(xlarge)} and #{breakpoint(landscape)} {
+    @include breakpoint ( landscape ) {
         .j-1 picture > * {
             bottom: 14%;
         }

@@ -27,15 +27,9 @@ include 'incl/_header.php'; ?>
 
         <div class="off-canvas-content body-content home" data-off-canvas-content>
 
-            <div class="row">
+            <div class="row expanded">
 
                 <main>
-
-                    <section id="splash" class="splash">
-                        
-                        <?php include 'incl/_splash.php' ; ?>                          
-
-                    </section>
 
                     <section id="about" class="about">
 
@@ -52,6 +46,12 @@ include 'incl/_header.php'; ?>
                     <section id="contact">
 
                         <?php include 'incl/_contact.php' ; ?>
+
+                    </section>
+
+                    <section id="splash" class="splash">
+                        
+                        <?php include 'incl/_splash.php' ; ?>                          
 
                     </section>
 

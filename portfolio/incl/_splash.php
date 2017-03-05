@@ -7,10 +7,10 @@
     <p>I'm <span class="show-for-medium">David Duffy, </span>a web designer and developer.</p>
     <p>I live at the intersection between design and code. It's an easy place to be a difference-maker.</p>
   </div>
-  <?php include './incl/_circlediv.php';?>
   <ul class="subheading show-for-small-only menu">
     <li><a href="about">About</a></li>
     <li><a href="portfolio">Portfolio</a></li>
     <li><a href="contact">Contact</a></li>
   </ul>
 </div>
+<div class="splash-img"></div>

@@ -17,10 +17,16 @@
     }
 }
 
+main > * {
+    padding-top: 10vh;
+}
+
 // Home
 // ==============
 
-.home {
+.splash {
+    padding-top: 0;
+
     .heading {
         margin-top: 10vh;
         padding-left: 0;
@@ -37,6 +43,11 @@
     li {
         display: block;
     }
+
+    .splash-img {
+        min-height: 100vh;
+        background: #eee url('../img/snow.jpg') no-repeat bottom/cover;
+    }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
@@ -45,6 +56,8 @@
         margin-right: 2rem;
     }
 }
+
+
 
 // circleDivider
 // =============

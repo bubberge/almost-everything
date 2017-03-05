@@ -1,26 +1,62 @@
 <?php
+
+if (isset($_POST["submit"])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $website = $_POST['website'];
+    $message = $_POST['message'];
+    $message = wordwrap($message, 70, "\r\n");
+    $from = 'Demo Contact Form'; 
+    $to = 'daviduffy1@gmail.com'; 
+    $subject = 'Portfolio Site Contact Form Submission';
+    $body ="From: $name\n E-Mail: $email\n Website: $website\n Message:\n $message";
+    
+
+    if ( $name && $email && $message ) {
+        mail ($to, $subject, $body, $from);
+        $result ='<div class="success callout">Thank You! I will be in touch</div>';
+    } else {
+        $result ='<div class="alert callout">Sorry there was an error sending your message. Please try again later.</div>';
+    }
+}
+
 $pageTitle = '';
 $pageDescription = 'A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington.';
 $pageExt = '';
 include 'incl/_header.php'; ?>
-        <!-- page content goes in this container -->
-        <div class="off-canvas-content body-content home" data-off-canvas-content>
-          <div class="row">
-            <div class="large-8 large-push-2 column heading">
-              <h1 class="small-title show-for-small-only">David Duffy</h1>
-              <div class="subheading">
-                <h2>Howdy!</h2>
-                <p>I'm <span class="show-for-medium">David Duffy, </span>a web designer and developer.</p>
-                <p>I live at the intersection between design and code. It's an easy place to be a difference-maker.</p>
-              </div>
-              <ul class="subheading show-for-small-only menu">
-                <li><a href="about">About</a></li>
-                <li><a href="portfolio">Portfolio</a></li>
-                <li><a href="contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <?php include './incl/_circlediv.php';?>
 
-      <!-- /page content  -->
+        <div class="off-canvas-content body-content home" data-off-canvas-content>
+
+            <div class="row">
+
+                <main>
+
+                    <section id="splash" class="splash">
+                        
+                        <?php include 'incl/_splash.php' ; ?>                          
+
+                    </section>
+
+                    <section id="about" class="about">
+
+                      <?php include 'incl/_about.php' ; ?>
+
+                    </section>
+
+                    <section id="portfolio">
+        
+                        <?php include 'incl/_portfolio.php' ; ?>
+                        
+                    </section>
+
+                    <section id="contact">
+
+                        <?php include 'incl/_contact.php' ; ?>
+
+                    </section>
+
+                </main>
+            
+          </div>
+          
 <?php include 'incl/_footer.php';  ?>

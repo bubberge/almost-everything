@@ -31,7 +31,7 @@ include 'incl/_header.php'; ?>
 
                 <main>
 
-                    <section id="about" class="about">
+                    <section id="about">
 
                       <?php include 'incl/_about.php' ; ?>
 
@@ -49,7 +49,7 @@ include 'incl/_header.php'; ?>
 
                     </section>
 
-                    <section id="splash" class="splash">
+                    <section id="splash">
                         
                         <?php include 'incl/_splash.php' ; ?>                          
 

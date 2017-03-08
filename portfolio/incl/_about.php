@@ -1,6 +1,6 @@
 <!-- about content -->
-
-<div class="row content about _1_lw">
+<div class="header-spacer"></div>
+<div class="row normal content about _1_lw">
   <div class="small-3 column scrollFill">
     <div>
       <img src="img/LW.png">

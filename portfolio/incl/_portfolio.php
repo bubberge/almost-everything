@@ -1,5 +1,6 @@
 <!-- portfolio content -->
-<div class="row content portfolio">
+<div class="header-spacer"></div>
+<div class="row normal content portfolio">
     <div class="portfolio-heading">
         <h2 class="comment">Websites</h2>
     </div>
@@ -80,8 +81,8 @@
     </div>
   </div>
 </div>
-<div class="doodles">
-    <div class="row content portfolio">
+<div class="row content portfolio doodles">
+    <div class="row normal">
         <div class="portfolio-heading">
             <h2 class="comment">Doodles</h2>
         </div>

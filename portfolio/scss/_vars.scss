@@ -6,58 +6,56 @@
 
 
 
-// Colors
-// ------
-
-$color-primary: rgba(250, 141, 40, 1);
-
-
-// Utility Mixins
+// Utilities
 // ------------
 
+.row.normal {
+    max-width: $grid-row-width !important;
+}
+
 .eat-left {
-  padding-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .eat-right {
-  padding-right: 0 !important;
+    padding-right: 0 !important;
 }
 
 .eat-both {
-  @extend .eat-left;
-  @extend .eat-right;
+    @extend .eat-left;
+    @extend .eat-right;
 }
 
 @mixin abs-centered {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 @mixin display-flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
 
 @mixin justify-content-center {
-  -webkit-justify-content: center;
-  justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 
 @mixin align-items($arg) {
-  -webkit-align-items: $arg;
-  align-items: $arg;
+    -webkit-align-items: $arg;
+    align-items: $arg;
 }
 
 @mixin flex-centered {
-  @include display-flex;
-  @include justify-content-center;
-  @include align-items(center);
+    @include display-flex;
+    @include justify-content-center;
+    @include align-items(center);
 }
 
 @mixin link-style {
@@ -71,8 +69,8 @@ $color-primary: rgba(250, 141, 40, 1);
 }
 
 @mixin flex-wrap($arg) {
-  -webkit-flex-wrap: $arg;
-  flex-wrap: $arg;
+    -webkit-flex-wrap: $arg;
+    flex-wrap: $arg;
 }
 
 @mixin column-count($arg){

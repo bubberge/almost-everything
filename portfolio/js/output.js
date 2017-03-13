@@ -19196,23 +19196,68 @@ $(document).ready(function(){
                 }
              },
             'about': {
-                 'rendered': function() {
-                     console.log('this view is "about"');
+                'rendered': function() {
+                    console.log('this view is "about"');
+
+                    if ( !window.MyAbout ) {
+                        window.onload = app.route.aboutInit();
+                    } 
+
+                    MyAbout.setHeights();
+
+                    window.addEventListener('scroll', function(){ 
+                        console.log('scroll');
+                        window.MyAbout.scrollTracker();
+                    });
+
                      // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
-                 }
-              },
+                },
+                'aboutInit': function() {
+
+                    window.MyAbout = {}; // global Object container
+                    MyAbout.aboutElement      = document.querySelectorAll('#about .content')[0];
+
+                    MyAbout.setHeights        = function () {
+                        this.aboutHeight    = this.aboutElement.scrollHeight;
+                        this.headHeight     = document.querySelectorAll('#about .header-spacer')[0].scrollHeight;
+                        this.screenHeight   = window.innerHeight;
+                        this.adjustedHeight = this.aboutHeight - this.headHeight - ( this.screenHeight / 2 );
+                    }; 
+                    MyAbout.clearClasses      = function ( element , string ) {
+                        element.classList.remove('_1_lw', '_2_uw', '_3_jh', '_4_cc', '_5_me');
+                        element.classList.add( string );
+                    };
+                    MyAbout.scrollTracker     = function ( event ) {
+                        if ( document.body.scrollTop >= 0 && document.body.scrollTop < MyAbout.adjustedHeight * 0.13 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_1_lw');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.131 && document.body.scrollTop < MyAbout.adjustedHeight * 0.34 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_2_uw');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.341 && document.body.scrollTop < MyAbout.adjustedHeight * 0.57 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_3_jh');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.58 && document.body.scrollTop < MyAbout.adjustedHeight * 0.79) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_4_cc');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.80) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_5_me');
+                        }
+                    }
+                }
+            },
             'portfolio': {
                 'rendered': function() {
                     console.log('this view is "portfolio"');
                     // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 }
-             },
-             'contact': {
-                 'rendered': function() {
+            },
+            'contact': {
+                'rendered': function() {
                      console.log('this view is "contact"');
                      // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
-                 }
-              }
+                }
+            }
         },
         // The default view is recorded here. A more advanced implementation
         // might query the DOM to define it on the fly.
@@ -19846,157 +19891,4 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   // Window exports
   Foundation.plugin(Abide, 'Abide');
 }(jQuery);
-/* jshint laxcomma: true */
-
-var wind = $(window)
-  , $headSpace = $('.row.heading').height()
-  , $body = $('.body-content.About').height() - $headSpace
-  , $content = $('.row.content.about')
-  , $header = $('#widemenu').height()
-  , height = wind.height();
-
-function clearClasses (element) {
-    element.removeClass('_1_lw _2_uw _3_jh _4_cc _5_me');
-}
-
-function scrollTracker(e) {
-    if ( wind.scrollTop() > 20 && wind.scrollTop() < ($body*.17)-$header ) {
-        clearClasses($content);
-        $content.addClass('_1_lw');
-    }
-    if ( wind.scrollTop() > ($body*.18)-$header && wind.scrollTop() < ($body*.36)-$header ) {
-        clearClasses($content);
-        $content.addClass('_2_uw');
-    }
-    if ( wind.scrollTop() > ($body*.37)-$header && wind.scrollTop() < ($body*.53)-$header ) {
-        clearClasses($content);
-        $content.addClass('_3_jh');
-    }
-    if ( wind.scrollTop() > ($body*.54)-$header && wind.scrollTop() < $body*.67) {
-        clearClasses($content);
-        $content.addClass('_4_cc');
-    }
-    if ( wind.scrollTop() > $body*.68) {
-        clearClasses($content);
-        $content.addClass('_5_me');
-    }
-}
-
-// do things
-$(document).ready(function(){
-    wind.scroll( function(){ 
-        //console.log('scroll');
-        scrollTracker();
-    });
-});
-
-
-/* jshint laxcomma:true */
-var hoverSplits = true
-  , $leaves = $('.leaf')
-  , $created = $('.created>span')
-  , $destroyed = $('.score')
-  , $countdownGoal = $('.goal')
-  , $toggleButton = $('#toggle')
-  , $resetButton = $('.reset')
-  , $reverseText = $('#inReverse')
-  , $overlay = $('.circleGen-overlay')
-  , destroyedScore = 0
-  , totalCircles = $leaves.length
-  , leavesTemplate = '<div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div>'
-  , reverseTemplate = '<button id="reverse">Reverse</button>'
-  , $startingTemplate = '<div class="outer-box leaf"></div><div class="outer-box right parent inter"><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div><div class="leaf"></div></div>'
-  , $container = $('.circleGen-container')
-  ;
-
-var fadeIn = function(elem) {
-  elem.addClass('fade-in-down');
-};
-
-var reverse = function(){
-  hoverSplits = !hoverSplits;
-  $countdownGoal.text('0.0%');
-  initTimer(Math.sqrt(totalCircles)*1600);
-  fadeIn($('.timer'));
-  fadeIn($('.destroyed'));
-};
-
-var reset = function(){
-  $leaves.unbind('mouseover');
-  var overlay = $overlay.detach();
-  $container.html( $startingTemplate );
-  $container.prepend(overlay);
-  $leaves = $('.leaf');
-  totalCircles = $leaves.length;
-  $created.text(totalCircles);
-  $leaves.on('mouseover', splitter);
-  destroyedScore = 0;
-  destroyedPct = 0;
-  hoverSplits = true;
-  $destroyed.text(destroyedScore);
-  $countdownGoal.text('0.0%');
-  $('.circleGen-overlay').removeClass('active');
-};
-
-var splitter = function(){
-  var $this = $(this)
-    , $parent = $this.parent()
-    , destroyedPct = 0
-    ; 
-  
-  if (totalCircles > 302) {
-    fadeIn($toggleButton);
-  }
-  
-  if ( hoverSplits ){
-    totalCircles += 3;
-    $parent.removeClass('inter');  
-    $this.addClass('parent inter').removeClass( 'leaf').append(leavesTemplate);  
-    $this.unbind('mouseover').find('.leaf').on('mouseover', splitter);
-    $created.text(totalCircles);
-  } else if ($parent.hasClass('inter')){
-    destroyedScore += 3;
-    $parent.removeClass('inter parent').addClass('leaf');
-    $parent.html('');
-    $parent.parent().addClass('inter');
-    $this.unbind('mouseover').find('.inter').on('mouseover', splitter);
-    destroyedPct = +((destroyedScore/totalCircles)*100).toFixed(1);
-    $countdownGoal.text( destroyedPct + '%');
-    $destroyed.text(destroyedScore);
-  }
-
-};
-
-function initTimer(circles){
-  var timeLeft = circles
-    , $minutes = $('.minutes')
-    , $seconds = $('.seconds')
-    , timeinterval = setInterval( function(){
-      var t = getTimeRemaining( timeLeft );
-      $minutes.html('0' + t.minutes).slice(-2);
-      $seconds.html(('0' + t.seconds).slice(-2));
-      timeLeft -= 1000;
-      if(timeLeft<=0){
-          $('.leaf').unbind('mouseover');
-          $('.circleGen-overlay').addClass('active');
-          console.log('unbind leaves');
-          clearInterval(timeinterval); // stops timer
-      }
-  },1000);
-}
-
-var getTimeRemaining = function(input){
-  var t = input
-    , seconds = Math.floor( (t/1000) % 60 )
-    , minutes = Math.floor( (t/1000/60) % 60 )
-  ;
-  return {
-      'minutes': minutes,
-      'seconds': seconds
-  };
-};
-
-$leaves.on( 'mouseover', splitter );
-$resetButton.on( 'click', reset );
-$toggleButton.on('click', reverse );
 //# sourceMappingURL=output.js.map

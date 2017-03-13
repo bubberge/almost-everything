@@ -1,3 +1,15 @@
+.title-bar,
+.top-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 0;
+    z-index: 10;
+    background-color: transparent;
+}
+
+
 // header on small
 // =============
 .title-bar {
@@ -20,21 +32,11 @@
         text-transform: uppercase;
         font-weight: 300;
     }
-    h1 {
-        display: inline-block;
-    }
 }
+
+
 // header on medium up
 // =============
-.top-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding-top: 0;
-    z-index: 2;
-    background-color: transparent;
-}
 .top-bar-left {
     background-color: $color-primary;
     span {
@@ -82,6 +84,9 @@
 }
 // Comment Slash
 // =============
+.title-bar .comment {
+    display:none;
+}
 .comment {
     position: relative;
     bottom: 3px;
@@ -97,4 +102,9 @@
     @include breakpoint(large) {
         left: -3.5rem;
     }
+}
+.about .comment.about,
+.portfolio .comment.portfolio,
+.contact .comment.contact {
+    display: inline-block;
 }

@@ -42,9 +42,13 @@
     display: flex;
 }
 
+@mixin justify-content ( $arg ) {
+    -webkit-justify-content: $arg ;
+    justify-content: $arg ;
+}
+
 @mixin justify-content-center {
-    -webkit-justify-content: center;
-    justify-content: center;
+    @include justify-content(center);
 }
 
 @mixin align-items($arg) {
@@ -54,7 +58,7 @@
 
 @mixin flex-centered {
     @include display-flex;
-    @include justify-content-center;
+    @include justify-content(center);
     @include align-items(center);
 }
 

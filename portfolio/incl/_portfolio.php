@@ -1,6 +1,6 @@
 <!-- portfolio content -->
 <div class="header-spacer"></div>
-<div class="row normal content portfolio">
+<div class="row normal content portfolio sites">
     <div class="portfolio-heading">
         <h2 class="comment">Websites</h2>
     </div>
@@ -89,7 +89,7 @@
         <div class="medium-6 large-4 columns doodle-card doodle-1">
             <div class="doodle-inner">  
                 <div class="doodle-image" title="teaser image of a CSS flower animation demo" style="background-image:url('img/flower.png')">
-                    <a href="http://jsbin.com/yeyewic/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the hover flower doodle by daviduffy">
+                    <a href="http://jsbin.com/yeyewic/" target="_blank" title="jsbin.com external link to code for the hover flower doodle by daviduffy">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                 </div>
@@ -102,26 +102,26 @@
         <div class="medium-6 large-4 columns doodle-card doodle-2">
             <div class="doodle-inner">  
                 <div class="doodle-image" style="background-image:url('img/gradient.jpg')">
-                    <a href="http://jsbin.com/venuda/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the RGB gradient generator by daviduffy">
+                    <a href="http://jsbin.com/gajeboz" target="_blank" title="jsbin.com external link to code for the RGB gradient generator by daviduffy">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                </div>
                 <div class="doodle-heading">
-                    <h3>RGB Gradient Value Gen</h3>
-                    <p>Harnessing user input to manipulate the DOM</p>
+                    <h3>RGB Gradient Tool</h3>
+                    <p>Creates multiple concentric rings of petals based on user input.</p>
                 </div>
             </div>
         </div>
         <div class="medium-6 large-4 columns doodle-card doodle-3">
             <div class="doodle-inner">  
-                <div class="doodle-image" style="background-image:url('img/lo-fi.png')">
-                    <a href="http://jsbin.com/duyivar/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the lo-fi film shake by daviduffy">
+                <div class="doodle-image" style="background-image:url('img/circleDiv.jpg')">
+                    <a href="http://output.jsbin.com/fudizi" target="_blank" title="jsbin.com external link to code for the circle divider game shake by daviduffy">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                 </div>
                 <div class="doodle-heading">
-                    <h3>Lo-Fi Film Shake</h3>
-                    <p>Experimenting with CSS blend modes and animation</p>
+                    <h3>Circle Divider Game</h3>
+                    <p>Infinite circle splitting game.</p>
                 </div>
             </div>
         </div>

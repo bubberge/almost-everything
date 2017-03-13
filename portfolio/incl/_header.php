@@ -15,9 +15,9 @@
     <meta name="twitter:url" content="http://daviduffy.me"/>
     <meta name="twitter:title" content="David Duffy"/>
     <meta name="twitter:description" content="<?php echo $pageDescription; ?>"/>
-    <meta name="twitter:image" content="https://daviduffy.me/img/twitter.jpg"/>
-    <meta name="twitter:site" content="@fairedusnow"/>
-    <meta name="twitter:creator" content="@fairedusnow"/>
+    <meta name="twitter:image" content="https://daviduffy.me/splash/david-duffy-designer-developer-product-owner-1024.jpg"/>
+    <meta name="twitter:site" content="@daviduffy_"/>
+    <meta name="twitter:creator" content="@daviduffy_"/>
     <meta property="og:title" content="David Duffy" />
     <meta property="og:site_name" content="David Duffy Portfolio" />
     <meta property="og:type" content="website" />
@@ -37,19 +37,19 @@
           }
         </style>
         <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
-          <?php if ($pageTitle) : ?>
           <div class="title-bar-left">
             <span><a href="#splash">
               <span class="lettermark">D</span>
               <span class="lettermark">D</span>
             </a></span>
-            <h1 class="comment"><?php echo $pageTitle ?></h1>
+            <h1 class="comment about">about</h1>
+            <h1 class="comment portfolio">portfolio</h1>
+            <h1 class="comment contact">contact</h1>
           </div>
           
           <div class="title-bar-right">
             <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
           </div>
-          <?php endif; ?>
         </div>
 
         <!-- off-canvas right menu -->

@@ -15,23 +15,68 @@ $(document).ready(function(){
                 }
              },
             'about': {
-                 'rendered': function() {
-                     console.log('this view is "about"');
+                'rendered': function() {
+                    console.log('this view is "about"');
+
+                    if ( !window.MyAbout ) {
+                        window.onload = app.route.aboutInit();
+                    } 
+
+                    MyAbout.setHeights();
+
+                    window.addEventListener('scroll', function(){ 
+                        console.log('scroll');
+                        window.MyAbout.scrollTracker();
+                    });
+
                      // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
-                 }
-              },
+                },
+                'aboutInit': function() {
+
+                    window.MyAbout = {}; // global Object container
+                    MyAbout.aboutElement      = document.querySelectorAll('#about .content')[0];
+
+                    MyAbout.setHeights        = function () {
+                        this.aboutHeight    = this.aboutElement.scrollHeight;
+                        this.headHeight     = document.querySelectorAll('#about .header-spacer')[0].scrollHeight;
+                        this.screenHeight   = window.innerHeight;
+                        this.adjustedHeight = this.aboutHeight - this.headHeight - ( this.screenHeight / 2 );
+                    }; 
+                    MyAbout.clearClasses      = function ( element , string ) {
+                        element.classList.remove('_1_lw', '_2_uw', '_3_jh', '_4_cc', '_5_me');
+                        element.classList.add( string );
+                    };
+                    MyAbout.scrollTracker     = function ( event ) {
+                        if ( document.body.scrollTop >= 0 && document.body.scrollTop < MyAbout.adjustedHeight * 0.13 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_1_lw');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.131 && document.body.scrollTop < MyAbout.adjustedHeight * 0.34 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_2_uw');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.341 && document.body.scrollTop < MyAbout.adjustedHeight * 0.57 ) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_3_jh');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.58 && document.body.scrollTop < MyAbout.adjustedHeight * 0.79) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_4_cc');
+                        }
+                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.80) {
+                          MyAbout.clearClasses(MyAbout.aboutElement, '_5_me');
+                        }
+                    };
+                }
+            },
             'portfolio': {
                 'rendered': function() {
                     console.log('this view is "portfolio"');
                     // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 }
-             },
-             'contact': {
-                 'rendered': function() {
+            },
+            'contact': {
+                'rendered': function() {
                      console.log('this view is "contact"');
                      // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
-                 }
-              }
+                }
+            }
         },
         // The default view is recorded here. A more advanced implementation
         // might query the DOM to define it on the fly.
@@ -41,8 +86,10 @@ $(document).ready(function(){
             app.route = app.routes[app.routeID];
             app.routeElem = document.getElementById(app.routeID);
 
+            // housekeeping
             $body.classList = '';
             $body.classList.add( app.routeID );
+            
 
             app.route.rendered();
         },

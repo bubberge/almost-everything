@@ -37,7 +37,12 @@
         </span>
     </div>
     <div class="card description">
-        <span>A photographer that captures simple, natural photography.<br><br><a href="http://blog.amygalbraith.com/" target="_blank">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+        <span>A photographer that captures simple, natural images. A beautiful portfolio and blog.
+            <div class="sub-description">
+                <a href="http://amygalbraith.com/" target="_blank">The Portfolio <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                <a href="http://blog.amygalbraith.com/" target="_blank">The Blog <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+            </div>
+        </span>
     </div>
     <div class="card meta">
       <span class="tech">PHP<br>jQuery</span>
@@ -77,7 +82,7 @@
       </span>
     </div>
     <div class="card description">
-        <span>Work with me to create a site that captures your audience and positions you for success.<br><br><a href="contact">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+        <span>Work with me to create a site that captures your audience and positions you for success.<br><br><a href="#contact">Contact <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
     </div>
   </div>
 </div>

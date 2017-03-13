@@ -309,131 +309,135 @@
 // ===================
 
 
-.title-bar,
-.About .heading {
-    background-color: $white;
-    position: relative;
-    z-index: 1;
-    padding-top: 3rem;
-    padding-bottom: 7rem;
-    @include breakpoint(medium){
-        padding-top: initial;
-    }
-}
+// .title-bar,
+// .about .heading {
+//     background-color: $white;
+//     position: relative;
+//     z-index: 1;
+//     padding-top: 3rem;
+//     padding-bottom: 7rem;
+//     @include breakpoint(medium){
+//         padding-top: initial;
+//     }
+// }
 .about {
-    background: $light-gray;
-    position: relative;
-    z-index: 0;
-    .header-spacer {
-        height: 28vh;
-    }
-    .scrollContent {
-        color: $medium-gray;
-        transition: color .4s ease-in-out;
-        padding-right: 1rem;
-        @include breakpoint (medium) {
-            padding-right: 6rem;
+    section {
+        // background: $light-gray;
+        position: relative;
+        z-index: 0;
+        .header-spacer {
+            height: 28vh;
         }
-        @include breakpoint (large) {
-            padding-right: 12rem;
+        .scrollContent {
+            transition: color .4s ease-in-out;
+            padding-right: 1rem;
+            @include breakpoint (medium) {
+                padding-right: 6rem;
+            }
+            @include breakpoint (large) {
+                padding-right: 12rem;
+            }
         }
-    }
-    .img-fill {
-        background: url('../img/SIS.png') center/contain repeat-y;
-        height: 100%;
-    }
-    &:before,
-    &:after {
-        content: '';
-        position: fixed;
-        width: 100%;
-        max-width: 1170px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-    &:before {
-        height: 100vh;
-        transition: background-color .4s ease-in-out;
-        top: 0;
-        will-change: background-color;
-    }
-    &:after{
-        height: 32vh;
-        bottom: 0;
-        z-index: -2;
-        background: $light-gray;
-    }
-    &._1_lw {
+        .img-fill {
+            background: url('../img/SIS.png') center/contain repeat-y;
+            height: 100%;
+        }
         &:before {
-        background-color: purple;
+            content: '';
+            position: fixed;
+            width: 100%;
+            max-width: 1170px;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            z-index: -1;
+            height: 100vh;
+            transition: background-color .4s ease-in-out;
+            top: 0;
+            will-change: background-color;
         }
-        .LW {
-            color: $black;
+        // &:after{
+        //     height: 32vh;
+        //     bottom: 0;
+        //     z-index: -2;
+        //     background: $light-gray;
+        // }
+
+        img {
+            display: block;
+            width: 3.6rem;
+            margin: 0 auto;
+            @include breakpoint(medium){
+                width: 12rem;
+            }
         }
-    }
-    &._2_uw {
-        &:before {
-        background-color: #4B2E84;
+        .scrollFill,
+        .scrollContent {
+            height: 460px;
+            background-color: white;
+            @include breakpoint (medium){
+                height: 600px;
+            }
         }
-        .UW {
-            color: $black;
+        .scrollFill {
+            mix-blend-mode: screen;
+            clear: left;
         }
-    }
-    &._3_jh {
-        &:before {
-        background-color: #B22222;
-        }
-        .JH {
-            color: $black;
-        }
-    }
-    &._4_cc {
-        &:before {
-        background-color: #29abe1;
-        }
-        .CC {
-            color: $black;
-        }
-    }
-    &._5_me {
-        &:before {
-        background-color: $color-primary;
-        }
-        .ME {
-            color: $black;
-        }
-        .scrollContent a {
-            color: $dark-gray;
-            box-shadow: 0px 2px 0px 0px transparentize($color-primary,.2);
-        }
-    }
-    img {
-        display: block;
-        width: 3.6rem;
-        margin: 0 auto;
-        @include breakpoint(medium){
-            width: 12rem;
-        }
-    }
-    .scrollFill,
-    .scrollContent {
-        height: 460px;
-        background-color: white;
-        @include breakpoint (medium){
+        .scrollFill.omega,
+        .scrollContent:last-child {
             height: 600px;
+            @include breakpoint (medium){
+                height: 800px;
+            }
         }
-    }
-    .scrollFill {
-        mix-blend-mode: screen;
-        clear: left;
-    }
-    .scrollFill.omega,
-    .scrollContent:last-child {
-        height: 600px;
-        @include breakpoint (medium){
-            height: 800px;
+        &.scroll-colors-enabled {
+            .LW, .UW, .JH, .CC, .ME {
+                color: $medium-gray;
+            }
+            &._1_lw {
+                &:before {
+                background-color: purple;
+                }
+                .LW {
+                    color: $black;
+                }
+            }
+            &._2_uw {
+                &:before {
+                background-color: #4B2E84;
+                }
+                .UW {
+                    color: $black;
+                }
+            }
+            &._3_jh {
+                &:before {
+                background-color: #B22222;
+                }
+                .JH {
+                    color: $black;
+                }
+            }
+            &._4_cc {
+                &:before {
+                background-color: #29abe1;
+                }
+                .CC {
+                    color: $black;
+                }
+            }
+            &._5_me {
+                &:before {
+                background-color: $color-primary;
+                }
+                .ME {
+                    color: $black;
+                }
+                .scrollContent a {
+                    color: $dark-gray;
+                    box-shadow: 0px 2px 0px 0px transparentize($color-primary,.2);
+                }
+            }
         }
     }
 }

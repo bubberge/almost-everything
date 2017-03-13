@@ -19205,9 +19205,11 @@ $(document).ready(function(){
 
                     MyAbout.setHeights();
 
-                    window.addEventListener('scroll', function(){ 
-                        console.log('scroll');
-                        window.MyAbout.scrollTracker();
+                    window.addEventListener('scroll', function () {
+                        if (MyAbout.scrollTimer) {
+                            clearTimeout(MyAbout.scrollTimer);   // clear any previous pending timer
+                        }
+                        MyAbout.scrollTimer = setTimeout(MyAbout.handleScroll, 22);   // set new timer
                     });
 
                      // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
@@ -19215,35 +19217,51 @@ $(document).ready(function(){
                 'aboutInit': function() {
 
                     window.MyAbout = {}; // global Object container
-                    MyAbout.aboutElement      = document.querySelectorAll('#about .content')[0];
+                    MyAbout.scrollTimer       = null;
+                    MyAbout.aboutElement      = document.getElementById('about');
+                    MyAbout.aboutElement.classList.add('scroll-colors-enabled','_1_lw');
 
                     MyAbout.setHeights        = function () {
-                        this.aboutHeight    = this.aboutElement.scrollHeight;
-                        this.headHeight     = document.querySelectorAll('#about .header-spacer')[0].scrollHeight;
-                        this.screenHeight   = window.innerHeight;
-                        this.adjustedHeight = this.aboutHeight - this.headHeight - ( this.screenHeight / 2 );
+                        this.aboutHeight      = this.aboutElement.scrollHeight;
+                        this.headHeight       = document.querySelectorAll('#about .header-spacer')[0].scrollHeight;
+                        this.screenHeight     = window.innerHeight;
+                        this.adjustedHeight   = this.aboutHeight - this.headHeight - ( this.screenHeight / 2 );
                     }; 
-                    MyAbout.clearClasses      = function ( element , string ) {
+                    MyAbout.changeClasses     = function ( element , string ) {
                         element.classList.remove('_1_lw', '_2_uw', '_3_jh', '_4_cc', '_5_me');
                         element.classList.add( string );
                     };
                     MyAbout.scrollTracker     = function ( event ) {
-                        if ( document.body.scrollTop >= 0 && document.body.scrollTop < MyAbout.adjustedHeight * 0.13 ) {
-                          MyAbout.clearClasses(MyAbout.aboutElement, '_1_lw');
+                        if ( MyAbout.scrollQuery( 0, 0.13 )) {
+                          MyAbout.changeClasses(MyAbout.aboutElement, '_1_lw');
                         }
-                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.131 && document.body.scrollTop < MyAbout.adjustedHeight * 0.34 ) {
-                          MyAbout.clearClasses(MyAbout.aboutElement, '_2_uw');
+                        if ( MyAbout.scrollQuery( 0.131, 0.34 )) {
+                          MyAbout.changeClasses(MyAbout.aboutElement, '_2_uw');
                         }
-                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.341 && document.body.scrollTop < MyAbout.adjustedHeight * 0.57 ) {
-                          MyAbout.clearClasses(MyAbout.aboutElement, '_3_jh');
+                        if ( MyAbout.scrollQuery( 0.341, 0.57 )) {
+                          MyAbout.changeClasses(MyAbout.aboutElement, '_3_jh');
                         }
-                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.58 && document.body.scrollTop < MyAbout.adjustedHeight * 0.79) {
-                          MyAbout.clearClasses(MyAbout.aboutElement, '_4_cc');
+                        if ( MyAbout.scrollQuery( 0.571 , 0.79 )) {
+                          MyAbout.changeClasses(MyAbout.aboutElement, '_4_cc');
                         }
-                        if ( document.body.scrollTop > MyAbout.adjustedHeight * 0.80) {
-                          MyAbout.clearClasses(MyAbout.aboutElement, '_5_me');
+                        if ( MyAbout.scrollQuery( 0.791, 1 )) {
+                          MyAbout.changeClasses(MyAbout.aboutElement, '_5_me');
                         }
-                    }
+                    };
+                    MyAbout.scrollQuery       = function ( int1, int2 ) {
+                        if (
+                            ( window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0 ) >= ( MyAbout.adjustedHeight * int1 ) &&
+                            ( window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0 ) < ( MyAbout.adjustedHeight * int2 )
+                         ) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    };
+                    MyAbout.handleScroll      = function () {
+                        console.log('scroll');
+                        window.MyAbout.scrollTracker();
+                    };
                 }
             },
             'portfolio': {
@@ -19267,8 +19285,10 @@ $(document).ready(function(){
             app.route = app.routes[app.routeID];
             app.routeElem = document.getElementById(app.routeID);
 
+            // housekeeping
             $body.classList = '';
             $body.classList.add( app.routeID );
+
 
             app.route.rendered();
         },

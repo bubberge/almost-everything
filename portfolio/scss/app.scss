@@ -3,6 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'vars';
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -53,3 +54,4 @@
 @import 'layout/index';
 @import 'components/index';
 @import 'special/index';
+

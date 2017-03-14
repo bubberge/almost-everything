@@ -4,31 +4,31 @@ $pageBlurb = "Right now I like simple, clean design.<br class='show-for-large'><
 $pageDescription = "The actual portfolio page on David Duffy (aka daviduffy)'s web design porfolio website. David is a web designer and developer from Seattle, Washington.";
 $pageExt = 'portfolio';
 include 'incl/_header.php'; ?>
-          <div class="row content portfolio">
-          <div class="portfolio-heading">
-            <h2 class="comment">Websites</h2>
-          </div>
+        <div class="row content portfolio">
+            <div class="portfolio-heading">
+                <h2 class="comment">Websites</h2>
+            </div>
             <div class="large-6 columns portfolio-card card-1">
-              <div class="card image" title="The main image from the Give-r e-Commerce site, developed by David Duffy">
-              </div>
-              <div class="card underline">
+                <div class="card image" title="The main image from the Give-r e-Commerce site, developed by David Duffy">
+                </div>
+                <div class="card underline">
                   <span>&nbsp;</span>
-              </div>
-              <div class="card card-button">
-                <span>
-                  <span>Give'r</span>
-                  <a class="show-for-small-only" target="_blank" href="http://www.give-r.com/"></a>
-                </span>
-              </div>
-              <div class="card description">
-                  <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.
-                      <div class="sub-description"><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
-                  </span>
-              </div>
-              <div class="card meta">
-                <span class="tech">Liquid<br>SCSS</span>
-                <span class="platform">Shopify</span>
-              </div>
+                </div>
+                <div class="card card-button">
+                    <span>
+                        <span>Give'r</span>
+                        <a class="show-for-small-only" target="_blank" href="http://www.give-r.com/"></a>
+                    </span>
+                </div>
+                <div class="card description">
+                    <span>Give'r, an adventure equipment brand that focuses on a small group of flagship products.
+                        <div class="sub-description"><a target="_blank" href="http://www.give-r.com/">See it <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+                    </span>
+                </div>
+                <div class="card meta">
+                    <span class="tech">Liquid<br>SCSS</span>
+                    <span class="platform">Shopify</span>
+                </div>
             </div>
             <div class="large-6 columns portfolio-card card-2">
               <div class="card image" title="A main image from the photographer Amy Galbraith's blog website, designed and developed by David Duffy">
@@ -95,8 +95,54 @@ include 'incl/_header.php'; ?>
                   </span>
               </div>
             </div>
-          </div>
         </div>
+        <div class="doodles">
+            <div class="row content portfolio">
+                <div class="portfolio-heading">
+                    <h2 class="comment">Doodles</h2>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-1">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" title="teaser image of a CSS flower animation demo" style="background-image:url('img/flower.png')">
+                            <a href="http://jsbin.com/yeyewic/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the hover flower doodle by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
+                        </div>
+                        <div class="doodle-heading">
+                            <h3>Hover Flower</h3>
+                            <p>Achieving 60 FPS with CSS3 animations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-2">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" style="background-image:url('img/gradient.jpg')">
+                            <a href="http://jsbin.com/venuda/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the RGB gradient generator by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
+                       </div>
+                        <div class="doodle-heading">
+                            <h3>RGB Gradient Value Gen</h3>
+                            <p>Harnessing user input to manipulate the DOM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 large-4 columns doodle-card doodle-3">
+                    <div class="doodle-inner">  
+                        <div class="doodle-image" style="background-image:url('img/lo-fi.png')">
+                            <a href="http://jsbin.com/duyivar/edit?html,css,js,output" target="_blank" title="jsbin.com external link to code for the lo-fi film shake by daviduffy">
+                                <?php include 'incl/_outbound.php' ;?>
+                            </a>
+                        </div>
+                        <div class="doodle-heading">
+                            <h3>Lo-Fi Film Shake</h3>
+                            <p>Experimenting with CSS blend modes and animation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <!-- /page content  -->
 <?php include 'incl/_footer.php';  ?>

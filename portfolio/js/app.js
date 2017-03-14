@@ -9,33 +9,43 @@ $(document).ready(function(){
         // routes (i.e. views and their functionality) defined here
         'routes': {
             'splash': {
-                'rendered': function() {
-                    console.log('this view is "splash"');
-                    // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
+                'entered': function() {
+                    // app.newRouteElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 }
              },
             'about': {
-                'rendered': function() {
-                    console.log('this view is "about"');
+                'entered': function() {
 
+                    // if the MyAbout object doesn't exist yet, create it
                     if ( !window.MyAbout ) {
-                        window.onload = app.route.aboutInit();
+                        window.onload = app.newRoute.aboutInit();
                     } 
 
+                    // set heights of DOM elements again just in case they aren't set yet
                     MyAbout.setHeights();
 
+                    // enable color changes to icon elements on scroll
                     window.addEventListener('scroll', function () {
+
+                        // delay firing this function until a new scroll event hasn't happened for 30ms
                         if (MyAbout.scrollTimer) {
-                            clearTimeout(MyAbout.scrollTimer);   // clear any previous pending timer
+
+                            // clear any previous pending timer
+                            clearTimeout(MyAbout.scrollTimer);   
                         }
-                        MyAbout.scrollTimer = setTimeout(MyAbout.handleScroll, 22);   // set new timer
+
+                        // set new timer
+                        MyAbout.scrollTimer = setTimeout(MyAbout.handleScroll, 30);   
                     });
 
-                     // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
+                     // app.newRouteElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 },
                 'aboutInit': function() {
 
-                    window.MyAbout = {}; // global Object container
+                    // create the about object container
+                    window.MyAbout = {};
+
+                    // fill it with things
                     MyAbout.scrollTimer       = null;
                     MyAbout.aboutElement      = document.getElementById('about');
                     MyAbout.aboutElement.classList.add('scroll-colors-enabled','_1_lw');
@@ -81,41 +91,70 @@ $(document).ready(function(){
                         console.log('scroll');
                         window.MyAbout.scrollTracker();
                     };
+                },
+                'exited' : function(){
+
                 }
             },
             'portfolio': {
-                'rendered': function() {
-                    console.log('this view is "portfolio"');
-                    // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
+                'entered': function() {
+                    // app.newRouteElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 }
             },
             'contact': {
-                'rendered': function() {
-                     console.log('this view is "contact"');
-                     // app.routeElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
+                'entered': function() {
+                     // app.newRouteElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
                 }
             }
         },
         // The default view is recorded here. A more advanced implementation
         // might query the DOM to define it on the fly.
         'default': 'splash',
-        'routeChange': function() {
-            app.routeID = location.hash.slice(1); // 'splash', 'about', etc
-            app.route = app.routes[app.routeID];
-            app.routeElem = document.getElementById(app.routeID);
+        'routeChange': function(e) {
 
-            // housekeeping
+            // if this function was triggered by a hashchange set previous route info
+            if (e) {
+
+                // set previous route info
+                app.prevRouteID = e.oldURL.split("#")[1];
+                app.prevRoute = app.routes[app.prevRouteID];
+
+                // and run exited function
+                if (app.prevRoute.exited) {
+                    app.prevRoute.exited();
+                }
+            }
+
+            // set new route info
+            app.newRouteID = location.hash.slice(1); // 'splash', 'about', etc
+            app.newRoute = app.routes[app.newRouteID];
+
+            // classes housekeeping
             $body.classList = '';
-            $body.classList.add( app.routeID );
+            $body.classList.add( app.newRouteID );
 
 
-            app.route.rendered();
+            // run entered function
+            app.newRoute.entered();
+
+            // target new route
+            app.newRouteElem = document.getElementById(app.newRouteID);
+
         },
+
         // The function to start the app
         'init': function() {
-            window.addEventListener('hashchange', function() {
-                app.routeChange();
-            });
+
+            // just in case newURL and oldURL aren't supported
+            if(!window.HashChangeEvent)(function(){
+                var lastURL=document.URL;
+                window.addEventListener("hashchange",function(event){
+                    Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+                    Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+                    lastURL=document.URL;
+                });
+            }());
+
             // If there is no hash in the URL, change the URL to
             // include the default view's hash.
             if (!window.location.hash) {
@@ -124,6 +163,13 @@ $(document).ready(function(){
                 // Execute routeChange() for the first time
                 app.routeChange();
             }
+
+            // Fire all of the ins and outs of route changes
+            window.addEventListener('hashchange', function(e) {
+                app.routeChange(e);
+            });
+
+
         }
     };
     window.app = app;

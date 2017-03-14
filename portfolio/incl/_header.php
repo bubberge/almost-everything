@@ -26,7 +26,7 @@
     <meta property="og:description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington." />
     <link rel="canonical" href="http://daviduffy.me">
   </head>
-  <body>
+  <body class="splash">
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 

@@ -57,12 +57,11 @@ a {
 .portfolio-heading {
     h2 {
         font-size: 1.2rem;
+        line-height: 1;
+        margin-left: 1rem;
         @include breakpoint(medium){
             font-size: 2rem;;
         }
-    }
-    .comment {
-        line-height: 1;
     }
 }
 .card {

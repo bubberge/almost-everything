@@ -110,8 +110,8 @@
 // ===============
 .portfolio section {
     .content {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -358,7 +358,6 @@
             left: 50%;
             right: auto;
             transform: translateX(-50%);
-            z-index: -1;
             height: 100vh;
             transition: background-color .4s ease-in-out;
             top: 0;
@@ -382,7 +381,6 @@
         .scrollFill,
         .scrollContent {
             height: 460px;
-            background-color: white;
             @include breakpoint (medium){
                 height: 600px;
             }

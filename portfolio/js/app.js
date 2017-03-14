@@ -25,22 +25,11 @@ $(document).ready(function(){
                     MyAbout.setHeights();
 
                     // enable color changes to icon elements on scroll
-                    window.addEventListener('scroll', function () {
-
-                        // delay firing this function until a new scroll event hasn't happened for 30ms
-                        if (MyAbout.scrollTimer) {
-
-                            // clear any previous pending timer
-                            clearTimeout(MyAbout.scrollTimer);   
-                        }
-
-                        // set new timer
-                        MyAbout.scrollTimer = setTimeout(MyAbout.handleScroll, 30);   
-                    });
+                    window.addEventListener('scroll', MyAbout.scrollTrigger );
 
                      // app.newRouteElem.innerHTML = '<p>This JavaScript content overrides the static content for this view.</p>';
-                },
-                'aboutInit': function() {
+                    },
+                    'aboutInit': function() {
 
                     // create the about object container
                     window.MyAbout = {};
@@ -87,13 +76,27 @@ $(document).ready(function(){
                             return false;
                         }
                     };
+                    MyAbout.scrollTrigger      = function () {
+
+                        // delay firing this function until a new scroll event hasn't happened for 30ms
+                        if (MyAbout.scrollTimer) {
+
+                            // clear any previous pending timer
+                            clearTimeout(MyAbout.scrollTimer);   
+                        }
+
+                        // set new timer
+                        MyAbout.scrollTimer = setTimeout(MyAbout.handleScroll, 30);   
+                    };
                     MyAbout.handleScroll      = function () {
                         console.log('scroll');
                         window.MyAbout.scrollTracker();
                     };
                 },
                 'exited' : function(){
-
+                    console.log('exiting');
+                    // remove scroll event listener
+                    window.removeEventListener('scroll', MyAbout.scrollTrigger );
                 }
             },
             'portfolio': {

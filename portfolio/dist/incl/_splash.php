@@ -6,6 +6,7 @@
             <div class="subheading">
                 <h2>Howdy!</h2>
                 <p>I'm <span class="show-for-medium">David Duffy, </span>a web designer <br class="show-for-small-only">and developer.</p>
+                <a href="#about" class="fancy-link">see more</a>
             </div>
         </div>
     </div>

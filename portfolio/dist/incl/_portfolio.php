@@ -2,7 +2,7 @@
 <div class="header-spacer"></div>
 <div class="row normal content portfolio sites">
     <div class="portfolio-heading">
-        <h2 class="comment">Websites</h2>
+        <h2>Websites</h2>
     </div>
     <div class="large-6 columns portfolio-card card-1">
         <div class="card image" title="The main image from the Give-r e-Commerce site, developed by David Duffy">
@@ -89,7 +89,7 @@
 <div class="row content portfolio doodles">
     <div class="row normal">
         <div class="portfolio-heading">
-            <h2 class="comment">Doodles</h2>
+            <h2>Doodles</h2>
         </div>
         <div class="medium-6 large-4 columns doodle-card doodle-1">
             <div class="doodle-inner">  

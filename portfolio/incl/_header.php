@@ -5,26 +5,26 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Duffy | daviduffy | Web Designer &amp; Developer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
-    <meta name="description" content="<?php echo $pageDescription; ?>" />
-    <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
+    <meta name="description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington." />
+    <meta itemprop="description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington." />
     <link rel="stylesheet" href="css/app.css">
     <link rel='shortcut icon' href='img/fav.ico' type='image/x-icon'/ >
     <meta itemprop="name" content="David Duffy"/>
-    <meta itemprop="url" content="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>"/>
+    <meta itemprop="url" content="http://daviduffy.me"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:url" content="http://daviduffy.me"/>
     <meta name="twitter:title" content="David Duffy"/>
-    <meta name="twitter:description" content="<?php echo $pageDescription; ?>"/>
-    <meta name="twitter:image" content="https://daviduffy.me/splash/david-duffy-designer-developer-product-owner-1024.jpg"/>
+    <meta name="twitter:description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington."/>
+    <meta name="twitter:image" content="http://daviduffy.me/img/splash/david-duffy-designer-developer-product-owner-2-1024.jpg"/>
     <meta name="twitter:site" content="@daviduffy_"/>
     <meta name="twitter:creator" content="@daviduffy_"/>
     <meta property="og:title" content="David Duffy" />
     <meta property="og:site_name" content="David Duffy Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>" />
-    <meta property="og:image" content="http://daviduffy.me/img/twitter.jpg" />
-    <meta property="og:description" content="<?php echo $pageDescription; ?>" />
-    <link rel="canonical" href="http://daviduffy.me<?php if ($pageExt) echo '/' . $pageExt; ?>">
+    <meta property="og:url" content="http://daviduffy.me" />
+    <meta property="og:image" content="http://daviduffy.me/img/splash/david-duffy-designer-developer-product-owner-2-1024.jpg" />
+    <meta property="og:description" content="A portfolio site created by David Duffy (aka daviduffy), a web designer and developer from Seattle, Washington." />
+    <link rel="canonical" href="http://daviduffy.me">
   </head>
   <body>
     <div class="off-canvas-wrapper">
@@ -36,26 +36,30 @@
             .title-bar {display:none;}
           }
         </style>
-        <div class="title-bar" data-responsive-toggle="offCanvasRight" data-hide-for="medium">
+        <div class="title-bar" data-responsive-toggle="offCanvasLeft" data-hide-for="medium">
+          <div class="title-bar-right">
+            <?php 
+            // <span><a href="#splash">
+            //   <span class="lettermark">D</span>
+            //   <span class="lettermark">D</span>
+            // </a></span>
+            ?>
+             
+
+          </div>
+          
           <div class="title-bar-left">
-            <span><a href="#splash">
-              <span class="lettermark">D</span>
-              <span class="lettermark">D</span>
-            </a></span>
+            <button class="menu-icon" type="button" data-toggle="offCanvasLeft"></button>
             <h1 class="comment about">about</h1>
             <h1 class="comment portfolio">portfolio</h1>
             <h1 class="comment contact">contact</h1>
           </div>
-          
-          <div class="title-bar-right">
-            <button class="menu-icon" type="button" data-toggle="offCanvasRight"></button>
-          </div>
         </div>
 
         <!-- off-canvas right menu -->
-        <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-position="left">
           <ul class="vertical dropdown menu" data-dropdown-menu>
-            <?php if ( $pageTitle ) : ?><li class="show-for-small-only"><a href="#splash">Home</a></li><?php endif; ?>
+            <li class="show-for-small-only"><a href="#splash">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>

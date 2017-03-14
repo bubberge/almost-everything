@@ -1,12 +1,12 @@
 <!-- contact content -->
-
-<div class="row">
+<div class="header-spacer"></div>
+<div class="row normal">
     <div class="medium-6 medium-centered columns">
         <?php echo $result; ?>
     </div>
 </div>
-<div class="row contact content">
-    <form class="medium-6 medium-centered columns" method="post" action="contact.php" data-abide>
+<div class="row normal contact content">
+    <form class="medium-6 medium-centered columns" method="post" action="index.php#contact" data-abide>
         <div data-abide-error class="alert callout" style="display: none;">
             <p><i class="fi-alert"></i> There are some errors in your form.</p>
         </div>

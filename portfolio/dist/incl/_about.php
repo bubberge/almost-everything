@@ -1,6 +1,6 @@
 <!-- about content -->
-
-<div class="row content about _1_lw">
+<div class="header-spacer"></div>
+<div class="row normal content">
   <div class="small-3 column scrollFill">
     <div>
       <img src="img/LW.png">
@@ -55,11 +55,11 @@
   </div>
   <div class="small-9 column scrollContent CC">
     <h2>CrystalCommerce</h2>
-    <span class="year show-for-medium">2014-2016</span>
-    <p>Started at the bottom a customer service rep. Worked hard, moved into web design and development department, where I am the manager now.</p>
+    <span class="year show-for-medium">2014-<?php echo date("Y"); ?></span>
+    <p>Started as a customer service rep. Worked hard, moved into web design and UX, and then into product management.</p>
     <span><span>Customer Service:</span> refined that ever-important ability to explain technical subject matter to non-technical persons</span>
     <span><span>Design/Development:</span> went from 4th-grade reading level to fluent in HTML/SCSS and can do work with JS as well</span>
-    <span><span>Management:</span> learned to do all I can to create clarity from ambiguity</span>
+    <span><span>Product Management:</span> learned to build consensus, to adapt to uncertainty, and a lot about agile process</span>
   </div>
 
   <div class="small-3 column scrollFill omega">
@@ -71,7 +71,7 @@
     <span><span>Snowboarding:</span>In 2009 I moved to Jackson, WY just to snowboard. Inadvertently, the jobs that I had there laid the groundwork for pursuing web develoment.</span>
     <span><span>Halo Suit:</span>I think armor costumes are cool. Like a true DIY enthusiast, I watched about 2 minutes of a YouTube video and figured <br class="show-for-medium">I could make one too. <a target="_blank" href="http://imgur.com/a/D7oUQ#0" title="photo gallery [imgur] of my self-made Halo 3 MJOLNIR Mark VI suit">It went better than expected.</a></span>
     <span><span>Web Develoment:</span>The world of webdev is basically endless, and it can be self-taught. It may seem strange because web development is just work for so many people, but for me it's a fun world to explore.</span>
-    <span><span>If you read all of that,</span>It's probably time to <a href="portfolio">look at my portfolio.</a></span>
+    <span><span>If you read all of that,</span>It's probably time to <a href="#portfolio">look at my portfolio.</a></span>
   </div>
 
 </div>

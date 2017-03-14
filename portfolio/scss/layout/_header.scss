@@ -16,10 +16,12 @@
     padding: 0;
     color: $black;
 }
-.title-bar-right {
-    margin: .7rem;
-}
 .title-bar-left {
+    margin: .7rem;
+    @include display-flex;
+    @include align-items(center);
+}
+.title-bar-right {
     &>span {
         font-size: 2rem;
         line-height: 3.3rem;
@@ -33,6 +35,17 @@
         font-weight: 300;
     }
 }
+.title-bar h1 {
+    display:none;
+    bottom: 0px;
+    margin-bottom: 0;
+}
+.about h1.about,
+.portfolio h1.portfolio,
+.contact h1.contact {
+    display: inline-block;
+}
+
 
 
 // header on medium up
@@ -50,8 +63,13 @@
 }
 .top-bar-right {
     font-size: 1.8rem;
-    li:nth-child(n+2) {
-        padding-left: 6rem;
+    float: left;
+    li {
+        padding-left: calc(6vh - 40px);
+        padding-right: calc(6vh - 40px);
+    }
+    li:first-child {
+        padding-left: calc(12vh - 30px);
     }
     a {
         color: $black;
@@ -84,9 +102,6 @@
 }
 // Comment Slash
 // =============
-.title-bar .comment {
-    display:none;
-}
 .comment {
     position: relative;
     bottom: 3px;
@@ -102,9 +117,4 @@
     @include breakpoint(large) {
         left: -3.5rem;
     }
-}
-.about .comment.about,
-.portfolio .comment.portfolio,
-.contact .comment.contact {
-    display: inline-block;
 }

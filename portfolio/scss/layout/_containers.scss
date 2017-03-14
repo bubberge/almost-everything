@@ -37,11 +37,17 @@
     .heading {
         position: absolute;
         z-index: 3;
-        margin-top: 50vh;
-        transform: translateY(-50%);
+        margin-top: 10vh;
         padding-left: 0;
         @include breakpoint(medium){
+            margin-top: 40vh;
+            transform: translateY(-50%);
             padding-left: inherit;
+        }
+        @include breakpoint(large){
+            p {
+                font-size: 1.2rem;
+            }
         }
     }
     .subheading {
@@ -54,19 +60,18 @@
         display: block;
     }
 
-    // // may want to use this on small
-    // .splash-overlay {
-    //     box-shadow: inset 0 0 50vw 0 rgba(255,255,255,1.0);
-    //     background-color: rgba(255,255,255,0.3);
-    //     display: block;
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     height: 100%;
-    // }
+    // may want to use this on small
+    .splash-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 
     .splash-image {
         position: relative;
@@ -326,7 +331,10 @@
         position: relative;
         z-index: 0;
         .header-spacer {
-            height: 28vh;
+            height: 10vh;
+            @include breakpoint (medium) {
+                height: 28vh;
+            }
         }
         .scrollContent {
             transition: color .4s ease-in-out;

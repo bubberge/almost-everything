@@ -162,10 +162,10 @@ $(document).ready(function(){
             // include the default view's hash.
             if (!window.location.hash) {
                 window.location.hash = app.default;
-            } else {
-                // Execute routeChange() for the first time
-                app.routeChange();
             }
+
+            // Execute routeChange() for the first time
+            app.routeChange();
 
             // Fire all of the ins and outs of route changes
             window.addEventListener('hashchange', function(e) {

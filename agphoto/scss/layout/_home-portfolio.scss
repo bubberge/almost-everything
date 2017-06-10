@@ -54,20 +54,20 @@
         transition: background $transition-time $transition-bezier;
     }
     @include breakpoint(medium){
-            &:hover {
-                a {
-                    background: transparent;
-                }
-                .g-title span {
-                    border-color: transparent;
-                    transition: $transition-time $transition-bezier;
-                }
-                .g-underline span {
-                    width: 12%;
-                    // border-color: #C93;
-                }
+        &:hover {
+            a {
+                background: transparent;
+            }
+            .g-title span {
+                border-color: transparent;
+                transition: $transition-time $transition-bezier;
+            }
+            .g-underline span {
+                width: 12%;
+                // border-color: #C93;
             }
         }
+    }
 }
 
 .home .g-card {
@@ -106,4 +106,51 @@
 
 .galleries .row {
     margin-bottom: 2rem;
+}
+
+
+// testing grid layout
+// ===================
+
+.j-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.j-grid__item {
+    img {
+        mask-image: url('../img/logo-mask.png');
+    }
+}
+
+.j-grid__item--1 {
+    grid-row: 1;
+    grid-column: 2 / 6;
+    img {
+        mask-position: 0% 0%
+    }
+}
+.j-grid__item--2 {
+    grid-row: 1;
+    grid-column: 6 / 9;
+    align-self: end;
+    img {
+        mask-position: 100% 0%
+    }
+}
+.j-grid__item--3 {
+    grid-row: 2;
+    grid-column: 3 / 6;
+    img {
+        mask-position: 100% 100%
+    }
+}
+.j-grid__item--4 {
+    grid-row: 2;
+    grid-column: 6 / 8;
+    img {
+        mask-position: 0% 100%
+    }
 }

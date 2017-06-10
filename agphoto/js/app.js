@@ -16,12 +16,13 @@ if ( $home[0] ) {
 
 
 function home(){ // removes images that aren't good for small and then inits slick on home
-    console.log('home slick');
+    // console.log('home slick');
     var $jumbo = $('.j-background');
     $('.j-track').slick({
         dots: true,
         infinite: true,
         speed: 700,
+        fade: true,
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 5000
@@ -58,7 +59,8 @@ function home(){ // removes images that aren't good for small and then inits sli
                         var s = value.content;
                         s = s.slice(0,s.indexOf(".jpg") + 4 );
                         s = s.slice(s.indexOf("src=") + 5);
-                        console.log(s);
+                        // console.log(s);
+
                         thehtml += s + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
                         finalHTML += thehtml;
                     }

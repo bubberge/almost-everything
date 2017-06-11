@@ -76,13 +76,11 @@ function home(){ // removes images that aren't good for small and then inits sli
 function slickGallery(){
     //console.log('gallery slick');
     $('.s-container').slick({
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 300,
-        slidesToShow: 1,
+        speed: 700,
+        fade: true,
         centerMode: true,
-        variableWidth: true,
-        lazyLoad: 'ondemand'
     });
 }
 

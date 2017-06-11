@@ -46,19 +46,26 @@
 }
 
 .gallery {
-    box-shadow: 0 -4px 0 #fff,0 0 0 #fff,0 4px 0 #fff,-4px 3px 6px 0px rgba(10,10,10,0.25);
     min-height: 100vh;
     .page-wrapper {
         padding-top: 40px;
     }
     .s-slide {
         max-height: 700px;
-        box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
-        background-color: #e9e9e9;
         min-width: 200px;
+        display: flex;
+        justify-content: center;
         &>img {
             height: 70vh;
         }
+    }
+    .slick-slide {
+        img {
+            margin: auto;
+        }
+    }
+    .slick-track {
+
     }
     @include breakpoint (medium) {
         .page-wrapper {

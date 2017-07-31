@@ -1,0 +1,103 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title David Duffy | Resume
+    %link{:href => "css/app.css", :rel => "stylesheet"}/
+    %link{:href => "img/fav.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+  %body
+    %header.header{:item => "vcard"}
+      .header__content
+        .header__title-info
+          %h1.header__heading{:itemprop => "fn"}
+            David
+            %br>/
+            Duffy
+          %h2.header__subheading Leader, web designer &amp; developer, adventurer
+        %ul.header__contact-info
+          %li
+            %span{:itemprop => "tel", :item => true} 1 425 829 0320
+          %li
+            %a{:href => "mailto:daviduffy@gmail.com", :itemprop => "email"} daviduffy1@gmail.com
+          %li{:itemprop => "adr", :item => true}
+            %span{:itemprop => "street-address"} 10528 Midvale Ave N
+            %span{:itemprop => "locality"}> Seattle
+            ,
+            %span{:itemprop => "region"} WA
+            %span{:itemprop => "postal-code"} 98133
+          %li
+            %a{:href => "http://daviduffy.me", :itemprop => "url"} daviduffy.me
+        %div
+          .header__down-arrow
+    %main.content
+      %section.section.section--about
+        %h2.section__heading About
+        .section__content
+          %p David is a self-motivated problem solver and leader. He is focused and analytical, able to navigate through challenges and ambiguity with poise. He is intelligent and determined, able to analyze obstacles, quickly learn and apply new skills, and rise to the occasion.
+      %section.section.section--experience
+
+        %h2.section__heading Job Experience
+        .section__content.section__content--experience
+          %ul
+            %li.job
+              %h3.job__date 2016-Current
+              %h4.job__title Product Manager
+              %p.job__company CrystalCommerce | Mountlake Terrace, WA
+              %p.job__responsibilities I work in two worlds: in one world I work to update and optimize legacy platform components. I recently led updates and optimizations to our legacy checkout that cut load time by over 60%. In the other world, I use cutting edge tools and web dev practices to build the next generation of our infrastructure. For example, I am the lead frontend developer for a major marketplace project that consumes our new CrystalAPI. <br /><span class="strong">Daily tools:</span> HTML5, CSS3, JS up to ES6, Ruby/Rails
+            %li.job
+              %h3.job__date 2014-2016
+              %h4.job__title Design Manager
+              %p.job__company CrystalCommerce | Mountlake Terrace, WA
+              %p.job__responsibilities Coordinator and supervisor of all web and graphic design projects. Analyzed and overhauled established web development processes, adding modern build pipline practices: version control, Gulp, SCSS, file minification, lean file structure. Developed productivity metrics and KPIs, doubling department utilization and increasing project delivery speed.
+            %li.job
+              %h3.job__date 2013-2014
+              %h4.job__title Client Experience Representative
+              %p.job__company CrystalCommerce | Mountlake Terrace, WA
+              %p.job__responsibilities Provided exemplary, personal support tailored to each specific client's needs. Introduced and supported clients through onboarding onto the inventory management and e-commerce platform.
+            %li.job
+              %h3.job__date 2009-2013
+              %h4.job__title Design and Service Coordinator
+              %p.job__company JH Surgery.com et al | Jackson, WY
+              %p.job__responsibilities Designer, Inventory Manager, Customer Service Savant. Managed all sales, inventory control, and order processing on the e-commerce platform. Designed all web and print marketing assets. Built extensive knowledge of Adobe Creative Suite.
+      %section.section.section--education
+        %h2.section__heading Education
+        .section__content
+          .school
+            %h3.school__name 2009 University of Washington
+            %p.school__focus European Studies, French Language Studies
+          .school
+            %h3.school__name 2004 Lake Washington High School
+            %p.school__focus Marketing, Web Design
+      %section.section.section--skills
+        %h2.section__heading Skills
+        .section__content
+          .skill.skill--titles
+            %p Communication
+            %p Web Design
+            %p Web Development
+            %p Bowling
+          .skill.skill--points
+            %p
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star-half-o{"aria-hidden" => "true"}
+            %p
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+            %p
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+              %i.fa.fa-star{"aria-hidden" => "true"}
+            %p
+              %i.fa.fa-star-half-o{"aria-hidden" => "true"}
+    %footer.footer
+      .footer__content
+        %p Thanks for looking!

@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:500,700|Open+Sans:400,300,600);
+
+/* ====== Vars ====== */
+:root {
+  --color-primary     : #2199e8;
+  --color-text        : #63666f;
+  --color-white       : #fefefe;
+
+  --width-content     : 62rem;
+
+  --gap-exp-trail     : 1rem;
+}
+
+/* 
+$min-width-small                : unquote("min-width: 360px")
+$max-width-small                : unquote("max-width: 599px")
+
+$min-width-smedium              : unquote("min-width: 600px")
+$max-width-smedium              : unquote("max-width: 899px")
+
+$min-width-medium               : unquote("min-width: 900px")
+$max-width-medium               : unquote("max-width: 1199px")
+
+$min-width-large                : unquote("min-width: 1200px")
+$max-width-large                : unquote("max-width: 1799px")
+
+$min-width-xlarge               : unquote("min-width: 1800px")
+*/
+
+
+/* ====== Skinny Reset ====== */
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+ul,
+footer, header, section, article, aside
+ {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  box-sizing: border-box;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+ul {
+  list-style:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* ====== Base ====== */
+
+body {
+  line-height:1.6;
+  color: var( --color-text );
+  font-family: "open sans", helvetica, tahoma, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+.header__content, .content, .footer__content {
+  max-width: var( --width-content );
+  margin: 0 auto;
+}
+
+.header,
+.footer {
+  background-color: var( --color-primary );
+  color: var( --color-white );
+}
+
+
+/* ====== Heading Area ====== */
+
+.header a { color: var( --color-white ); }
+
+.header__content {
+  padding: 6rem 1rem 3rem;
+}
+@media screen and ( min-width: 900px ) {
+  .header__content {
+    padding: 4rem 0;
+  }
+}
+
+/* @supports not (transform-origin: 10em 10em 10em) {}
+/* TODO: modify to only apply if grid isn't supported */
+.header__content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header__title-info {
+  margin-bottom: 2rem;
+}
+@media screen and ( min-width: 900px ) {
+  .header__title-info { float: left; margin-bottom: 0; }
+}
+
+.header__contact-info {
+  text-align: right;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+@media screen and ( min-width: 900px ) {
+  .header__title-info { margin-bottom: 0; }
+}
+
+.header__heading {
+  font-family: lato, helvetica, tahoma, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.header__subheading {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.header__down-arrow {
+  border-left: 2px solid var( --color-white );
+  border-bottom: 2px solid var( --color-white );
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 auto;
+  transform: rotate(-45deg);
+}
+@media screen and ( min-width: 900px ) {
+  .down-arrow { display: none; }
+}
+
+
+/* ====== Content Area ====== */
+.content {
+  padding: 1rem;
+}
+.section {
+  margin-bottom: 2rem;
+}
+
+.section__heading {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+@media screen and ( min-width: 900px ) {
+  .down-arrow {   font-size: 3rem; }
+}
+
+.section__content {
+  font-weight: 300;
+}
+
+.callout.large {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+/* ====== Job Blue Dots ====== */
+
+.section__content--experience {
+    margin-left: 24px;
+}
+@media screen and ( min-width: 900px ) {
+  .section__content--experience { margin-left: 66px; }
+}
+
+.job {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.job::after,
+.job::before {
+  content: '';
+  background: var( --color-primary );
+  position: absolute;
+  display: block;
+}
+
+.job::before { /* the dot */
+  width: 1rem;
+  height: 1rem;
+  left: -30px;
+  top: 6px;
+  border-radius: 50%;
+}
+@media screen and ( min-width: 900px ) {
+  .job::before { left: -46px; top: 5px; }
+}
+
+.job::after { /* the line */
+  height: 100%;
+  width: 4px;
+  left: -24px;
+  top: 7px;
+}
+@media screen and ( min-width: 900px ) {
+  .job::after { left: -40px; top: 10px; }
+}
+
+.job:last-of-type::after {
+  content: initial;
+}
+
+/* ====== Job Area ====== */
+.job {
+
+}
+
+.job__date,
+.job__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.job__date {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid;
+}
+
+.job__company {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: -.3px;
+}
+
+.content-container {
+  font-weight: 300;
+}
+
+@media screen and (min-width: 40em) {
+  .job-date,
+  .job-title,
+  .job span {
+  font-size: 1.5rem;
+  display: inline;
+  }
+}
+
+
+/* ====== Education Area ====== ( see link 151 )  */
+
+/* ====== Skills Area ====== */
+
+.skill i {
+  font-size: 1.2rem;
+  padding: 0 .3rem;
+}
+
+.collapse {
+  padding-left: 0;
+}
+
+.too-long {
+  letter-spacing: -.65px;
+}
+
+/* ====== Footer Area ====== */
+
+.footer-wrapper {
+  margin-top: 1rem;
+}
+
+footer p {
+  color: var( --color-primary );
+}

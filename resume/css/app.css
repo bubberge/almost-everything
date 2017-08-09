@@ -94,39 +94,14 @@ body {
 
 /* ====== Heading Area ====== */
 
-.header a { color: var( --color-white ); }
-
-.header__content {
-  padding: 6rem 1rem 3rem;
-}
-@media screen and ( min-width: 900px ) {
-  .header__content {
-    padding: 4rem 0;
-  }
-}
-
-/* @supports not (transform-origin: 10em 10em 10em) {}
-/* TODO: modify to only apply if grid isn't supported */
-.header__content:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.header__title-info {
-  margin-bottom: 2rem;
-}
-@media screen and ( min-width: 900px ) {
-  .header__title-info { float: left; margin-bottom: 0; }
+.header a {
+  /* breaking BEM right up front 👎 */
+  color: var( --color-white );
 }
 
 .header__contact-info {
   text-align: right;
   font-weight: 300;
-  margin-bottom: 2rem;
-}
-@media screen and ( min-width: 900px ) {
-  .header__title-info { margin-bottom: 0; }
 }
 
 .header__heading {
@@ -134,13 +109,18 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 5rem;
-  margin-bottom: 1rem;
   line-height: 1;
 }
 
 .header__subheading {
   font-size: 1.4rem;
   font-weight: 300;
+}
+
+@media screen and ( min-width: 900px ) {
+  .header__down-arrow-container {
+    display: none;
+  }
 }
 
 .header__down-arrow {
@@ -155,8 +135,84 @@ body {
   .down-arrow { display: none; }
 }
 
+/* only applies if grid isn't supported */
+@supports not ( display: grid ) {
+  .header__content {
+    padding: 6rem 1rem 3rem;
+  }
+  @media screen and ( min-width: 900px ) {
+    .header__content { padding: 4rem 0; }
+  }
+
+  .header__content:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .header__title-info {
+    margin-bottom: 2rem;
+  }
+  @media screen and ( min-width: 900px ) {
+    .header__title-info { float: left; margin-bottom: 0; }
+  }
+
+  .header__contact-info {
+    margin-bottom: 2rem;
+  }
+  @media screen and ( min-width: 900px ) {
+    .header__title-info { margin-bottom: 0; }
+  }
+
+  .header__heading {
+    margin-bottom: 1rem;
+  }
+
+  .header__down-arrow-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
+}
+
+@supports ( display: grid ) {
+  .header__content {
+    height: calc(100vh - 42px); /* tease some letters down there */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 40px;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  @media screen and ( min-width: 900px ) {
+    .header__content {
+      height: 400px;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .header__contact-info {
+    grid-row: 2;
+  }
+  @media screen and ( min-width: 900px ) {
+    .header__contact-info {
+      grid-row: 1;  
+      grid-column: 2;
+    }
+  }
+
+  .header__down-arrow-container {
+    grid-row: 3;
+  }
+}
+
+
+
 
 /* ====== Content Area ====== */
+
+
+
 .content {
   padding: 1rem;
 }
@@ -241,9 +297,15 @@ body {
 }
 
 .job__date {
-  margin-right: 1rem;
-  padding-right: 1rem;
-  border-right: 1px solid;
+  margin-right: 1.6rem;
+  position: relative;
+}
+
+.job__date::after {
+  content: '|';
+  position: absolute;
+  right: -1.4rem;
+  top: -2px;
 }
 
 .job__company {
@@ -253,27 +315,19 @@ body {
   letter-spacing: -.3px;
 }
 
-.content-container {
-  font-weight: 300;
-}
-
-@media screen and (min-width: 40em) {
-  .job-date,
-  .job-title,
-  .job span {
-  font-size: 1.5rem;
-  display: inline;
-  }
-}
-
-
 /* ====== Education Area ====== ( see link 151 )  */
+
+.school {
+  margin-bottom: 1rem;
+}
 
 /* ====== Skills Area ====== */
 
-.skill i {
-  font-size: 1.2rem;
-  padding: 0 .3rem;
+.star {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background: url('../img/star.svg') center/contain no-repeat;
 }
 
 .collapse {

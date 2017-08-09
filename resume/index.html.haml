@@ -30,7 +30,7 @@
             %span{:itemprop => "postal-code"} 98133
           %li
             %a{:href => "http://daviduffy.me", :itemprop => "url"} daviduffy.me
-        %div
+        .header__down-arrow-container
           .header__down-arrow
     %main.content
       %section.section.section--about
@@ -62,7 +62,7 @@
               %h4.job__title Design and Service Coordinator
               %p.job__company JH Surgery.com et al | Jackson, WY
               %p.job__responsibilities Designer, Inventory Manager, Customer Service Savant. Managed all sales, inventory control, and order processing on the e-commerce platform. Designed all web and print marketing assets. Built extensive knowledge of Adobe Creative Suite.
-      %section.section.section--education
+      %section.section.section--inline.section--education
         %h2.section__heading Education
         .section__content
           .school
@@ -71,7 +71,7 @@
           .school
             %h3.school__name 2004 Lake Washington High School
             %p.school__focus Marketing, Web Design
-      %section.section.section--skills
+      %section.section.section--inline.section--skills
         %h2.section__heading Skills
         .section__content
           .skill.skill--titles
@@ -80,24 +80,24 @@
             %p Web Development
             %p Bowling
           .skill.skill--points
-            %p
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star-half-o{"aria-hidden" => "true"}
-            %p
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-            %p
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-              %i.fa.fa-star{"aria-hidden" => "true"}
-            %p
-              %i.fa.fa-star-half-o{"aria-hidden" => "true"}
+            .star-container
+              .star
+              .star
+              .star
+              .star
+              .star.star--half
+            .star-container
+              .star
+              .star
+              .star
+              .star
+            .star-container
+              .star
+              .star
+              .star
+              .star
+            .star-container
+              .star.star--half
     %footer.footer
       .footer__content
         %p Thanks for looking!

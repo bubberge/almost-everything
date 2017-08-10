@@ -1,32 +1,76 @@
+/* jshint laxcomma: true */
 $(document).foundation();
 
-var $slickHome = $('.home')
+var $home = $('.home')
   , $slickGallery = $('.s-container')
   , $slickAbout = $('.a-slide')
   ;
 
-if ( $slickHome[0] ) { 
-        slickHome();
-    } else if ( $slickGallery[0] ) {
-        slickGallery();
-    } else if ( $slickAbout[0] ) {
-        slickAbout();
-    }
+if ( $home[0] ) {
+    home();
+} else if ( $slickGallery[0] ) {
+    slickGallery();
+} else if ( $slickAbout[0] ) {
+    slickAbout();
+}
 
-function slickHome(){ // removes images that aren't good for small and then inits slick on home
-    console.log('¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>');
+
+function home(){ // removes images that aren't good for small and then inits slick on home
+    // console.log('home slick');
     var $jumbo = $('.j-background');
-    if ( $slickHome[0] && $jumbo.width() < 640 ) {
-        $('.rm-rf').remove();
-    }
     $('.j-track').slick({
         dots: true,
         infinite: true,
         speed: 700,
+        fade: true,
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 5000
     });
+
+    /**
+     * parses any RSS/XML feed through Google and returns JSON data
+     * source: http://stackoverflow.com/a/6271906/477958
+     */
+
+    (function parseRSS(url, container) {
+        // console.log(parseRSS);
+        var $outputContainer = $(container);
+        var finalHTML = '';
+        $.ajax({
+            url: document.location.protocol + "//feedrapp.info?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
+            dataType: 'json',
+            success: function(data) {
+                // console.log(data.responseData.feed);
+                $.each(data.responseData.feed.entries, function(key, value){
+                    if ( key < 8) {
+                        var thehtml = '<div class="b-post"><div class="b-title">';
+                        var str = value.title;
+                        // console.log(typeof str);
+                        if (str.indexOf(' | ') !== -1) {
+                            var splitStrings = str.split(' | ');
+                            // console.log(splitStrings)
+                            thehtml += '<h3 class="b-post__title">'+splitStrings[0]+ '</h3>';
+                            thehtml += '<span>'+splitStrings[1]+'</span>';
+                        } else {
+                            thehtml += '<span>'+str+'</span>';
+                        }
+                        thehtml += '</div><div class="b-background" style="background-image: url(';
+                        var s = value.content;
+                        s = s.slice(0,s.indexOf(".jpg") + 4 );
+                        s = s.slice(s.indexOf("src=") + 5);
+                        // console.log(s);
+
+                        thehtml += s + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
+                        finalHTML += thehtml;
+                    }
+                });
+                $('#blogLoc').removeClass('link-style');
+                $outputContainer.html('');
+                $outputContainer.append(finalHTML);
+            }
+        });
+    })('http://blog.amygalbraith.com/feed','.blog-feed');
 }
 
 function slickGallery(){
@@ -34,11 +78,9 @@ function slickGallery(){
     $('.s-container').slick({
         dots: false,
         infinite: true,
-        speed: 300,
-        slidesToShow: 1,
+        speed: 700,
+        fade: true,
         centerMode: true,
-        variableWidth: true,
-        lazyLoad: 'ondemand'
     });
 }
 
@@ -73,49 +115,6 @@ function slickAbout(){
             }
         ]
     });
-}
-
-/**
- * parses any RSS/XML feed through Google and returns JSON data
- * source: http://stackoverflow.com/a/6271906/477958
- */
-if ( $('.blog-feed')[0] ) {
-    // if the blog feed dom node exists, run this function
-    // console.log('start parseRSS');
-    (function parseRSS(url, container) {
-        // console.log(parseRSS);
-        var $outputContainer = $(container);
-        $.ajax({
-            url: document.location.protocol + '//feedrapp.info?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-            dataType: 'json',
-            success: function(data) {
-                // console.log(data.responseData.feed);
-                $.each(data.responseData.feed.entries, function(key, value){
-                    if ( key < 8) {
-                        var thehtml = '<div class="b-post"><div class="b-title">';
-                        var str = value.title;
-                        // console.log(typeof str);
-                        if (str.indexOf(' | ') !== -1) {
-                            var splitStrings = str.split(' | ');
-                            $.each(splitStrings,function(index, value){
-                                thehtml += '<span>'+value+'</span>';
-                            });
-                        } else {
-                            thehtml += '<span>'+str+'</span>';
-                        }
-                        thehtml += '</div><div class="b-background" style="background-image: url(';
-                        // Description string contains featured image as first element. Cut string at the src attribute value
-                        var first = value.content.slice(value.content.indexOf('src="') + 5 );
-                        // cut and save the string after .jpg
-                        var imgURL = first.slice(0,first.indexOf('.jpg') + 4);
-                        // console.log(imgURL);
-                        thehtml += imgURL + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                        $outputContainer.append(thehtml);
-                    }
-                });
-            }
-        });
-    })('http://blog.amygalbraith.com/feed/','.blog-feed');
 }
 
 var wind = $(window);

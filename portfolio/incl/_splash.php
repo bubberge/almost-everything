@@ -1,5 +1,5 @@
-<!-- splash cont>ent -->
-<div class="row">
+<!-- splash content -->
+<div class="row expanded">
     <div class="row normal">
         <div class="large-6 heading column">
             <h1 class="small-title show-for-small-only">David Duffy</h1>

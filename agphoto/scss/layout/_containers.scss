@@ -1,5 +1,5 @@
 // ===============================
-// Jumbotron styles
+// Container styles
 // ===============================
 
 .off-canvas-wrapper {
@@ -20,6 +20,33 @@
     }
 }
 
+// Home
+
+.home {
+    .blog {
+        a {
+            cursor: default;
+        }
+        h2.module-heading {
+            position: relative;
+            margin: 2rem auto;
+            max-width: 100px!important;
+            color: $black;
+            &.link-style::before {
+                content: "Feed didn't load, check the";
+                font-family: $font-handwriting;
+                position: absolute;
+                font-size: 1rem;
+                transform: rotateZ(-20deg) translateX(-7.7rem) translateY(-2.6rem);
+                width: 160px;
+                cursor: default;
+
+            }
+        }
+    }
+
+}
+
 
 // About
 .row.shifted {
@@ -30,6 +57,12 @@
 }
 
 .about {
+
+    @media screen and #{breakpoint(medium down)} and #{breakpoint(landscape)} {
+        .j-overlay-text h1 {
+            display: none;
+        }
+    }
 
     &-text {
         font-family: $font-content;
@@ -86,6 +119,7 @@
             height: 24vh;
             border-right: 2px solid $light-gray;
             min-width: 90px;
+            max-height: 400px;
             img {
                 max-height: 100%;
             }
@@ -117,7 +151,7 @@
             background: #fff no-repeat center/contain;
             min-height: 120px;
             position: relative;
-            min-width: 32.5%;
+            min-width: 30.5%;
             margin-bottom: 1rem;
             @include breakpoint (medium) {
                 min-width: 19.5%;
@@ -177,6 +211,17 @@
             &:last-child {
                 padding-top: .25rem;
             }
+        }
+    }
+    .investment-text {
+        a {
+            @include link-style;
+        }
+    }
+    .optional-investment-text {
+        margin-bottom: 1rem;
+        @media screen and #{breakpoint(medium down)} and #{breakpoint(portrait)} {
+            display: none;
         }
     }
     .g-underline span {

@@ -606,9 +606,22 @@ $color-action               : #FFBF40;
   display: flex;
 }
 
+@mixin display-flex-important {
+  display: -webkit-box!important;
+  display: -moz-box!important;
+  display: -ms-flexbox!important;
+  display: -webkit-flex!important;
+  display: flex!important;
+}
+
 @mixin justify-content-center {
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+@mixin justify-content ($arg) {
+  -webkit-justify-content: $arg;
+  justify-content: $arg;
 }
 
 @mixin align-items($arg) {
@@ -641,4 +654,8 @@ $color-action               : #FFBF40;
     -webkit-column-count: $arg; /* Chrome, Safari, Opera */
     -moz-column-count: $arg; /* Firefox */
     column-count: $arg;
+}
+
+.link-style {
+  @include link-style;
 }

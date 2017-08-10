@@ -1,6 +1,7 @@
 <?php
 $pageTitle = 'Contact';
-$pageDescription = 'Amy Galbraith is a documentary Seattle wedding photographer and Jackson Hole wedding photographer. As a mountain wedding photographer and seattle senior portrait photographer, she strives to capture candid, natural, and emotion-driven images.';
+$pageMetaTitle = 'Contact Amy Galbraith | Seattle Wedding Photographer';
+$pageDescription = 'Get in touch with Amy Galbraith directly using this built-in form.';
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
 $pageExt = 'contact';
 $pageClasses = 'contact';

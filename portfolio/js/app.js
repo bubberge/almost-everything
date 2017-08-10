@@ -1,6 +1,12 @@
 $(document).foundation();
 $(document).ready(function(){
     console.log('¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>');
+    // hotfix for menu
+    $('.off-canvas .menu a').click(function(){
+      $('#offCanvasLeft').foundation('close');
+      // required otherwise foundation actually shows/hides opposite of the correct time
+      $('.off-canvas.position-left').css('display','none');
+    });
 });
 
 (function() {

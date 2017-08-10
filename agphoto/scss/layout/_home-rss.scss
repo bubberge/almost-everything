@@ -41,13 +41,14 @@ $color-map      : ( color-1: #d2d2d2, color-2: #a2a2a2, color-3: #646464, color-
     span {
         font-family: $font-main;
         color: $white;
-        &:first-child {
-            text-transform: uppercase;
-        }
-        &:last-child {
-            text-transform: capitalize;
-        }
+        text-transform: capitalize;
     }
+}
+.b-post__title {
+    color: $white;
+    font-family: $font-main;
+    font-size: 1.33rem;
+    text-transform: uppercase;
 }
 .b-background {
     height:100%;

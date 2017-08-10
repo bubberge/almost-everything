@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="all, index, follow, noodp, noydir">
-        <title>Amy Galbraith Photography | Seattle | Jackson Hole<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
+        <title><?php echo $metaTitle; ?></title>
         <meta name="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="name" content="Amy Galbraith"/>
@@ -43,9 +43,33 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
+        <?php include '_stringVars.php'; ?>
+        <?php include_once('_analyticstracking.php'); ?>
+        <?php
+            if (isset($pageType) && $pageType == 'gallery') {
+                echo "<style>
+                        .gallery .s-slide:first-child {
+                            display: -webkit-box !important;
+                            display: -ms-flexbox !important;
+                            display: -webkit-flex !important;
+                            display: flex !important;
+                            -webkit-justify-content: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            -webkit-align-items: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                        }
+                        .gallery .s-slide:nth-child(n+2) { 
+                            display: none!important;
+                        }
+                    </style>";
+            }
+        ?>
     </head>
     <body class="<?php echo $pageClasses; ?>">
-    <?php include_once('_analyticstracking.php') ?>
     <div class="off-canvas-wrapper">
         <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
             <div class="off-canvas position-left" id="offCanvas" data-off-canvas>

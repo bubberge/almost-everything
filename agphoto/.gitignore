@@ -4,3 +4,6 @@ node_modules
 npm-debug.log
 css
 dist
+js/output.js
+js/output.min.js
+js/output.min.js.map

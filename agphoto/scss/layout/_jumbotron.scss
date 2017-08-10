@@ -2,9 +2,12 @@
 // Jumbotron styles
 // ===============================
 @mixin j-height {
-    height: calc(100vh - 74px);
-    min-height: 500px;
+    height: 100vh;
     margin-bottom: 20px;
+    @include breakpoint (large) {
+        height: calc(100vh - 74px);
+        min-height: 500px;
+    }
 }
 
 .jumbotron {
@@ -28,7 +31,9 @@
     @include flex-centered;
     @include flex-direction(column);
     color: $white;
-    span {
+    .page-scroll__trigger {
+        font-size: 1.33rem;
+        font-weight: 600;
         display: block;
         font-family: $font-handwriting;
     }
@@ -72,19 +77,29 @@
         }
     }
     .j-background {
-        display: flex;
+        display: flex!important;
         justify-content: center;
         align-items: flex-end;
-        height: calc(100vh - 74px)!important;
-        min-height: 500px!important;
-        &.j-1{background-image:url('../img/homepage/001-leavenworth_wedding_photographer-betz-001.jpg');background-position:bottom;}
-        &.j-2{background-image:url('../img/homepage/002-jackson_hole_wedding_photographer-todd-002.jpg');}
-        &.j-3{background-image:url('../img/homepage/002-wisconsin-wedding-photographer-001.jpg');}
-        &.j-4{background-image:url('../img/homepage/003-leavenworth_wedding_photographer-jasinski-004.jpg');}
-        &.j-5{background-image:url('../img/homepage/004-within-sodo-wedding-aebischer.jpg');}
-        &.j-6{background-image:url('../img/homepage/006-mt-baker-engagement-session-001.jpg');}
-        &.j-7{background-image:url('../img/homepage/007-bainbridge-island-engagement-001.jpg');}
-        &.j-8{background-image:url('../img/homepage/008-stevens-pass-engagement-session-001.jpg');}
+        @include j-height;
+        overflow: hidden;
+        @include breakpoint ( landscape ) {
+            position: relative;
+        }
+        picture {
+            & > * {
+                width: 100vw;
+                display: block;
+                max-width: none;
+                @include breakpoint ( portrait ) {
+                    width: 88vh;
+                }
+                @include breakpoint ( landscape ) {
+                    height: 66.66vw;
+                    @include abs-centered;
+                    margin: auto;
+                }
+            }
+        }
     }
     .j-overlay-background {
         @include abs-centered;
@@ -100,6 +115,14 @@
     .j-overlay {
         flex-direction: column-reverse;
         z-index: 2;
+    }
+    @include breakpoint (landscape) {
+        .j-1 picture > * {
+            bottom: 14%;
+        }
+        .j-6 picture > * {
+            top: 8%;
+        }
     }
 }
 
@@ -149,6 +172,13 @@
             color: inherit;
             font-size: 3.5rem;
         }
+        @media screen and (orientation: landscape) and (max-width: 639px) {
+            padding: 0;
+            align-self: center;
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
         @include breakpoint (medium) {
             text-align: left;
             background: transparentize($white, .2);
@@ -161,7 +191,7 @@
 .investment {
     .j-background {
         background-image: url('../img/other/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
-        @include breakpoint ( small only ) {
+        @media screen and #{breakpoint(medium down)} {
             background-position: right;
         }
     }
@@ -172,6 +202,19 @@
         }
     }
     .j-overlay-content {
+        @media screen and #{breakpoint(medium down)} and #{breakpoint(landscape)} {
+            justify-content: flex-start;
+            margin-left: 33.33333%;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 33.33333%;
+            -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            .j-overlay-text {
+                opacity: 0;
+            }
+        }
+
         justify-content: center;
     }
     .j-overlay-text {

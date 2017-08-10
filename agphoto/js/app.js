@@ -49,9 +49,9 @@ function home(){ // removes images that aren't good for small and then inits sli
                         // console.log(typeof str);
                         if (str.indexOf(' | ') !== -1) {
                             var splitStrings = str.split(' | ');
-                            $.each(splitStrings,function(index, value){
-                                thehtml += '<span>'+value+'</span>';
-                            });
+                            // console.log(splitStrings)
+                            thehtml += '<h3 class="b-post__title">'+splitStrings[0]+ '</h3>';
+                            thehtml += '<span>'+splitStrings[1]+'</span>';
                         } else {
                             thehtml += '<span>'+str+'</span>';
                         }

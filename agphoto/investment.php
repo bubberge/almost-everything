@@ -22,7 +22,7 @@ include 'incl/_header.php'; ?>
             </div>
             <div class="j-arrow">
                 <a id="page-scroll" href="#inv" title="Read my story!">
-                    <span>Check out pricing</span>
+                    <span class="page-scroll__trigger">Check out pricing</span>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
             </div>

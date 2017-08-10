@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'Home';
-$pageDescription = 'Amy Galbraith is a documentary Seattle wedding photographer and Jackson Hole wedding photographer. As a mountain wedding photographer and seattle senior portrait photographer, she strives to capture candid, natural, and emotion-driven images.';
-$pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
+$metaTitle = 'Amy Galbraith | Seattle Wedding Photographer';
+$pageDescription = 'Adventure and mountain wedding photography in Seattle, Washington and Jackson, Wyoming. We capture candid, natural, and emotion-driven images.';
+$pageKeywords = 'seattle wedding photographer, jackson hole wedding photographer, adventure wedding photographer, mountain wedding photographer, outdoor wedding photographer, backcountry wedding';
 $pageExt = '';
 $pageClasses = 'home';
 include 'incl/_header.php'; ?>
@@ -193,7 +193,7 @@ include 'incl/_header.php'; ?>
                     </div>
                     <div class="g-underline"><span>&nbsp;</span></div>
                     <div class="g-background"></div>
-                    <a href="/weddings"></a>
+                    <a href="/wedding-photography"></a>
                 </div>
                 <div class="g-card engagements column small-12 medium-6 large-4 eat-left">
                     <div class="g-title">
@@ -201,7 +201,7 @@ include 'incl/_header.php'; ?>
                     </div>
                     <div class="g-underline"><span>&nbsp;</span></div>
                     <div class="g-background"></div>
-                    <a href="/engagements"></a>
+                    <a href="/engagement-photography"></a>
                 </div>
                 <div class="g-card seniors column small-12 medium-6 large-4 eat-left">
                     <div class="g-title">
@@ -209,7 +209,7 @@ include 'incl/_header.php'; ?>
                     </div>
                     <div class="g-underline"><span>&nbsp;</span></div>
                     <div class="g-background"></div>
-                    <a href="/seniors"></a>
+                    <a href="/high-school-senior-photography"></a>
                 </div>
             </div>
         </div>

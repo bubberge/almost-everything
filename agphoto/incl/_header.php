@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="all, index, follow, noodp, noydir">
-        <title>Amy Galbraith Photography | Seattle Wedding Photographer | Jackson Hole Wedding Photographer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
+        <title><?php echo $metaTitle; ?></title>
         <meta name="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="name" content="Amy Galbraith"/>

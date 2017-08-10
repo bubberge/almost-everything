@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'About';
-$pageDescription = 'Amy Galbraith is a documentary Seattle wedding photographer and Jackson Hole wedding photographer. As a mountain wedding photographer and seattle senior portrait photographer, she strives to capture candid, natural, and emotion-driven images.';
+$pageMetaTitle = 'About Amy Galbraith | Seattle Wedding Photographer';
+$pageDescription = "Experience my adventure-driven style of photography first-hand! Read and see more about how I strive to capture candid, natural, and emotion-driven images.";
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
 $pageExt = 'about';
 $pageClasses = 'about';
@@ -24,7 +24,7 @@ include 'incl/_header.php'; ?>
                 </div>
                 <div class="j-arrow hide-for-medium">
                     <a id="page-scroll" href="#storyLoc" title="Read my story!">
-                        <span>See my story down here!</span>
+                        <span class="page-scroll__trigger">See my story down here!</span>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                 </div>

@@ -1,9 +1,9 @@
 <?php
 $pageType = 'gallery';
-$pageTitle = 'Weddings Portfolio Gallery';
-$pageDescription = 'Amy Galbraith Photography is a Seattle wedding photographer and Jackson Hole wedding photographer that captures stunning, beautiful mountain wedding venue photos in the Pacific Northwest, Washington State and Jackson Hole.';
-$pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
-$pageExt = 'weddings';
+$pageMetaTitle = 'Amy Galbraith | Seattle Wedding Photographer';
+$pageDescription = 'Amy Galbraith Photography is a Seattle wedding photographer and Jackson Hole wedding photographer that captures stunning, beautiful mountain wedding photos in the Pacific Northwest, Washington State and Jackson Hole.';
+$pageKeywords = 'seattle wedding photographer, jackson hole wedding photographer, adventure wedding photographer, mountain wedding photographer, outdoor wedding photographer, backcountry wedding';
+$pageExt = 'wedding-photography';
 $pageClasses = 'gallery weddings';
 include 'incl/_header.php'; ?>
     <div class="page-wrapper">
@@ -18,18 +18,6 @@ include 'incl/_header.php'; ?>
             </div>
         </div>
         <div class="s-wrapper">
-            <style>
-                .s-overlay {
-                    -webkit-box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
-                    -moz-box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
-                    box-shadow: inset 0 0 30em 0 rgba(138,138,138,0.95);
-                    background-color: #e9e9e9;
-                    background-color: rgba(233,233,233,1);
-                    zoom: 1;
-                    filter: alpha(opacity=50);
-                    opacity: 1;
-                }
-            </style>
             <div class="s-container">
                 <div class="s-slide">
                     <img src="img/weddings/001-seattle_wedding_photographer-portfolio_001.jpg" alt="a bride turns and gazes pensively toward the ground in her dressing room, revealing her vintage earrings" />

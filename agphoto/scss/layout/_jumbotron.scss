@@ -189,7 +189,7 @@
 .investment {
     .j-background {
         background-image: url('../img/other/amy-galbraith-wedding-engagement-senior-photography-snake-river-sporting-club-brin.jpg');
-        @include breakpoint ( small only ) {
+        @media screen and #{breakpoint(medium down)} {
             background-position: right;
         }
     }

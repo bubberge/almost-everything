@@ -14,7 +14,7 @@ include 'incl/_header.php'; ?>
     <div class="jumbotron">
         <div class="j-background"></div>
         <div class="j-overlay row">
-            <div class="j-overlay-content small-10 small-offset-1 medium-6 medium-offset-6 large-4 large-offset-7 columns">
+            <div class="j-overlay-content small-10 small-offset-1 medium-6 medium-offset-3 large-4 large-offset-7 columns">
                 <img src="img/amy-galbraith-photography-logo.png" alt="amy galbraith photography logo, a circle with four small hand-drawn trees" />
                 <div class="j-overlay-text">
                     <?php include 'incl/_investmentBlurb.php'; ?>

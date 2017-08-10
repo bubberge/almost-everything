@@ -1,4 +1,5 @@
 <?php
+$pageType = 'gallery';
 $pageTitle = 'Weddings Portfolio Gallery';
 $pageDescription = 'Amy Galbraith Photography is a Seattle wedding photographer and Jackson Hole wedding photographer that captures stunning, beautiful mountain wedding venue photos in the Pacific Northwest, Washington State and Jackson Hole.';
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';

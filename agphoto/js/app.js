@@ -76,7 +76,7 @@ function home(){ // removes images that aren't good for small and then inits sli
 function slickGallery(){
     //console.log('gallery slick');
     $('.s-container').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 700,
         fade: true,

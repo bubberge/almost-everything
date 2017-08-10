@@ -606,6 +606,14 @@ $color-action               : #FFBF40;
   display: flex;
 }
 
+@mixin display-flex-important {
+  display: -webkit-box!important;
+  display: -moz-box!important;
+  display: -ms-flexbox!important;
+  display: -webkit-flex!important;
+  display: flex!important;
+}
+
 @mixin justify-content-center {
   -webkit-justify-content: center;
   justify-content: center;

@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="all, index, follow, noodp, noydir">
-        <title>Amy Galbraith Photography | Seattle | Jackson Hole<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
+        <title>Amy Galbraith Photography | Seattle Wedding Photographer | Jackson Hole Wedding Photographer<?php if ($pageTitle) echo ' | ' . $pageTitle; ?></title>
         <meta name="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="description" content="<?php echo $pageDescription; ?>" />
         <meta itemprop="name" content="Amy Galbraith"/>
@@ -43,7 +43,8 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        <?php include_once('_analyticstracking.php') ?>
+        <?php include '_stringVars.php'; ?>
+        <?php include_once('_analyticstracking.php'); ?>
         <?php
             if (isset($pageType) && $pageType == 'gallery') {
                 echo "<style>

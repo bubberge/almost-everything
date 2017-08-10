@@ -31,7 +31,9 @@
     @include flex-centered;
     @include flex-direction(column);
     color: $white;
-    span {
+    .page-scroll__trigger {
+        font-size: 1.33rem;
+        font-weight: 600;
         display: block;
         font-family: $font-handwriting;
     }

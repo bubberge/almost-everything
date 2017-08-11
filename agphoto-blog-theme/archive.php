@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+$archive = true;
+get_header(); 
+?>
+
 
 <section class="row">
 

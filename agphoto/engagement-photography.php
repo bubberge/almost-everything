@@ -1,6 +1,6 @@
 <?php
 $pageType = 'gallery';
-$pageMetaTitle = 'Amy Galbraith | Seattle Engagement Photographer';
+$pageTitle = 'Amy Galbraith | Seattle Engagement Photographer';
 $pageDescription = 'Adventure-driven engagement photography based in Seattle, Washington and Jackson, Wyoming.';
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
 $pageExt = 'engagement-photography';
@@ -42,6 +42,9 @@ include 'incl/_header.php'; ?>
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/008-jackson_hole_wedding_photographer-sheehy-001.jpg" alt="" />
+                </div>
+                <div class="s-slide">
+                    <img data-lazy="img/engagements/009-discovery-park-engagement.jpg" alt="" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/010-stevens-pass-engagement_005.jpg" alt="" />
@@ -92,13 +95,13 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/engagements/025-seattle_wedding_photographer-jasinski-26.jpg" alt="" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/engagements/026-seattle_wedding_photographer-betz-19.jpg" alt="" />
-                </div>
-                <div class="s-slide">
                     <img data-lazy="img/engagements/027-jackson_hole_wedding_photographer-engagement-040.jpg" alt="" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/028-snoqualmie_engagement_handler-002.jpg" alt="" />
+                </div>
+                <div class="s-slide">
+                    <img data-lazy="img/engagements/028-2-rattlesnake-lake-engagement-savery.jpg" alt="" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/029-seattle_engagement_photos-nagel-003.jpg" alt="" />
@@ -107,7 +110,7 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/engagements/030-seattle_engagement_photos-bailey-003.jpg" alt="" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/engagements/031-snoqualmie-engagement-session-betz-001.jpg" alt="" />
+                    <img data-lazy="img/engagements/031-bellevue-engagement-photos-moen.jpg" alt="" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/032-snoqualmie-engagement-session-betz-002.jpg" alt="" />
@@ -127,9 +130,7 @@ include 'incl/_header.php'; ?>
                 <div class="s-slide">
                     <img data-lazy="img/engagements/037-seattle_wedding_photographer-engagement-035.jpg" alt="" />
                 </div>
-                <div class="s-slide">
-                    <img src="img/engagements/038-seattle_engagement_photos-aebischer-002.jpg" alt="" />
-                </div>                
+              
             </div>
         </div>
     </div>

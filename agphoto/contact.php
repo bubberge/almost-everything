@@ -1,6 +1,5 @@
 <?php
-$pageTitle = 'Contact';
-$pageMetaTitle = 'Contact Amy Galbraith | Seattle Wedding Photographer';
+$pageTitle = 'Amy Galbraith | Seattle Wedding Photographer | Contact Me!';
 $pageDescription = 'Get in touch with Amy Galbraith directly using this built-in form.';
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
 $pageExt = 'contact';

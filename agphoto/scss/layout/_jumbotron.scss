@@ -116,9 +116,12 @@
         flex-direction: column-reverse;
         z-index: 2;
     }
-    @include breakpoint (landscape) {
+    @media screen and #{breakpoint(large)} and #{breakpoint(landscape)} {
         .j-1 picture > * {
             bottom: 14%;
+        }
+        .j-4 picture > * {
+            bottom: 10%;
         }
         .j-6 picture > * {
             top: 8%;

@@ -19,6 +19,7 @@ function home(){ // removes images that aren't good for small and then inits sli
     // console.log('home slick');
     var $jumbo = $('.j-background');
     $('.j-track').slick({
+        arrows: false,
         dots: true,
         infinite: true,
         speed: 700,

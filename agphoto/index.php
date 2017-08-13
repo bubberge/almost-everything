@@ -1,5 +1,5 @@
 <?php
-$metaTitle = 'Amy Galbraith | Seattle Wedding Photographer';
+$pageTitle = 'Amy Galbraith | Seattle Wedding Photographer';
 $pageDescription = 'Adventure and mountain wedding photography in Seattle, Washington and Jackson, Wyoming. We capture candid, natural, and emotion-driven images.';
 $pageKeywords = 'seattle wedding photographer, jackson hole wedding photographer, adventure wedding photographer, mountain wedding photographer, outdoor wedding photographer, backcountry wedding';
 $pageExt = '';
@@ -81,15 +81,15 @@ include 'incl/_header.php'; ?>
                 <picture>
 
                     <!-- portrait images -->
-                    <source media="(orientation: portrait) and (min-width:500px)" srcset="img/homepage/h1334/003-leavenworth_wedding_photographer-jasinski-004-1334h.jpg" >
-                    <source media="(orientation: portrait)" srcset="img/homepage/h667/003-leavenworth_wedding_photographer-jasinski-004-667h.jpg" >
+                    <source media="(orientation: portrait) and (min-width:500px)" srcset="img/homepage/h1334/003-turpin-meadows-wedding-1334h.jpg" >
+                    <source media="(orientation: portrait)" srcset="img/homepage/h667/003-turpin-meadows-wedding-667h.jpg" >
 
                     <!-- landscape images -->
-                    <source srcset="img/homepage/w2000/003-leavenworth_wedding_photographer-jasinski-004-2000.jpg" media="(min-width: 1440px)" />
-                    <source srcset="img/homepage/w1440/003-leavenworth_wedding_photographer-jasinski-004-1440.jpg" media="(min-width: 1024px)" />
-                    <source srcset="img/homepage/w1024/003-leavenworth_wedding_photographer-jasinski-004-1024.jpg" media="(min-width: 768px)" />
-                    <source srcset="img/homepage/w768/003-leavenworth_wedding_photographer-jasinski-004-768.jpg"/>
-                    <img src="img/homepage/w1024/003-leavenworth_wedding_photographer-jasinski-004-1024.jpg" alt="<?php altText('Outdoor wedding'); ?> gets a sweeping landscape wedding photograph of a couple in Plain, WA near Leavenworth, WA"/>
+                    <source srcset="img/homepage/w2000/003-turpin-meadows-wedding-2000.jpg" media="(min-width: 1440px)" />
+                    <source srcset="img/homepage/w1440/003-turpin-meadows-wedding-1440.jpg" media="(min-width: 1024px)" />
+                    <source srcset="img/homepage/w1024/003-turpin-meadows-wedding-1024.jpg" media="(min-width: 768px)" />
+                    <source srcset="img/homepage/w768/003-turpin-meadows-wedding-768.jpg"/>
+                    <img src="img/homepage/w1024/003-turpin-meadows-wedding-1024.jpg" alt="<?php altText('Outdoor wedding'); ?> gets a sweeping landscape wedding photograph of a couple in Plain, WA near Leavenworth, WA"/>
 
                 </picture>
 

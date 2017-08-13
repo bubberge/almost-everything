@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Recommended Wedding Vendors';
+$pageTitle = 'Amy Galbraith | Seattle Wedding Photographer';
 $pageDescription = 'A list of recommended professional wedding vendors. Created by Amy Galbraith, for use in wedding planning in the Jackson Hole and Seattle.';
 $pageKeywords = 'recommended wedding vendors, best wedding vendors, top vendors, wedding photography, wedding photographer, engagement photos, Jackson hole, seattle';
 $pageExt = 'vendors';

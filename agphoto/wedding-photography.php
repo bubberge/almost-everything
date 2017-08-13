@@ -1,6 +1,6 @@
 <?php
 $pageType = 'gallery';
-$pageMetaTitle = 'Amy Galbraith | Seattle Wedding Photographer';
+$pageTitle = 'Amy Galbraith | Seattle Wedding Photographer';
 $pageDescription = 'Amy Galbraith Photography is a Seattle wedding photographer and Jackson Hole wedding photographer that captures stunning, beautiful mountain wedding photos in the Pacific Northwest, Washington State and Jackson Hole.';
 $pageKeywords = 'seattle wedding photographer, jackson hole wedding photographer, adventure wedding photographer, mountain wedding photographer, outdoor wedding photographer, backcountry wedding';
 $pageExt = 'wedding-photography';
@@ -35,7 +35,7 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/009-seattle_wedding_photographer-tate-7.jpg" alt="a groom provides comic relief as he stretches in the getting-ready room" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/010-seattle_wedding_photographer-clark-8.jpg" alt="a 3/4 photo of a bride looking down towards the floor" />
+                    <img data-lazy="img/weddings/010-seattle-wedding-photographer-uddin.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/011-seattle_wedding_photographer-clark-9.jpg" alt="a waist-down shot of a bride displays the lace of her wedding gown and the sparkle of her engagement ring" />
@@ -49,12 +49,8 @@ include 'incl/_header.php'; ?>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/015-seattle_wedding_photographer-rayachoti-002.jpg" alt="fresh henna is displayed on the hands of a bride in a traditional indian wedding" />
                 </div>
-                <!--  -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/016-leavenworth_wedding_photographer-jasinski-002.jpg" alt="the bride steals a quiet moment to herself as she gazes into the a mirror in the corner of a dark room" />
-                </div>
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/017-idaho_wedding_photographer-wallace-12.jpg" alt="we look down on a groom-to-be as he lounges carelessly on a wooden bench, his exterior belying the excitement within" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/018-seattle_wedding_photographer-kelly-001.jpg" alt="a bride wearing a green wedding dress holds her bouquet out to the camera for a close-up" />
@@ -69,6 +65,9 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/021-seattle_wedding_photographer-jacobs_003.jpg" alt="A bride in a 1920's themed room sits and thinks quietly to herself as her eyes wander to the floor" />
                 </div>
                 <div class="s-slide">
+                    <img data-lazy="img/weddings/022-seattle-wedding-photographer-berry.jpg" alt="TODO" />
+                </div>
+                <div class="s-slide">
                     <img data-lazy="img/weddings/023-seattle_wedding_photographer-rayachoti-003.jpg" alt="A jovial groom celebrates with the cheering crowd around him while seated on a huge white horse" />
                 </div>
                 <div class="s-slide">
@@ -80,18 +79,20 @@ include 'incl/_header.php'; ?>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/026-seattle_wedding_photographer-lewis-4.jpg" alt="An excited groom reaches out behind himself to try to catch the hand of his bride as she comes to surprise him with their first look." />
                 </div>
-                <!-- -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/027-seattle_wedding_photographer-jhaveri-001.jpg" alt="A bride's hands jump to her face to hold back tears of joy as she gets a first look at her husband on their wedding day" />
+                </div>
+                <div class="s-slide">
+                    <img data-lazy="img/weddings/028-2-swiftwater-cellars-wedding-uddin.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/028-woodinville_wedding_photographer-cummings_001.jpg" alt="A young bride laughs honestly as her husband gives her a kiss on the temple" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/029-woodinville_wedding_photographer-cummings_002.jpg" alt="A bride holds out an abnormally beautiful bouquet for a close-up" />
+                    <img data-lazy="img/weddings/030-des-moines-beach-park-wedding-irish-001.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/031-jackson_hole_wedding_photographer-portfolio-049.jpg" alt="bride and groom walk away from the camera, through the sagebrush in Jackson Hole, Wyoming" />
+                    <img data-lazy="img/weddings/031-pickering-barn-wedding-savery.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/032-seattle_wedding_photographer-portfolio_031.jpg" alt="bride and groom walk through the summertime ski slopes of Crystal Mountain" />
@@ -111,18 +112,8 @@ include 'incl/_header.php'; ?>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/037-jackson_hole_wedding_photographer-soto-1.jpg" alt="a wedding couple walks along the snake river as the tetons loom high in the background, Jackson Hole Wyoming" />
                 </div>
-                <!-- -->
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/038-idaho_wedding_photographer-wallace-29.jpg" alt="Groom leans in and touches his forehead to his bride's" />
-                </div>
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/039-jackson_hole_wedding_photographer-portfolio-005.jpg" alt="bride and groom are dwarfed by the teton mountain range as the kiss in a field" />
-                </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/040-seattle_wedding_photographer-clark-27.jpg" alt="groom hugs his bride as they walk through tall grass at a beach, semiahmoo, washington" />
-                </div>
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/041-jackson-hole-wedding-photographer-piche-001.jpg" alt="bride and groom hold hands and walk casually into a forest in the mountains" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/042-portland-wedding-photographer-piwowarski-002.jpg" alt="a couple looks disproportionately small as they kiss against the backdrop of Portland, Oregon" />
@@ -131,18 +122,11 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/043-jackson_hole_wedding_photographer-portfolio-022.jpg" alt="a couple enjoys a private moment before their wedding ceremony as they ride a chairlift together to the top of the mountain in Grand Targhee, Wyoming " />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/044-snohomish_wedding_photographer-bailey-003.jpg" alt="the bride stands on the railroad tracks and shows us her beautiful bouquet" />
-                </div>
-                <div class="s-slide">
                     <img data-lazy="img/weddings/045-snohomish_wedding_photographer-bailey-002.jpg" alt="a bride walks down the railroad tracks while gingerly holding her bouquet" />
-                </div>
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/046-jackson_hole_wedding_photographer-sheehy-002.jpg" alt="a beautiful bride smiles and turns to look off to the right of the photograph" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/047-leavenworth_wedding_photographer-betz-001-1.jpg" alt="a groom is framed by his groomsmen as they all smile and walk towards us" />
                 </div>
-                <!-- -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/049-jackson_hole_wedding_photographer-todd-001.jpg" alt="a groom and five groomsmen stand in provile as they chug a ceremonial can of beer before the wedding" />
                 </div>
@@ -171,17 +155,16 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/057-seattle_wedding_photographer-tate-26.jpg" alt="a ring bearer almost loses his feet as he runs to chase a dog down the aisle" />
                 </div>
                 <div class="s-slide">
+                    <img data-lazy="img/weddings/058-2-winthrop-wedding-photographer-nichols.jpg" alt="TODO" />
+                </div>
+                <div class="s-slide">
                     <img data-lazy="img/weddings/058-seattle_wedding_photographer-lewis-18.jpg" alt="father and daughter laugh and reminisce for a brief moment as they walk together down the aisle" />
                 </div>
-                <!-- -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/059-jackson_hole_wedding_photographer-rayachoti-004.jpg" alt="a wide view looking down the center aisle at a couple getting married directly in front of the tetons in Jackson, WY" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/060-seattle_wedding_photographer-davis_001.jpg" alt="a wife-to-be jokes with her partner as they exchange vows in their wedding ceremony" />
-                </div>
-                <div class="s-slide">
-                    <img data-lazy="img/weddings/061-seattle_wedding_photographer-davis_002.jpg" alt="husband and wife hold hands on the bow of the Skansonia as they are married on the water in Seattle, Wa" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/062-swiftwater-cellars-wedding-001.jpg" alt="as a bride reads her prepared vows to her partner, we steal a glance at the lovingly-crafted words on the paper she is reading" />
@@ -193,7 +176,7 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/065-jackson_hole_wedding_photographer-brin-001.jpg" alt="while stealing a knowing smile at each other's eyes, an elated newlywed couple walks forth down the aisle towards the camera" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/066-seattle_wedding_photographer-davis_003.jpg" alt="a literally-just-married couple shares a laugh with wedding guests as they walk forward down the aisle towards the camera" />
+                    <img data-lazy="img/weddings/066-turpin-meadows-wedding.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/067-seattle_wedding_photographer-portfolio-027.jpg" alt="wife looks back and shares a laugh with her new husband as she leads them forward and out of the picture" />
@@ -204,12 +187,14 @@ include 'incl/_header.php'; ?>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/069-idaho_wedding_photographer-wallace-31.jpg" alt="two escaped chickens roam freely in front of the feet of a man and woman wearing wedding attire" />
                 </div>
-                <!-- -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/070-jackson_hole_wedding_photographer-harmon-11.jpg" alt="a bride bends down to share a cute moment with her black lab, who looks lovingly up at his newly-married mama" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/071-leavenworth_wedding_photographer-betz-002.jpg" alt="a close-up of some delicious looking cupcake-sized pies" />
+                </div>
+                <div class="s-slide">
+                    <img data-lazy="img/weddings/072-2-marble-calligraphy-name.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/072-seattle_wedding_photographer-lewis-29.jpg" alt="close-up of a bride and groom's new rings looped over the stem of an apple, which came from a heirloom tree on the bride's grandparents' property" />
@@ -227,26 +212,28 @@ include 'incl/_header.php'; ?>
                     <img data-lazy="img/weddings/077-snohomish_wedding_photographer-bailey-006.jpg" alt="a large group of young wedding quests pauses for a cheezy selfie as the bride and groom have their picture taken far in the background" />
                 </div>
                 <div class="s-slide">
+                    <img data-lazy="img/weddings/078-jm-cellars-wedding-cummings.jpg" alt="bride and groom smile and dance as their seated guests look on" />
+                </div>
+                <div class="s-slide">
                     <img data-lazy="img/weddings/079-seattle_wedding_photographer-lewis-36.jpg" alt="ignoring the world around them, the groom leads the bride through their first dance" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/080-snohomish_wedding_photographer-bailey-004.jpg" alt="bride and groom smile and dance as their seated guests look on" />
+                    <img data-lazy="img/weddings/080-swiftwater-cellars-wedding-uddin.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/081-snohomish_wedding_photographer-bailey-005.jpg" alt="a stunning panorama features only a bride and groom in the midst of a vast field" />
                 </div>
-                <!-- -->
                 <div class="s-slide">
                     <img data-lazy="img/weddings/082-wisconsin_wedding_photographer-kastner-001.jpg" alt="bride and groom kiss amoung the grape vines" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/083-leavenworth_wedding_photographer-jasinski-001.jpg" alt="a bride shoots a contented smile at the camera as her groom embraces her with a kiss on the temple" />
+                    <img data-lazy="img/weddings/083-des-moines-beach-park-wedding-irish.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/084-jackson-hole-wedding-photographer-piche-002.jpg" alt="a bride laughs heartily as her groom sweeps her off of her feet and carries her through the waist-high grass" />
                 </div>
                 <div class="s-slide">
-                    <img data-lazy="img/weddings/085-jackson_hole_wedding_photographer-sorensen-002.jpg" alt="bride and groom pause for just a moment before they kiss" />
+                    <img data-lazy="img/weddings/085-winthrop-wedding-photographer-nichols.jpg" alt="TODO" />
                 </div>
                 <div class="s-slide">
                     <img data-lazy="img/weddings/086-jackson_hole_wedding_photographer-todd-003.jpg" alt="groom dips his bride in front of sheep mountain (sleeping indian) in jackson hole, wyoming" />

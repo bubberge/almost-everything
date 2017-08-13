@@ -1,6 +1,6 @@
 <?php
 $pageType = 'gallery';
-$pageMetaTitle = 'Amy Galbraith | Seattle High School Senior Photographer';
+$pageTitle = 'Amy Galbraith | Seattle High School Senior Photographer';
 $pageDescription = 'Candid, beautiful high school senior photography that hits both ends of the spectrum -- from trendy to timeless.';
 $pageKeywords = 'seattle highschool photography, seattle highschool photographer, seattle senior photography, seattle senior photographer, timeless senior photography, classic senior photography, candid senior photography, northwest senior photography';
 $pageExt = 'high-school-senior-photography';

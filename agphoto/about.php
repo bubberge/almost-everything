@@ -1,5 +1,5 @@
 <?php
-$pageMetaTitle = 'About Amy Galbraith | Seattle Wedding Photographer';
+$pageTitle = 'Amy Galbraith | Seattle Wedding Photographer | About Me!';
 $pageDescription = "Experience my adventure-driven style of photography first-hand! Read and see more about how I strive to capture candid, natural, and emotion-driven images.";
 $pageKeywords = 'jackson hole wedding photography, seattle wedding photography, jackson hole wedding photographer, seattle wedding photographer, seattle engagement photographer';
 $pageExt = 'about';

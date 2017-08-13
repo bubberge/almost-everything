@@ -4,7 +4,6 @@
 
 .slick-arrow {
     z-index: 1;
-    mix-blend-mode: exclusion;
     &.slick-prev {
         left: 4%;
     }
@@ -29,9 +28,10 @@
     img {
         color: transparent;
     }
-    @media screen and (max-width: 1024px) and (orientation: landscape) {
-        min-width: 200px;
-    }
+    // this was for the slideshow and it not needed anymore
+    // @media screen and (max-width: 1024px) and (orientation: landscape) {
+    //     min-width: 200px;
+    // }
 }
 
 .s-overlay {
@@ -55,6 +55,10 @@
             min-height: 80vh;
         }
     }
+    .slick-track {
+        @include display-flex;
+        @include align-items(center);
+    }
     .s-container.slick-initialized {
         .s-slide,
         .s-slide:nth-child(n+2) {
@@ -67,8 +71,11 @@
         max-height: 700px;
         min-width: 200px;
         &>img {
-            height: 70vh;
-            max-width: initial;
+            height: initial;
+            max-width: 100vw;
+            @include breakpoint (large) {
+                max-height: calc(100vh - 49px - 48px); // 49px = header 48px = footer
+            }
         }
     }
     .slick-slide {
@@ -82,8 +89,16 @@
         }
         .s-slide {
             max-height: 885px;
-            &>img {
-                height: 87.5vh;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+            height: 100%;
+            width: 130px;
+            &:hover {
+
             }
         }
     }
@@ -109,7 +124,7 @@
             color: $color-gallery-icons;
         }
     }
-    @media screen and (orientation: landscape) and (max-width: 1024px)  { /* @include breakpoint (large) */
+    @media screen and (orientation: landscape) and (max-width: 1023px)  { /* @include breakpoint (large) */
         .title-bar {
             display: none;
         }

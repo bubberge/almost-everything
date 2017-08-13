@@ -15,7 +15,7 @@ if ( $home[0] ) {
 }
 
 
-function home(){ // removes images that aren't good for small and then inits slick on home
+function home(){
     // console.log('home slick');
     var $jumbo = $('.j-background');
     $('.j-track').slick({
@@ -83,6 +83,9 @@ function slickGallery(){
         fade: true,
         centerMode: true,
     });
+    setTimeout(function(){
+        $('.slick-list').attr('tabindex', 0).focus();
+    }, 500);
 }
 
 function slickAbout(){

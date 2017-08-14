@@ -17,6 +17,12 @@
     animation-duration: .33s;
     animation-timing-function: $transition-bezier;
 }
+.fade-in-out {
+  animation-name: fade-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: .8s;
+  animation-timing-function: $transition-bezier;
+}
 
 @keyframes fade-in {
     0% {opacity: 0;}
@@ -26,6 +32,11 @@
 @keyframes fade-out {
     0% {opacity: 1;}
     100% {opacity: 0;}
+}
+@keyframes fade-in-out {
+    0% {background-color: transparent;}
+    50% {background-color: transparentize($black, 0.7);}
+    100% {background-color: transparent;}
 }
 
 @-webkit-keyframes uil-ring-anim {

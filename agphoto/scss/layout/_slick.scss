@@ -4,19 +4,37 @@
 
 .slick-arrow {
     z-index: 1;
-    &.slick-prev {
-        left: 4%;
+    @include display-flex-important;
+    @include align-items(center);
+    @include justify-content(center);
+    height: 100%!important;
+    width: 8%!important;
+    background-color: transparentize($black, 0.9);
+    mix-blend-mode: difference;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    &.slick-prev::before {
+        transform: rotate(135deg);
+
     }
-    &.slick-next {
-        right: 4%;
+    &.slick-next::before {
+        transform: rotate(-45deg);
     }
-    &:before {
+    &::before {
+        content: ''!important;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-right: 1.25px solid;
+        border-bottom: 1.25px solid;
+        border-width: 2px;
         opacity: 1!important;
     }
 }
 
 .s-wrapper {
-    @include breakpoint (large) {
+    margin-top: 40px;
+    @include breakpoint (xlarge) {
         margin-top: 48px;
     }
 }
@@ -90,16 +108,22 @@
         .s-slide {
             max-height: 885px;
         }
+    }
+    @include breakpoint (large down) {
+        .slick-arrow {
+
+            &:hover {
+                animation-name: fade-in-out;
+                animation-fill-mode: forwards;
+                animation-duration: .8s;
+                animation-timing-function: $transition-bezier;
+            }
+        }
         .slick-prev {
             left: 0;
         }
         .slick-next {
             right: 0;
-            height: 100%;
-            width: 130px;
-            &:hover {
-
-            }
         }
     }
     // @include breakpoint (large) {
@@ -125,16 +149,12 @@
         }
     }
     @media screen and (orientation: landscape) and (max-width: 1023px)  { /* @include breakpoint (large) */
-        .title-bar {
-            display: none;
-        }
         .page-wrapper {
-            height: calc(100vh - 4px);
             padding-top: 2px;
             padding-bottom: 2px;
         }
         .s-slide>img {
-            height: calc(100vh - 4px);
+            max-height: calc(100vh - 4px);
         }
         .slick-dots,
         .footer {

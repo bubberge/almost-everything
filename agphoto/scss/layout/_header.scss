@@ -83,7 +83,10 @@
     width: 100%;
     z-index: 99;
     &.stuck {
-        @include breakpoint (medium) {
+        @media screen and (max-width: 63.9375em) and (orientation: landscape) {
+            background: transparent;
+        }
+        @include breakpoint (large) {
             background: $white;
         }    
     }
@@ -92,6 +95,7 @@
 .title-bar.stuck {
     .title-bar-left {
         @include breakpoint (small only){
+            @include flex-shorthand(initial);
             background-color: transparentize($white,.5);
             border-radius: 2px;
         }
@@ -121,6 +125,18 @@
         background: $color-gallery-icons;
         box-shadow: 0 7px 0 $color-gallery-icons,0 14px 0 $color-gallery-icons;
     }
+    .title-bar-left {
+        .menu-icon {
+            @media screen and ( min-width: 1025px ) {
+                display: none;
+            }
+        }
+        .dropdown.menu {
+            @media screen and ( max-width: 1024px ) {
+                display: none;
+            }
+        }
+    }
     .title-bar-right {
         @include display-flex;
         @include align-items(center);
@@ -131,6 +147,9 @@
             height: 20px;
             margin: 0 .25rem 0 .5rem;
             opacity: .25;
+        }
+        @include breakpoint (landscape) {
+            display: none;
         }
     }
     .l-hint {

@@ -17,7 +17,7 @@ include 'incl/_header.php'; ?>
             <div class="j-overlay-background"></div>
             <div class="j-arrow">
                 <a id="page-scroll" href="#portLoc" title="Take me to the pictures!">
-                    <h1 class="page-scroll__trigger">I am a Seattle wedding photographer. <br />See more down here!</h1>
+                    <h1 class="page-scroll__trigger">I am a Seattle wedding photographer. <br class="show-for-portrait"/>See more down here!</h1>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
             </div>

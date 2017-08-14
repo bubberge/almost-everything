@@ -46,6 +46,29 @@
     }
 
 }
+.gallery__heading-cont {
+    padding: 0 1rem 0 2rem;
+}
+
+.gallery__heading {
+
+    span:first-child {
+        font-size: 1.5rem;
+        font-family: $font-handwriting;
+    }
+    span:last-child {
+        display: block;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 1rem;
+        margin-left: 2rem;
+    }
+}
+
+.gallery__subheading {
+    font-family: $font-handwriting;
+    margin-left: 2rem;
+}
 
 
 // About

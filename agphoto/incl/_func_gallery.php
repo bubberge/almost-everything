@@ -6,5 +6,6 @@
         $html .= '<img ' . ($index < 2 ? 'src="' : 'data-lazy="') . $current[0] . '"';
         $html .= ' alt="' . $current[1] . '" /></div>';
         echo $html;
+        $index++;
       };
     };

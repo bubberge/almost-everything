@@ -7,16 +7,9 @@ $pageExt = 'high-school-senior-photography';
 $pageClasses = 'gallery seniors';
 include 'incl/_header.php'; ?>
     <div class="page-wrapper">
-        <div class="title-bar">
-            <div class="title-bar-left">
-                <button class="menu-icon hide-for-medium" type="button" data-open="offCanvas"></button>
-                <?php include 'incl/_horizontal-menu.php'; ?>
-            </div>
-            <div class="title-bar-right show-for-small-only">
-                <span class="l-hint">try landscape!</span>
-                <img src="img/rotate.png" alt="an icon of a phone rotating from portrait to landscale orientation" />
-            </div>
-        </div>
+    
+        <?php include 'incl/_gallery_title_bar.php'; ?>
+
         <div class="s-wrapper">
             <div class="s-container">
                 

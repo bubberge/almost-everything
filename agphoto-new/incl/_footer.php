@@ -13,6 +13,7 @@
           <a href="/contact">Contact</a>
         </div>
       </div>
-    <script src="js/output.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="js/output.min.js"></script> -->
   </body>
 </html>

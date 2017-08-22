@@ -1,12 +1,20 @@
 .slideshow
 
+.slideshow__slide
+  display: none
 
 // Grid Styles
 // ================================================================
 @supports (display: grid)
+
+  // TODO set this back to display: grid
   .slideshow__slide
-    display: grid
+    display: none
     justify-content: center
+
+  // TODO delete this
+  .slideshow__slide--1
+    display: grid
 
   .slideshow__img
 

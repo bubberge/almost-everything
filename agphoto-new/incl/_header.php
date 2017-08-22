@@ -70,8 +70,19 @@
         ?>
     </head>
     <body class="<?php echo $pageClasses; ?>">
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 
-        <!-- Menu -->
-        <?php include '_vertical-menu.php' ?>
+                <!-- Close button -->
+                <button class="close-button" aria-label="Close menu" type="button" data-close>
+                    <span aria-hidden="true">&times;</span>
+                </button>
 
-        <!-- begin page content -->
+                <!-- Menu -->
+                <?php include '_vertical-menu.php' ?>
+
+            </div>
+
+            <div class="off-canvas-content <?php echo $pageClasses; ?>-content" data-off-canvas-content>
+                <!-- begin page content -->

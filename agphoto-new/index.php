@@ -32,10 +32,16 @@ include 'incl/_header.php'; ?>
       <p class="work__blurb">Seattle wedding photographer and expert tent-pitcher</p>
     </div>
     <div class="work__slideshow-1 slideshow slideshow--mini">
-      <img src="http://placehold.it/1024x682/e67e21/fff" alt="work slideshow 1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1024x682/e67e21/fff?text=slide-1" alt="work slideshow 1 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1024x682/f90/fff?text=slide-2" alt="work slideshow 1 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1024x682/9f0/fff?text=slide-3" alt="work slideshow 1 slide-3" />
+
     </div>
     <div class="work__slideshow-2 slideshow slideshow--mini">
-      <img src="http://placehold.it/1167x1334/1abc9c/fff" alt="work slideshow 2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-1" alt="work slideshow 2 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-2" alt="work slideshow 2 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-3" alt="work slideshow 2 slide-3" />
+
     </div>
     <a class="work__link" href="javascript:void(0)" title="See all of Seattle wedding photographer Amy Galbraith photography">See more</a>
   </section>

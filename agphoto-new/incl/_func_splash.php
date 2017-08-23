@@ -16,7 +16,7 @@
   function create_splash_slideshow_slides($data) {
     $index = 1;
     foreach ($data as $current) {
-      $html = '<div class="slideshow__slide slideshow__slide--' . $index . '" data-slide-index="' . $index . '"><picture>';
+      $html = '<div class="slideshow__slide slideshow__slide--splash slideshow__slide--' . $index . '" data-slide-index="' . $index . '"><picture>';
       # <!-- portrait images -->
       $html .= '<source class="slideshow__img slideshow__img--hyper-res" media="(orientation: portrait) and (min-width:500px)" srcset="' . $current[0] . '" >';
       $html .= '<source class="slideshow__img slideshow__img--hyper-res" media="(orientation: portrait)" srcset="' . $current[1] . '" >';

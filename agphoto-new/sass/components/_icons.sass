@@ -2,7 +2,9 @@
   display: inline-block
 
 .ic--dot
-  width: 6px
-  height: 6px
+  width: 0.75rem
+  height: 0.75rem
   border-radius: 100%
-  background-color: var( --white ) 
+  border: 1px solid var( --white )
+  background-color: transparent
+  transition: background-color var( --standard-easing-duration ) cubic-bezier( var( --standard-easing-bezier ) )

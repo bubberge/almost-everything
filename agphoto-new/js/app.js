@@ -21,10 +21,20 @@
 })();
 
 // homepage slideshow
+const slides = {
+  all         : Array.from(document.querySelectorAll('[data-radio-index]')),
+  checked     : function(){
+    return slides.all.filter(current => current.checked)[0].getAttribute('ID');
+  },
+  rotate      : function() {
 
-// find all radio buttons that control slides nodes
-var slides = Array.from(document.querySelectorAll('[data-radio-index]'))
-// find next dom node
+  },
+  clear       : function() {
+    for ( let i of slides.all ) {
+      i.checked = false;
+    }
+  }
+}
 
 // transition class to next dom node
 

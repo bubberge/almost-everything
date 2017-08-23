@@ -6,15 +6,20 @@
 // Grid Styles
 // ================================================================
 @supports (display: grid)
+  .slideshow
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 1fr
+    align-content: center
+    justify-content: center
 
   // TODO set this back to display: grid
   .slideshow__slide
-    display: none
-    justify-content: center
-
-  // TODO delete this
-  .slideshow__slide--1
     display: grid
+    grid-area: 1 / 1 / 2 / 2
+
+  .slideshow__slide--is-current
+    z-index: 2
 
   .slideshow__img
 
@@ -30,3 +35,26 @@
       height: initial
       min-height: initial
       width: 100vw
+
+// Slideshow navigation styles
+// ================================================================
+
+.slideshow__radio
+  display: none
+
+.slideshow__label
+  display: inline-block
+  width: 1rem
+  height: 1rem
+  border: 1px solid
+
+.slideshow__radio:checked + .slideshow__label
+  border-color: red
+
+.slideshow__slide
+  opacity: 0
+  transition: opacity  var( --standard-easing-duration ) cubic-bezier( var( --standard-easing-bezier ) ) 
+
+@for $i from 1 through 8
+  .slideshow__radio--#{$i}:checked ~ .slideshow__slide--#{$i}
+    opacity: 1

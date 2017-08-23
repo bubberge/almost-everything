@@ -32,12 +32,12 @@
   transform: none
 
 .off-canvas--animatable .off-canvas__menu
-  transition: all 130ms ease-in
+  transition: all var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
 
 .off-canvas--visible.off-canvas--animatable  .off-canvas__menu
-  transition: all 330ms ease-out
+  transition: all var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
 
-.menu:after
+.off-canvas:after
   content: ''
   display: block
   position: absolute
@@ -49,7 +49,7 @@
   opacity: 0
   will-change: opacity
   pointer-events: none
-  transition: opacity 0.3s cubic-bezier(0,0,0.3,1)
+  transition: opacity var( --standard-easing-duration ) cubic-bezier( var(--standard-easing-bezier) )
 
 .off-canvas--visible.off-canvas:after
   opacity: 1

@@ -70,15 +70,17 @@
       }
     ?>
   </head>
-  <body class="<?php echo $pageClasses; ?>">
+  <body>
     <div class="off-canvas">
       <div class="off-canvas__menu">
         <?php include '_vertical-menu.php' ?>
       </div>
     </div>
     <div class="content content--<?php echo $pageClass; ?>">
-      <header>
-        <button class="off-canvas__trigger">open</button>
+      <header class="header">
+        <button class="header__trigger" title="open">
+          <svg class="header__bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.1 63.86"><defs><style>.cls-1{fill:none;stroke:var( --color-text-inverted );stroke-miterlimit:10;stroke-width:10px;}</style></defs><title>Bars</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M0 5h72.1M0 31.74h72.1M72.1 58.86H0"/></g></g></svg>
+        </button>
       </header>
       
       <!-- begin page content -->

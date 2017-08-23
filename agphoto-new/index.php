@@ -10,11 +10,12 @@ include 'incl/_header.php'; ?>
     <div class="splash__bg slideshow">
 
       <?php include 'incl/_data_splash.php';
+      create_splash_slideshow_nav($data_splash);
       create_splash_slideshow($data_splash); ?>
 
     </div>
     <div class="splash__logo">
-      <img src="http://placehold.it/300X300/fefefe" alt="Amy Galbraith's Awesome Logo" />
+      <img src="img/amy-galbraith-photography-logo-white.png" alt="Seattle wedding photographer Amy Galbraith's Logo" />
     </div>
   </section>
   <section class="section section--super-narrow intro">

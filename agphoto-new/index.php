@@ -7,11 +7,12 @@ $pageClasses = 'home';
 include 'incl/_header.php'; ?>
   <section class="section splash">
     <h2 class="splash__heading">Hi! I'm Amy Galbraith, a Seattle wedding photographer</h2>
-    <div class="splash__bg slideshow">
+    <div class="splash__bg slideshow slideshow--splash">
 
       <?php include 'incl/_data_splash.php';
-      create_splash_slideshow_nav($data_splash);
-      create_splash_slideshow($data_splash); ?>
+      create_splash_slideshow_radios($data_splash);
+      create_splash_slideshow_slides($data_splash);
+      create_splash_slideshow_nav($data_splash); ?>
 
     </div>
     <div class="splash__logo">
@@ -30,10 +31,10 @@ include 'incl/_header.php'; ?>
       <p class="h1 t-poster work__poster">My featured works</p>
       <p class="work__blurb">Seattle wedding photographer and expert tent-pitcher</p>
     </div>
-    <div class="work__slideshow-1 slideshow">
+    <div class="work__slideshow-1 slideshow slideshow--mini">
       <img src="http://placehold.it/1024x682/e67e21/fff" alt="work slideshow 1" />
     </div>
-    <div class="work__slideshow-2 slideshow">
+    <div class="work__slideshow-2 slideshow slideshow--mini">
       <img src="http://placehold.it/1167x1334/1abc9c/fff" alt="work slideshow 2" />
     </div>
     <a class="work__link" href="javascript:void(0)" title="See all of Seattle wedding photographer Amy Galbraith photography">See more</a>

@@ -1,6 +1,5 @@
 <?php
   include '_func_splash.php';
-  include '_func_splash_nav.php';
   $data_splash = [
     [
       # holy shit this isn't JSON so I can comment in it

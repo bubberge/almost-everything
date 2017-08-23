@@ -44,6 +44,11 @@
     @error "Detected mixed units. Please use the same units for all parameters. " + $u1 +", " + $u2 + ", " + $u3 +", "+ $u4
 
 
+@mixin splash-height
+  height: 100vh
+  @media screen and ( $min-width-medium )
+    height: var( --splash-height-large )
+    min-height: 500px
 
 // Media Queries
 // ================================================================

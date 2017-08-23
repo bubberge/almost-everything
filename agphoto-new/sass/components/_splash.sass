@@ -1,18 +1,11 @@
 .splash
-  height: 100vh
   overflow: hidden
   background-color: var( --light-gray )
   padding: 0
+  @include splash-height
 
-
-  @media screen and ( $min-width-medium )
-    height: calc(100vh - 74px)
-    min-height: 500px
-
-.splash__heading,
-.splash__logo
-  position: relative
-  z-index: 5
+.splash__heading
+  color: var( --white )
 
 
 // Grid Styles
@@ -27,6 +20,8 @@
   .splash__logo
     grid-row: 2 / 3
     grid-column: 3 / 4
+    // prevents flicker when transitioning from one slide to another
+    z-index: 1
 
   .splash__bg
     grid-row: 1 / 6

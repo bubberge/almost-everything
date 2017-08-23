@@ -1,5 +1,19 @@
 <?php
-  function create_splash_slideshow($data) {
+  function create_splash_slideshow_radios($data) {
+    $index = 1;
+    $html = '';
+    foreach ($data as $current) {
+      $current_radio = ($index == 1 ? 'checked' : '');
+      $html .= '<input class="slideshow__radio slideshow__radio--' . $index . '" id="splash_' . $index . '" type="radio" ' . $current_radio . ' name="slide" value="' . $index . '" data-radio-index="' . $index . '">';
+      $index++;
+    };
+    echo $html;
+  };
+
+  unset($html);
+  unset($index);
+
+  function create_splash_slideshow_slides($data) {
     $index = 1;
     foreach ($data as $current) {
       $html = '<div class="slideshow__slide slideshow__slide--' . $index . '" data-slide-index="' . $index . '"><picture>';
@@ -16,5 +30,18 @@
       echo $html;
       $index++;
     };
-    unset($index);
+  };
+
+  unset($html);
+  unset($index);
+
+  function create_splash_slideshow_nav($data) {
+    $index = 1;
+    $html = '<div class="slideshow__nav">';
+    foreach ($data as $current) {
+      $html .= '<label class="slideshow__label" for="splash_' . $index . '"><span class="ic ic--dot"></span></label>';
+      $index++;
+    };
+    $html .= "</div>";
+    echo $html;
   };

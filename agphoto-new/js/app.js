@@ -22,8 +22,8 @@
 
 // homepage slideshow
 
-// find all dom nodes
-var slides = Array.from(document.querySelectorAll('[data-index]'))
+// find all radio buttons that control slides nodes
+var slides = Array.from(document.querySelectorAll('[data-radio-index]'))
 // find next dom node
 
 // transition class to next dom node

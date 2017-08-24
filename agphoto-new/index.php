@@ -27,22 +27,32 @@ include 'incl/_header.php'; ?>
   </section>
   <section class="section section--narrow work">
     <div class="work__heading">
-      <h2 class="h2 t-cursive work__cursive">check out</h2>
+      <h2 class="h1 t-cursive work__cursive">check out</h2>
       <p class="h1 t-poster work__poster">My featured works</p>
       <p class="work__blurb">Seattle wedding photographer and expert tent-pitcher</p>
     </div>
-    <div class="work__slideshow-1 slideshow slideshow--mini">
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1024x682/e67e21/fff?text=slide-1" alt="work slideshow 1 slide-1" />
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1024x682/f90/fff?text=slide-2" alt="work slideshow 1 slide-2" />
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1024x682/9f0/fff?text=slide-3" alt="work slideshow 1 slide-3" />
 
+    <div class="work__slideshow-1 slideshow slideshow--mini">
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/600x900/e67e21/fff?text=S01E01" alt="work slideshow 1 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/600x900/f90/fff?text=S01E02" alt="work slideshow 1 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/600x900/9f0/fff?text=S01E03" alt="work slideshow 1 slide-3" />
     </div>
     <div class="work__slideshow-2 slideshow slideshow--mini">
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-1" alt="work slideshow 2 slide-1" />
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-2" alt="work slideshow 2 slide-2" />
-      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1167x1334/1abc9c/fff?text=slide-3" alt="work slideshow 2 slide-3" />
-
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/800x533/1abc9c/fff?text=S02E01" alt="work slideshow 2 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/800x533/1abc9c/fff?text=S02E02" alt="work slideshow 2 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/800x533/1abc9c/fff?text=S02E03" alt="work slideshow 2 slide-3" />
     </div>
+    <div class="work__slideshow-3 slideshow slideshow--mini">
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1024x682/e67e21/fff?text=S03E01" alt="work slideshow 3 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1024x682/f90/fff?text=S03E02" alt="work slideshow 3 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1024x682/9f0/fff?text=S03E03" alt="work slideshow 3 slide-3" />
+    </div>
+    <div class="work__slideshow-4 slideshow slideshow--mini">
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--1" src="http://placehold.it/1167x1334/1abc9c/fff?text=S04E01" alt="work slideshow 4 slide-1" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--2" src="http://placehold.it/1167x1334/1abc9c/fff?text=S04E02" alt="work slideshow 4 slide-2" />
+      <img class="slideshow__slide slideshow__slide--mini slideshow__slide--3" src="http://placehold.it/1167x1334/1abc9c/fff?text=S04E03" alt="work slideshow 4 slide-3" />
+    </div>
+
     <a class="work__link" href="javascript:void(0)" title="See all of Seattle wedding photographer Amy Galbraith photography">See more</a>
   </section>
   <section class="section section--narrow about">

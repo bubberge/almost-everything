@@ -21,20 +21,61 @@
 })();
 
 // homepage slideshow
-const slides = {
-  all         : Array.from(document.querySelectorAll('[data-radio-index]')),
-  checked     : function(){
-    return slides.all.filter(current => current.checked)[0].getAttribute('ID');
-  },
-  rotate      : function() {
+var slides = {
+  all             : Array.from(document.querySelectorAll('[data-radio-index]')),
+  current         : 0,
+  intervalRunning : false,
+  intervalID      : null,
+  autoRotate      : function( flag ){
 
-  },
-  clear       : function() {
-    for ( let i of slides.all ) {
-      i.checked = false;
-    }
-  }
+                      // no interval running, start new interval
+                      if ( flag && !slides.intervalRunning ) {
+                        slides.intervalID = setInterval(function() {
+                          slides.changeSlide();
+                        }, 5000);
+                        slides.intervalRunning = true;
+
+                      // killing existing interval
+                      } else if ( !flag ) {
+                        clearInterval(slides.intervalID);
+                        slides.intervalRunning = false;
+
+                      // do nothing, interval already running
+                      } else {
+                        // for slideshow navigation spammers
+                      }
+                    },
+  clear           : function() {
+                      for ( var i = 0; i < slides.all.length; i++ ) {
+                        slides.all[i].checked = false;
+                      }
+                    },
+  increment       : function(){
+                      if (slides.current == (slides.all.length - 1)) {
+                        slides.current = 0;
+                      } else {
+                        slides.current++;
+                      }
+                    },
+  changeSlide     : function() {
+                      slides.increment();
+                      slides.clear();
+                      slides.all[slides.current].checked = true;
+                    },
+  handleUserClick : function(elem) {
+                      slides.current = parseFloat(elem.dataset.radioIndex);
+                      slides.autoRotate(false);
+                      // give user two extra seconds to look at that picture
+                      setTimeout(function(){
+                        slides.autoRotate(true)}, 2000);
+                    },
+  initUserClicks  : function(arr){
+                      for ( var i = 0; i < arr.length; i++) {
+                        arr[i].addEventListener('click', function(){
+                          slides.handleUserClick(this);
+                        })
+                      };
+                    }
 }
-
-// transition class to next dom node
-
+slides.autoRotate(true);
+slides.initUserClicks(slides.all);

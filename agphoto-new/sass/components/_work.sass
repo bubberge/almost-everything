@@ -6,26 +6,35 @@
 .work__cursive,
 .work__poster
   @media screen and ( $min-width-smedium )
-    text-align: right
     line-height: 1
+
+.work__cursive
+  transform: translate(-17px, 17px)
+
+.work__poster
+  font-weight: 600
+  letter-spacing: 7px
+
+.work__blurb
+  line-height: 1.5
 
 // Grid Styles
 // ================================================================
 @supports (display: grid)
   .work
-    grid-auto-rows: 10px
+    grid-auto-rows: 1fr
     @media screen and ( $min-width-medium )
+      height: 1000px
       grid-template-columns: repeat(30, 1fr)
-      grid-row-gap: 1.25rem
+      grid-row-gap: 1.5rem
 
   .work__heading
     z-index: 1
-    grid-row: 1 / span 7
+    grid-row: 1 / span 5
     grid-column: 1 / span 15
     display: grid
     grid-template-rows: repeat(3, 2fr)
   
-
   .work__cursive
     grid-row: 1
     grid-column: 1
@@ -40,41 +49,33 @@
     text-transform: uppercase
     color: var( --color-primary )
 
+  .slideshow--mini
+    border: 1px solid lightgray
+
   .work__slideshow-1
     grid-row: 2 / 3
     grid-column: 1
     @media screen and ( $min-width-medium )
-      grid-row: 1 / span 26
-      grid-column: 15 / span 13
+      grid-row: 2 / span 13
+      grid-column: 15 / span 14
 
   .work__slideshow-2
     grid-row: 3 / 5
     grid-column: 1
     @media screen and ( $min-width-medium )
-      grid-row: 10 / span 13
-      grid-column: 1 / span 13
+      grid-row: 6 / span 8
+      grid-column: 2 / span 12
 
   .work__slideshow-3
     grid-row: 2 / 3
     grid-column: 1
     @media screen and ( $min-width-medium )
-      grid-row: 28 / span 12
+      grid-row: 15 / span 8
       grid-column: 15 / span 15
 
   .work__slideshow-4
     grid-row: 3 / 5
     grid-column: 1
     @media screen and ( $min-width-medium )
-      grid-row: 24 / span 16
-      grid-column: 4 / span 10
-
-  .work__link
-    grid-row: 3 / 4
-    grid-column: 1
-    display: grid
-    justify-content: end
-    @media screen and ( $min-width-medium )
-      grid-column: 3 / 4
-      transform: translateX(-50%)
-      justify-content: unset
-      align-content: center
+      grid-row: 14 / span 9
+      grid-column: 3 / span 11

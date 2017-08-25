@@ -1,23 +1,40 @@
 .section
   @include display-flex
   @include flex-direction(column)
-  border-bottom: 1px solid var( --light-gray )
   padding: 1rem
-
-.section__heading
-  text-align: center
 
 .section--narrow
   @include fluid-spacing(padding-left, 37.5rem, 80rem, 1rem, 10rem)
   @include fluid-spacing(padding-right, 37.5rem, 80rem, 1rem, 10rem)
 
+// 1rem padding at ~415px wide, 30rem padding at 1440px
 .section--super-narrow
-  @include fluid-spacing(padding-left, 37.5rem, 80rem, 2rem, 20rem)
-  @include fluid-spacing(padding-right, 37.5rem, 80rem, 2rem, 20rem)
+  @include fluid-spacing(padding-left, 26rem, 90rem, 1rem, 30rem)
+  @include fluid-spacing(padding-right, 26rem, 90rem, 1rem, 30rem)
 
 .section--work
-  @include fluid-spacing(padding-left, 56rem, 100rem, 2rem, 20rem)
-  @include fluid-spacing(padding-right, 56rem, 100rem, 2rem, 20rem)
+  @include fluid-spacing(padding-left, 56rem, 100rem, 1rem, 20rem)
+  @include fluid-spacing(padding-right, 56rem, 100rem, 1rem, 20rem)
+
+.section__heading,
+.section__subheading
+  text-align: center
+  text-transform: uppercase
+
+.section__heading
+  font-family: var( --font-poster )
+  font-weight: 600
+  margin-bottom: 0.75rem
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.33rem, 0.45rem)
+
+.section__subheading
+  margin-bottom: 0.5rem
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.35rem, 0.5rem)
+
+.section__content--intro
+  @include fluid-spacing(max-width, 26rem, 80rem, 24rem, 36rem)
+  margin: auto
+  text-align: center
 
 // Grid Styles
 // ================================================================
@@ -25,12 +42,16 @@
   .section
     display: grid
     grid-template-columns: 1fr
-    grid-template-rows: auto
+    grid-template-rows: var( --vertical-spacer ) auto auto auto var( --vertical-spacer )
 
   .section__heading
-    grid-row: 1
+    grid-row: 2
+    grid-column: 1
+
+  .section__subheading
+    grid-row: 3
     grid-column: 1
 
   .section__content
-    grid-row: 2
+    grid-row: 4
     grid-column: 1

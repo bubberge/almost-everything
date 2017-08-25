@@ -6,7 +6,6 @@ $pageExt = '';
 $pageClasses = 'home';
 include 'incl/_header.php'; ?>
   <section class="section splash">
-    <h2 class="splash__heading">Hi! I'm Amy Galbraith, a Seattle wedding photographer</h2>
     <div class="splash__bg slideshow slideshow--splash">
 
       <?php include 'incl/_data_splash.php';
@@ -19,9 +18,10 @@ include 'incl/_header.php'; ?>
       <img src="img/amy-galbraith-photography-logo-white.png" alt="Seattle wedding photographer Amy Galbraith's Logo" />
     </div>
   </section>
-  <section class="section section--super-narrow intro">
-    <h2 class="section__heading">Welcome</h2>
-    <div class="section__content">
+  <section class="section section--intro">
+    <h2 class="h1 section__heading">Welcome</h2>
+    <h3 class="h4 section__subheading">I am a Seattle wedding photographer</h3>
+    <div class="section__content section__content--intro">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu egestas ligula, sed convallis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer quis turpis iaculis, aliquam lorem mollis, vestibulum odio. Nulla facilisi.</p>
     </div>
   </section>

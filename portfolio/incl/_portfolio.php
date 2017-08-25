@@ -94,39 +94,39 @@
         <div class="medium-6 large-4 columns doodle-card doodle-1">
             <div class="doodle-inner">  
                 <div class="doodle-image" title="teaser image of a CSS flower animation demo" style="background-image:url('img/flower.png')">
-                    <a href="http://jsbin.com/yeyewic/" target="_blank" title="jsbin.com external link to code for the hover flower doodle by daviduffy">
+                    <a href="/demos/flower.html" target="_blank" title="new window link to code for the color gradient value doodle by daviduffy">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                 </div>
                 <div class="doodle-heading">
-                    <h3>Hover Flower</h3>
-                    <p>Achieving 60 FPS with CSS3 animations.</p>
+                    <h3>Color Map Generator</h3>
+                    <p>Finds any number of steps between any two colors</p>
                 </div>
             </div>
         </div>
         <div class="medium-6 large-4 columns doodle-card doodle-2">
             <div class="doodle-inner">  
-                <div class="doodle-image" style="background-image:url('img/gradient.jpg')">
-                    <a href="http://jsbin.com/gajeboz" target="_blank" title="jsbin.com external link to code for the RGB gradient generator by daviduffy">
+                <div class="doodle-image" style="background-image:url('img/sudoku.png')">
+                    <a href="/demos/sudoku.html" target="_blank" title="new window link to code for the sudoku solver by daviduffy">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                </div>
                 <div class="doodle-heading">
-                    <h3>RGB Gradient Tool</h3>
-                    <p>Creates multiple concentric rings of petals based on user input.</p>
+                    <h3>Sudoku Magician</h3>
+                    <p>Solve any existing sudoku or create a new one</p>
                 </div>
             </div>
         </div>
         <div class="medium-6 large-4 columns doodle-card doodle-3">
             <div class="doodle-inner">  
                 <div class="doodle-image" style="background-image:url('img/circleDiv.jpg')">
-                    <a href="http://output.jsbin.com/fudizi" target="_blank" title="jsbin.com external link to code for the circle divider game shake by daviduffy">
+                    <a href="/demos/hover.html" target="_blank" title="new window link to code for a hover circle splitting game">
                         <?php include 'incl/_outbound.php' ;?>
                     </a>
                 </div>
                 <div class="doodle-heading">
-                    <h3>Circle Divider Game</h3>
-                    <p>Infinite circle splitting game.</p>
+                    <h3>Hover circle generator</h3>
+                    <p>Split circles by hovering. Put them back together before time runs out!</p>
                 </div>
             </div>
         </div>

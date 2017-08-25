@@ -59,7 +59,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/app.css','js/output.min.js','incl/**','*.php','img/**'], {base:'./'})
+    return gulp.src(['css/app.css','js/output.min.js', 'demos/**','incl/**','*.php','img/**'], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 

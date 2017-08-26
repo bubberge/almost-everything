@@ -5,6 +5,7 @@ html:root
 
   // Base
   --white                      : #fefefe
+  --almost-white               : #e2e2e2
   --light-gray                 : #cccccc
   --medium-gray                : #999999
   --dark-gray                  : #666666
@@ -67,3 +68,10 @@ html:root
   font-family: var( --font-poster )
   font-weight: 300
   letter-spacing: 2.125px
+  @include fluid-spacing(letter-spacing, 37.5rem, 80rem, 0.33rem, 0.45rem)
+
+@mixin splash-height
+  height: 100vh
+  @media screen and ( $min-width-medium )
+    height: var( --splash-height-large )
+    min-height: 500px

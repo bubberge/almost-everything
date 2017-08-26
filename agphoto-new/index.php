@@ -22,13 +22,13 @@ include 'incl/_header.php'; ?>
     <h2 class="h1 section__heading">Welcome</h2>
     <h3 class="h4 section__subheading">I am a Seattle wedding photographer</h3>
     <div class="section__content section__content--intro">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu egestas ligula, sed convallis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer quis turpis iaculis, aliquam lorem mollis, vestibulum odio. Nulla facilisi.</p>
+        <p>I specialize in photographing mountain weddings in both the Pacific Northwest and Jackson Hole. I believe that photos are more than just a way to remind you what you looked like or who you were with the day that they were taken. Photos are meant to tell a story, where each frame has the power to transport you back in time, to that exact moment.</p>
     </div>
   </section>
   <section class="section section--work work">
     <div class="work__heading">
-      <h2 class="h1 t-cursive work__cursive">check out</h2>
-      <p class="h1 t-poster work__poster">My featured works</p>
+      <h2 class="h1 t-cursive work__cursive">explore</h2>
+      <p class="h1 t-poster work__poster">the galleries</p>
       <p class="work__blurb">Mountain weddings, adventure sessions<br />high school seniors, and life with littles</p>
     </div>
 
@@ -58,13 +58,12 @@ include 'incl/_header.php'; ?>
   </section>
   <section class="section section--narrow about">
     <div class="about__heading">
-      <h2 class="h2 t-cursive about__cursive">hello, i'm</h2>
-      <p class="h1 t-poster about__poster">Amy Galbraith</p>
-      <p class="about__blurb">Seattle wedding photographer and expert tent-pitcher</p>
+      <h2 class="h1 t-cursive about__cursive">hi there,</h2>
+      <p class="h1 t-poster about__poster">I'm Amy</p>
     </div>
-    <img class="about__image" src="http://placehold.it/1167x1334/1abc9c/fff?text=Picture%20of%20Amy" alt="picture of amy" />
-    <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu egestas ligula, sed convallis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer quis turpis iaculis, aliquam lorem mollis, vestibulum odio. Nulla facilisi.</p>
-    <a class="about__link" href="javascript:void(0)" title="Read the whole story about Seattle wedding photographer Amy Galbraith">Learn More</a>
+    <div class="about__image" style="background-image:url('http://placehold.it/1167x1334/1abc9c/fff?text=Picture%20of%20Amy');" title="picture of amy" /></div>
+    <p class="about__text">I am a former fire-twirler and ski bum, current outdoor crazy-person and adventure mama! I live in Seattle with my web developer husband and sweet baby boy. I am happiest when I am capturing natural, emotion-driven images. There is a unique energy present in laughter, intimacy, and love. I look for those moments.</p>
+    <a class="about__link" href="javascript:void(0)" title="Read the whole story about Seattle wedding photographer Amy Galbraith">More about Amy &raquo;</a>
   </section>
   <section class="section blog">
     <h2 class="blog__heading">Blog</h2>
@@ -200,4 +199,34 @@ include 'incl/_header.php'; ?>
             </div>
         </div>
     </div>
-                <?php include 'incl/_footer.php';  ?>
+    <script>
+      // don't want to transcribe this so var it is
+      var scroll = {
+        last_known_position           : 0,
+        is_ticking                    : false,
+        header                        : document.querySelector('.header'),
+        splash_height                 : document.querySelector('.slideshow--splash').clientHeight,
+        init                          : function() {
+                                          window.addEventListener('scroll', function(e) {
+                                            scroll.last_known_position = window.scrollY;
+                                            if (!scroll.is_ticking) {
+                                              window.requestAnimationFrame(function() {
+                                                scroll.handleScroll(scroll.last_known_position);
+                                                scroll.is_ticking = false;
+                                              });
+                                            }
+                                            scroll.is_ticking = true;
+                                          });
+                                        },
+        handleScroll                  : function(scrollHeight) {
+                                          if ( scrollHeight > scroll.splash_height ) {
+                                            scroll.header.classList.add('header--inverted');
+                                          } else {
+                                            scroll.header.classList.remove('header--inverted');
+                                          }
+                                        }
+
+      }
+      scroll.init();
+    </script>
+    <?php include 'incl/_footer.php';  ?>

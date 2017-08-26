@@ -1,29 +1,40 @@
-/* jshint laxcomma: true */
+'use strict';
 
-var gulp = require('gulp')
-  , $    = require('gulp-load-plugins')()
-  , maps = require('gulp-sourcemaps')
-  , concat = require('gulp-concat')
-  , uglify = require('gulp-uglify')
-  , rename = require('gulp-rename')
-  , del = require('del');
+var gulp = require('gulp'),
+    http = require('http-server'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    cleanCSS = require('gulp-clean-css'),
+    sass = require('gulp-sass'),
+    maps = require('gulp-sourcemaps'),
+    del = require('del');
 
-var sassPaths = [
-    'bower_components/foundation-sites/scss',
-    'bower_components/motion-ui/src'
-    ]
-  , jsPaths = [
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/what-input/what-input.js',
-    'bower_components/foundation-sites/dist/foundation.js',
-    'js/app.js',
-    'js/foundation.abide.js'
-    //'js/scrollFill.js',
-    //'js/circles.js'
-  ];
+gulp.task('compile-sass',function(){
+    return gulp.src('./sass/app.sass')
+        .pipe(maps.init())          // create maps from scss partials
+        .pipe(sass())
+        .pipe(maps.write('./'))     // this path is relative to the output directory
+        .pipe(gulp.dest('./css'));  // this is the output directory
+});
+
+gulp.task('concat-css',['compile-sass'], function(){
+    return gulp.src(['css/app.css'])
+        .pipe(concat('output.css')) // concat into file name
+        .pipe(gulp.dest('css'));    // send that file to the css directory
+});
+
+gulp.task('minify-css',['concat-css'], function(){
+    return gulp.src('css/output.css')
+        .pipe(maps.init({loadMaps:true}))   // create maps from scss *sourcemaps* not the css
+        .pipe(cleanCSS())
+        .pipe(rename('output.min.css'))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('css'));
+});
 
 gulp.task('concat-scripts', function(){
-    return gulp.src( jsPaths )
+    return gulp.src(['js/app.js'])
         .pipe(maps.init())
         .pipe(concat('output.js'))
         .pipe(maps.write('./'))
@@ -39,30 +50,18 @@ gulp.task('minify-scripts',['concat-scripts'], function(){
         .pipe(gulp.dest('js'));
 });
 
-gulp.task('sass', function() {
-  return gulp.src('scss/app.scss')
-    .pipe(maps.init({loadmaps:true}))
-    .pipe($.sass({
-      includePaths: sassPaths,
-      outputStyle: 'compressed' // if css compressed **file size**
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-        browsers: ['last 2 version', 'safari 5', 'ie >= 9', 'opera 12.1', 'ios 6', 'android 4']
-    }))
-    .pipe(maps.write('./')) 
-    .pipe(gulp.dest('css'));
-});
-
 gulp.task('clean', function(){
-  del(['dist','css/app*.css*','js/output*.js*']);
+    del(['dist','css/output*.css*','css/style.css*','js/output*.js*']);
 });
 
-gulp.task('build', ['minify-scripts', 'sass'], function(){ // array defined dependencies, which are all run before the default task
-    return gulp.src(['css/app.css','js/output.min.js','incl/**','*.php','img/**'], {base:'./'})
+gulp.task('watch', function(){
+    gulp.watch('./sass/**/*.sass',['minify-css']);
+    gulp.watch('./js/app.js',['minify-scripts']);
+});
+
+gulp.task('build', ['minify-scripts', 'minify-css'], function(){ // array defined dependencies, which are all run before the default task
+    return gulp.src(['css/output.min.css','js/output.min.js','incl/**','*.php',], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
-});
+gulp.task('default', ['watch']);

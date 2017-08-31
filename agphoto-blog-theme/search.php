@@ -22,7 +22,7 @@ $search = new WP_Query($search_query);
 
 	<div class="small-12 large-8 columns">
 
-		<div class="leader">
+		<div class="leader p-search">
 
 		<?php if (have_posts()) : ?>
 
@@ -75,7 +75,7 @@ $search = new WP_Query($search_query);
 				<p>Try a different search?</p>
 
 			<?php endif; ?>
-
+			<?php include 'includes/pagination.php' ?>
 		</div>
 	</div>
 

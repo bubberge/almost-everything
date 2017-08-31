@@ -6,7 +6,7 @@
 
 	<div class="small-12 medium-8 columns">
 
-		<div class="leader">
+		<div class="leader p-category">
 
 		<h1><?php single_cat_title(); ?></h1>
 
@@ -39,11 +39,11 @@
 					<?php endif ?>
 
 				</div>
-			<article>
+			</article>
 		<?php endwhile; else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
-
+		<?php include 'includes/pagination.php' ?>
 		</div>
 	</div>
 

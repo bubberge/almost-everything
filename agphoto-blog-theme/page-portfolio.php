@@ -11,7 +11,7 @@
 
 <section class="row">
 	<div class="small-12 columns text-center">
-		<div class="leader">
+		<div class="leader p-portfolio">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

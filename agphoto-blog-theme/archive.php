@@ -10,7 +10,7 @@ get_header();
 
 	<div class="small-12 medium-8 columns">
 
-		<div class="leader">
+		<div class="leader p-archive">
 
 		<h1><?php single_month_title(' ') ?></h1>
 
@@ -31,7 +31,7 @@ get_header();
 				
 				<div class="post-meta">
 
-					<hr></hr>
+					<hr />
 
 					<?php
 					$tags = get_the_tags(); // only output tags if there are tags
@@ -43,11 +43,11 @@ get_header();
 					<?php endif ?>
 
 				</div>
-			<article>
+			</article>
 		<?php endwhile; else : ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
-
+		<?php include 'includes/pagination.php' ?>
 		</div>
 	</div>
 

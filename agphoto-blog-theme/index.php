@@ -6,7 +6,7 @@
 
 	<div class="small-12 large-8 columns">
 
-		<div class="leader">
+		<div class="leader p-index">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

@@ -10,6 +10,10 @@ var gulp = require('gulp'),
     maps = require('gulp-sourcemaps'),
     del = require('del');
 
+var jsPaths = [
+    'js/app.js'
+];
+
 gulp.task('compile-sass',function(){
     return gulp.src('./sass/app.sass')
         .pipe(maps.init())          // create maps from scss partials
@@ -34,7 +38,7 @@ gulp.task('minify-css',['concat-css'], function(){
 });
 
 gulp.task('concat-scripts', function(){
-    return gulp.src(['js/app.js'])
+    return gulp.src( jsPaths )
         .pipe(maps.init())
         .pipe(concat('output.js'))
         .pipe(maps.write('./'))

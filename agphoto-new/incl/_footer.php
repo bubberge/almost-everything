@@ -14,7 +14,7 @@
         </div>
       </div>
     <script src="js/app.js"></script>
-    <script src="js/g_slider.min.js"></script>
+    <script src="js/g_slider.js"></script>
     <!-- <script src="js/output.min.js"></script> -->
   </body>
 </html>

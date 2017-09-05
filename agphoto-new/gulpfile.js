@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     del = require('del');
 
 var jsPaths = [
-    'js/app.js'
+    'js/app.js',
+    'js/tiny-gallery-slider.min.js'
 ];
 
 gulp.task('compile-sass',function(){

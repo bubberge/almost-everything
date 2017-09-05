@@ -7,7 +7,7 @@ $pageExt = 'wedding-photography';
 $pageClasses = 'gallery weddings';
 include 'incl/_header.php'; ?>
     <div class="g-slider">
-        <ul class="g-slider__track" style="width:9999999px">
+        <ul class="g-slider__track" tabindex="0" style="width:9999999px">
             <?php include 'incl/_data_weddings.php';
             create_gallery_slideshow($data_weddings); ?>
         </ul>

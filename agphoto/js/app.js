@@ -29,49 +29,51 @@ function home(){ // removes images that aren't good for small and then inits sli
         autoplaySpeed: 5000
     });
 
-    /**
-     * parses any RSS/XML feed through Google and returns JSON data
-     * source: http://stackoverflow.com/a/6271906/477958
-     */
+    
 
-    (function parseRSS(url, container) {
-        // console.log(parseRSS);
-        var $outputContainer = $(container);
-        var finalHTML = '';
-        $.ajax({
-            url: document.location.protocol + "//feedrapp.info?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
-            dataType: 'json',
-            success: function(data) {
-                // console.log(data.responseData.feed);
-                $.each(data.responseData.feed.entries, function(key, value){
-                    if ( key < 8) {
-                        var thehtml = '<div class="b-post"><div class="b-title">';
-                        var str = value.title;
-                        // console.log(typeof str);
-                        if (str.indexOf(' | ') !== -1) {
-                            var splitStrings = str.split(' | ');
-                            // console.log(splitStrings)
-                            thehtml += '<h3 class="b-post__title">'+splitStrings[0]+ '</h3>';
-                            thehtml += '<span>'+splitStrings[1]+'</span>';
-                        } else {
-                            thehtml += '<span>'+str+'</span>';
-                        }
-                        thehtml += '</div><div class="b-background" style="background-image: url(';
-                        var s = value.content;
-                        s = s.slice(0,s.indexOf(".jpg") + 4 );
-                        s = s.slice(s.indexOf("src=") + 5);
-                        // console.log(s);
-
-                        thehtml += s + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +value.link+'" target="_blank"></a></div>';
-                        finalHTML += thehtml;
-                    }
-                });
-                $('#blogLoc').removeClass('link-style');
-                $outputContainer.html('');
-                $outputContainer.append(finalHTML);
-            }
-        });
-    })('http://blog.amygalbraith.com/feed','.blog-feed');
+    (function getFeed(url, container){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.send(null);
+      xhr.onreadystatechange = function () {
+        var DONE = 4; // readyState 4 means the request is done.
+        var OK = 200; // status 200 is a successful return.
+        if (xhr.readyState === DONE) {
+          if (xhr.status === OK) {
+            var response = JSON.parse(xhr.responseText); // 'This is the returned text.'
+            // console.log(response);
+            var finalHTML = '';
+            response.forEach(function(current, index){
+              var thehtml = '<div class="b-post"><div class="b-title">';
+              var str = current.title.rendered;
+              // console.log(`titles before:`)
+              // console.log(titles);
+              if (str.indexOf(' | ') !== -1) {
+                  var splitStrings = str.split(' | ');
+                  // console.log(splitStrings)
+                  thehtml += '<h3 class="b-post__title">'+splitStrings[0]+ '</h3>';
+                  thehtml += '<span>'+splitStrings[1]+'</span>';
+              } else {
+                  thehtml += '<span>'+str+'</span>';
+              }
+              thehtml += '</div><div class="b-background" style="background-image: url(';
+              // console.log(`titles after`);
+              // console.log(titles);
+              var s = current.content.rendered.slice(0,300);
+              var image = s.slice((s.indexOf('href=\"')+6),(s.indexOf('.jpg\"')+4));
+              thehtml += image + ')"></div><span class="b-overlay"></span><a class="b-link" href="' +current.link+'" target="_blank"></a></div>';
+              finalHTML += thehtml;;
+              // console.log(the_html);
+            })
+            $('#blogLoc').removeClass('link-style');
+            $(container).html('');
+            $(container).append(finalHTML);
+          } else {
+            console.error('Error: ' + xhr.status); // An error occurred during the request.
+          }
+        }
+      };
+    })('http://blog.amygalbraith.com/wp-json/wp/v2/posts?per_page=8','.blog-feed');
 }
 
 function slickGallery(){
@@ -178,33 +180,3 @@ smoothScroll('.home #blog-link');
 $(".off-canvas a").mouseup( function(){
   $(".close-button").click();
 });
-
-/*
- * Uses AJAX to load JSON and then builds markup for slideshow
-
-
- function createGallery( container, fileExt ) {   
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', fileExt, true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            var $container = $(container);
-            var jsonFile = JSON.parse(xobj.responseText);
-            for ( var i = 0; i < jsonFile.slides.length; i++ ){
-                theHTML = '<div class="s-slide"><div class="s-overlay"></div><img src="';
-                theHTML += jsonFile.slides[i].url;
-                theHTML += '" alt="';
-                theHTML += jsonFile.slides[i].alt;
-                theHTML += '" /></div>';
-                $container.append(theHTML);
-            }
-            slickInit();
-            console.log('gallery loaded');
-          }
-    };
-    xobj.send(null);  
- }
-
-createGallery('.weddings .s-container', 'img/weddings/weddings.json');
- */

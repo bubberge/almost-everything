@@ -1,0 +1,70 @@
+Arguments: 
+  /Users/daviduffy/.nvm/versions/node/v9.10.0/bin/node /usr/local/bin/yarn init
+
+PATH: 
+  /usr/local/opt/php@7.1/sbin:/usr/local/opt/php@7.1/bin:/usr/local/opt/php@7.0/sbin:/usr/local/opt/php@7.0/bin:/opt/local/bin:/opt/local/sbin:/Users/daviduffy/.nvm/versions/node/v9.10.0/bin:/Users/daviduffy/google-cloud-sdk/bin:/Users/daviduffy/.rvm/gems/ruby-2.4.0/bin:/Users/daviduffy/.rvm/gems/ruby-2.4.0@global/bin:/Users/daviduffy/.rvm/rubies/ruby-2.4.0/bin:/Users/daviduffy/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/daviduffy/.rvm/bin:/Users/daviduffy/.rvm/bin:/usr/local/Cellar/node@8/8.9.4/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  9.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "foundation-sites-template",
+    "version": "1.0.0",
+    "description": "Basic template for a new Foundation for Sites project.",
+    "main": "gulpfile.js",
+    "devDependencies": {
+      "del": "^2.2.1",
+      "gulp": "^3.9.0",
+      "gulp-autoprefixer": "^3.1.0",
+      "gulp-concat": "^2.6.0",
+      "gulp-load-plugins": "^1.2.4",
+      "gulp-rename": "^1.2.2",
+      "gulp-sass": "^2.3.2",
+      "gulp-sourcemaps": "^1.6.0",
+      "gulp-uglify": "^1.5.4"
+    },
+    "scripts": {
+      "start": "gulp",
+      "build": "gulp sass"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/zurb/foundation-sites-template.git"
+    },
+    "bugs": {
+      "url": "https://github.com/zurb/foundation-sites/issues",
+      "email": "foundation@zurb.com"
+    },
+    "author": "ZURB <foundation@zurb.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+      "gulp-autoprefixer": "^3.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:120971:13)
+      at Interface.emit (events.js:180:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:163:10)
+      at ReadStream.emit (events.js:180:13)
+      at emitKeys (internal/readline.js:422:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1019:36)
+      at ReadStream.emit (events.js:180:13)
+      at addChunk (_stream_readable.js:274:12)
